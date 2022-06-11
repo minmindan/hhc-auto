@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('milestones', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('years')->nullable()->comment('年份');
+            $table->string('month')->nullable()->comment('月份');
+            $table->string('content')->nullable()->comment('內文');
         });
     }
 

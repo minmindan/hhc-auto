@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('contact_banners', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('img_path')->nullable()->comment('圖片路徑');
+            $table->string('weights')->nullable()->comment('排序');
         });
     }
 

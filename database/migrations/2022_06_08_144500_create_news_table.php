@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('time')->nullable()->comment('時間');
+            $table->string('title')->nullable()->comment('標題');
+            $table->string('content')->nullable()->comment('內文');
         });
     }
 
