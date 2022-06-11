@@ -1,12 +1,16 @@
 var hoverbox = document.querySelectorAll('.downlist');
+var nav = document.getElementById('nav');
+var subnav = document.querySelectorAll('.fons');
+var whitelogo = document.getElementById('white-logo');
+var minilogo = document.getElementById('minilogo');
+var biglogo = document.getElementById('biglogo');
+var entryblue = document.getElementById('entryblue');
+var entrywhite = document.getElementById('entrywhite');
+var stuffing = document.querySelectorAll('.stuffing');
 hoverbox.forEach(element => {
-    var nav = document.getElementById('nav');
-    var subnav = document.querySelectorAll('.fons');
-    var whitelogo = document.getElementById('white-logo');
-    var minilogo = document.getElementById('minilogo');
-    var biglogo = document.getElementById('biglogo');
     element.addEventListener('mousemove', function () {
         nav.classList.add('blue');
+        console.log(stuffing);
         subnav[0].classList.add('white');
         subnav[1].classList.add('white');
         subnav[2].classList.add('white');
@@ -15,7 +19,9 @@ hoverbox.forEach(element => {
         subnav[5].classList.add('white');
         minilogo.classList.add('none');
         biglogo.classList.add('none');
-        whitelogo.style.display='block';
+        whitelogo.style.display ='block';
+        stuffing[0].style.backgroundColor='white';
+        stuffing[1].style.backgroundColor='white';
     });
     nav.addEventListener('mouseleave', function () {
         nav.classList.remove('blue');
@@ -28,6 +34,8 @@ hoverbox.forEach(element => {
         minilogo.classList.remove('none');
         biglogo.classList.remove('none');
         whitelogo.style.display='none';
+        stuffing[0].style.backgroundColor='#0146a8';
+        stuffing[1].style.backgroundColor='#0146a8';
     });
 });
 var bgli = document.getElementById('bglist');
@@ -38,12 +46,12 @@ var xx = document.getElementById('XX');
 var entry = document.getElementById('focus-button');
 var focusbutton = document.getElementById('focus-button');
 focusbutton.addEventListener('mousemove',function(){
-    focusbutton.innerHTML = `<h1>E n t r y</h1>
-    <img src="/image/blue_white_entry.svg" alt="">`
+    entryblue.classList.remove('none');
+    entrywhite.classList.add('none');
 })
 focusbutton.addEventListener('mouseleave',function(){
-    focusbutton.innerHTML = `<h1>E n t r y</h1>
-    <img src="/image/right_white_entry.svg" alt="">`
+    entryblue.classList.add('none');
+    entrywhite.classList.remove('none');
 })
 bgli.addEventListener('click', function () {
     focuss.classList.remove('none')

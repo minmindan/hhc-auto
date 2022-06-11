@@ -8,6 +8,6 @@ class HhcAutoController extends Controller
 {
     //
     public function index(){
-        return view ('index');
+        return view ('template.template');
     }
 }
