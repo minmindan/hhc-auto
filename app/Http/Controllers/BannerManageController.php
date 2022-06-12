@@ -2,18 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class BannerManageController extends Controller
 {
-     // BANNER管理
-
+    // BANNER管理
 
     // 首頁 BANNER管理
     // 首頁
     public function homepage_index()
     {
-        return view('');
+        return view('banner_manage.index_banner');
     }
 
     // 新增頁
@@ -36,12 +33,12 @@ class BannerManageController extends Controller
     public function homepage_delete()
     {}
 
-
     // 關於我們 BANNER管理
     // 首頁
     public function aboutus_index()
     {
-        return view('');
+        return view('banner_manage.aboutus_banner');
+
     }
 
     // 新增頁
@@ -64,12 +61,12 @@ class BannerManageController extends Controller
     public function aboutus_delete()
     {}
 
-
     // 產品介紹 BANNER管理
     // 首頁
     public function product_index()
     {
-        return view('');
+        return view('banner_manage.product_banner');
+
     }
 
     // 新增頁
@@ -92,12 +89,12 @@ class BannerManageController extends Controller
     public function product_delete()
     {}
 
-
     // 產品製作流程 BANNER管理
     // 首頁
     public function process_index()
     {
-        return view('');
+        return view('banner_manage.process_banner');
+
     }
 
     // 新增頁
@@ -120,12 +117,12 @@ class BannerManageController extends Controller
     public function process_delete()
     {}
 
-
     // 聯絡我們 BANNER管理
     // 首頁
     public function contact_index()
     {
-        return view('');
+        return view('banner_manage.contact_banner');
+
     }
 
     // 新增頁

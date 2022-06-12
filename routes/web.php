@@ -56,15 +56,21 @@ Route::prefix('/hhc-auto/aboutus')->group(function (){
 });
 
 
+
 // 表單 手建
-Route::prefix('/hhc-auto/contact')->group(function (){
-    Route::get('/',[ContactController::class, 'index']); //總表
-    Route::get('/create',[ContactController::class, 'create']); //新增頁面
+
+    Route::get('/contact',[ContactController::class, 'index']); //表1
+    Route::post('/contact2',[ContactController::class, 'contact2']); //表2
+    Route::post('/contact3',[ContactController::class, 'contact3']); //表3
+
     Route::post('/store',[ContactController::class, 'store']); //儲存頁面
     Route::get('/edit',[ContactController::class, 'edit']); //編輯頁面
     Route::post('/update',[ContactController::class, 'update']); //更新頁面
-    Route::post('/delete',[ContactController::class, 'delete']); //刪除頁面
-});
+
+    Route::get('/contact/delete/{id}',[ContactController::class, 'delete']); //刪除頁面
+    // 以下用不到
+    //Route::get('/create',[ContactController::class, 'create']); //新增頁面
+
 
 
 
@@ -128,7 +134,7 @@ Route::prefix('/product-manage/maintenance')->group(function (){
 
 // BANNER管理
 // 首頁 手建
-Route::prefix('/banner-manage/banner')->group(function (){
+Route::prefix('/banner-manage/homepage')->group(function (){
     Route::get('/',[BannerManageController::class, 'homepage_index']); //總表
     Route::get('/create',[BannerManageController::class, 'homepage_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'homepage_store']); //儲存頁面
@@ -138,7 +144,7 @@ Route::prefix('/banner-manage/banner')->group(function (){
 });
 
 // 關於我們 手建
-Route::prefix('/banner-manage/banner')->group(function (){
+Route::prefix('/banner-manage/aboutus')->group(function (){
     Route::get('/',[BannerManageController::class, 'aboutus_index']); //總表
     Route::get('/create',[BannerManageController::class, 'aboutus_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'aboutus_store']); //儲存頁面
@@ -148,7 +154,7 @@ Route::prefix('/banner-manage/banner')->group(function (){
 });
 
 // 產品介紹 手建
-Route::prefix('/banner-manage/banner')->group(function (){
+Route::prefix('/banner-manage/product')->group(function (){
     Route::get('/',[BannerManageController::class, 'product_index']); //總表
     Route::get('/create',[BannerManageController::class, 'product_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'product_store']); //儲存頁面
@@ -158,7 +164,7 @@ Route::prefix('/banner-manage/banner')->group(function (){
 });
 
 // 產品製作流程 手建
-Route::prefix('/banner-manage/banner')->group(function (){
+Route::prefix('/banner-manage/process')->group(function (){
     Route::get('/',[BannerManageController::class, 'process_index']); //總表
     Route::get('/create',[BannerManageController::class, 'process_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'process_store']); //儲存頁面
@@ -168,7 +174,7 @@ Route::prefix('/banner-manage/banner')->group(function (){
 });
 
 // 聯絡我們 手建
-Route::prefix('/banner-manage/banner')->group(function (){
+Route::prefix('/banner-manage/contact')->group(function (){
     Route::get('/',[BannerManageController::class, 'contact_index']); //總表
     Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面

@@ -9,7 +9,9 @@ class ProductManageController extends Controller
     // 設備
     // 首頁
     public function equipment_index()
-    {}
+    {
+        return view('equipment.product');
+    }
 
     // 新增頁
     public function equipment_create()
@@ -35,7 +37,10 @@ class ProductManageController extends Controller
     // 軟體
     // 首頁
     public function software_index()
-    {}
+    {
+        return view('equipment.product');
+
+    }
 
     // 新增頁
     public function software_create()

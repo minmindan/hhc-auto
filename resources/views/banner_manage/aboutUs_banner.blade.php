@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./css/aboutUs_banner.css" />
+  <link rel="stylesheet" href="{{asset('css/aboutus_banner.css')}}" />
 </head>
 
 <body>
@@ -107,7 +107,7 @@
                   <div class="content-img">
                     <img src="" alt="" />
                   </div>
-  
+
                   <!-- 說明 -->
                   <div class="directions">
                     <h2>ABOUT US</h2>
@@ -124,7 +124,7 @@
                   <div class="content-img">
                     <img src="" alt="" />
                   </div>
-  
+
                   <!-- 說明 -->
                   <div class="directions">
                     <h2>ABOUT US</h2>
@@ -134,7 +134,7 @@
                   <div class="function-button">
                     <button>更換</button>
                   </div>
-  
+
                 </div>
           </form>
         </div>
