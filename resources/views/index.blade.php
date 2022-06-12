@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HHC-AUTO</title>
     <script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./sei.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/swiper.css">
-    <link rel="stylesheet" href="./css/btn.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/footerstamped.css">
+    <link rel="stylesheet" href="{{asset('css/index-nav.css')}}">
+    <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
+    <link rel="stylesheet" href="{{asset('css/index.css')}}">
+    <link rel="stylesheet" href="{{asset('css/swiper-index.css')}}">
+    <link rel="stylesheet" href="{{asset('css/btn.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footerstamped.css')}}">
+    <link rel="stylesheet" href="{{asset('css/nav-list.css')}}">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
         body {
@@ -116,28 +117,28 @@
     <nav id="nav">
         <div id="focus" class="none">
             <div id="focuslogo" class="focus-logo none">
-                <img src="./image/Logo_white.svg" alt="">
-                <img id="XX" style="cursor: pointer;" height="40px" src="./image/burger_white_X.svg" alt="">
+                <img src="{{asset('image/index-icon/Logo_white.svg')}}" alt="">
+                <img id="XX" style="cursor: pointer;" height="40px" src="{{asset('image/nav/burger_white_X.svg')}}" alt="">
             </div>
             <div id="focusmain" class="focus-main none">
                 <div id="focus-box">
                     <p>關於我們</p>
                     <h1>ABOUT US</h1>
                     <ul>
-                        <li>經營理念 <img src="./image/white_right.svg" alt=""></li>
-                        <li>公司沿革 <img src="./image/white_right.svg" alt=""></li>
-                        <li>公司簡介 <img src="./image/white_right.svg" alt=""></li>
+                        <li>經營理念 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
+                        <li>公司沿革 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
+                        <li>公司簡介 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
                     </ul>
                 </div>
                 <div id="focus-box">
                     <p>產品介紹</p>
                     <h1>PRODUCT</h1>
                     <ul>
-                        <li>設備 <img src="./image/white_right.svg" alt=""></li>
-                        <li>軟體 <img src="./image/white_right.svg" alt=""></li>
-                        <li>部品零件 <img src="./image/white_right.svg" alt=""></li>
-                        <li>耗材 <img src="./image/white_right.svg" alt=""></li>
-                        <li>維修 <img src="./image/white_right.svg" alt=""></li>
+                        <li>設備 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
+                        <li>軟體 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
+                        <li>部品零件 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
+                        <li>耗材 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
+                        <li>維修 <img src="{{asset('image/nav/white_right.svg')}}" alt=""></li>
                     </ul>
                 </div>
                 <div id="focus-box">
@@ -150,39 +151,39 @@
                 </div>
                 <div class="btn btn--1" id="focus-button">
                     <h1>E n t r y</h1>
-                    <img src="./image/right_white_entry.svg" alt="">
+                    <img src="{{asset('image/nav/right_white_entry.svg')}}" alt="">
                 </div>
             </div>
         </div>
         <div id="bar">
             <div id="logo">
-                <img id="minilogo" class="none" src="./image/small_blue.svg" alt="">
-                <img id="biglogo" src="./image/1x/1x/資產 1.png" alt="">
+                <img id="minilogo" class="none" src="{{asset('image/index-icon/small_blue.svg')}}" alt="">
+                <img id="biglogo" src="{{asset('image/index-icon/Logo_white.svg')}}" alt="">
             </div>
             <div id="subnav">
                 <div class="hoverbox downlist">
                     <div class="fons">關於我們</div>
-                    <img width="15px" style="margin-left:10px ;" src="./image/down_white.svg" alt=""></i>
+                    <img width="15px" style="margin-left:10px ;" src="{{asset('image/nav/down_white.svg')}}" alt=""></i>
                     <div class="list aboutlist">
                         <p>經營理念</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>公司沿革</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>公司簡介</p>
                     </div>
                 </div>
                 <div class="hoverbox downlist">
                     <div class="fons">產品介紹</div>
-                    <img width="15px" style="margin-left:10px ;" src="./image/down_white.svg" alt=""></i>
+                    <img width="15px" style="margin-left:10px ;" src="{{asset('image/nav/down_white.svg')}}" alt=""></i>
                     <div class="list productlist">
                         <p>設備</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>軟體</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>部品零件</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>耗材</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>維修</p>
                     </div>
                 </div>
@@ -197,14 +198,14 @@
                 </div>
                 <div class="hoverbox downlist">
                     <div class="fons background">後台管理</div>
-                    <img width="15px" style="margin-left:10px ;" src="./image/down_white.svg" alt=""></i>
+                    <img width="15px" style="margin-left:10px ;" src="{{asset('image/nav/down_white.svg')}}" alt=""></i>
                     <div class="list backendlist">
                         <p>關於我們</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>Banner</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>產品編輯</p>
-                        <img src="./image/gray_line.svg" alt="">
+                        <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                         <p>表單回報</p>
                     </div>
                 </div>
@@ -218,13 +219,13 @@
     <!-- Banner -->
     <div id="banner">
         <div id="scrool">
-            <img src="./image/white_dwon.svg" alt="">
+            <img src="{{asset('image/index-icon/white_dwon.svg')}}" alt="">
             <h1>SCROLL</h1>
         </div>
         <div class="swiper banner swiper-no-swiping" style="width: 100%;height: calc(100vh + 5px) ;">
             <div class="swiper-wrapper swiper-no-swiping" style="width: 100%; height: 100%;">
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                        src="./image/video/shutterstock_1086212468.mp4"></video></div>
+                        src="{{asset('image/index-video/index-banner-1.mp4')}}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
                         src="./image/video/banner_3.mp4"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
@@ -397,20 +398,20 @@
         </div>
         <div id="footer-main">
             <div class="footer-btn subaboutbtn" tabindex="0">
-                <h1>關於我們 <img src="./image/down_white.svg" alt=""></h1>
+                <h1>關於我們 <img src="{{asset('image/nav/down_white.svg')}}" alt=""></h1>
                 <div class="footer-aboutlist">
                     <p>經營理念</p>
-                    <img src="./image/gray_line.svg" alt="">
+                    <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <p>公司沿革</p>
-                    <img src="./image/gray_line.svg" alt="">
+                    <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <p>公司簡介</p>
                 </div>
             </div>
             <div class="footer-btn subservebtn" tabindex="0">
-                <h1>支援服務 <img src="./image/down_white.svg" alt=""></h1>
+                <h1>支援服務 <img src="{{asset('image/nav/down_white.svg')}}" alt=""></h1>
                 <div class="footer-servelist">
                     <p>關於我們</p>
-                    <img src="./image/gray_line.svg" alt="">
+                    <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <p>如何前往</p>
                 </div>
             </div>
@@ -422,98 +423,8 @@
             </div>
         </div>
     </footer>
-    <script src="./navbar.js"></script>
-    <script src="./index.js"></script>
-    <!-- <script>
-        var el = document.querySelector('body');
-        el.addEventListener('touchmove', show, false);
-        el.addEventListener('mousewheel', show, false);
-        el.addEventListener('DOMMouseScroll', show, false);
-        var banner = document.getElementById('banner');
-        var main = document.getElementById('main');
-        var product = document.getElementById('product');
-        var nav = document.getElementById('nav');
-        var subnav = document.getElementById('subnav');
-        var minilogo = document.getElementById('minilogo');
-        var biglogo = document.getElementById('biglogo');
-        var bgrlist = document.querySelectorAll('.stuffing');
-        var footer = document.getElementById('footer')
-        var footerstamped = document.getElementById('footer-stamped');
-        console.log(footerstamped);
-        console.log(bgrlist[0]);
-        function phone() {
-            if (window.innerWidth < 1020) {
-                main.classList.remove('op')
-                main.classList.add('onpp')
-                main.classList.remove('none')
-                footer.classList.remove('none')
-                footerstamped.classList.remove('none');
-                subnav.classList.add('noneimportant');
-            }
-        }
-        phone();
-        function show(event) {
-            var sy = event.pageY;//頁面
-            var cy = event.clientY;//網頁
-            var wi = window.innerHeight //頁面高度
-            console.log(`頁面:${sy} 螢幕${cy} ${window.innerWidth} ${window.innerHeight}`);
-            window.onscroll = () => {
-                var windowtop = document.documentElement.scrollTop;
-                console.log(windowtop);
-                let cH = document.documentElement.clientHeight;
-                let sH = document.documentElement.scrollHeight;
-                let sT = document.documentElement.scrollTop;
-                console.log(cH , sH , sT);
-                if (window.innerWidth >= 1020) {
-                    if (sH == cH + sT || sH < cH + sT) {
-                        banner.classList.remove('onpp')
-                        setTimeout("banner.classList.add('none')", 200)
-                        banner.classList.add('op')
-                        main.classList.remove('op')
-                        setTimeout("main.classList.add('onpp')", 220)
-                        setTimeout("main.classList.remove('none')", 220)
-                        setTimeout("footer.classList.remove('none')", 220)
-                        setTimeout("footerstamped.classList.remove('none')", 220)
-                        if (!(windowtop >= 1020)) {
-                            setTimeout("location.href = '#12'", 220)
-                        }
-                        subnav.classList.add('noneimportant');
-                        minilogo.classList.remove('none');
-                        biglogo.classList.add('none');
-                        bgrlist[0].classList.add('bgblue');
-                        bgrlist[1].classList.add('bgblue')
-                    } else if (sT == 0) {
-                        setTimeout("banner.classList.add('onpp')", 200)
-                        setTimeout("banner.classList.remove('none')", 200)
-                        setTimeout("banner.classList.remove('op')", 200)
-                        main.classList.add('op');
-                        setTimeout("main.classList.add('none')", 200)
-                        setTimeout("footer.classList.add('none')", 200)
-                        footerstamped.classList.add('none');
-                        subnav.classList.remove('noneimportant');
-                        minilogo.classList.add('none');
-                        biglogo.classList.remove('none');
-                        bgrlist[0].classList.remove('bgblue');
-                        bgrlist[1].classList.remove('bgblue');
-                    }
-                }
-                if (window.innerWidth < 1020) {
-                    if (windowtop >= window.innerHeight) {
-                        minilogo.classList.remove('none');
-                        biglogo.classList.add('none');
-                        bgrlist[0].classList.add('bgblue');
-                        bgrlist[1].classList.add('bgblue')
-                    } else if (windowtop <= window.innerHeight) {
-                        minilogo.classList.add('none');
-                        biglogo.classList.remove('none');
-                        bgrlist[0].classList.remove('bgblue');
-                        bgrlist[1].classList.remove('bgblue');
-                    }
-
-                }
-            }
-        }
-    </script> -->
+    <script src="{{asset('js/index-navbar.js')}}"></script>
+    <script src="{{asset('js/index.js')}}"></script>
 </body>
 
 </html>

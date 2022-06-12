@@ -20,7 +20,7 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('/', function () {
-    return view('equipment.product');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
