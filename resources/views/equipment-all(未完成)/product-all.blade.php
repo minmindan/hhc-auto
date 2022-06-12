@@ -5,12 +5,13 @@ About Us
 @section('css')
 
 <link rel="stylesheet" href="/css/product-all.css">
+<link rel="stylesheet" href="{{asset('css/swiper.css')}}">
 @endsection
-    <!-- Swiper的link -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
 </head>
 
 <body>
+    @section('main')
     <main>
 
 
@@ -199,6 +200,8 @@ About Us
             </div>
         </div>
     </main>
+    @endsection
+    @section('js')
     <!-- Swiper的Js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -209,6 +212,4 @@ About Us
             },
         });
     </script>
-</body>
-
-</html>
+@endsection

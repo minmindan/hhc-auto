@@ -17,7 +17,7 @@ use App\Http\Controllers\AboutUsController;
 */
 
 Route::get('/', function () {
-    return view('equipment.product');
+    return view('Terms of Service.TermsOfService');
 });
 
 Route::get('/dashboard', function () {

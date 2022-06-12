@@ -10,13 +10,9 @@ var stuffing = document.querySelectorAll('.stuffing');
 hoverbox.forEach(element => {
     element.addEventListener('mousemove', function () {
         nav.classList.add('blue');
-        console.log(stuffing);
-        subnav[0].classList.add('white');
-        subnav[1].classList.add('white');
-        subnav[2].classList.add('white');
-        subnav[3].classList.add('white');
-        subnav[4].classList.add('white');
-        subnav[5].classList.add('white');
+        stuffing.forEach(navlist => {
+            navlist.classList.add('white');
+        });
         minilogo.classList.add('none');
         biglogo.classList.add('none');
         whitelogo.style.display ='block';
@@ -25,12 +21,9 @@ hoverbox.forEach(element => {
     });
     nav.addEventListener('mouseleave', function () {
         nav.classList.remove('blue');
-        subnav[0].classList.remove('white');
-        subnav[1].classList.remove('white');
-        subnav[2].classList.remove('white');
-        subnav[3].classList.remove('white');
-        subnav[4].classList.remove('white');
-        subnav[5].classList.remove('white');
+        stuffing.forEach(navlist => {
+            navlist.classList.remove('white');
+        });
         minilogo.classList.remove('none');
         biglogo.classList.remove('none');
         whitelogo.style.display='none';

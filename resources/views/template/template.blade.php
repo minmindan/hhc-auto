@@ -194,9 +194,7 @@
     el.addEventListener('mousewheel', show, false);
     el.addEventListener('DOMMouseScroll', show, false);
     show(), false;
-
     function navin() {
-        console.log(banner.clientHeight);
         var windowtop = document.documentElement.scrollTop;
         console.log(windowtop);
         if (window.innerWidth > 993) {

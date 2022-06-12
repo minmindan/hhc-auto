@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/equipment-detail.css">
-</head>
-
-<body>
+@extends('template.template')
+@section('title')
+    About Us
+@endsection
+@section('css')
+    <link rel="stylesheet" href="{{ asset('css/equipment-detail.css') }}">
+@endsection
+@section('main')
     <main>
         <!-- 頁面大區塊 -->
         <div id="product-detail">
@@ -138,6 +134,4 @@
             </div>
         </div>
     </main>
-</body>
-
-</html>
+@endsection
