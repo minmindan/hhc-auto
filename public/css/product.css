@@ -14,7 +14,7 @@ body main #banner {
 
 @media (max-width: 1600px) {
   body main #banner {
-    padding-left: 280px;
+    padding-left: 230px;
   }
 }
 
@@ -197,7 +197,7 @@ body main #banner .banner-container .main-section {
 
 @media (max-width: 1500px) {
   body main #banner .banner-container .main-section {
-    padding-left: 150px;
+    padding-left: 200px;
   }
 }
 
@@ -215,6 +215,12 @@ body main #banner .banner-container .main-section .banner-img {
   height: auto;
   margin-left: auto;
   position: relative;
+}
+
+@media (max-width: 1500px) {
+  body main #banner .banner-container .main-section .banner-img {
+    max-width: 930;
+  }
 }
 
 @media (max-width: 992px) {
@@ -298,6 +304,7 @@ body main #banner .banner-container .main-section .banner-img .page-list ul {
   font-size: 15px;
   line-height: 22px;
   list-style-type: none;
+  text-align: right;
 }
 
 body main #banner .banner-container .main-section .banner-img .page-list ul li {
@@ -386,12 +393,21 @@ body main #product-container #equipment-section .equipment-content .right-sectio
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid #c7000b;
 }
 
 body main #product-container #equipment-section .equipment-content .right-section .main-section .tittle-box .more-box .more-img {
-  width: 100px;
-  height: 30px;
-  background-color: aquamarine;
+  width: 30px;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+body main #product-container #equipment-section .equipment-content .right-section .main-section .tittle-box .more-box .more-img img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -557,12 +573,21 @@ body main #product-container #software-section .software-content .right-section 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid #c7000b;
 }
 
 body main #product-container #software-section .software-content .right-section .main-section .tittle-box .more-box .more-img {
-  width: 100px;
-  height: 30px;
-  background-color: aquamarine;
+  width: 30px;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+body main #product-container #software-section .software-content .right-section .main-section .tittle-box .more-box .more-img img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -728,12 +753,21 @@ body main #product-container #parts-section .parts-content .right-section .main-
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid #c7000b;
 }
 
 body main #product-container #parts-section .parts-content .right-section .main-section .tittle-box .more-box .more-img {
-  width: 100px;
-  height: 30px;
-  background-color: aquamarine;
+  width: 30px;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+body main #product-container #parts-section .parts-content .right-section .main-section .tittle-box .more-box .more-img img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -899,12 +933,21 @@ body main #product-container #consumables-section .consumables-content .right-se
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 2px solid #c7000b;
 }
 
 body main #product-container #consumables-section .consumables-content .right-section .main-section .tittle-box .more-box .more-img {
-  width: 100px;
-  height: 30px;
-  background-color: aquamarine;
+  width: 30px;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+body main #product-container #consumables-section .consumables-content .right-section .main-section .tittle-box .more-box .more-img img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -1071,9 +1114,17 @@ body main #product-container #maintenance-section .maintenance-content .right-se
 }
 
 body main #product-container #maintenance-section .maintenance-content .right-section .main-section .tittle-box .more-box .more-img {
-  width: 100px;
-  height: 30px;
-  background-color: aquamarine;
+  width: 30px;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+
+body main #product-container #maintenance-section .maintenance-content .right-section .main-section .tittle-box .more-box .more-img img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
