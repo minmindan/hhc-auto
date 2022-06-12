@@ -16,15 +16,17 @@
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/btn.css') }}">
     <link rel="stylesheet" href="{{ asset('css/nav-list.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/swiper.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
     <style>
         body {
             margin: 0;
             padding: 0;
         }
 
+        @import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+
         * {
-            box-sizing: border-box
+            box-sizing: border-box font-family: 'Noto Sans TC', 'sans-serif';
         }
 
         .none {
@@ -192,42 +194,45 @@
     el.addEventListener('mousewheel', show, false);
     el.addEventListener('DOMMouseScroll', show, false);
     show(), false;
+
     function navin() {
-      console.log(banner.clientHeight);
-      var windowtop = document.documentElement.scrollTop;
-      console.log(windowtop);
-      if (window.innerWidth > 993) {
-        if (windowtop > 100) {
-          subnav.classList.add("none")
-          biglogo.classList.add('none')
+        console.log(banner.clientHeight);
+        var windowtop = document.documentElement.scrollTop;
+        console.log(windowtop);
+        if (window.innerWidth > 993) {
+            if (windowtop > 100) {
+                subnav.classList.add("none")
+                biglogo.classList.add('none')
+            } else {
+                subnav.classList.remove("none")
+                biglogo.classList.remove('none')
+            }
         } else {
-          subnav.classList.remove("none")
-          biglogo.classList.remove('none')
+            if (windowtop > banner.clientHeight) {
+                whitelogo.classList.add('none');
+                minilogo.classList.add('block');
+                bgrlist[1].classList.add('bgblue');
+                bgrlist[0].classList.add('bgblue');
+            } else {
+                whitelogo.classList.remove('none');
+                minilogo.classList.remove('block');
+                bgrlist[1].classList.remove('bgblue');
+                bgrlist[0].classList.remove('bgblue');
+            }
         }
-      } else {
-        if (windowtop > banner.clientHeight) {
-          whitelogo.classList.add('none');
-          minilogo.classList.add('block');
-          bgrlist[1].classList.add('bgblue');
-          bgrlist[0].classList.add('bgblue');
-        } else {
-          whitelogo.classList.remove('none');
-          minilogo.classList.remove('block');
-          bgrlist[1].classList.remove('bgblue');
-          bgrlist[0].classList.remove('bgblue');
-        }
-      }
     }
+
     function show(event) {
-      var wi = window.innerHeight //頁面高度
-      navin();
-      window.onscroll = () => {
+        var wi = window.innerHeight //頁面高度
         navin();
-        let cH = document.documentElement.clientHeight;
-        let sH = document.documentElement.scrollHeight;
-        let sT = document.documentElement.scrollTop;
-        console.log(cH, sH, sT);
-      }
+        window.onscroll = () => {
+            navin();
+            let cH = document.documentElement.clientHeight;
+            let sH = document.documentElement.scrollHeight;
+            let sT = document.documentElement.scrollTop;
+            console.log(cH, sH, sT);
+        }
     }
-  </script>
+</script>
+
 </html>
