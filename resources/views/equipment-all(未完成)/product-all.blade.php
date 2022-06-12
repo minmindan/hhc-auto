@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('template.template')
+@section('title')
+About Us
+@endsection
+@section('css')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/product-all.css">
+<link rel="stylesheet" href="/css/product-all.css">
+@endsection
     <!-- Swiper的link -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
@@ -14,7 +13,7 @@
 <body>
     <main>
 
- 
+
         <!-- Banner大圖片 -->
         <div id="banner">
             <div class="banner-container">

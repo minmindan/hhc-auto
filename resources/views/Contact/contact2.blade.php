@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/b1.css" />
-  </head>
-  <body>
+@extends('template.template')
+@section('title')
+Contact
+@endsection
+@section('css')
+<link rel="stylesheet" href="{{asset('css/contact2.css')}}" />
+@endsection
+@section('main')
     <main>
       <!-- Banner -->
       <div id="banner">
@@ -91,48 +89,48 @@
             <div class="form-section">
               <div class="type form-field">
                 <label>查詢類型</label>
-                <select name="" id="">
+                <select disabled name="" id="">
                   <option value="">類型1</option>
                   <option value="">類型1</option>
                 </select>
               </div>
               <div class="company-name form-field">
                 <label>您的公司名稱/個人</label>
-                <input type="text" />
+                <input type="text" disabled />
               </div>
               <div class="appellation form-field">
                 <label for="text">職稱</label>
-                <input id="text" t type="text" />
+                <input id="text" t type="text" disabled />
               </div>
               <div class="youname form-field">
                 <label>姓名</label>
-                <input type="text" />
+                <input type="text" disabled />
               </div>
               <div class="tel-number form-field">
                 <label>電話號碼</label>
-                <input type="text" />
+                <input type="text" disabled />
               </div>
               <div class="email-address form-field">
                 <label>電子郵件</label>
-                <input type="text" />
+                <input type="text" disabled />
               </div>
               <div class="demand form-field">
                 <label>需求說明</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea disabled name="" id="" cols="30" rows="10"></textarea>
               </div>
             </div>
-            <!-- 隱私權政策 -->
-            <div class="privacy-policy">
-              <input id="privacy-policy" type="checkbox" />
-              <label for="privacy-policy">隱私權政策</label>
-            </div>
             <!-- 表單按鈕 -->
-            <button type="submit">
-              <p>確認送出</p>
-            </button>
+            <div class="button-section">
+              <button type="submit">
+                <p>返回修改</p>
+              </button>
+              <button type="submit">
+                <p>確認送出</p>
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </main>
-  </body>
-</html>
+    @endsection
+

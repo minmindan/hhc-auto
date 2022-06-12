@@ -8,6 +8,7 @@ class AboutUsController extends Controller
 {
     //首頁
     public function index(){
-        return view('aboutUs.aboutUs');
+        // dd('123');
+        return view('aboutus.aboutus');
     }
 }

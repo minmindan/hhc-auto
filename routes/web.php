@@ -17,7 +17,7 @@ use App\Http\Controllers\AboutUsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('equipment.product');
 });
 
 Route::get('/dashboard', function () {
@@ -34,7 +34,7 @@ Route::prefix('hhc-auto')->group(function (){
 
 
 // 關於我們 手建
-Route::prefix('/aboutUs')->group(function (){
+Route::prefix('/hhc-auto/aboutus')->group(function (){
     Route::get('/',[AboutUsController::class, 'index']); //總表
     Route::get('/create',[AboutUsController::class, 'create']); //新增頁面
     Route::post('/store',[AboutUsController::class, 'store']); //儲存頁面

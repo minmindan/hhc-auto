@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/product.css">
-</head>
-
-<body>
+@extends('template.template')
+@section('title')
+About Us
+@endsection
+@section('css')
+    <link rel="stylesheet" href="{{asset('css/product.css')}}">
+@endsection
+@section('main')
     <main>
 
         <!-- Banner大圖片 -->
@@ -385,6 +381,4 @@
 
         </div>
     </main>
-</body>
-
-</html>
+    @endsection
