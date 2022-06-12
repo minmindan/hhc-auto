@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< Updated upstream
 class ContactController extends Controller
 {
     //首頁
@@ -31,11 +30,4 @@ class ContactController extends Controller
     // 刪除頁
     public function delete()
     {}
-=======
-use Illuminate\Http\Request;
-
-class ContactController extends Controller
-{
-    //
->>>>>>> Stashed changes
 }
