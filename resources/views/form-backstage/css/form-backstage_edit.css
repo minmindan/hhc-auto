@@ -1,0 +1,313 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#contact-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 150px;
+  padding-left: 316px;
+}
+
+@media (max-width: 1600px) {
+  #contact-id {
+    padding-left: 280px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 1440px) {
+  #contact-id {
+    padding-left: 153px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #contact-id {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  #contact-id {
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contact-id .progress-bar-l {
+  width: 280px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1600px) {
+  #contact-id .progress-bar-l {
+    width: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  #contact-id .progress-bar-l {
+    display: none;
+  }
+}
+
+#contact-id .progress-bar-l .progress-step1 {
+  color: #F5D5C4;
+}
+
+#contact-id .progress-bar-l .progress-step1::after {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: #F5D5C4;
+  display: block;
+  margin: 10px auto;
+}
+
+#contact-id .progress-bar-l .progress-step2 {
+  color: red;
+}
+
+#contact-id .progress-bar-l .progress-step2::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  display: block;
+  margin: 3px 0px auto;
+}
+
+#contact-id .progress-bar-l .progress-step3::before {
+  content: '';
+  width: 1px;
+  height: 50px;
+  background-color: black;
+  display: block;
+  margin: 10px auto;
+}
+
+#contact-id .progress-bar-t {
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  #contact-id .progress-bar-t {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact-id .progress-bar-t {
+    display: none;
+  }
+}
+
+#contact-id .progress-bar-t .progress-step1 {
+  color: #F5D5C4;
+}
+
+#contact-id .progress-bar-t .line {
+  width: 50px;
+  height: 1px;
+  background-color: #F5D5C4;
+  margin: 0 10px;
+}
+
+#contact-id .progress-bar-t .progress-step2 {
+  color: red;
+}
+
+#contact-id .progress-bar-t .progress-step2::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  display: block;
+}
+
+#contact-id .progress-bar-t .progress-step2::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+#contact-id .progress-bar-t .progress-step3 {
+  color: black;
+}
+
+#contact-id .form-container {
+  margin-top: 50px;
+}
+
+@media (max-width: 992px) {
+  #contact-id .form-container {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact-id .form-container {
+    padding-left: 0;
+  }
+}
+
+#contact-id .form-container .directions {
+  margin-bottom: 60px;
+}
+
+#contact-id .form-container .directions h5 {
+  font-weight: 500;
+}
+
+#contact-id .form-container form .form-section .form-field {
+  width: 100%;
+  min-width: 679px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin-bottom: 50px;
+  border: none;
+}
+
+#contact-id .form-container form .form-section .form-field label {
+  margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+  #contact-id .form-container form .form-section .form-field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: unset;
+  }
+}
+
+#contact-id .form-container form .form-section .form-field input {
+  height: 65px;
+  width: 679px;
+  border: none;
+  border-radius: 0;
+  background-color: #F3F6FA;
+}
+
+@media (max-width: 768px) {
+  #contact-id .form-container form .form-section .form-field input {
+    width: 100%;
+  }
+}
+
+#contact-id .form-container form .form-section .form-field select {
+  height: 65px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 679px;
+  border: none;
+  border-radius: 0;
+  background-color: #F3F6FA;
+}
+
+@media (max-width: 768px) {
+  #contact-id .form-container form .form-section .form-field select {
+    width: 100%;
+  }
+}
+
+#contact-id .form-container form .form-section .form-field textarea {
+  width: 679px;
+  height: 282px;
+  resize: none;
+  border: none;
+  border-radius: 0;
+  background-color: #F3F6FA;
+}
+
+@media (max-width: 768px) {
+  #contact-id .form-container form .form-section .form-field textarea {
+    width: 100%;
+  }
+}
+
+#contact-id .form-container form .button-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact-id .form-container form .button-section button {
+  margin-top: 50px;
+  width: 45%;
+  height: 65px;
+  margin-bottom: 50px;
+  background-color: white;
+  border: 1px solid #004098;
+  border-radius: 5px;
+}
+
+#contact-id .form-container form .button-section button:hover {
+  cursor: pointer;
+}
+
+#contact-id .form-container form .button-section button p {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #004098;
+}

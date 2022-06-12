@@ -1,0 +1,261 @@
+@import "./template.scss";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// 聯絡表單區塊
+#contact-id {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    padding-left: 316px;
+
+    @include screen1600 {
+        padding-left: 280px;
+        justify-content: space-around;
+    }
+
+    @include screen1440 {
+        padding-left: 153px;
+    }
+
+    @include screen1200 {
+        padding-left: 50px;
+    }
+
+    @include pad {
+        padding-left: 0px;
+        flex-direction: column;
+    }
+
+    // 直版表單進度條
+    .progress-bar-l {
+        width: 280px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include screen1600 {
+            width: 150px;
+        }
+
+        @include pad {
+            display: none;
+        }
+
+        .progress-step1 {
+            color: #F5D5C4;
+
+            &::after {
+                content: '';
+                width: 1px;
+                height: 50px;
+                background-color: #F5D5C4;
+                display: block;
+                margin: 10px auto;
+            }
+
+        }
+
+        .progress-step2 {
+            color: red;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: red;
+                display: block;
+                margin: 3px 0px auto;
+            }
+        }
+
+        .progress-step3 {
+
+            &::before {
+                content: '';
+                width: 1px;
+                height: 50px;
+                background-color: black;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    }
+
+    // 橫版表單進度條
+    .progress-bar-t {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: none;
+
+        @include pad {
+            display: flex;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        .progress-step1 {
+            color: #F5D5C4;
+        }
+
+        .line {
+            width: 50px;
+            height: 1px;
+            background-color: #F5D5C4;
+            margin: 0 10px;
+        }
+
+        .progress-step2 {
+            color: red;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: red;
+                display: block;
+            }
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: black;
+            }
+        }
+
+        .progress-step3 {
+            color: black;
+        }
+    }
+
+
+    // 表單區塊
+    .form-container {
+        margin-top: 50px;
+
+        @include pad {
+            padding-left: 50px;
+        }
+
+        @include mobile {
+            padding-left: 0;
+        }
+
+        // 說明文字
+        .directions {
+            margin-bottom: 60px;
+
+            h5 {
+                font-weight: 500;
+            }
+        }
+
+        // 表單
+        form {
+            .form-section {
+                .form-field {
+                    width: 100%;
+                    min-width: 679px;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    margin-bottom: 50px;
+                    border: none;
+
+                    label {
+                        margin-right: 30px;
+
+                    }
+
+
+                    @include mobile {
+                        flex-direction: column;
+                        min-width: unset;
+                    }
+
+                    input {
+                        height: 65px;
+                        width: 679px;
+                        @include f-field;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
+                    select {
+                        height: 65px;
+                        appearance: none;
+                        width: 679px;
+                        @include f-field;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+
+                    textarea {
+                        width: 679px;
+                        height: 282px;
+                        resize: none;
+                        @include f-field;
+
+                        @include mobile {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .button-section {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    margin-top: 50px;
+                    width: 45%;
+                    height: 65px;
+                    margin-bottom: 50px;
+                    background-color: white;
+                    border: 1px solid $themeColor;
+                    border-radius: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        letter-spacing: 0.05em;
+                        color: $themeColor;
+                    }
+                }
+            }
+
+        }
+    }
+}

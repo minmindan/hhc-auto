@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// 導覽列
+
+// 內容
+
+main {
+    #page-tittle {
+        .tittle {
+            color: blue;
+        }
+    }
+
+    #form-report {
+        background-color: #F7F8FA;
+        height: auto;
+        padding-bottom: 50px;
+
+        .content {
+
+            .content-tittle {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                padding-top: 50px;
+
+                .type {
+                    width: 180px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+
+                .name {
+                    width: 180px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+
+                .email {
+                    width: 428px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+
+                .state {
+                    width: 207px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+
+                .comment-date {
+                    width: 207px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+
+                button {
+                    background-color: transparent;
+                    border: 1px solid transparent;
+                    color: transparent;
+
+
+                }
+            }
+
+            .box {
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 50px;
+                margin-top: 35px;
+
+                .container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    height: 121px;
+                    background-color: white;
+                    min-width: 1132px;
+
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        border: 0px;
+                        text-align: center;
+                    }
+
+                    .box1 {
+                        background-color: transparent;
+                        width: 180px;
+                        height: 42px;
+                        margin-right: 15px;
+                        border: 1px solid black;
+
+                        &:nth-child(1) {
+                            margin-left: 30px;
+                        }
+                    }
+
+                    .box2 {
+                        background-color: transparent;
+                        width: 428px;
+                        height: 42px;
+                        margin-right: 15px;
+                        border: 1px solid black;
+                    }
+
+                    .box3 {
+                        background-color: transparent;
+                        width: 207px;
+                        height: 42px;
+                        margin-right: 15px;
+                        border: 1px solid black;
+
+                        select {
+                            width: 100%;
+                            height: 100%;
+                            border: 0px solid black;
+                            background-color: #F7F8FA;
+                            text-align: center;
+                            appearance: none;
+                        }
+                    }
+
+                    button {
+                        white-space: nowrap;
+                        margin-right: 30px;
+                    }
+
+                }
+
+            }
+        }
+    }
+}

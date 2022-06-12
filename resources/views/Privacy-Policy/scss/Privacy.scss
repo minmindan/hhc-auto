@@ -1,0 +1,82 @@
+$themeColor:#004098;
+$subTittleColor:#b4b4b4;
+
+
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+
+// h1 頁面英文大標題
+h1 {
+    width: 100%;
+    color: $themeColor;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 0.1em;
+}
+
+// h2 頁面中文大標題
+h2 {
+    width: 100%;
+    color: $subTittleColor;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+}
+
+// h3 頁面副標題
+h3 {
+    width: 100%;
+    color: $themeColor;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    letter-spacing: 0.1em;
+}
+
+// p  頁面內容
+p {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    letter-spacing: 0.1em;
+}
+
+
+body {
+    main {
+        padding: 0 28% 30px;
+        @media (max-width:1600px) {
+            padding: 0 18% 30px;
+            
+        }
+        @media (max-width:1440px) {
+            padding: 0 8% 30px;
+            
+        }
+        @media (max-width:992px) {
+            padding: 0 5% 30px;
+            
+        }
+        @media (max-width:768px) {
+            padding: 0 50px 30px;
+            
+        }
+        .container {
+            width: 100%;
+            max-width: 1132px;
+        }
+    }
+}

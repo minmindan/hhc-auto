@@ -1,0 +1,292 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #F7F8FA;
+}
+
+main #tittle-list-id .list-tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 250px;
+}
+
+main #tittle-list-id .list-tittle h1 {
+  color: blue;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-tittle ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #tittle-list-id .list-tittle ul li {
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-container {
+  background-color: #F7F8FA;
+  padding: 25px 0px 50px;
+  position: relative;
+}
+
+main #tittle-list-id .list-container::after {
+  content: '';
+  width: 70%;
+  height: 2px;
+  background-color: #004098;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+main #tittle-list-id .list-container .field-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+main #tittle-list-id .list-container .field-section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 1000px;
+  padding: 0px 50px 0px 50px;
+}
+
+main #tittle-list-id .list-container .field-section .content .field-img {
+  width: 412px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-container .field-section .content .field-name {
+  width: 111px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #tittle-list-id .list-container .field-section .content .field-radation {
+  width: 111px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #tittle-list-id .list-container .field-section .content .field-star {
+  width: 220px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #tittle-list-id .list-container .field-section .content .field-date {
+  width: 150px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #tittle-list-id .list-container .content-section {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #tittle-list-id .list-container .content-section:nth-last-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+main #tittle-list-id .list-container .content-section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: white;
+  width: 1000px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 50px;
+}
+
+main #tittle-list-id .list-container .content-section form .content-img {
+  width: 412px;
+  height: 259px;
+  padding: 20px;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-container .content-section form .content-img img {
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+}
+
+main #tittle-list-id .list-container .content-section form .product-name {
+  width: 111px;
+  height: 42px;
+  border-radius: 5px;
+}
+
+main #tittle-list-id .list-container .content-section form .product-name input {
+  width: 100%;
+}
+
+main #tittle-list-id .list-container .content-section form .image-gradation {
+  width: 111px;
+  height: 42px;
+}
+
+main #tittle-list-id .list-container .content-section form .produt-star {
+  width: 220px;
+  height: 42px;
+}
+
+main #tittle-list-id .list-container .content-section form .date-fixed {
+  width: 150px;
+  height: 42px;
+}
+
+main #tittle-list-id .list-container .content-section form .date-fixed input {
+  width: 100%;
+}
+
+main #tittle-list-id #formto {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+main #tittle-list-id #formto .form-input {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #tittle-list-id #formto .form-input input {
+  width: 70%;
+  font-size: 32px;
+  border: unset;
+  background-color: white;
+  border-radius: 0;
+}
+
+main #tittle-list-id #formto .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #tittle-list-id #formto .btn button {
+  width: 56px;
+  height: 26px;
+  border-radius: 13px;
+  border: unset;
+  margin: 0 10px;
+}
+
+main #tittle-list-id #formto .btn button:nth-child(1) {
+  background-color: #2C8900;
+  color: white;
+}
+
+main #tittle-list-id #formto .btn button:nth-child(1):hover {
+  background-color: #226b00;
+}

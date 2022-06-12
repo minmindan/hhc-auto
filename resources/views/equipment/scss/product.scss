@@ -1,0 +1,1001 @@
+@import "./_template.scss";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    main {
+
+
+        // Banner大圖
+        #banner {
+            padding-left: 316px;
+
+            @include screen1600 {
+                padding-left: 280px;
+            }
+
+            @include screen1440 {
+                padding-left: 153px;
+            }
+
+            @include screen1200 {
+                padding-left: 50px;
+            }
+
+            @include pad {
+                padding-left: 0px;
+            }
+
+
+            .banner-container {
+                .sub-section {
+                    height: auto;
+                    width: auto;
+                    position: relative;
+
+                    .tittle-en {
+                        color: $themeColor;
+                        font-size: 68px;
+                        font-weight: 300;
+                        letter-spacing: 0.18em;
+                        line-height: 118px;
+                        z-index: 3;
+
+                        @include pad {
+                            position: absolute;
+                            color: white;
+                            margin-top: 10%;
+                            margin-top: 5%;
+                            padding-left: 50px;
+                        }
+
+                        @include screen500 {
+                            line-height: 100px;
+                        }
+                    }
+
+                    .tittle-ch {
+                        font-weight: 500;
+                        font-size: 40px;
+                        line-height: 59px;
+                        color: #B4B4B4;
+                        letter-spacing: 0.06em;
+
+                        @include pad {
+                            position: absolute;
+                            z-index: 3;
+                            color: white;
+                            padding-left: 50px;
+                            margin-top: 25%;
+                        }
+
+                        @include screen500 {
+                            margin-top: 250px;
+
+                        }
+                    }
+
+                    .scroll-box {
+                        position: absolute;
+                        left: 0;
+                        bottom: -250%;
+
+                        @include pad {
+                            z-index: 1;
+                            top: 600px;
+                            padding-left: 50px;
+                            left: 0;
+                        }
+
+
+                        .scroll-img {
+                            width: 24px;
+                            height: 100px;
+                            margin-bottom: 30px;
+
+                            @include pad {
+                                z-index: 10;
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+
+                                @include pad {
+                                    z-index: 10;
+                                }
+
+
+                            }
+                        }
+
+                        .scroll-text {
+                            @include pad {
+                                z-index: 10;
+                            }
+
+                            span {
+                                writing-mode: vertical-lr;
+                                orientation: mixed;
+                                color: $themeColor;
+
+                                @include pad {
+                                    z-index: 10;
+                                    color: white;
+                                }
+
+                            }
+                        }
+                    }
+
+
+                    .sup-bg {
+                        width: 1064px;
+                        height: 476px;
+                        z-index: -1;
+                        position: absolute;
+                        top: 68px;
+                        left: 95px;
+
+                        @include screen1600 {
+                            width: 950px;
+                            height: 400px;
+                        }
+
+                        @include screen1440 {
+                            width: 840px;
+                            height: 376px;
+                        }
+
+                        @include pad {
+                            display: none;
+                        }
+
+                        .color-block {
+                            background-color: #ebf3ff;
+                            width: 100%;
+                            height: 100%;
+
+                            @include pad {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .main-section {
+                    padding-left: 250px;
+
+                    @include screen1500 {
+                        padding-left: 150px;
+                    }
+
+                    @include pad {
+                        padding-left: 0;
+                    }
+
+                    .banner-img {
+                        max-width: 1178px;
+                        min-width: 930px;
+                        min-height: 518px;
+                        width: auto;
+                        height: auto;
+                        margin-left: auto;
+                        position: relative;
+
+                        @include pad {
+                            max-width: unset;
+                            min-width: unset;
+                            min-height: unset;
+                            max-height: 827px;
+                            height: 100%;
+                        }
+
+                        @include mobile {
+                            margin-left: unset;
+                        }
+
+                        .img {
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+
+                                @include pad {
+                                    min-height: 827px;
+                                }
+                            }
+
+                            .main-img-color {
+                                height: 100%;
+                                width: 100%;
+                                background-color: rgba($color: $themeColor, $alpha: 0.2);
+                                position: absolute;
+                                top: 0;
+                                display: none;
+
+                                @include pad {
+                                    display: block;
+                                }
+                            }
+                        }
+
+
+                        .page-list {
+                            width: 160px;
+                            height: 229px;
+                            background-color: $themeColor;
+                            color: white;
+                            padding: 42px 36px 36px 49px;
+                            position: absolute;
+                            top: calc(50% - 229px);
+                            left: -120px;
+
+                            @include screen1700 {
+                                top: 40%;
+                            }
+
+                            @include screen1440 {
+                                top: 37%;
+                            }
+
+                            @include pad {
+                                top: unset;
+                                left: unset;
+                                bottom: -10%;
+                                right: 15%;
+                            }
+
+                            ul {
+                                font-weight: 500;
+                                font-size: 15px;
+                                line-height: 22px;
+                                list-style-type: none;
+
+                                li {
+                                    margin-bottom: 16px;
+                                }
+                            }
+                        }
+
+
+
+
+                    }
+                }
+            }
+        }
+
+
+
+        #product-container {
+            padding-top: 150px;
+
+
+
+            // 設備區塊
+            #equipment-section {
+                width: 100%;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // 區塊內容
+                .equipment-content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    // 背景文字
+                    .left-section {
+                        margin-right: 150px;
+
+                        @include pad {
+                            margin-right: 100px;
+                        }
+
+                        @include mobile {
+                            margin-right: 40px;
+                        }
+
+                        .white-space {
+                            h1 {
+                                @include bgTextSet;
+                            }
+                        }
+                    }
+
+                    // 主要內容區塊
+                    .right-section {
+                        .main-section {
+                            padding-top: 50px;
+
+                            // 標題區塊
+                            .tittle-box {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+
+                                .tittle-text {
+                                    @include p-blue-font;
+                                }
+
+                                .more-box {
+                                    @include p-red-font;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .more-img {
+                                        width: 100px;
+                                        height: 30px;
+                                        background-color: aquamarine;
+                                    }
+
+                                    @include screen1200 {
+                                        position: absolute;
+                                        right: 0;
+                                    }
+
+                                    @include mobile {
+                                        position: unset;
+                                        right: 0;
+                                    }
+                                }
+                            }
+
+                            // 內容區塊
+                            .content {
+                                width: 100%;
+                                display: flex;
+                                margin-top: 50px;
+
+                                .product-content {
+                                    position: relative;
+                                    width: 50%;
+                                    max-width: 431px;
+                                    min-width: 431px;
+                                    height: 507px;
+                                    background-color: #ebebeb;
+
+                                    &:first-child {
+                                        margin-right: 50px;
+
+                                        @include mobile {
+                                            margin-right: 0px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        @include screen1200 {
+                                            display: none;
+                                        }
+                                    }
+
+                                    // 圖片
+                                    .image-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 文字說明
+                                    .product-directions {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translate(-50%, 75%);
+                                        text-align: center;
+
+                                        .product-name {
+                                            h3 {
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .product-number {
+                                            p {
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 軟體區塊
+            #software-section {
+                width: 100%;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // 區塊內容
+                .software-content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    // 背景文字
+                    .left-section {
+                        margin-right: 150px;
+
+                        @include pad {
+                            margin-right: 100px;
+                        }
+
+                        @include mobile {
+                            margin-right: 40px;
+                        }
+
+                        .white-space {
+                            h1 {
+                                @include bgTextSet;
+                            }
+                        }
+                    }
+
+                    // 主要內容區塊
+                    .right-section {
+                        .main-section {
+                            padding-top: 50px;
+
+                            // 標題區塊
+                            .tittle-box {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+
+                                .tittle-text {
+                                    @include p-blue-font;
+                                }
+
+                                .more-box {
+                                    @include p-red-font;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .more-img {
+                                        width: 100px;
+                                        height: 30px;
+                                        background-color: aquamarine;
+                                    }
+
+                                    @include screen1200 {
+                                        position: absolute;
+                                        right: 0;
+                                    }
+
+                                    @include mobile {
+                                        position: unset;
+                                        right: 0;
+                                    }
+                                }
+                            }
+
+                            // 內容區塊
+                            .content {
+                                width: 100%;
+                                display: flex;
+                                margin-top: 50px;
+
+                                .product-content {
+                                    position: relative;
+                                    width: 50%;
+                                    max-width: 431px;
+                                    min-width: 431px;
+                                    height: 507px;
+                                    background-color: #ebebeb;
+
+                                    &:first-child {
+                                        margin-right: 50px;
+
+                                        @include mobile {
+                                            margin-right: 0px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        @include screen1200 {
+                                            display: none;
+                                        }
+                                    }
+
+                                    // 圖片
+                                    .image-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 文字說明
+                                    .product-directions {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translate(-50%, 75%);
+                                        text-align: center;
+
+                                        .product-name {
+                                            h3 {
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .product-number {
+                                            p {
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 部品零件區塊
+            #parts-section {
+                width: 100%;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // 區塊內容
+                .parts-content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    // 背景文字
+                    .left-section {
+                        margin-right: 150px;
+
+                        @include pad {
+                            margin-right: 100px;
+                        }
+
+                        @include mobile {
+                            margin-right: 40px;
+                        }
+
+                        .white-space {
+                            h1 {
+                                @include bgTextSet;
+                            }
+                        }
+                    }
+
+                    // 主要內容區塊
+                    .right-section {
+                        .main-section {
+                            padding-top: 50px;
+
+                            // 標題區塊
+                            .tittle-box {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+
+                                .tittle-text {
+                                    @include p-blue-font;
+                                }
+
+                                .more-box {
+                                    @include p-red-font;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .more-img {
+                                        width: 100px;
+                                        height: 30px;
+                                        background-color: aquamarine;
+                                    }
+
+                                    @include screen1200 {
+                                        position: absolute;
+                                        right: 0;
+                                    }
+
+                                    @include mobile {
+                                        position: unset;
+                                        right: 0;
+                                    }
+                                }
+                            }
+
+                            // 內容區塊
+                            .content {
+                                width: 100%;
+                                display: flex;
+                                margin-top: 50px;
+
+                                .product-content {
+                                    position: relative;
+                                    width: 50%;
+                                    max-width: 431px;
+                                    min-width: 431px;
+                                    height: 507px;
+                                    background-color: #ebebeb;
+
+                                    &:first-child {
+                                        margin-right: 50px;
+
+                                        @include mobile {
+                                            margin-right: 0px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        @include screen1200 {
+                                            display: none;
+                                        }
+                                    }
+
+                                    // 圖片
+                                    .image-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 文字說明
+                                    .product-directions {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translate(-50%, 75%);
+                                        text-align: center;
+
+                                        .product-name {
+                                            h3 {
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .product-number {
+                                            p {
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 耗材區塊
+            #consumables-section {
+                width: 100%;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // 區塊內容
+                .consumables-content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    // 背景文字
+                    .left-section {
+                        margin-right: 150px;
+
+                        @include pad {
+                            margin-right: 100px;
+                        }
+
+                        @include mobile {
+                            margin-right: 40px;
+                        }
+
+                        .white-space {
+                            h1 {
+                                @include bgTextSet;
+                            }
+                        }
+                    }
+
+                    // 主要內容區塊
+                    .right-section {
+                        .main-section {
+                            padding-top: 50px;
+
+                            // 標題區塊
+                            .tittle-box {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+
+                                .tittle-text {
+                                    @include p-blue-font;
+                                }
+
+                                .more-box {
+                                    @include p-red-font;
+                                    display: flex;
+                                    align-items: center;
+
+                                    .more-img {
+                                        width: 100px;
+                                        height: 30px;
+                                        background-color: aquamarine;
+                                    }
+
+                                    @include screen1200 {
+                                        position: absolute;
+                                        right: 0;
+                                    }
+
+                                    @include mobile {
+                                        position: unset;
+                                        right: 0;
+                                    }
+                                }
+                            }
+
+                            // 內容區塊
+                            .content {
+                                width: 100%;
+                                display: flex;
+                                margin-top: 50px;
+
+                                .product-content {
+                                    position: relative;
+                                    width: 50%;
+                                    max-width: 431px;
+                                    min-width: 431px;
+                                    height: 507px;
+                                    background-color: #ebebeb;
+
+                                    &:first-child {
+                                        margin-right: 50px;
+
+                                        @include mobile {
+                                            margin-right: 0px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        @include screen1200 {
+                                            display: none;
+                                        }
+                                    }
+
+                                    // 圖片
+                                    .image-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 文字說明
+                                    .product-directions {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translate(-50%, 75%);
+                                        text-align: center;
+
+                                        .product-name {
+                                            h3 {
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .product-number {
+                                            p {
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 維修區塊
+            #maintenance-section {
+                width: 100%;
+                margin-bottom: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // 區塊內容
+                .maintenance-content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    // 背景文字
+                    .left-section {
+                        margin-right: 150px;
+
+                        @include pad {
+                            margin-right: 100px;
+                        }
+
+                        @include mobile {
+                            margin-right: 40px;
+                        }
+
+                        .white-space {
+                            h1 {
+                                @include bgTextSet;
+                            }
+                        }
+                    }
+
+                    // 主要內容區塊
+                    .right-section {
+                        .main-section {
+                            padding-top: 50px;
+
+                            // 標題區塊
+                            .tittle-box {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+
+                                .tittle-text {
+                                    @include p-blue-font;
+                                }
+
+                                .more-box {
+                                    @include p-red-font;
+                                    display: none;
+                                    align-items: center;
+
+                                    .more-img {
+                                        width: 100px;
+                                        height: 30px;
+                                        background-color: aquamarine;
+                                    }
+
+                                    @include screen1200 {
+                                        position: absolute;
+                                        right: 0;
+                                    }
+
+                                    @include mobile {
+                                        position: unset;
+                                        right: 0;
+                                    }
+                                }
+                            }
+
+                            // 內容區塊
+                            .content {
+                                width: 100%;
+                                display: flex;
+                                margin-top: 50px;
+                                width: calc(431px * 2 + 50px);
+
+                                @include screen1200 {
+                                    width: calc(431px + 50px);
+                                }
+
+                                @include mobile {
+                                    width: 431px;
+                                }
+
+                                .product-content {
+                                    display: none;
+                                    position: relative;
+                                    width: 50%;
+                                    max-width: 431px;
+                                    min-width: 431px;
+                                    height: 507px;
+                                    background-color: #ebebeb;
+
+                                    &:first-child {
+                                        margin-right: 50px;
+
+                                        @include mobile {
+                                            margin-right: 0px;
+                                        }
+                                    }
+
+                                    &:last-child {
+                                        @include screen1200 {
+                                            display: none;
+                                        }
+                                    }
+
+                                    // 圖片
+                                    .image-box {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            object-fit: cover;
+                                        }
+                                    }
+
+                                    // 文字說明
+                                    .product-directions {
+                                        position: absolute;
+                                        left: 50%;
+                                        bottom: 0;
+                                        transform: translate(-50%, 75%);
+                                        text-align: center;
+
+                                        .product-name {
+                                            h3 {
+                                                font-weight: 400;
+                                            }
+                                        }
+
+                                        .product-number {
+                                            p {
+                                                color: grey;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
