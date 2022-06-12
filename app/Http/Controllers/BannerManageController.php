@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class BannerManageController extends Controller
 {
+<<<<<<< Updated upstream
      // BANNER管理
 
 
@@ -147,4 +148,7 @@ class BannerManageController extends Controller
     // 刪除頁
     public function contact_delete()
     {}
+=======
+    //
+>>>>>>> Stashed changes
 }

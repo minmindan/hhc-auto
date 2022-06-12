@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< Updated upstream
 class ProductManageController extends Controller
 {
     //產品管理
@@ -136,4 +137,11 @@ class ProductManageController extends Controller
     {}
 
 
+=======
+use Illuminate\Http\Request;
+
+class ProductManageController extends Controller
+{
+    //
+>>>>>>> Stashed changes
 }

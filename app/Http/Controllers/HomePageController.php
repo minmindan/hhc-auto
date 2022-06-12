@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< Updated upstream
 class HomePageController extends Controller
 {
     //首頁
@@ -30,4 +31,11 @@ class HomePageController extends Controller
     // 刪除頁
     public function delete()
     {}
+=======
+use Illuminate\Http\Request;
+
+class HomePageController extends Controller
+{
+    //
+>>>>>>> Stashed changes
 }
