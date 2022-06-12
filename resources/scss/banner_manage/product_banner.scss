@@ -1,0 +1,136 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    box-sizing: border-box;
+}
+
+// 導覽列
+// 頁面內容
+main {
+
+    // 頁面標題列表
+    #tittle-list-id {
+
+        // 列表標題
+        .list-tittle {
+            display: flex;
+            align-items: center;
+            margin-left: 250px;
+            padding: 25px 0px;
+            h1 {
+                color: blue;
+                margin-right: 50px;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    width: 3px;
+                    height: 80%;
+                    background-color: blue;
+                    top: 50%;
+                    right: -30px;
+                    transform: translate(0%,-45%);
+                }
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-left: 20px;
+                li {
+                    list-style-type: none;
+                    margin-right: 50px;
+                    &:nth-child(3){
+                        font-size: 1.5rem;
+                        color: blue;
+                        font-weight: 500;
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            bottom: -5px;
+                            left: 1px;
+                            width: 100%;
+                            height: 2px;
+                            content: '';
+                            background-color: blue;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 列表內容
+        .list-container {
+
+            background-color: #F7F8FA;
+            padding: 25px 0px 50px;
+
+
+            .content-section {
+          
+                form {
+                    .content-manage {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        padding: 0% 15%;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+                        .content-card {
+                            width: 50%;
+                            max-width: 450px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            text-align: center;
+                            border-radius: 10px;
+                            background-color: white;
+                            padding: 30px;
+                            margin-bottom: 30px;
+
+                            // 圖片
+                            .content-img {
+                                width: 412px;
+                                height: 259px;
+                                background-color: gainsboro;
+                                padding: 20px;
+                                border-radius: 15px;
+
+                                img {
+                                    background-color: gray;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            .directions {
+                                h2 {
+                                    font-weight: 400;
+                                    margin-bottom: 10px;
+                                    margin-top: 10px;
+                                }
+
+                                h3 {
+                                    font-weight: 400;
+                                }
+                            }
+
+                            // 功能按鈕
+                            .function-button {
+
+                                margin-top: 30px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
