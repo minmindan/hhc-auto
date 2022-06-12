@@ -7,9 +7,13 @@ var biglogo = document.getElementById('biglogo');
 var entryblue = document.getElementById('entryblue');
 var entrywhite = document.getElementById('entrywhite');
 var stuffing = document.querySelectorAll('.stuffing');
+var fons = document.querySelectorAll('.fons');
 hoverbox.forEach(element => {
     element.addEventListener('mousemove', function () {
         nav.classList.add('blue');
+        fons.forEach(element => {
+            element.style.color='white'
+        });
         stuffing.forEach(navlist => {
             navlist.classList.add('white');
         });
@@ -21,6 +25,9 @@ hoverbox.forEach(element => {
     });
     nav.addEventListener('mouseleave', function () {
         nav.classList.remove('blue');
+        fons.forEach(element => {
+            element.style.color='#B4B4B4'
+        });
         stuffing.forEach(navlist => {
             navlist.classList.remove('white');
         });
