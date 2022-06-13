@@ -20,7 +20,7 @@
                 <h1>BANNER管理</h1>
                 <ul>
                     <li>首頁</li>
-                    <li>關於我們</li>
+                    <li><a href="/banner-manage/aboutus/edit">關於我們</a></li>
                     <li>產品介紹</li>
                     <li>產品製作流程</li>
                     <li>聯絡我們</li>
@@ -32,13 +32,12 @@
                     <div class="content-manage">
                         @foreach ($abus_banner as $abus)
                             <!-- 卡片 -->
-                            <form action="/banner-manage/aboutus/update/{{ $abus->id }}" method="post"
-                                enctype="multipart/form-data">
+                            <form action="/banner-manage/aboutus/update/{{ $abus->id }}" method="post">
                                 @csrf
                                 <div class="content-card">
                                     <!-- 圖片 -->
                                     <div class="content-img">
-                                        <img src="{{ $abus->img_path ?? '' }}" alt="" />
+                                        <img src="{{ $abus->img_path ?? '' }}" alt="no img" />
                                     </div>
 
                                     <!-- 說明 -->
@@ -48,7 +47,7 @@
                                     </div>
                                     <!-- 功能按鈕 -->
                                     <div class="function-button{{ $abus->id }}">
-                                        <button type="button" onclick="chimg{{ $abus->id . '()' }}">更換</button>
+                                        <button type="button" onclick="chimg{{ $abus->id.'()' }}">更換</button>
                                     </div>
                                 </div>
 
