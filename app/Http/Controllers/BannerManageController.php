@@ -1,6 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\FilesController;
+
+use App\Models\Aboutus_banner;
+
+
 
 class BannerManageController extends Controller
 {
@@ -37,13 +45,13 @@ class BannerManageController extends Controller
     // 首頁
     public function aboutus_index()
     {
-        return view('banner_manage.aboutus_banner');
-
+        ;
     }
 
     // 新增頁
-    public function aboutus_create()
-    {}
+    public function aboutus_create(){
+
+    }
 
     // 儲存頁
     public function aboutus_store()
@@ -51,11 +59,31 @@ class BannerManageController extends Controller
 
     // 編輯頁
     public function aboutus_edit()
-    {}
+    {
+        $abus_banner = Aboutus_banner::get();
+
+        return view('banner_manage.aboutus_banner',compact('abus_banner'));
+    }
 
     // 更新頁
-    public function aboutus_update()
-    {}
+    public function aboutus_update(Request $request, $id){
+
+
+        $abus_banner = aboutus_banner::find($id);
+
+
+        if ($request->hasfile('img_path')) {
+            FilesController::deleteUpload($abus_banner->img_path); //小工具刪除圖片
+            $path = FilesController::imgUpload($request->img_path, 'banner');
+
+            $abus_banner->img_path = $path;
+        }
+
+        $abus_banner->save();
+
+        return redirect('banner-manage/aboutus');
+
+    }
 
     // 刪除頁
     public function aboutus_delete()
@@ -66,7 +94,6 @@ class BannerManageController extends Controller
     public function product_index()
     {
         return view('banner_manage.product_banner');
-
     }
 
     // 新增頁
@@ -82,8 +109,7 @@ class BannerManageController extends Controller
     {}
 
     // 更新頁
-    public function product_update()
-    {}
+    public function product_update(){}
 
     // 刪除頁
     public function product_delete()

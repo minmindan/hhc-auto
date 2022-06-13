@@ -46,7 +46,7 @@ Route::prefix('/hhc-auto/index')->group(function (){
 
 
 // 關於我們 手建
-Route::prefix('/hhc-auto/aboutus')->group(function (){
+Route::prefix('aboutus')->group(function (){
     Route::get('/',[AboutUsController::class, 'index']); //總表
     Route::get('/create',[AboutUsController::class, 'create']); //新增頁面
     Route::post('/store',[AboutUsController::class, 'store']); //儲存頁面
@@ -146,10 +146,10 @@ Route::prefix('/banner-manage/homepage')->group(function (){
 // 關於我們 手建
 Route::prefix('/banner-manage/aboutus')->group(function (){
     Route::get('/',[BannerManageController::class, 'aboutus_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'aboutus_create']); //新增頁面
+    Route::post('/create',[BannerManageController::class, 'aboutus_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'aboutus_store']); //儲存頁面
     Route::get('/edit',[BannerManageController::class, 'aboutus_edit']); //編輯頁面
-    Route::post('/update',[BannerManageController::class, 'aboutus_update']); //更新頁面
+    Route::post('/update/{id}',[BannerManageController::class, 'aboutus_update']); //更新頁面
     Route::post('/delete',[BannerManageController::class, 'aboutus_delete']); //刪除頁面
 });
 
