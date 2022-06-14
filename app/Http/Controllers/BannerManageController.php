@@ -1,14 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Http\Controllers\AboutUsController;
+
 use App\Http\Controllers\FilesController;
-
 use App\Models\Aboutus_banner;
-
-
+use Illuminate\Http\Request;
 
 class BannerManageController extends Controller
 {
@@ -31,12 +27,14 @@ class BannerManageController extends Controller
 
     // 編輯頁
     public function homepage_edit()
-    {}
+    {
+        $abus_banner = Index_banne::get();
+
+        return view('banner_manage.aboutus_banner', compact('abus_banner'));}
 
     // 更新頁
     public function homepage_update()
     {}
-
 
     // 關於我們 BANNER管理
     // 首頁
@@ -45,7 +43,8 @@ class BannerManageController extends Controller
     }
 
     // 新增頁
-    public function aboutus_create(){
+    public function aboutus_create()
+    {
 
     }
 
@@ -58,15 +57,14 @@ class BannerManageController extends Controller
     {
         $abus_banner = Aboutus_banner::get();
 
-        return view('banner_manage.aboutus_banner',compact('abus_banner'));
+        return view('banner_manage.aboutus_banner', compact('abus_banner'));
     }
 
     // 更新頁
-    public function aboutus_update(Request $request, $id){
-
+    public function aboutus_update(Request $request, $id)
+    {
 
         $abus_banner = aboutus_banner::find($id);
-
 
         if ($request->hasfile('img_path')) {
             FilesController::deleteUpload($abus_banner->img_path); //小工具刪除圖片
@@ -77,11 +75,9 @@ class BannerManageController extends Controller
 
         $abus_banner->save();
 
-
         return redirect("banner-manage/aboutus/edit");
 
     }
-
 
     // 產品介紹 BANNER管理
     // 首頁
@@ -103,8 +99,8 @@ class BannerManageController extends Controller
     {}
 
     // 更新頁
-    public function product_update(){}
-
+    public function product_update()
+    {}
 
     // 產品製作流程 BANNER管理
     // 首頁
@@ -129,7 +125,6 @@ class BannerManageController extends Controller
     // 更新頁
     public function process_update()
     {}
-
 
     // 聯絡我們 BANNER管理
     // 首頁
