@@ -7,58 +7,60 @@
     <style>
         a {
             text-decoration: none;
+            color: #0000ff;
+        }
+        a:visited{
+            color:#0000ff;
         }
     </style>
 @endsection
-</head>
 @section('main')
-<main>
-    <!-- 頁面標題列表 -->
-    <div id="tittle-list-id">
-        <div class="list-tittle">
-            <h1>BANNER管理</h1>
-            <ul>
-                <li>首頁</li>
-                <li><a href="/banner-manage/aboutus/edit">關於我們</a></li>
-                <li>產品介紹</li>
-                <li>產品製作流程</li>
-                <li>聯絡我們</li>
-            </ul>
-        </div>
-        <div class="list-container">
+    <main>
+        <!-- 頁面標題列表 -->
+        <div id="tittle-list-id">
+            <div class="list-tittle">
+                <h1>BANNER管理</h1>
+                <ul>
+                    <li><a href="/banner-manage/homepage/edit">首頁</a></li>
+                    <li><a href="/banner-manage/aboutus/edit">關於我們</a></li>
+                    <li><a href="/banner-manage/product/edit">產品介紹</a></li>
+                    <li><a href="/banner-manage/process/edit">產品製作流程</a></li>
+                    <li><a href="/banner-manage/contact/edit">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="list-container">
 
-            <div class="content-section">
-                <div class="content-manage">
-                    @foreach ($abus_banner as $abus)
-                        <!-- 卡片 -->
-                        <form action="/banner-manage/aboutus/update/{{ $abus->id }}" method="post"
-                            enctype="multipart/form-data">
-                            @csrf
-                            <div class="content-card">
-                                <!-- 圖片 -->
-                                <div class="content-img">
-                                    <img src="{{ $abus->img_path ?? '' }}" alt="no img" />
+                <div class="content-section">
+                    <div class="content-manage">
+                        @foreach ($abus_banner as $abus)
+                            <!-- 卡片 -->
+                            <form action="/banner-manage/aboutus/update/{{ $abus->id }}" method="post"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="content-card">
+                                    <!-- 圖片 -->
+                                    <div class="content-img">
+                                        <img src="{{ $abus->img_path ?? '' }}" alt="no img" />
+                                    </div>
+
+                                    <!-- 說明 -->
+                                    <div class="directions">
+                                        <h2>{{ $abus->tittle }}</h2>
+                                        <h3>{{ $abus->subtittle }}</h3>
+                                    </div>
+
+                                    <!-- 功能按鈕 -->
+                                    <div class="function-button{{ $abus->id }}">
+                                        <button type="button" onclick="chimg{{ $abus->id . '()' }}">更換</button>
+                                    </div>
                                 </div>
 
-                                <!-- 說明 -->
-                                <div class="directions">
-                                    <h2>{{ $abus->tittle }}</h2>
-                                    <h3>{{ $abus->subtittle }}</h3>
-                                </div>
-
-                                <!-- 功能按鈕 -->
-                                <div class="function-button{{ $abus->id }}">
-                                    <button type="button" onclick="chimg{{ $abus->id . '()' }}">更換</button>
-                                </div>
-                            </div>
-
-                        </form>
-                    @endforeach
-
+                            </form>
+                        @endforeach
+                    </div>
                 </div>
             </div>
-        </div>
-</main>
+    </main>
 @endsection
 @section('js')
     <script>

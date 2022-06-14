@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('img_path')->nullable()->comment('圖片路徑');
             $table->string('tittle')->nullable()->comment('標題');
+            $table->string('subtittle')->nullable()->comment('副標題');
             
         });
     }

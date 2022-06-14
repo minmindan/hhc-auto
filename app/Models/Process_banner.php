@@ -9,9 +9,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $created_at
  * @property string $updated_at
  * @property string $img_path
- * @property string $weights
+ * @property string $tittle
+ * @property string $subtittle
  */
-class Aboutus_banner extends Model
+class Process_banner extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
@@ -23,5 +24,5 @@ class Aboutus_banner extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'img_path', 'weights'];
+    protected $fillable = ['created_at', 'updated_at', 'img_path', 'tittle', 'subtittle'];
 }
