@@ -4,7 +4,7 @@ About Us
 @endsection
 @section('css')
 
-<link rel="stylesheet" href="/css/product-all.css">
+<link rel="stylesheet" href="{{asset('css/product-all.css')}}">
 <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
 @endsection
 

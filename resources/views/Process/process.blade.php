@@ -4,7 +4,7 @@ About Us
 @endsection
 @section('css')
 
-<link rel="stylesheet" href="{{./css/process.css}}">
+<link rel="stylesheet" href="{{asset('css/process.css')}}">
 @endsection
 @section('main')
 <main>

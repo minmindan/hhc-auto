@@ -81,7 +81,7 @@ class BannerManageController extends Controller
 
         $abus_banner->save();
 
-        return redirect('banner-manage/aboutus/edit',compact());
+        return redirect('banner-manage/aboutus/edit');
 
     }
 
