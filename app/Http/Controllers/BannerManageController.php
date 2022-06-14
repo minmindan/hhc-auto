@@ -37,15 +37,11 @@ class BannerManageController extends Controller
     public function homepage_update()
     {}
 
-    // 刪除頁
-    public function homepage_delete()
-    {}
 
     // 關於我們 BANNER管理
     // 首頁
     public function aboutus_index()
     {
-        ;
     }
 
     // 新增頁
@@ -81,13 +77,11 @@ class BannerManageController extends Controller
 
         $abus_banner->save();
 
-        return redirect('banner-manage/aboutus/edit',compact());
+
+        return redirect("banner-manage/aboutus/edit");
 
     }
 
-    // 刪除頁
-    public function aboutus_delete()
-    {}
 
     // 產品介紹 BANNER管理
     // 首頁
@@ -111,9 +105,6 @@ class BannerManageController extends Controller
     // 更新頁
     public function product_update(){}
 
-    // 刪除頁
-    public function product_delete()
-    {}
 
     // 產品製作流程 BANNER管理
     // 首頁
@@ -139,9 +130,6 @@ class BannerManageController extends Controller
     public function process_update()
     {}
 
-    // 刪除頁
-    public function process_delete()
-    {}
 
     // 聯絡我們 BANNER管理
     // 首頁
@@ -167,7 +155,4 @@ class BannerManageController extends Controller
     public function contact_update()
     {}
 
-    // 刪除頁
-    public function contact_delete()
-    {}
 }

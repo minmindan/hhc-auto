@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="{{ asset('css/aboutus_banner.css') }}" />
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +37,7 @@
                     <div class="content-manage">
                         @foreach ($abus_banner as $abus)
                             <!-- 卡片 -->
-                            <form action="/banner-manage/aboutus/update/{{ $abus->id }}" method="post">
+                            <form action="/banner-manage/aboutus/update/{{ $abus->id }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="content-card">
                                     <!-- 圖片 -->
@@ -45,6 +50,7 @@
                                         <h2>{{$abus->tittle}}</h2>
                                         <h3>{{$abus->subtittle}}</h3>
                                     </div>
+
                                     <!-- 功能按鈕 -->
                                     <div class="function-button{{ $abus->id }}">
                                         <button type="button" onclick="chimg{{ $abus->id.'()' }}">更換</button>
@@ -62,12 +68,13 @@
 
     <!-- 該頁面JS -->
     <script>
+
         function chimg1() {
             const ch_img1 = document.querySelector('.function-button1')
             ch_img1.innerHTML = ""
             ch_img1.innerHTML += `
             <div style="display:flex; flex-direction:column;">
-            <input type="file" name="img_path">
+            <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
             </div>
@@ -79,7 +86,7 @@
             ch_img2.innerHTML = ""
             ch_img2.innerHTML += `
             <div style="display:flex; flex-direction:column;">
-            <input type="file" name="img_path">
+            <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
             </div>
@@ -91,7 +98,7 @@
             ch_img3.innerHTML = ""
             ch_img3.innerHTML += `
             <div style="display:flex; flex-direction:column;">
-            <input type="file" name="img_path">
+            <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
             </div>
@@ -103,7 +110,7 @@
             ch_img4.innerHTML = ""
             ch_img4.innerHTML += `
             <div style="display:flex; flex-direction:column;">
-            <input type="file" name="img_path">
+            <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
             </div>
@@ -115,7 +122,7 @@
             ch_img5.innerHTML = ""
             ch_img5.innerHTML += `
             <div style="display:flex; flex-direction:column;">
-            <input type="file" name="img_path">
+            <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
             </div>
@@ -127,7 +134,7 @@
             ch_img6.innerHTML = ""
             ch_img6.innerHTML += `
             <div style="display:flex; flex-direction:column;">
-            <input type="file" name="img_path">
+            <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
             </div>
@@ -136,24 +143,6 @@
 
 
 
-
-
-        // function uploadpic_1(id) {
-
-        //     let formData = new FormData();
-        //     formData.append('_method', 'post');
-        //     formData.append('_token', '{{ csrf_token() }}');
-
-        //     fetch('/banner-manage/aboutus/update/' + id, {
-        //             method: 'POST',
-        //             body: formData
-        //         })
-
-        //         .then(function(response) {
-        //             alert('上傳成功')
-        //         })
-
-        // }
     </script>
 
 

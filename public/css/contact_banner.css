@@ -54,14 +54,14 @@ main #tittle-list-id .list-tittle ul li {
   margin-right: 50px;
 }
 
-main #tittle-list-id .list-tittle ul li:nth-child(2) {
+main #tittle-list-id .list-tittle ul li:nth-child(5) {
   font-size: 1.5rem;
   color: blue;
   font-weight: 500;
   position: relative;
 }
 
-main #tittle-list-id .list-tittle ul li:nth-child(2)::after {
+main #tittle-list-id .list-tittle ul li:nth-child(5)::after {
   position: absolute;
   bottom: -5px;
   left: 1px;
@@ -76,23 +76,8 @@ main #tittle-list-id .list-container {
   padding: 25px 0px 50px;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+main #tittle-list-id .list-container .content-section form .content-manage {
   width: 100%;
-  padding: 0 15%;
-}
-
-main #tittle-list-id .list-container .content-section .content-manage form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,15 +85,16 @@ main #tittle-list-id .list-container .content-section .content-manage form {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 0% 15%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 50%;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card {
+main #tittle-list-id .list-container .content-section form .content-manage .content-card {
+  width: 50%;
   max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,7 +116,7 @@ main #tittle-list-id .list-container .content-section .content-manage form .cont
   margin-bottom: 30px;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card .content-img {
+main #tittle-list-id .list-container .content-section form .content-manage .content-card .content-img {
   width: 412px;
   height: 259px;
   background-color: gainsboro;
@@ -138,22 +124,22 @@ main #tittle-list-id .list-container .content-section .content-manage form .cont
   border-radius: 15px;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card .content-img img {
+main #tittle-list-id .list-container .content-section form .content-manage .content-card .content-img img {
   background-color: gray;
   width: 100%;
   height: 100%;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card .directions h2 {
+main #tittle-list-id .list-container .content-section form .content-manage .content-card .directions h2 {
   font-weight: 400;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card .directions h3 {
+main #tittle-list-id .list-container .content-section form .content-manage .content-card .directions h3 {
   font-weight: 400;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card .function-button {
+main #tittle-list-id .list-container .content-section form .content-manage .content-card .function-button {
   margin-top: 30px;
 }
