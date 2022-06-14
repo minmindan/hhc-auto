@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HHC-AUTO</title>
+    <meta name="keywords" content="興和川自動化,半導體封裝,工業4.0,半導體設備,自動化生產,履歷管理">
+    <meta name="description" content="半導體封裝業界經歷了崛起，成長等趨勢轉變後，接下來面臨著工業4.0的需求與挑戰，需要更加智能化的自動化生產來做量產的履歷管理。
+興和川自動化有限公司由一群在業界耕耘了20年以上的有志者來提供更專業，高價值的服務，幫助客戶增加競爭力。對於半導體上片Fasford設備更有著service20年以上的經驗。
+">
     <script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('css/index-nav.css')}}">
     <link rel="stylesheet" href="{{asset('css/swiper.css')}}">
@@ -242,7 +246,7 @@
                 <h1>Product</h1>
                 <div class="productsubtitle">
                     <div class="productmoretitle">產品介紹</div>
-                    <div class="productmore">more　<img src="./image/more_right.svg" alt=""></div>
+                    <div class="productmore">more　<img src="{{asset('image/index-icon/more_right.svg')}}" alt=""></div>
                 </div>
             </div>
             <div class="product">
@@ -255,7 +259,7 @@
                             <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img src="./image/more_right.svg" alt=""></div>
+                                <div class="product-types-more">MORE　　<img src="{{asset('image/index-icon/more_right.svg')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -267,7 +271,7 @@
                             <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img src="./image/more_right.svg" alt=""></div>
+                                <div class="product-types-more">MORE　　<img src="{{asset('image/index-icon/more_right.svg')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -279,7 +283,7 @@
                             <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img src="./image/more_right.svg" alt=""></div>
+                                <div class="product-types-more">MORE　　<img src="{{asset('image/index-icon/more_right.svg')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -291,7 +295,7 @@
                             <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img src="./image/more_right.svg" alt=""></div>
+                                <div class="product-types-more">MORE　　<img src="{{asset('image/index-icon/more_right.svg')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -303,7 +307,7 @@
                             <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img src="./image/more_right.svg" alt=""></div>
+                                <div class="product-types-more">MORE　　<img src="{{asset('image/index-icon/more_right.svg')}}" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -321,7 +325,7 @@
                         <h1 class="about_us_title">About us</h1>
                         <p>關於我們</p>
                         <p class="pmain">以誠為本、追求創新、培育未來、滿足客戶</p>
-                        <button>more　　<img class="btnimg" src="./image/more_right_white.svg" alt=""></button>
+                        <button>more　　<img class="btnimg" src="{{asset('image/index-icon/more_right_white.svg')}}" alt=""></button>
                     </div>
                     <img src="./image/截圖 2022-05-30 下午2.01.00.png" alt="">
                 </div>

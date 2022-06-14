@@ -20,7 +20,7 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('template.backnav');
 });
 
 Route::get('/dashboard', function () {

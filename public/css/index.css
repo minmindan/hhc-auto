@@ -566,7 +566,7 @@ main #about_us {
 
 main #about_us .about_background {
   width: 70%;
-  height: 70%;
+  height: 90%;
   background-color: #0146a8;
   padding: 80px 0 0 80px;
   position: relative;
@@ -600,7 +600,7 @@ main #about_us .about_background .about_main {
 
 main #about_us .about_background .about_main .about_us_title {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 0;
   letter-spacing: 9px;
 }
@@ -612,7 +612,7 @@ main #about_us .about_background .about_main .about_us_title {
 }
 
 main #about_us .about_background .about_main p {
-  margin-top: 12px;
+  margin-top: 0;
   font-size: 30px;
   letter-spacing: 3px;
 }
@@ -668,7 +668,7 @@ main #about_us img {
   max-width: 100%;
   width: 100%;
   max-height: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
@@ -747,7 +747,7 @@ main #topics h1 {
 main #topics .topics_title {
   font-size: 50px;
   color: #0146a8;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 main #topics p {
@@ -775,15 +775,16 @@ main #topics .topicsmain .topics {
   width: 33%;
   height: 70%;
   padding: 0 20px;
+  padding-top: 25px;
   margin: auto;
-  border-left: #0146a8 1px solid;
+  border-left: #B4B4B4 1px solid;
 }
 
 @media (max-width: 1000px) {
   main #topics .topicsmain .topics {
     width: 80%;
     border-left: unset;
-    border-bottom: #0146a8 1px solid;
+    border-bottom: #B4B4B4 1px solid;
     padding-bottom: 25px;
   }
 }
@@ -809,7 +810,7 @@ main #topics .topicsmain .topics .time {
 
 main #topics .topicsmain .topics .topicsmain_title {
   font-size: 20px;
-  margin: 0;
+  margin: 25px 0 15px 0;
 }
 
 main #topics .topicsmain .topics p {
@@ -879,12 +880,54 @@ main #company .com {
       flex-wrap: wrap;
 }
 
-main #company .com img {
-  height: auto;
+main #company .com .com_img {
+  position: relative;
   width: 25%;
-  max-height: 150px;
-  padding: 30px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 50px;
+}
+
+main #company .com .com_img .stop {
+  width: 20px;
+  height: 20px;
+  background-color: #C7000B;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #company .com .com_img .stop .stop_ {
+  width: 50%;
+  height: 3px;
+  background-color: white;
+}
+
+main #company .com .com_img img {
+  height: 100%;
+  width: auto;
+  max-height: 150px;
+  max-width: 80%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   -webkit-transition-duration: .2s;
@@ -892,13 +935,12 @@ main #company .com img {
 }
 
 @media (max-width: 850px) {
-  main #company .com img {
-    padding: 15px;
+  main #company .com .com_img img {
     width: 33% !important;
   }
 }
 
-main #company .com img:hover {
+main #company .com .com_img img:hover {
   -webkit-filter: unset;
           filter: unset;
 }
