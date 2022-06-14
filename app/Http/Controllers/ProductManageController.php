@@ -1,6 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use App\Models\Consumables_product;
+use App\Models\Components_product;
+use App\Models\Equipment_product;
+use App\Models\Repair_product;
+use App\Models\Software_product;
+
 
 class ProductManageController extends Controller
 {
@@ -10,12 +17,15 @@ class ProductManageController extends Controller
     // 首頁
     public function equipment_index()
     {
-        return view('equipment.product');
+        return view('product_manage.product_equipment');
     }
 
     // 新增頁
     public function equipment_create()
-    {}
+    {
+
+        return view('product_create.equipment_create');
+    }
 
     // 儲存頁
     public function equipment_store()
@@ -34,17 +44,25 @@ class ProductManageController extends Controller
     {}
 
 
+
+
+
+
+
     // 軟體
     // 首頁
     public function software_index()
     {
-        return view('equipment.product');
+        return view('product_manage.product_software');
 
     }
 
     // 新增頁
     public function software_create()
-    {}
+    {
+        return view('product_create.software_create');
+
+    }
 
     // 儲存頁
     public function software_store()
@@ -63,18 +81,35 @@ class ProductManageController extends Controller
     {}
 
 
+
+
+
+
+
+
+
     // 部品零件
     // 首頁
     public function parts_index()
-    {}
+    {
+        return view('product_manage.product_parts');
+
+    }
 
     // 新增頁
     public function parts_create()
-    {}
+    {
+
+        return view('product_create.parts_create');
+
+    }
 
     // 儲存頁
-    public function parts_store()
-    {}
+    public function parts_store(Request $request)
+    {
+        dd($request->all());
+        return redirect('/product-manage/parts');
+    }
 
     // 編輯頁
     public function parts_edit()
@@ -89,14 +124,23 @@ class ProductManageController extends Controller
     {}
 
 
+
+
+
+
     // 耗材
     // 首頁
     public function consumables_index()
-    {}
+    {
+        return view('product_manage.product_consumables');
+    }
 
     // 新增頁
     public function consumables_create()
-    {}
+    {
+        return view('product_create.consumables_create');
+
+    }
 
     // 儲存頁
     public function consumables_store()
@@ -115,14 +159,25 @@ class ProductManageController extends Controller
     {}
 
 
+
+
+
+
+
+
     // 維修
     // 首頁
     public function maintenance_index()
-    {}
+    {
+        return view('product_manage.product_maintenance');
+    }
 
     // 新增頁
     public function maintenance_create()
-    {}
+    {
+        return view('product_create.maintenance_create');
+
+    }
 
     // 儲存頁
     public function maintenance_store()
@@ -139,6 +194,5 @@ class ProductManageController extends Controller
     // 刪除頁
     public function maintenance_delete()
     {}
-
 
 }

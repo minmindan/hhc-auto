@@ -7,6 +7,8 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\BannerManageController;
 use App\Http\Controllers\ProductManageController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +75,12 @@ Route::prefix('aboutus')->group(function (){
 
 
 
+
+
+
+
+// 產品首頁
+Route::get('/equipment',[Controller::class, 'equipment_index']);
 
 
 // 產品管理

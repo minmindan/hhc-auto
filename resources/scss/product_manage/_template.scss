@@ -1,0 +1,105 @@
+$themeColor:#004098;
+$SupColor:#C7000B;
+$bgTextColor:#EAEEF3;
+@mixin textArea {
+    margin-bottom: 40px;
+}
+
+// product專區
+@mixin p-blue-font{
+    color: $themeColor;
+}
+@mixin p-red-font {
+    color:$SupColor;
+}
+
+
+// 背景文字
+@mixin bgTextSet{
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    orientation: mixed;
+    font-size: 60px;
+    color:#EAEEF3;
+    line-height: 5rem;
+}
+
+// 藍字標題
+@mixin tittleSet {
+   color: $themeColor;
+    font-weight: 500;
+font-size: 30px;
+line-height: 44px;
+}
+
+// 文字
+@mixin contentFont {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+}
+@mixin contentFont2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+}
+
+// 表單顏色
+@mixin f-field {
+    border: none;
+    border-radius: 0;
+    background-color: #F3F6FA;
+}
+
+
+// RWD響應式網站
+@mixin screen1700 {
+    @media (max-width:1700px) {
+        @content;
+    }
+}
+
+@mixin screen1600 {
+    @media (max-width:1600px) {
+        @content;
+    }
+}
+
+@mixin screen1500 {
+    @media (max-width:1500px) {
+        @content;
+    }
+}
+
+@mixin screen1440 {
+    @media (max-width:1440px) {
+        @content;
+    }
+}
+
+@mixin screen1200 {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(max-width:992px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:768px) {
+        @content;
+    }
+}
+
+@mixin screen500 {
+    @media (max-width:546px) {
+        @content;
+    }
+}
