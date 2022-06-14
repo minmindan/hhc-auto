@@ -1,4 +1,4 @@
-@extends('template.backnav')
+@extends('template.template')
 @section('title')
     About Us
 @endsection
