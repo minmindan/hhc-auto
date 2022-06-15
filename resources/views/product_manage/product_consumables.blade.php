@@ -4,6 +4,7 @@
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}">
     <style>
         a {
             text-decoration: none;
@@ -63,9 +64,9 @@
                         <!-- 排序 -->
                         <div class="image-gradation">
                             <select name="" id="">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
                             </select>
                         </div>
                         <!-- 主打產品 -->
@@ -93,11 +94,4 @@
     </main>
 @endsection
 @section('js')
-    <script>
-        function QQ() {
-            const QQ = document.querySelector('.add-img')
-
-            console.log(QQ);
-        }
-    </script>
 @endsection

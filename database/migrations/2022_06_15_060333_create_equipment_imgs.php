@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('equipment_imgs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('path')->nullable()->comment('圖片路徑');
+            $table->string('iid')->nullable()->comment('圖片ID');
         });
     }
 
