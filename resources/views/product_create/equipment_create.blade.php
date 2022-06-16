@@ -80,27 +80,27 @@
             <p>主打商品</p>
             <ul>
               <li>
-                <input type="radio" name="items" id="items1" />
+                <input type="radio" name="items" value="1" id="items1" />
                 <label for="items1">主打商品1</label>
               </li>
               <li>
-                <input type="radio" name="items" id="items2" />
+                <input type="radio" name="items" value="2" id="items2" />
                 <label for="items2">主打商品2</label>
               </li>
               <li>
-                <input type="radio" name="items" id="items3" />
+                <input type="radio" name="items" value="3" id="items3" />
                 <label for="items3">主打商品3</label>
               </li>
               <li>
-                <input type="radio" name="items" id="items4" />
+                <input type="radio" name="items" value="4" id="items4" />
                 <label for="items4">主打商品4</label>
               </li>
               <li>
-                <input type="radio" name="items" id="items5" />
+                <input type="radio" name="items" value="5" id="items5" />
                 <label for="items5">主打商品5</label>
               </li>
               <li>
-                <input type="radio" name="items" id="items6" />
+                <input type="radio" name="items" value="6" id="items6" />
                 <label for="items6">不是主打商品</label>
               </li>
             </ul>
@@ -108,27 +108,27 @@
           <!-- 產品名稱 -->
           <div class="form-input">
             <p>產品名稱</p>
-            <input type="text" />
+            <input name="product_name" type="text" />
           </div>
           <!-- 產品款號 -->
           <div class="form-input">
             <p>產品款號</p>
-            <input type="text" />
+            <input name="model" type="text" />
           </div>
           <!-- 產品規格 -->
           <div class="form-input">
             <p>產品規格</p>
-            <input type="text" />
+            <input name="standard" type="text" />
           </div>
           <!-- 產品特色 -->
           <div class="form-input">
             <p>產品特色</p>
-            <input type="text" />
+            <input name="feature" type="text" />
           </div>
           <!-- 產品說明 -->
           <div class="form-input">
             <p>產品說明</p>
-            <input type="text" />
+            <input name="illustrate" type="text" />
           </div>
           <!-- 上傳按鈕 -->
           <div class="btn">

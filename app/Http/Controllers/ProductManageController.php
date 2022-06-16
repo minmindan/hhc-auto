@@ -7,6 +7,9 @@ use App\Models\Components_product;
 use App\Models\Equipment_product;
 use App\Models\Repair_product;
 use App\Models\Software_product;
+use App\Http\Controllers\FilesController;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderShipped;
 
 
 class ProductManageController extends Controller
@@ -17,27 +20,36 @@ class ProductManageController extends Controller
     // 首頁
     public function equipment_index()
     {
+        // Mail::to('ivy@hhc-auto.com')->send(new OrderShipped);
         return view('product_manage.product_equipment');
     }
 
     // 新增頁
     public function equipment_create()
     {
-
+        // Equipment_product::create([
+        //     //
+        // ]);
         return view('product_create.equipment_create');
     }
 
     // 儲存頁
     public function equipment_store()
-    {}
+    {
+
+    }
 
     // 編輯頁
     public function equipment_edit()
-    {}
+    {
+
+    }
 
     // 更新頁
     public function equipment_update()
-    {}
+    {
+
+    }
 
     // 刪除頁
     public function equipment_delete()

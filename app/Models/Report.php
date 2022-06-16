@@ -22,7 +22,7 @@ class Report extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -30,5 +30,5 @@ class Report extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'type', 'company', 'title', 'name', 'phone', 'address', 'demand', 'state', 'img_path'];
+    protected $fillable = ['created_at', 'updated_at', 'type', 'company', 'title', 'name', 'phone', 'address', 'demand', 'state' ,'remark'];
 }

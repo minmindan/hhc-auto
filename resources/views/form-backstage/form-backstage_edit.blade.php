@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/form-backstage_edit.css">
-</head>
-<body>
-    
-    <div id="contact-id">
+@extends('template.backnav')
+@section('title')
+    About Us
+@endsection
+@section('css')
+<link rel="stylesheet" href="{{asset('css/form-backstage_edit.css')}}">
+@endsection
+@section('main')
+  <div id="contact-id">
 
         <!-- 表單區塊 -->
         <div class="form-container">
@@ -59,6 +56,5 @@
 
           </form>
         </div>
-      </div>
-</body>
-</html>
+    </div>
+@endsection

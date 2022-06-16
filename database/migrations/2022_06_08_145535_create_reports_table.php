@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('address')->nullable()->comment('郵件地址');
             $table->string('demand')->nullable()->comment('需求說明');
             $table->string('state')->nullable()->comment('處理狀態');
-            $table->string('img_path')->nullable()->comment('備註說明');
+            $table->string('remark')->nullable()->comment('備註說明');
         });
     }
 
