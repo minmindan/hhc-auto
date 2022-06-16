@@ -134,7 +134,7 @@
             <form action="">
                 <!-- logo -->
                 <div class="logo-img">
-                    <img src="./login-logo.svg" alt="">
+                    <img src="{{asset('image/login/login-logo.svg')}}" alt="">
                 </div>
                 <div class="container">
                     <div class="type-box">
@@ -169,7 +169,7 @@
                                 <p>登入</p>
                             </div>
                             <div class="login-img">
-                                <img src="./blue_right.svg" alt="">
+                                <img src="{{asset('image/login/blue_right.svg')}}" alt="">
                             </div>
                         </button>
                     </div>

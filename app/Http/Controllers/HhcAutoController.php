@@ -10,4 +10,8 @@ class HhcAutoController extends Controller
     public function index(){
         return view ('template.template');
     }
+
+    public function login(){
+        return view('login.login');
+    }
 }
