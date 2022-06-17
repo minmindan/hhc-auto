@@ -1,4 +1,4 @@
-@import "./template";
+@import "./_template.scss";
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 * {
@@ -29,6 +29,11 @@ body {
 
             @include pad {
                 padding-left: 0px;
+                max-height: 915px;
+            }
+
+            @include mobile {
+                max-height: 650px;
             }
 
 
@@ -46,16 +51,30 @@ body {
                         line-height: 118px;
                         z-index: 3;
 
+
                         @include pad {
                             position: absolute;
                             color: white;
-                            margin-top: 10%;
-                            margin-top: 5%;
+                            margin-top: 150px;
                             padding-left: 50px;
+                            font-size: 68px;
+                            font-weight: 300;
+                        }
+
+                        @media (max-width:680px) {
+                            line-height: 50px;
+                            font-size: 50px;
+
                         }
 
                         @include screen500 {
                             line-height: 100px;
+                            font-size: 37px;
+                            font-weight: 400;
+                            line-height: 50px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+
                         }
                     }
 
@@ -70,13 +89,19 @@ body {
                             position: absolute;
                             z-index: 3;
                             color: white;
+                            margin-top: 300px;
                             padding-left: 50px;
-                            margin-top: 25%;
+                        }
+
+                        @media (max-width:680px) {
+                            font-size: 40px;
                         }
 
                         @include screen500 {
                             margin-top: 250px;
-
+                            font-size: 30px;
+                            padding-left: 30px;
+                            line-height: 59px;
                         }
                     }
 
@@ -84,13 +109,12 @@ body {
                         position: absolute;
                         left: 0;
                         bottom: -250%;
+                        width: 100%;
 
                         @include pad {
-                            z-index: 1;
-                            top: 600px;
-                            padding-left: 50px;
-                            left: 0;
+                            display: none;
                         }
+
 
 
                         .scroll-img {
@@ -170,23 +194,24 @@ body {
 
                 .main-section {
                     padding-left: 250px;
-
-                    @include screen1500 {
-                        padding-left: 150px;
-                    }
+                    position: relative;
 
                     @include pad {
                         padding-left: 0;
                     }
 
+                    @include mobile {
+                        max-height: 650px;
+                    }
+
                     .banner-img {
                         max-width: 1178px;
-                        min-width: 930px;
                         min-height: 518px;
                         width: auto;
                         height: auto;
                         margin-left: auto;
                         position: relative;
+                        display: flex;
 
                         @include pad {
                             max-width: unset;
@@ -207,14 +232,14 @@ body {
                                 object-fit: cover;
 
                                 @include pad {
-                                    min-height: 827px;
+                                    min-height: 622px;
                                 }
                             }
 
                             .main-img-color {
                                 height: 100%;
                                 width: 100%;
-                                background-color: rgba($color: $themeColor, $alpha: 0.2);
+                                background-color: rgba($color: $themeColor, $alpha: 0.5);
                                 position: absolute;
                                 top: 0;
                                 display: none;
@@ -224,7 +249,6 @@ body {
                                 }
                             }
                         }
-
 
                         .progress-bar {
                             display: none;
@@ -256,60 +280,66 @@ body {
                             }
                         }
 
-
-                        .progress-bar-l {
-                            width: 280px;
-                            height: auto;
-                            display: none;
-                            flex-direction: column;
-                            align-items: center;
+                        .scroll-box {
                             position: absolute;
-                            bottom: 0;
-                            right: 0;
+                            left: 0;
+                            bottom: 30px;
+                            z-index: 10;
+                            display: none;
 
-                            @include screen1600 {
-                                width: 150px;
+                            @include pad {
+                                display: block;
+                                z-index: 1;
+                                padding-left: 50px;
                             }
 
-                            @include mobile {
-                                display: flex;
+                            @include screen500 {
+                                padding-left: 30px;
                             }
 
-                            .progress-step1 {
-                                color: red;
 
-                                &::after {
-                                    content: '';
+
+                            .scroll-img {
+                                width: 24px;
+                                height: 100px;
+                                margin-bottom: 30px;
+
+                                @include pad {
+                                    z-index: 10;
+                                }
+
+                                img {
                                     width: 100%;
-                                    height: 1px;
-                                    background-color: red;
-                                    display: block;
-                                    margin: 3px 0px auto;
+                                    height: 100%;
+
+                                    @include pad {
+                                        z-index: 10;
+                                    }
+
+
                                 }
                             }
 
-                            .progress-step2 {
-                                &::before {
-                                    content: '';
-                                    width: 1px;
-                                    height: 50px;
-                                    background-color: black;
-                                    display: block;
-                                    margin: 10px auto;
+                            .scroll-text {
+                                @include pad {
+                                    z-index: 10;
                                 }
-                            }
 
-                            .progress-step3 {
-                                &::before {
-                                    content: '';
-                                    width: 1px;
-                                    height: 50px;
-                                    background-color: black;
-                                    display: block;
-                                    margin: 10px auto;
+                                span {
+                                    writing-mode: vertical-lr;
+                                    orientation: mixed;
+                                    color: $themeColor;
+
+                                    @include pad {
+                                        z-index: 10;
+                                        color: white;
+                                    }
+
                                 }
                             }
                         }
+
+
 
                     }
                 }
@@ -325,8 +355,12 @@ body {
             justify-content: space-between;
             position: relative;
 
-            @include pad {
-                padding: 0 2%;
+            @media (max-width:767px) {
+                padding: 0 15px;
+            }
+
+            @media (max-width:700px) {
+                display: none;
             }
 
             &::before {
@@ -341,6 +375,10 @@ body {
 
                 @include screen1200 {
                     left: 20%;
+                }
+
+                @media (max-width:992px) {
+                    left: 8%;
                 }
             }
 
@@ -368,10 +406,15 @@ body {
 
                 @include pad {
                     width: 100%;
+                    padding: 80px 0 0 25px;
                 }
 
                 .section-l {
                     margin-right: 100px;
+
+                    @media (max-width:767px) {
+                        margin-right: 30px;
+                    }
 
                     .step1 {
                         display: flex;
@@ -382,7 +425,13 @@ body {
                         height: 70px;
                         background-color: white;
                         border: 1px solid $themeColor;
+
                         font-size: 40px;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
 
                     h3 {
@@ -393,16 +442,26 @@ body {
                         margin-top: 15px;
                         font-size: 30px;
                         letter-spacing: 0.3em;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+
+                        }
                     }
                 }
 
                 .section-r {
                     .step-content {
+                        padding-top: 30px;
                         width: 83%;
 
                         .sup-directions1 {
                             display: flex;
                             margin-bottom: 15px;
+
+                            .content {
+                                font-size: 1.1rem;
+                            }
 
                             .tittle {
                                 p {
@@ -428,13 +487,16 @@ body {
                             }
 
                             .content {
+                                font-size: 1.1rem;
+
                                 ul {
                                     li {
                                         list-style-type: none;
 
                                         &:nth-child(1) {
                                             font-weight: 500;
-                                            font-size: 15px;
+                                            font-size: 1.1rem;
+
                                             letter-spacing: 0.06em;
                                         }
 
@@ -498,10 +560,15 @@ body {
 
                 @include pad {
                     width: 100%;
+                    padding: 80px 0 0 25px;
                 }
 
                 .section-l {
                     margin-right: 100px;
+
+                    @media (max-width:767px) {
+                        margin-right: 30px;
+                    }
 
                     .step2 {
                         display: flex;
@@ -512,7 +579,13 @@ body {
                         height: 70px;
                         background-color: white;
                         border: 1px solid $themeColor;
+
                         font-size: 40px;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
 
                     h3 {
@@ -523,11 +596,18 @@ body {
                         margin-top: 15px;
                         font-size: 30px;
                         letter-spacing: 0.3em;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+
+                        }
                     }
                 }
 
                 .section-r {
                     .step-content {
+                        padding-top: 30px;
+
                         .sup-directions1 {
                             font-size: 20px;
                             margin-bottom: 30px;
@@ -563,6 +643,7 @@ body {
                                     display: flex;
                                     margin: 0 10px 15px 0;
                                     align-items: center;
+                                    font-size: 1.1rem;
 
                                     &:nth-child(1) {
                                         &::before {
@@ -575,7 +656,7 @@ body {
                                             background-color: $themeColor;
                                             border-radius: 50%;
                                             color: white;
-                                            font-size: 15px;
+                                            font-size: 1.1rem;
                                             margin-right: 10px;
                                         }
                                     }
@@ -591,7 +672,7 @@ body {
                                             background-color: $themeColor;
                                             border-radius: 50%;
                                             color: white;
-                                            font-size: 15px;
+                                            font-size: 1.1rem;
                                             margin-right: 10px;
                                         }
                                     }
@@ -628,10 +709,15 @@ body {
 
                 @include pad {
                     width: 100%;
+                    padding: 80px 0 0 25px;
                 }
 
                 .section-l {
                     margin-right: 100px;
+
+                    @media (max-width:767px) {
+                        margin-right: 30px;
+                    }
 
                     .step3 {
                         display: flex;
@@ -642,7 +728,13 @@ body {
                         height: 70px;
                         background-color: white;
                         border: 1px solid $themeColor;
+
                         font-size: 40px;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
 
                     h3 {
@@ -653,20 +745,29 @@ body {
                         margin-top: 15px;
                         font-size: 30px;
                         letter-spacing: 0.3em;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+
+                        }
                     }
                 }
 
                 .section-r {
                     .step-content {
+                        padding-top: 30px;
+
                         .sup-directions1 {
                             font-size: 20px;
                             margin-bottom: 15px;
                         }
 
                         .sup-directions2 {
+
                             p {
                                 display: flex;
                                 margin-bottom: 15px;
+                                font-size: 1.1rem;
 
                                 span {
                                     position: relative;
@@ -745,10 +846,15 @@ body {
 
                 @include pad {
                     width: 100%;
+                    padding: 80px 0 0 25px;
                 }
 
                 .section-l {
                     margin-right: 100px;
+
+                    @media (max-width:767px) {
+                        margin-right: 30px;
+                    }
 
                     .step4 {
                         display: flex;
@@ -759,7 +865,13 @@ body {
                         height: 70px;
                         background-color: white;
                         border: 1px solid $themeColor;
+
                         font-size: 40px;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
 
                     h3 {
@@ -770,11 +882,18 @@ body {
                         margin-top: 15px;
                         font-size: 30px;
                         letter-spacing: 0.3em;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+
+                        }
                     }
                 }
 
                 .section-r {
                     .step-content {
+                        padding-top: 30px;
+
                         .sup-directions1 {
                             font-size: 20px;
                         }
@@ -791,7 +910,7 @@ body {
                                 p {
                                     display: flex;
                                     margin-bottom: 15px;
-
+                                    font-size: 1.1rem;
 
 
                                     &:nth-child(1) {
@@ -877,10 +996,15 @@ body {
 
                 @include pad {
                     width: 100%;
+                    padding: 80px 0 0 25px;
                 }
 
                 .section-l {
                     margin-right: 100px;
+
+                    @media (max-width:767px) {
+                        margin-right: 30px;
+                    }
 
                     .step5 {
                         display: flex;
@@ -891,7 +1015,13 @@ body {
                         height: 70px;
                         background-color: white;
                         border: 1px solid $themeColor;
+
                         font-size: 40px;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+                            height: 60px;
+                        }
                     }
 
                     h3 {
@@ -902,11 +1032,18 @@ body {
                         margin-top: 15px;
                         font-size: 30px;
                         letter-spacing: 0.3em;
+
+                        @media (max-width:767px) {
+                            width: 60px;
+
+                        }
                     }
                 }
 
                 .section-r {
                     .step-content {
+                        padding-top: 30px;
+
                         .sup-directions1 {
                             font-size: 20px;
                         }
@@ -916,6 +1053,7 @@ body {
                                 display: flex;
                                 margin-top: 15px;
                                 margin-bottom: 15px;
+                                font-size: 1.1rem;
 
                                 &:nth-child(1) {
                                     &::before {
@@ -977,6 +1115,734 @@ body {
             }
         }
 
+        // 手機板
+        #process-m {
+            * {
+                font-size: 1rem;
+            }
+
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: none;
+
+            margin-top: 80px;
+            margin-bottom: 100px;
+
+            @media (max-width:700px) {
+                display: block;
+            }
+
+            .swiper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .swiper-wrapper {
+                        
+                    .swiper-slide {
+                        text-align: center;
+                        font-size: 18px;
+                        background: #fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 60%;
+
+                        &:nth-child(2n) {
+                            width: 60%;
+                        }
+
+                        &:nth-child(3n) {
+                            width: 60%;
+                        }
+
+
+
+                        .process-card1 {
+
+                            min-height: 550px;
+                            padding: 15px 30px;
+                            width: 300px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: start;
+                            flex-direction: column;
+                            background: linear-gradient(274.96deg, #004098 -3.52%, #255CA8 6.36%, #E8F0FF 97.44%);
+
+                            .tittle {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: bold;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+
+
+                            .step {
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 15px;
+
+                                .circle {
+                                    width: 50px;
+                                    height: 50px;
+                                    background-color: white;
+                                    border: 2px solid #004098;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+
+                                    .content-number {
+                                        span {
+                                            font-size: 30px;
+                                            color: #004098;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step-content {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+
+                                .step1 {
+                                    .sub-t {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        text-align: center;
+                                        margin-bottom: 15px;
+
+                                        p {
+                                            background-color: black;
+                                            color: white;
+                                            width: 61px;
+                                            height: 28px;
+                                        }
+                                    }
+
+                                    .sub-content {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: space-between;
+
+
+                                        .content {
+                                            margin-bottom: 15px;
+                                            display: flex;
+                                            justify-content: center;
+                                            font-weight: bold;
+
+                                            width: 100%;
+
+
+
+                                            p {
+                                                margin-right: 30px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                font-weight: 400;
+                                            }
+
+                                            span {
+                                                color: #c7000b;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                position: relative;
+                                                font-size: 0.8rem;
+                                                font-weight: 400;
+                                                letter-spacing: 0.06em;
+
+                                                &::after {
+                                                    position: absolute;
+                                                    content: '';
+                                                    width: 100%;
+                                                    height: 1px;
+                                                    bottom: 0;
+                                                    background-color: #C7000B;
+                                                }
+
+                                                img {
+                                                    width: 30px;
+                                                    height: 5px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .step2 {
+                                    .sub-t {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        text-align: center;
+                                        margin-bottom: 15px;
+
+                                        p {
+                                            background-color: black;
+                                            color: white;
+                                            width: 61px;
+                                            height: 28px;
+                                        }
+                                    }
+
+                                    .content1 {
+                                        margin-bottom: 15px;
+                                    }
+
+                                    .content2 {
+                                        margin-bottom: 15px;
+
+                                        ul {
+                                            display: flex;
+                                            justify-content: start;
+                                            flex-direction: column;
+                                            list-style-type: none;
+                                            padding: 0;
+
+                                            li {
+                                                font-size: 13px;
+                                                display: flex;
+                                                justify-content: start;
+                                                list-style-type: none;
+                                                align-items: center;
+
+                                                &::before {
+                                                    content: '\2022';
+                                                    width: 15px;
+                                                    height: 15px;
+                                                    color: red;
+                                                    font-size: 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .step3 {
+                                    h2 {
+                                        font-weight: 400;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+
+                        }
+
+                        .process-card2 {
+                            min-height: 550px;
+                            padding: 15px;
+                            width: 300px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: start;
+                            flex-direction: column;
+                            background: linear-gradient(112.35deg, #F3F6FA 45.76%, rgba(243, 246, 250, 0.2) 100%);
+
+                            .tittle {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: bold;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .step {
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 15px;
+
+                                .circle {
+                                    width: 50px;
+                                    height: 50px;
+                                    background-color: white;
+                                    border: 2px solid #004098;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+
+                                    .content-number {
+                                        span {
+                                            font-size: 30px;
+                                            color: #004098;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step1 {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: 400;
+                                }
+                            }
+
+
+                            .step2 {
+                                .sub-t {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                    margin-bottom: 15px;
+
+                                    p {
+                                        background-color: black;
+                                        color: white;
+                                        height: 28px;
+                                        padding: 0 10px;
+                                    }
+                                }
+
+                                .content {
+                                    margin-bottom: 15px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    flex-direction: column;
+
+                                    .num1 {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 15px;
+
+                                        span {
+                                            max-width: 25px;
+                                            min-width: 25px;
+                                            max-height: 25px;
+                                            min-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+
+                                    .num2 {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 15px;
+
+                                        span {
+                                            max-width: 25px;
+                                            min-width: 25px;
+                                            max-height: 25px;
+                                            min-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step3 {
+                                h4 {
+                                    font-size: 20px;
+                                    font-weight: 400;
+
+                                }
+                            }
+
+                        }
+
+                        .process-card3 {
+
+                            min-height: 550px;
+                            padding: 15px;
+                            width: 300px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: start;
+                            flex-direction: column;
+                            background: linear-gradient(274.96deg, #004098 -3.52%, #255CA8 6.36%, #E8F0FF 97.44%);
+
+                            .tittle {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: bold;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .step {
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 15px;
+
+                                .circle {
+                                    width: 50px;
+                                    height: 50px;
+                                    background-color: white;
+                                    border: 2px solid #004098;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+
+                                    .content-number {
+                                        span {
+                                            font-size: 30px;
+                                            color: #004098;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step1 {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: 400;
+                                    font-size: 1.1rem;
+                                }
+                            }
+
+                            .step2 {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-direction: column;
+                                margin-bottom: 15px;
+
+
+                                .num1 {
+                                    display: flex;
+                                    align-items: flex-start;
+                                    margin-bottom: 15px;
+
+                                    span {
+                                        min-width: 25px;
+                                        max-height: 25px;
+                                        min-height: 25px;
+                                        max-width: 25px;
+                                        background-color: #004098;
+                                        color: #fff;
+                                        border-radius: 50%;
+                                        margin-right: 15px;
+                                    }
+                                }
+
+                            }
+
+                            .step3 {
+                                .num2 {
+                                    display: flex;
+                                    align-items: flex-start;
+
+                                    margin-bottom: 15px;
+
+                                    span {
+                                        min-width: 25px;
+                                        max-height: 25px;
+                                        min-height: 25px;
+                                        max-width: 25px;
+                                        background-color: #004098;
+                                        color: #fff;
+                                        border-radius: 50%;
+                                        margin-right: 15px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .process-card4 {
+
+                            min-height: 550px;
+                            padding: 15px;
+                            width: 300px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: start;
+                            flex-direction: column;
+                            background: linear-gradient(112.35deg, #F3F6FA 45.76%, rgba(243, 246, 250, 0.2) 100%);
+
+                            .tittle {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: bold;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .step {
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 15px;
+
+                                .circle {
+                                    width: 50px;
+                                    height: 50px;
+                                    background-color: white;
+                                    border: 2px solid #004098;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+
+                                    .content-number {
+                                        span {
+                                            font-size: 30px;
+                                            color: #004098;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step {
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 15px;
+
+                                .circle {
+                                    width: 50px;
+                                    height: 50px;
+                                    background-color: white;
+                                    border: 2px solid #004098;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+
+                                    .content-number {
+                                        span {
+                                            font-size: 30px;
+                                            color: #004098;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step1 {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: 400;
+                                    font-size: 1.2rem;
+                                }
+                            }
+
+                            .step2 {
+                                margin-bottom: 15px;
+
+                                .sub-t {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-align: center;
+                                    margin-bottom: 15px;
+
+                                    p {
+                                        background-color: black;
+                                        color: white;
+                                        height: 28px;
+                                        padding: 0 10px;
+                                    }
+                                }
+
+                                .content {
+                                    margin-bottom: 15px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    flex-direction: column;
+
+                                    .num1 {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 15px;
+
+                                        span {
+                                            min-width: 25px;
+                                            min-height: 25px;
+                                            max-width: 25px;
+                                            max-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+
+                                    .num2 {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 15px;
+
+                                        span {
+                                            min-width: 25px;
+                                            min-height: 25px;
+                                            max-width: 25px;
+                                            max-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .step3 {
+                                h4 {
+                                    font-weight: 400;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+
+                        .process-card5 {
+
+                            min-height: 550px;
+                            padding: 15px;
+                            width: 300px;
+                            height: 100%;
+                            display: flex;
+                            justify-content: start;
+                            flex-direction: column;
+                            background: linear-gradient(274.96deg, #004098 -3.52%, #255CA8 6.36%, #E8F0FF 97.44%);
+
+                            .tittle {
+                                margin-bottom: 15px;
+
+                                h3 {
+                                    font-weight: bold;
+                                    font-size: 1.5rem;
+                                }
+                            }
+
+                            .step {
+                                display: flex;
+                                justify-content: center;
+                                margin-bottom: 15px;
+
+                                .circle {
+                                    width: 50px;
+                                    height: 50px;
+                                    background-color: white;
+                                    border: 2px solid #004098;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 50%;
+
+                                    .content-number {
+                                        span {
+                                            font-size: 30px;
+                                            color: #004098;
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            .step-content {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-direction: column;
+                                text-align: center;
+
+                                .step1 {
+                                    margin-bottom: 15px;
+
+                                    h3 {
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                    }
+                                }
+
+                                .step2 {
+                                    margin-bottom: 15px;
+
+                                    .num1 {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        margin-bottom: 15px;
+
+                                        span {
+                                            min-width: 25px;
+                                            min-height: 25px;
+                                            max-width: 25px;
+                                            max-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+
+                                    .num2 {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        margin-bottom: 15px;
+
+                                        span {
+                                            min-width: 25px;
+                                            min-height: 25px;
+                                            max-width: 25px;
+                                            max-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+
+                                    .num3 {
+                                        margin-bottom: 15px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        span {
+                                            min-width: 25px;
+                                            min-height: 25px;
+                                            max-width: 25px;
+                                            max-height: 25px;
+                                            background-color: #004098;
+                                            color: #fff;
+                                            border-radius: 50%;
+                                            margin-right: 15px;
+                                        }
+                                    }
+                                }
+
+                                .step3 {
+                                    h3 {
+                                        font-size: 1.2rem;
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .line {
+            width: 100%;
+            height: 2px;
+            background-color: #B4B4B4;
+            margin-bottom: 100px;
+        }
+
+
         // 頁面連結
         #function-link {
             margin-top: 30px;
@@ -1002,6 +1868,10 @@ body {
                     flex-direction: column;
                     padding: 0 2%;
                     width: 100%;
+                }
+
+                @media (max-width:700px) {
+                    padding: 0px;
                 }
 
                 // 快速連結
@@ -1048,12 +1918,14 @@ body {
                         }
 
                         .content {
+                            margin-bottom: 15px;
                             position: absolute;
                             top: 50%;
                             left: calc(50% - (372px / 2));
 
-                            @include pad {
-                                left: 0;
+
+                            @media (max-width:400px) {
+                                left: 30px;
                             }
 
                             .target-name {
@@ -1074,16 +1946,32 @@ body {
                                     @include pad {
                                         margin-right: 0px;
                                     }
+
+                                    @media (max-width:400px) {
+                                        font-size: 30px;
+                                    }
                                 }
 
                                 .sup-icon {
                                     width: 32px;
                                     height: 32px;
                                     transform: translate(50%, 0%);
+                                    margin-left: 50px;
+
+                                    @media (max-width:400px) {
+                                        margin-left: 20px;
+                                        width: 25px;
+                                        height: 25px;
+                                    }
 
                                     img {
                                         width: 32px;
                                         height: 32px;
+
+                                        @media (max-width:400px) {
+                                            width: 27px;
+                                            height: 27px;
+                                        }
                                     }
                                 }
                             }
@@ -1135,12 +2023,13 @@ body {
                         }
 
                         .content {
+                            margin-bottom: 15px;
                             position: absolute;
                             top: 50%;
                             left: calc(50% - (372px / 2));
 
-                            @include pad {
-                                left: 0;
+                            @media (max-width:400px) {
+                                left: 30px;
                             }
 
                             .target-name {
@@ -1161,16 +2050,32 @@ body {
                                     @include pad {
                                         margin-right: 0px;
                                     }
+
+                                    @media (max-width:400px) {
+                                        font-size: 30px;
+                                    }
                                 }
 
                                 .sup-icon {
                                     width: 32px;
                                     height: 32px;
                                     transform: translate(50%, 0%);
+                                    margin-left: 50px;
+
+                                    @media (max-width:400px) {
+                                        margin-left: 20px;
+                                        width: 25px;
+                                        height: 25px;
+                                    }
 
                                     img {
                                         width: 32px;
                                         height: 32px;
+
+                                        @media (max-width:400px) {
+                                            width: 27px;
+                                            height: 27px;
+                                        }
                                     }
                                 }
                             }
