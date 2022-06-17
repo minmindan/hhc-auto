@@ -55,15 +55,28 @@ main #banner .banner-container .sub-section .tittle-en {
   main #banner .banner-container .sub-section .tittle-en {
     position: absolute;
     color: white;
-    margin-top: 10%;
-    margin-top: 5%;
+    margin-top: 150px;
     padding-left: 50px;
+    font-size: 68px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 680px) {
+  main #banner .banner-container .sub-section .tittle-en {
+    line-height: 50px;
+    font-size: 50px;
   }
 }
 
 @media (max-width: 546px) {
   main #banner .banner-container .sub-section .tittle-en {
     line-height: 100px;
+    font-size: 37px;
+    font-weight: 400;
+    line-height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -80,14 +93,23 @@ main #banner .banner-container .sub-section .tittle-ch {
     position: absolute;
     z-index: 3;
     color: white;
+    margin-top: 300px;
     padding-left: 50px;
-    margin-top: 25%;
+  }
+}
+
+@media (max-width: 680px) {
+  main #banner .banner-container .sub-section .tittle-ch {
+    font-size: 40px;
   }
 }
 
 @media (max-width: 546px) {
   main #banner .banner-container .sub-section .tittle-ch {
     margin-top: 250px;
+    font-size: 30px;
+    padding-left: 30px;
+    line-height: 59px;
   }
 }
 
@@ -95,14 +117,12 @@ main #banner .banner-container .sub-section .scroll-box {
   position: absolute;
   left: 0;
   bottom: -250%;
+  width: 100%;
 }
 
 @media (max-width: 992px) {
   main #banner .banner-container .sub-section .scroll-box {
-    z-index: 1;
-    top: 600px;
-    padding-left: 50px;
-    left: 0;
+    display: none;
   }
 }
 
@@ -110,6 +130,9 @@ main #banner .banner-container .sub-section .scroll-box .scroll-img {
   width: 24px;
   height: 100px;
   margin-bottom: 30px;
+  overflow: hidden;
+  -webkit-animation: scroll 1.2s infinite;
+          animation: scroll 1.2s infinite;
 }
 
 @media (max-width: 992px) {
@@ -126,6 +149,28 @@ main #banner .banner-container .sub-section .scroll-box .scroll-img img {
 @media (max-width: 992px) {
   main #banner .banner-container .sub-section .scroll-box .scroll-img img {
     z-index: 10;
+  }
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    height: 0px;
+    margin-bottom: 130px;
+  }
+  100% {
+    height: 100px;
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    height: 0px;
+    margin-bottom: 130px;
+  }
+  100% {
+    height: 100px;
+    margin-bottom: 30px;
   }
 }
 
@@ -169,7 +214,7 @@ main #banner .banner-container .sub-section .sup-bg {
 @media (max-width: 1440px) {
   main #banner .banner-container .sub-section .sup-bg {
     width: 840px;
-    height: 376px;
+    height: 378px;
   }
 }
 
@@ -193,12 +238,7 @@ main #banner .banner-container .sub-section .sup-bg .color-block {
 
 main #banner .banner-container .main-section {
   padding-left: 250px;
-}
-
-@media (max-width: 1500px) {
-  main #banner .banner-container .main-section {
-    padding-left: 150px;
-  }
+  position: relative;
 }
 
 @media (max-width: 992px) {
@@ -209,12 +249,14 @@ main #banner .banner-container .main-section {
 
 main #banner .banner-container .main-section .banner-img {
   max-width: 1178px;
-  min-width: 930px;
   min-height: 518px;
   width: auto;
   height: auto;
   margin-left: auto;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 992px) {
@@ -240,12 +282,6 @@ main #banner .banner-container .main-section .banner-img .img img {
      object-fit: cover;
 }
 
-@media (max-width: 992px) {
-  main #banner .banner-container .main-section .banner-img .img img {
-    min-height: 827px;
-  }
-}
-
 main #banner .banner-container .main-section .banner-img .img .main-img-color {
   height: 100%;
   width: 100%;
@@ -266,9 +302,9 @@ main #banner .banner-container .main-section .banner-img .page-list {
   height: 164px;
   background-color: #004098;
   color: white;
-  padding: 42px 36px 36px 49px;
+  padding: 42px 0px 36px 63px;
   position: absolute;
-  top: calc(50% - 164px);
+  top: calc(50% - 110px);
   left: -120px;
 }
 
@@ -304,6 +340,75 @@ main #banner .banner-container .main-section .banner-img .page-list ul li {
   margin-bottom: 16px;
 }
 
+main #banner .banner-container .main-section .banner-img .scroll-box {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  z-index: 10;
+  display: none;
+}
+
+@media (max-width: 992px) {
+  main #banner .banner-container .main-section .banner-img .scroll-box {
+    display: block;
+    z-index: 1;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 546px) {
+  main #banner .banner-container .main-section .banner-img .scroll-box {
+    padding-left: 30px;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img .scroll-box .scroll-img {
+  width: 24px;
+  height: 100px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  -webkit-animation: scroll 1.2s infinite;
+          animation: scroll 1.2s infinite;
+}
+
+@media (max-width: 992px) {
+  main #banner .banner-container .main-section .banner-img .scroll-box .scroll-img {
+    z-index: 10;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img .scroll-box .scroll-img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  main #banner .banner-container .main-section .banner-img .scroll-box .scroll-img img {
+    z-index: 10;
+  }
+}
+
+@media (max-width: 992px) {
+  main #banner .banner-container .main-section .banner-img .scroll-box .scroll-text {
+    z-index: 10;
+  }
+}
+
+main #banner .banner-container .main-section .banner-img .scroll-box .scroll-text span {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  orientation: mixed;
+  color: #004098;
+}
+
+@media (max-width: 992px) {
+  main #banner .banner-container .main-section .banner-img .scroll-box .scroll-text span {
+    z-index: 10;
+    color: white;
+  }
+}
+
 main #philosophy {
   padding: 0 428px 0 20%;
   margin-top: 120px;
@@ -315,6 +420,12 @@ main #philosophy {
     margin-top: 120px;
     padding-left: 240px;
     padding-right: 155px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main #philosophy {
+    padding-left: 120px;
   }
 }
 
@@ -353,6 +464,7 @@ main #philosophy .philosophy-container .left-section .white-space {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 main #philosophy .philosophy-container .left-section .white-space h1 {
@@ -425,20 +537,21 @@ main #philosophy .philosophy-container .right-section .main-container p {
   margin-bottom: 40px;
 }
 
-main #philosophy .philosophy-container .right-section .subtittle-container .sbutittle {
+main #philosophy .philosophy-container .right-section .subtittle-container .subtittle {
   margin-bottom: 40px;
 }
 
-main #philosophy .philosophy-container .right-section .subtittle-container .sbutittle .icon {
+main #philosophy .philosophy-container .right-section .subtittle-container .subtittle .icon {
   width: 13px;
+  height: 15px;
 }
 
-main #philosophy .philosophy-container .right-section .subtittle-container .sbutittle .icon img {
+main #philosophy .philosophy-container .right-section .subtittle-container .subtittle .icon img {
   width: 100%;
   height: 100%;
 }
 
-main #philosophy .philosophy-container .right-section .subtittle-container .sbutittle h4 {
+main #philosophy .philosophy-container .right-section .subtittle-container .subtittle h4 {
   margin-top: 3px;
   margin-bottom: 15px;
   font-size: 20px;
@@ -529,6 +642,8 @@ main #philosophy-img .philosophy-img-container .img-box .bg-image1 {
   main #philosophy-img .philosophy-img-container .img-box .bg-image1 {
     width: 399px;
     height: 412px;
+    position: absolute;
+    left: 20px;
   }
 }
 
@@ -539,6 +654,8 @@ main #philosophy-img .philosophy-img-container .img-box .bg-image1 {
     min-width: unset;
     -webkit-transform: unset;
             transform: unset;
+    position: unset;
+    margin-bottom: 40px;
   }
 }
 
@@ -561,6 +678,13 @@ main #philosophy-img .philosophy-img-container .img-box .bg-image2 {
   }
 }
 
+@media (max-width: 992px) {
+  main #philosophy-img .philosophy-img-container .img-box .bg-image2 {
+    position: absolute;
+    right: 0;
+  }
+}
+
 @media (max-width: 768px) {
   main #philosophy-img .philosophy-img-container .img-box .bg-image2 {
     display: none;
@@ -571,6 +695,8 @@ main #philosophy-img .philosophy-img-container .img-box .bg-image2 {
     max-width: unset;
     min-width: unset;
     min-height: 411px;
+    position: unset;
+    margin-bottom: 40px;
   }
 }
 
@@ -592,6 +718,12 @@ main #milestones {
     margin-top: 180px;
     padding-left: 240px;
     padding-right: 155px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main #milestones {
+    padding-left: 120px;
   }
 }
 
@@ -641,6 +773,9 @@ main #milestones .milestones-container .left-section .white-space h1 {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   orientation: mixed;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  orientation: mixed;
   font-size: 60px;
   color: #EAEEF3;
   line-height: 5rem;
@@ -688,7 +823,7 @@ main #milestones .milestones-container .right-section .main-container .content .
 }
 
 main #milestones-img .history-img-container {
-  height: 65vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -804,6 +939,12 @@ main #company-profile {
   }
 }
 
+@media (max-width: 1200px) {
+  main #company-profile {
+    padding-left: 120px;
+  }
+}
+
 @media (max-width: 992px) {
   main #company-profile {
     padding-right: 40px;
@@ -848,6 +989,9 @@ main #company-profile .company-profile-container .left-section .white-space h1 {
           writing-mode: vertical-lr;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  orientation: mixed;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
   orientation: mixed;
   font-size: 60px;
   color: #EAEEF3;
@@ -986,3 +1130,4 @@ main #location-map iframe {
     width: 100%;
   }
 }
+/*# sourceMappingURL=aboutus.css.map */

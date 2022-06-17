@@ -30,11 +30,11 @@ body {
 
             @include pad {
                 padding-left: 0px;
-                max-height: 915px;
+                // max-height: 915px;
             }
 
             @include mobile {
-                max-height: 622px;
+                // max-height: 622px;
             }
 
             .banner-container {
@@ -121,7 +121,8 @@ body {
                             width: 24px;
                             height: 100px;
                             margin-bottom: 30px;
-
+                            overflow: hidden;
+                            animation: scroll 1.2s infinite;
                             @include pad {
                                 z-index: 10;
                             }
@@ -137,6 +138,8 @@ body {
 
                             }
                         }
+
+                        @include animation-h130px;
 
                         .scroll-text {
                             @include pad {
@@ -201,7 +204,7 @@ body {
                     }
 
                     @include mobile {
-                        max-height: 622px;
+                        // max-height: 622px;
                     }
 
                     .banner-img {
@@ -232,7 +235,7 @@ body {
                                 object-fit: cover;
 
                                 @include pad {
-                                    min-height: 622px;
+                                    // min-height: 622px;
                                 }
                             }
 
@@ -379,9 +382,11 @@ body {
                     padding-left: 162px;
                 }
 
-                @include screen1350 {
+
+                @media (max-width:1350px) {
                     padding-left: 80px;
                 }
+
 
                 @media (max-width:992px) {
                     padding-left: 0px;
@@ -392,7 +397,7 @@ body {
                 margin-bottom: 50px;
                 }
 
-              
+
 
                 // 區塊內容
                 .product-content {
@@ -422,7 +427,7 @@ body {
                             margin-right: 120px;
                         }
 
-                        @include screen1350 {
+                        @media (max-width:1350px) {
                             margin-right: 60px;
                         }
 
@@ -444,13 +449,13 @@ body {
 
                 // 主要內容區塊
                 .right-section {
-                    
-                    
+
+
                   @media (max-width:992px) {
                     position: absolute;
                     right: 0;
                   }
-                  
+
                   @media (max-width:805px) {
                     position: unset;
                     right: unset;
@@ -519,11 +524,11 @@ body {
                                     margin-bottom: 150px;
                                     margin-right: 50px;
 
-                                    @include screen1350 {
+                                    @media (max-width:1350px) {
                                         margin-right: 45px;
                                     }
 
-                                    
+
 
                                     // 圖片
                                     .image-box {
@@ -717,7 +722,7 @@ body {
                                             font-weight: 400;
                                         }
                                     }
-                                    
+
                                 }
 
 

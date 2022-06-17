@@ -115,6 +115,7 @@
             z-index: 1;
         }
     </style>
+    <link rel="stylesheet" href="{{asset('css/swiper_circle.css')}}">
 </head>
 <body>
     <!-- 導覽列 -->

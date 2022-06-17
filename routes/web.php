@@ -39,7 +39,7 @@ Route::prefix('hhc-auto')->group(function (){
 
 
 // 首頁 手建
-Route::prefix('/hhc-auto/')->group(function (){
+Route::prefix('/hhc-auto')->group(function (){
     Route::get('/index',[HomePageController::class, 'index']); //總表
     Route::get('/aboutus',[AboutUsController::class, 'index']);
 });
@@ -67,6 +67,8 @@ Route::prefix('/hhc-auto/')->group(function (){
 
 // 產品首頁
 Route::get('/equipment',[Controller::class, 'equipment_index']);
+Route::get('/equipment/detail',[ProductManageController::class, 'test']);
+
 
 
 // 產品管理

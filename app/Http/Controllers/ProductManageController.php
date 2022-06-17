@@ -16,6 +16,10 @@ class ProductManageController extends Controller
 {
     //產品管理
 
+    public function test(){
+        return view('equipment-detail.equipment-detail');
+    }
+
     // 設備
     // 首頁
     public function equipment_index()

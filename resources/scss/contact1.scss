@@ -1,4 +1,4 @@
-@import "./template.scss";
+@import "./_template.scss";
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 * {
@@ -29,11 +29,11 @@ main {
 
         @include pad {
             padding-left: 0px;
-            max-height: 915px;
+            // max-height: 915px;
         }
 
         @include mobile {
-            max-height: 622px;
+            // max-height: 622px;
         }
 
         .banner-container {
@@ -199,7 +199,7 @@ main {
                 }
 
                 @include mobile {
-                    max-height: 622px;
+                    // max-height: 622px;
                 }
 
                 .banner-img {
@@ -231,7 +231,7 @@ main {
                             object-fit: cover;
 
                             @include pad {
-                                min-height: 622px;
+                                // min-height: 622px;
                             }
                         }
 
@@ -302,7 +302,8 @@ main {
                             width: 24px;
                             height: 100px;
                             margin-bottom: 30px;
-
+                            overflow: hidden;
+                            animation: scroll 1.2s infinite;
                             @include pad {
                                 z-index: 10;
                             }
@@ -315,9 +316,21 @@ main {
                                     z-index: 10;
                                 }
 
-
                             }
                         }
+
+                        @keyframes scroll {
+                            0% {
+                                height: 0px;
+                                margin-bottom: 130px;
+                            }
+
+                            100% {
+                                height: 100px;
+                                margin-bottom: 30px;
+                            }
+                        }
+
 
                         .scroll-text {
                             @include pad {
@@ -358,15 +371,13 @@ main {
                         }
 
                         .progress-step1 {
-                            color: #C7000B
-;
+                            color: #C7000B;
 
                             &::after {
                                 content: '';
                                 width: 100%;
                                 height: 1px;
-                                background-color: #C7000B
-;
+                                background-color: #C7000B;
                                 display: block;
                                 margin: 3px 0px auto;
                             }
@@ -445,15 +456,13 @@ main {
             }
 
             .progress-step1 {
-                color: #C7000B
-;
+                color: #C7000B;
 
                 &::after {
                     content: '';
                     width: 100%;
                     height: 1px;
-                    background-color: #C7000B
-;
+                    background-color: #C7000B;
                     display: block;
                     margin: 3px 0px auto;
                 }
@@ -505,15 +514,13 @@ main {
             }
 
             .progress-step1 {
-                color: #C7000B
-;
+                color: #C7000B;
 
                 &::after {
                     content: '';
                     width: 100%;
                     height: 1px;
-                    background-color: #C7000B
-;
+                    background-color: #C7000B;
                     display: block;
                 }
             }
@@ -638,6 +645,7 @@ main {
                             width: 679px;
                             height: 282px;
                             resize: none;
+
                             @media (max-width:1060px) {
                                 width: 620px;
 

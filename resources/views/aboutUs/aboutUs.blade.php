@@ -24,7 +24,7 @@ About Us
             <!-- SCROLL示意 -->
             <div class="scroll-box">
               <div class="scroll-img">
-                <img src="./img/functionIcon/gray_dwon.svg" alt="" />
+                <img src="{{asset('image/icon/AboutUs/gray_dwon.svg')}}" alt="" />
               </div>
               <div class="scroll-text">
                 <span>SCROLL</span>
@@ -38,10 +38,10 @@ About Us
           <!-- 公司主圖 -->
           <div class="main-section">
             <div class="banner-img">
-              
+
               <div class="img">
                 <div class="main-img-color"></div>
-                <img src="./img/backImg/Rectangle 22.png" alt="" />
+                <img src="{{asset('image/aboutus/image1.png')}}" alt="" />
               </div>
               <!-- 頁面導覽塊 -->
               <div class="page-list">
@@ -54,7 +54,7 @@ About Us
                <!-- SCROLL示意 -->
             <div class="scroll-box">
               <div class="scroll-img">
-                <img src="./img/functionIcon/gray_dwon.svg" alt="" />
+                <img src="{{asset('image/icon/AboutUs/gray_dwon.svg')}}" alt="" />
               </div>
               <div class="scroll-text">
                 <span>SCROLL</span>
@@ -100,10 +100,10 @@ About Us
             </div>
             <div class="subtittle-container">
               <!-- 副標 -->
-              <div class="sbutittle">
+              <div class="subtittle">
                 <!-- icon -->
                 <div class="icon">
-                  <img src="./img/functionIcon/blue_line.svg" alt="" />
+                  <img src="{{asset('image/icon/AboutUs/blue_line.svg')}}" alt="" />
                 </div>
                 <!-- 內容 -->
                 <div class="content">
@@ -112,10 +112,10 @@ About Us
                 </div>
               </div>
               <!-- 副標 -->
-              <div class="sbutittle">
+              <div class="subtittle">
                 <!-- icon -->
                 <div class="icon">
-                  <img src="./img/functionIcon/blue_line.svg" alt="" />
+                  <img src="{{asset('image/icon/AboutUs/blue_line.svg')}}" alt="" />
                 </div>
                 <!-- 內容 -->
                 <div class="content">
@@ -124,10 +124,10 @@ About Us
                 </div>
               </div>
               <!-- 副標 -->
-              <div class="sbutittle">
+              <div class="subtittle">
                 <!-- icon -->
                 <div class="icon">
-                  <img src="./img/functionIcon/blue_line.svg" alt="" />
+                  <img src="{{asset('image/icon/AboutUs/blue_line.svg')}}" alt="" />
                 </div>
                 <!-- 內容 -->
                 <div class="content">
@@ -145,10 +145,10 @@ About Us
           <div class="bg-color"></div>
           <div class="img-box">
             <div class="bg-image1">
-              <img src="./img/backImg/AboutUs_2.jpeg" alt="" />
+              <img src="{{asset('image/aboutus/image2.png')}}" alt="" />
             </div>
             <div class="bg-image2">
-              <img src="./img/backImg/AboutUs_4.jpeg" alt="" />
+              <img src="{{asset('image/aboutus/image3.png')}}" alt="" />
             </div>
           </div>
           <div class="img-box-swiper"></div>
@@ -228,10 +228,10 @@ About Us
           <div class="bg-color"></div>
           <div class="img-box">
             <div class="bg-image3">
-              <img src="./img/backImg/AboutUs_2.jpeg" alt="" />
+              <img src="{{asset('image/aboutus/image4.png')}}" alt="" />
             </div>
             <div class="bg-image4">
-              <img src="./img/backImg/AboutUs_4.jpeg" alt="" />
+              <img src="{{asset('image/aboutus/image5.png')}}" alt="" />
             </div>
           </div>
         </div>

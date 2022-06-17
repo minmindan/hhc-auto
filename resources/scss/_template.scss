@@ -5,6 +5,22 @@ $bgTextColor:#EAEEF3;
     margin-bottom: 40px;
 }
 
+
+// Animation h130px
+@mixin animation-h130px {
+    @keyframes scroll {
+        0% {
+            height: 0px;
+            margin-bottom: 130px;
+        }
+
+        100% {
+            height: 100px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
 // product專區
 @mixin p-blue-font{
     color: $themeColor;
@@ -13,6 +29,15 @@ $bgTextColor:#EAEEF3;
     color:$SupColor;
 }
 
+// 製程
+@mixin sub-tittle{
+    p{
+     background-color: black;
+     color: white;
+     padding: 0 10px;
+     margin-right: 20px;
+    }
+ }
 
 // 背景文字
 @mixin bgTextSet{

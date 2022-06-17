@@ -8,7 +8,7 @@ class HomePageController extends Controller
     public function index()
     {
         // dd('123');
-        return view('aboutus.aboutus');
+        return view('index');
     }
 
     // 新增頁
