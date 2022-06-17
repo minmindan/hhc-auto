@@ -30,6 +30,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+require __DIR__.'/back.php';
+
 
 Route::prefix('hhc-auto')->group(function (){
     Route::get('/',[HhcAutoController::class, 'index']);
@@ -37,27 +39,10 @@ Route::prefix('hhc-auto')->group(function (){
 
 
 // 首頁 手建
-Route::prefix('/hhc-auto/index')->group(function (){
-    Route::get('/',[HomePageController::class, 'index']); //總表
-    Route::get('/create',[HomePageController::class, 'create']); //新增頁面
-    Route::post('/store',[HomePageController::class, 'store']); //儲存頁面
-    Route::get('/edit',[HomePageController::class, 'edit']); //編輯頁面
-    Route::post('/update',[HomePageController::class, 'update']); //更新頁面
-    Route::post('/delete',[HomePageController::class, 'delete']); //刪除頁面
+Route::prefix('/hhc-auto/')->group(function (){
+    Route::get('/index',[HomePageController::class, 'index']); //總表
+    Route::get('/aboutus',[AboutUsController::class, 'index']);
 });
-
-
-// 關於我們 手建
-Route::prefix('aboutus')->group(function (){
-    Route::get('/',[AboutUsController::class, 'index']); //總表
-    Route::get('/create',[AboutUsController::class, 'create']); //新增頁面
-    Route::post('/store',[AboutUsController::class, 'store']); //儲存頁面
-    Route::get('/edit',[AboutUsController::class, 'edit']); //編輯頁面
-    Route::post('/update',[AboutUsController::class, 'update']); //更新頁面
-    Route::post('/delete',[AboutUsController::class, 'delete']); //刪除頁面
-});
-
-
 
 // 表單 手建
 
