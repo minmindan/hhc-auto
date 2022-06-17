@@ -20,7 +20,6 @@ class ProductManageController extends Controller
     // 首頁
     public function equipment_index()
     {
-        // Mail::to('ivy@hhc-auto.com')->send(new OrderShipped);
         return view('product_manage.product_equipment');
     }
 
