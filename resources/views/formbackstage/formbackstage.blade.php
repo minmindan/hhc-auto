@@ -12,23 +12,38 @@
       <h2>表單回報 |</h2>
     </div>
   </div>
+  @foreach ($datas as $data)
   <div id="form-report">
     <div class="content">
       <div class="content-tittle">
         <div class="type">
-          <p>查詢類型</p>
+          <p>查詢類型：
+            @if ($data->type == 1)
+            {{ '設備' }}
+        @elseif ($data->type == 2)
+            {{ '軟體' }}
+        @elseif ($data->type == 3)
+            {{ '部品零件' }}
+        @elseif ($data->type == 4)
+            {{ '耗材' }}
+        @elseif ($data->type == 5)
+            {{ '維修' }}
+        @elseif ($data->type == 6)
+            {{ '其他問題' }}
+        @endif
+          </p>
         </div>
         <div class="name">
-          <p>姓名</p>
+          <p>姓名：{{ $data->name }}</p>
         </div>
         <div class="email">
-          <p>Email</p>
+          <p>Email：{{ $data->address }}</p>
         </div>
         <div class="state">
-          <p>狀態</p>
+          <p>狀態：{{ $data->state }}</p>
         </div>
         <div class="comment-date">
-          <p>留言日期</p>
+          <p>留言日期：{{ $data->created_at }}</p>
         </div>
         <button>檢視</button>
       </div>
@@ -53,12 +68,15 @@
           <div class="box3">
             <input type="text" disabled />
           </div>
-          <button type="submit">檢視</button>
+          <button type="submit" href="/contact/list/edit{{$data->id}}">檢視</button>
         </div>
       </div>
 
     </div>
   </div>
+  @endforeach
 </main>
 @endsection
+@section('js')
 
+@endsection

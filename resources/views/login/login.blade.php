@@ -80,6 +80,8 @@
 
         .login-btn .login-img img {
             transform: translate(50%, 25%);
+            width: 100%;
+            height: 100%;
         }
 
         .login-btn p {
@@ -131,7 +133,8 @@
 <body>
     <main>
         <div id="login-id">
-            <form action="">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
                 <!-- logo -->
                 <div class="logo-img">
                     <img src="{{asset('image/login/login-logo.svg')}}" alt="">

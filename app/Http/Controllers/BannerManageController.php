@@ -8,6 +8,7 @@ use App\Models\Index_banner;
 use App\Models\Process_banner;
 use App\Models\Product_banner;
 use App\Models\Contact_banner;
+use App\Models\Report;
 
 use Illuminate\Http\Request;
 
@@ -199,7 +200,14 @@ class BannerManageController extends Controller
 
 
 
-
+    public function contactlist_index(){
+        $datas = Report::get();
+        return view ('formbackstage.formbackstage' , compact('datas'));
+    }
+    public function contactlist_edit($id){
+        $datas = Report::find($id);
+        return view ('formbackstage.formbackstage' , compact('datas'));
+    }
 
 
 
@@ -207,12 +215,15 @@ class BannerManageController extends Controller
     // 首頁
     public function contact_index()
     {
+        dd('123');
 
     }
 
     // 新增頁
     public function contact_create()
-    {}
+    {
+        return view ('form-backstage.form-backstage');
+    }
 
     // 儲存頁
     public function contact_store()
@@ -246,3 +257,46 @@ class BannerManageController extends Controller
     }
 }
 
+
+
+
+// // 首頁 TOPICS管理
+//     // 首頁
+//     public function homepage_index()
+//     {
+//         return view('banner_manage.index_banner');
+//     }
+
+//     // 新增頁
+//     public function homepage_create()
+//     {}
+
+//     // 儲存頁
+//     public function homepage_store()
+//     {}
+
+//     // 編輯頁
+//     public function homepage_edit()
+//     {
+//         $index_banner = Index_banner::get();
+
+//         return view('banner_manage.index_banner', compact('index_banner'));}
+
+//     // 更新頁
+//     public function homepage_update(Request $request, $id)
+//     {
+
+//         $index_banner = Index_banner::find($id);
+
+//         if ($request->hasfile('img_path')) {
+//             FilesController::deleteUpload($index_banner->img_path); //小工具刪除圖片
+//             $path = FilesController::imgUpload($request->img_path, 'Index');
+
+//             $index_banner->img_path = $path;
+//         }
+
+//         $index_banner->save();
+
+//         return redirect("banner-manage/aboutus/edit");
+
+//     }

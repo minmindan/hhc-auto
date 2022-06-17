@@ -258,14 +258,19 @@ Route::prefix('/banner-manage/contact')->group(function (){
 });
 // 表單
 // ContactController
-Route::prefix('/banner-manage/contact')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
+Route::prefix('/contact/list')->group(function (){
+    Route::get('/',[BannerManageController::class, 'contactlist_index']); //總表
     Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
+    Route::get('/edit{id}',[BannerManageController::class, 'contactlist_edit']); //編輯頁面
     Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
 });
 // 隱私權政策
-// 網站協議
+Route::get('/privacypolic',[HhcAutoController::class,'privacypolic']);
 
-Route::get('/login',[HhcAutoController::class,'login']);
+//使用條款
+Route::get('/termsofservice',[HhcAutoController::class,'termsofservice']);
+
+Route::get('/',[HhcAutoController::class,'login']);
+
+require __DIR__.'/auth.php';
