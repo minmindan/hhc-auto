@@ -128,13 +128,11 @@
         #banner #scrool .scrool-box {
             height: 120px;
             overflow: hidden;
-            z-index: 10px;
             animation: scroll 1.2s infinite;
         }
 
         #banner #scrool .scrool-box img {
             height: 100px;
-            z-index: 10px;
         }
 
         @keyframes scroll {
