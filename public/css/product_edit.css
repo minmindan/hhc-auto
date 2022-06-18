@@ -9,6 +9,23 @@ body {
   background-color: #F7F8FA;
 }
 
+main .blue {
+  font-size: 1.5rem;
+  color: #004098;
+  font-weight: 500;
+  position: relative;
+}
+
+main .blue::after {
+  position: absolute;
+  bottom: -5px;
+  left: 1px;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: #004098;
+}
+
 main #tittle-list-id {
   background-color: white;
 }
@@ -24,7 +41,7 @@ main #tittle-list-id .list-tittle {
 }
 
 main #tittle-list-id .list-tittle h1 {
-  color: blue;
+  color: #004098;
   margin-right: 50px;
 }
 
@@ -35,6 +52,9 @@ main #tittle-list-id .list-tittle ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 20px;
 }
 
 main #tittle-list-id .list-tittle ul li {
