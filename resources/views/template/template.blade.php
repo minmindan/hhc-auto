@@ -32,6 +32,21 @@
         .none {
             display: none !important;
         }
+        a{
+            color: white;
+            text-decoration:none;
+            display: flex;
+            justify-content: start;
+        }
+        a:visited{
+            color: white;
+        }
+        .bgblue{
+            background-color: #004098 !important;
+        }
+        /* .fons a{
+            color: #b4b4b4;
+        } */
     </style>
     @yield('css')
 </head>
@@ -46,32 +61,32 @@
             </div>
             <div id="focusmain" class="focus-main none">
                 <div id="focus-box">
-                    <p>關於我們</p>
+                    <p><a href="">關於我們</a></p>
                     <h1>ABOUT US</h1>
                     <ul>
-                        <li>經營理念 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li>公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li>公司簡介 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
+                        <li><a href="">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="">公司簡介 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                     </ul>
                 </div>
                 <div id="focus-box">
-                    <p>產品介紹</p>
-                    <h1>PRODUCT</h1>
+                    <p><a href="">產品介紹</a></p>
+                    <h1><a href="">PRODUCT</a></h1>
                     <ul>
-                        <li>設備 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li>軟體 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li>部品零件 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li>耗材 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li>維修 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
+                        <li><a href="">設備 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="">軟體 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="">部品零件 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="">耗材 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="">維修 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                     </ul>
                 </div>
                 <div id="focus-box">
-                    <p>產品製作流程</p>
-                    <h1>PROCESS</h1>
+                    <p><a href="">產品製作流程</a></p>
+                    <h1><a href="">PROCESS</a></h1>
                 </div>
                 <div id="focus-box">
-                    <p>聯絡我們</p>
-                    <h1>CONTACT</h1>
+                    <p><a href="">聯絡我們</a></p>
+                    <h1><a href="">CONTACT</a></h1>
                 </div>
                 <div class="btn btn--1" id="focus-button">
                     <h1>E n t r y</h1>
@@ -82,16 +97,17 @@
             </div>
         </div>
         <div id="bar">
+            <a href="/hhc-auto">
             <div id="logo">
                 <img id="minilogo" src="{{ asset('image/nav/blue_logo_mini.png') }}" alt="">
                 <img id="biglogo" src="{{ asset('image/nav/blue_logo.png') }}" alt="">
                 <img id="white-logo" src="{{ asset('image/nav/white_logo.png') }}" alt="">
             </div>
+        </a>
             <div id="subnav">
                 <div class="hoverbox downlist">
-                    <div class="fons" >關於我們</div>
-                    <img width="15px" style="margin-left:10px ;" src="{{ asset('image/nav/down_gray.svg') }}"
-                        alt=""></i>
+                    <div><a class="fons" href="">關於我們</a></div>
+                    <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
                     <div class="list aboutlist">
                         <p>經營理念</p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -101,9 +117,8 @@
                     </div>
                 </div>
                 <div class="hoverbox downlist">
-                    <div class="fons">產品介紹</div>
-                    <img width="15px" style="margin-left:10px ;" src="{{ asset('image/nav/down_gray.svg') }}"
-                        alt=""></i>
+                    <div><a class="fons" href="">產品介紹</a></div>
+                    <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
                     <div class="list productlist">
                         <p>設備</p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -117,18 +132,17 @@
                     </div>
                 </div>
                 <div class="hoverbox">
-                    <div class="fons">產品製作流程</div>
+                    <div><a class="fons" href="">產品製作流程</a></div>
                 </div>
                 <div class="hoverbox">
-                    <div class="fons">最新消息</div>
+                    <div><a class="fons" href="">最新消息</a></div>
                 </div>
                 <div class="hoverbox">
-                    <div class="fons">聯絡我們</div>
+                    <div><a class="fons" href="">聯絡我們</a></div>
                 </div>
                 <div class="hoverbox downlist">
-                    <div class="fons background">後台管理</div>
-                    <img width="15px" style="margin-left:10px ;" src="{{ asset('image/nav/down_gray.svg') }}"
-                        alt=""></i>
+                    <div background"><a class="fons href="">後台管理</a></div>
+                    <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
                     <div class="list backendlist">
                         <p>關於我們</p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -190,13 +204,17 @@
     var bgrlist = document.querySelectorAll('.stuffing');
     var whitelogo = document.getElementById('white-logo');
     var banner = document.querySelector('#banner');
-    el.addEventListener('touchmove', show, false);
-    el.addEventListener('mousewheel', show, false);
-    el.addEventListener('DOMMouseScroll', show, false);
-    show(), false;
+    var main = document.querySelector('main')
+    el.addEventListener('touchmove', navin, false);
+    el.addEventListener('mousewheel', navin, false);
+    el.addEventListener('DOMMouseScroll', navin, false);
+    // show(), false;
+    navin();
     function navin() {
-        var windowtop = document.documentElement.scrollTop;
+        // var windowtop = document.documentElement.scrollTop; 問題待解決
+        var windowtop = document.body.scrollTop;
         console.log(windowtop);
+        console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
             if (windowtop > 100) {
                 subnav.classList.add("none")
@@ -206,7 +224,8 @@
                 biglogo.classList.remove('none')
             }
         } else {
-            if (windowtop > banner.clientHeight) {
+            main.style.margin='-150px 0 0 0'
+            if (windowtop > banner.clientHeight - 75) {
                 whitelogo.classList.add('none');
                 minilogo.classList.add('block');
                 bgrlist[1].classList.add('bgblue');
@@ -220,17 +239,16 @@
         }
     }
 
-    function show(event) {
-        var wi = window.innerHeight //頁面高度
-        navin();
-        window.onscroll = () => {
-            navin();
-            let cH = document.documentElement.clientHeight;
-            let sH = document.documentElement.scrollHeight;
-            let sT = document.documentElement.scrollTop;
-            console.log(cH, sH, sT);
-        }
-    }
+    // function show(event) {
+    //     var wi = window.innerHeight //頁面高度
+    //     navin();
+    //     window.onscroll = () => {
+    //         navin();
+    //         let cH = document.documentElement.clientHeight;
+    //         let sH = document.documentElement.scrollHeight;
+    //         let sT = document.documentElement.scrollTop;
+    //     }
+    // }
 </script>
 
 </html>
