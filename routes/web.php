@@ -31,7 +31,7 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 require __DIR__.'/back.php';
 require __DIR__.'/bannermanage.php';
-require __DIR__.'/produvtmanage.php';
+require __DIR__.'/productmanage.php';
 
 Route::get('/',[HomePageController::class,'index']);
 

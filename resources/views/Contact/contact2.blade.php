@@ -113,12 +113,12 @@
                         <div class="type form-field">
                             <label>查詢類型</label>
                             <select disabled name="type" id="">
-                                <option value="1">設備</option>
-                                <option value="2">軟體</option>
-                                <option value="3">部品零件</option>
-                                <option value="4">耗材</option>
-                                <option value="5">維修</option>
-                                <option value="6">其他</option>
+                                <option value="1" @if ($data['type'] == 1) {{ 'selected' }} @endif>設備</option>
+                                <option value="2" @if ($data['type'] == 2) {{ 'selected' }} @endif>軟體</option>
+                                <option value="3" @if ($data['type'] == 3) {{ 'selected' }} @endif>部品零件</option>
+                                <option value="4" @if ($data['type'] == 4) {{ 'selected' }} @endif>耗材</option>
+                                <option value="5" @if ($data['type'] == 5) {{ 'selected' }} @endif>維修</option>
+                                <option value="6" @if ($data['type'] == 6) {{ 'selected' }} @endif>其他</option>
                             </select>
                         </div>
 
