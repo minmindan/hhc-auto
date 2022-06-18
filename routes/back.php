@@ -78,6 +78,10 @@ Route::prefix('/banner-manage/contact')->group(function (){
     Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
     Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
 });
+
+
+
+
 // 表單
 // ContactController
 Route::prefix('/contact/list')->group(function (){

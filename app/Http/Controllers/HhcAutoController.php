@@ -12,7 +12,7 @@ class HhcAutoController extends Controller
     }
 
     public function login(){
-        return view('login.login');
+        return view('index');
     }
 
     public function termsofservice(){

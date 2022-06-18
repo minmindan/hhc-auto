@@ -110,6 +110,7 @@
 
                         <div class="type form-field">
                             <label>查詢類型</label>
+                            <p>{{$data['type']}}</p>
                             <select disabled name="type" id="">
                                 <option value="{{ $data['type'] }}"
                                     @if ($data['type'] == 1) {{ 'selected' }} @endif>類型1</option>
@@ -158,10 +159,9 @@
                     </div>
                     <!-- 表單按鈕 -->
                     <div class="button-section">
-                        {{-- <button type="button" class="btn-for-a">
-                <a href="/contact">返回修改</a> --}}
-                        {{-- <a href="/contact/delete/{{$data]}}">返回修改</a> --}}
-                        </button>
+                        <div type="button" class="btn-for-a">
+                <a href="/contact">返回修改</a>
+                        </div>
                         <button type="submit">
                             <p>確認送出</p>
                         </button>

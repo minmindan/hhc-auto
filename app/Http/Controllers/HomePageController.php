@@ -7,27 +7,111 @@ class HomePageController extends Controller
     //首頁
     public function index()
     {
-        // dd('123');
+        return view('index');
+    }
+    public function aboutus()
+    {
+        return view('aboutus.aboutus');
+    }
+    public function equipment()
+    {
+        return view('equipment.product');
+    }
+    public function process()
+    {
+        return view('Process_cssunset.process');
+    }
+    public function topics()
+    {
         return view('index');
     }
 
-    // 新增頁
-    public function create()
-    {}
 
-    // 儲存頁
-    public function store()
-    {}
 
-    // 編輯頁
-    public function edit()
-    {}
 
-    // 更新頁
-    public function update()
-    {}
 
-    // 刪除頁
-    public function delete()
-    {}
+
+
+
+
+
+
+    //表單相關
+    
+    public function contact()
+    {
+        $data = session()->all();
+        // dd($data);
+        return view('Contact.contact1', compact('data'));
+    }
+    public function contact2(Request $request){
+        // dd($request->all());
+        session([
+            'type' => $request->type,
+            'company' => $request->company,
+            'title' => $request->appellation,
+            'name' => $request->name,
+            'phone' => $request->tel,
+            'address' => $request->email,
+            'demand' => $request->demand,
+            'state' => 1,
+            'img_path' => '',
+        ]);
+        $data = session()->all();
+        // if ($data['type'] = '1') {
+        //     dd('1');
+        // };
+        // if ($data['type'] = '2') {
+        //     dd('2');
+        // };
+        // if ($data['type'] = '101') {
+        //     dd('101');
+        // };
+        // dd($data);
+        // Report::create([
+        //     'type' => $request->type,
+        //     'company' => $request->company,
+        //     'title' => $request->appellation,
+        //     'name' => $request->name,
+        //     'phone' => $request->tel,
+        //     'address' => $request->email,
+        //     'demand' => $request->demand,
+        //     'state' => 1,
+        //     'img_path' => '',
+        // ]);
+
+        // $form = Report::orderby('id', 'desc')->take(1)->get();
+
+
+        return view('Contact.contact2', compact('data'));
+    }
+
+
+    public function contactin(Request $request){
+        // $data = session()->all();
+        // dd($data);
+        // dd($request);
+
+
+        Report::create([
+            'type' => session()->get('type'),
+            'company' => session()->get('company'),
+            'title' => session()->get('title'),
+            'name' => session()->get('name'),
+            'phone' => session()->get('phone'),
+            'address' => session()->get('address'),
+            'demand' => session()->get('demand'),
+            'state' => 1,
+            'remark' => '',
+        ]);
+
+
+
+        return redirect('/contact3');
+    }
+
+    public function contact3(){
+        return view('Contact.contact3');
+    }
+
 }
