@@ -21,7 +21,7 @@
                     <!-- SCROLL示意 -->
                     <div class="scroll-box">
                         <div class="scroll-img">
-                            <img src="./img/functionIcon/gray_dwon.svg" alt="" />
+                            <img src="{{asset('image/nav/down_gray.svg')}}" alt="" />
                         </div>
                         <div class="scroll-text">
                             <span>SCROLL</span>

@@ -68,6 +68,8 @@ Route::prefix('/hhc-auto')->group(function (){
 // 產品首頁
 Route::get('/equipment',[Controller::class, 'equipment_index']);
 Route::get('/equipment/detail',[ProductManageController::class, 'test']);
+Route::get('/equipment/all',[ProductManageController::class, 'test_all']);
+
 
 
 

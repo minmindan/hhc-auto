@@ -10,10 +10,35 @@
 
 main {
     #page-tittle {
+        background-color: white;
+
+        // 列表標題
         .tittle {
-            color: blue;
+            display: flex;
+            align-items: center;
+            margin-left: 250px;
+            padding: 25px 0px;
+
+            h2 {
+                color: #004098;
+                margin-right: 50px;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    width: 3px;
+                    height: 80%;
+                    background-color: #004098;
+                    top: 50%;
+                    right: -30px;
+                    transform: translate(0%, -45%);
+                }
+            }
+
         }
     }
+
 
     #form-report {
         background-color: #F7F8FA;

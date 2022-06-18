@@ -5,8 +5,37 @@
   padding: 0;
 }
 
+main #page-tittle {
+  background-color: white;
+}
+
 main #page-tittle .tittle {
-  color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 250px;
+  padding: 25px 0px;
+}
+
+main #page-tittle .tittle h2 {
+  color: #004098;
+  margin-right: 50px;
+  position: relative;
+}
+
+main #page-tittle .tittle h2::after {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 80%;
+  background-color: #004098;
+  top: 50%;
+  right: -30px;
+  -webkit-transform: translate(0%, -45%);
+          transform: translate(0%, -45%);
 }
 
 main #form-report {

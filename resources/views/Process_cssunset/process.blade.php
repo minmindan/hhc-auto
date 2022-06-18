@@ -1,15 +1,13 @@
 @extends('template.template')
 @section('title')
-About Us
+    About Us
 @endsection
 @section('css')
-
-<link rel="stylesheet" href="{{./css/process.css}}">
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="{{ asset('css/process.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 @endsection
 @section('main')
-<main>
+    <main>
         <!-- Banner -->
         <div id="banner">
             <div class="banner-container">
@@ -482,14 +480,13 @@ About Us
     </main>
 @endsection
 @section('js')
-<script src="../navbar.js"></script>
+    <script src="{{asset('js/navbar.js')}}"></script>
 
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper(".mySwiper", {});
-</script>
-
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {});
+    </script>
 @endsection

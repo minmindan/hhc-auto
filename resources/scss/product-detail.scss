@@ -144,6 +144,7 @@ main {
                                     width: auto;
                                     display: flex;
                                     justify-content: center;
+
                                     .arrow {
                                         width: 35px;
                                         display: flex;
@@ -350,9 +351,39 @@ main {
                     }
 
                     .section-r {
-                        img {
+                        width: auto;
+                        display: flex;
+                        justify-content: center;
+
+                        .arrow {
                             width: 35px;
-                            height: 286px;
+                            display: flex;
+                            justify-content: center;
+
+                            animation: scroll 1.2s infinite;
+                            overflow: hidden;
+
+                            @include pad {
+                                width: auto;
+                            }
+
+                            img {
+                                width: 35px;
+                                height: 286px;
+                            }
+                        }
+
+                        @keyframes scroll {
+                            0% {
+                                width: 35px;
+                                height: 0;
+                                margin-bottom: 286px;
+                            }
+
+                            100% {
+                                width: 35px;
+                                height: 286px;
+                            }
                         }
                     }
                 }

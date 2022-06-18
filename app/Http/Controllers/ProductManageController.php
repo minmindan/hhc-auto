@@ -20,6 +20,10 @@ class ProductManageController extends Controller
         return view('equipment-detail.equipment-detail');
     }
 
+    public function test_all(){
+        return view('equipment-all(未完成).product-all');
+    }
+
     // 設備
     // 首頁
     public function equipment_index()

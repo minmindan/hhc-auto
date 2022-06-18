@@ -89,7 +89,7 @@
             </div>
             <div id="subnav">
                 <div class="hoverbox downlist">
-                    <div class="fons">關於我們</div>
+                    <div class="fons" >關於我們</div>
                     <img width="15px" style="margin-left:10px ;" src="{{ asset('image/nav/down_gray.svg') }}"
                         alt=""></i>
                     <div class="list aboutlist">

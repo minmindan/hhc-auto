@@ -11,7 +11,6 @@
         <!-- 頁面大區塊 -->
         <div id="product-detail">
             <div id="product-section">
-
                 <!-- Comouter -->
                 <div class="page-container">
                     <div class="container-tittle">
@@ -40,7 +39,6 @@
                                                 <img src="{{ asset('image/equipment-detail/productimg.png') }}"
                                                     alt="">
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +83,6 @@
                                     <div class="swiper-slide">
                                         <img src="{{ asset('image/equipment-detail/productimg.png') }}" alt="">
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -150,7 +147,7 @@
                     <!-- 聯繫 -->
                     <div class="contact-us">
                         <span>CONTACT</span>
-                        <div class="img"><img src="./img/more_right.svg" alt=""></div>
+                        <div class="img"><img src="{{asset('image/equipment-detail/red_right.svg')}}" alt=""></div>
                     </div>
                 </div>
 
@@ -159,7 +156,7 @@
     </main>
 @endsection
 @section('js')
-    <script src="../navbar.js"></script>
+    <script src="{{asset('js/navbar.js')}}"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
