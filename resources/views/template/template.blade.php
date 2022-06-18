@@ -41,6 +41,9 @@
         a:visited{
             color: white;
         }
+        .bgblue{
+            background-color: #004098 !important;
+        }
         /* .fons a{
             color: #b4b4b4;
         } */
@@ -201,6 +204,7 @@
     var bgrlist = document.querySelectorAll('.stuffing');
     var whitelogo = document.getElementById('white-logo');
     var banner = document.querySelector('#banner');
+    var main = document.querySelector('main')
     el.addEventListener('touchmove', navin, false);
     el.addEventListener('mousewheel', navin, false);
     el.addEventListener('DOMMouseScroll', navin, false);
@@ -210,6 +214,7 @@
         // var windowtop = document.documentElement.scrollTop; 問題待解決
         var windowtop = document.body.scrollTop;
         console.log(windowtop);
+        console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
             if (windowtop > 100) {
                 subnav.classList.add("none")
@@ -219,7 +224,8 @@
                 biglogo.classList.remove('none')
             }
         } else {
-            if (windowtop > banner.clientHeight) {
+            main.style.margin='-150px 0 0 0'
+            if (windowtop > banner.clientHeight - 75) {
                 whitelogo.classList.add('none');
                 minilogo.classList.add('block');
                 bgrlist[1].classList.add('bgblue');
