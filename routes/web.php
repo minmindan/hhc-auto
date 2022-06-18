@@ -37,6 +37,9 @@ Route::prefix('hhc-auto')->group(function (){
     Route::get('/',[HhcAutoController::class, 'index']);
 });
 
+Route::get('/',[HhcAutoController::class, 'index']);
+
+
 
 // 首頁 手建
 Route::prefix('/hhc-auto')->group(function (){
