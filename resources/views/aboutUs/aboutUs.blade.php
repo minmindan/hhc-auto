@@ -10,6 +10,7 @@ About Us
     /> --}}
 @section('main')
 <main>
+
        <!-- Banner大圖片 -->
        <div id="banner">
         <div class="banner-container">
@@ -38,10 +39,11 @@ About Us
           <!-- 公司主圖 -->
           <div class="main-section">
             <div class="banner-img">
-
               <div class="img">
                 <div class="main-img-color"></div>
-                <img src="{{asset('image/aboutus/image1.png')}}" alt="" />
+                @foreach ($abus as $abus)
+                <img src="{{$abus[0] -> img_path ??''}}" alt="" />
+                @endforeach
               </div>
               <!-- 頁面導覽塊 -->
               <div class="page-list">

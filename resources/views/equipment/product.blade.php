@@ -36,7 +36,10 @@ About Us
        <div class="main-section">
            <div class="banner-img">
                <div class="img">
-                   <img src="{{asset('image/product/Rectangle 22 (2).png')}}" alt="" />
+                @foreach ($product as $product)
+                   <img src="{{$product->img_path??''}}" alt="" />
+                   @endforeach
+
                    <div class="main-img-color"></div>
                </div>
                <!-- 頁面導覽塊 -->

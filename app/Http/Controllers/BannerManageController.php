@@ -20,7 +20,9 @@ class BannerManageController extends Controller
     // 首頁
     public function homepage_index()
     {
-        return view('banner_manage.index_banner');
+        $index_banner = Index_banner::get();
+
+        return view('banner_manage.index_banner',compact('index_banner'));
     }
 
     // 新增頁
@@ -46,14 +48,14 @@ class BannerManageController extends Controller
 
         if ($request->hasfile('img_path')) {
             FilesController::deleteUpload($index_banner->img_path); //小工具刪除圖片
-            $path = FilesController::imgUpload($request->img_path, 'Index');
+            $path = FilesController::imgUpload($request->img_path, 'index');
 
             $index_banner->img_path = $path;
         }
 
         $index_banner->save();
 
-        return redirect("banner-manage/aboutus/edit");
+        return redirect("banner-manage/homepage/edit");
 
     }
 
@@ -160,7 +162,7 @@ class BannerManageController extends Controller
     // 首頁
     public function process_index()
     {
-
+        $process = Process_banner::get();
     }
 
     // 新增頁
@@ -215,7 +217,6 @@ class BannerManageController extends Controller
     // 首頁
     public function contact_index()
     {
-        dd('123');
 
     }
 
@@ -252,7 +253,7 @@ class BannerManageController extends Controller
 
         $contact_banner->save();
 
-        return redirect("banner-manage/aboutus/edit");
+        return redirect("banner-manage/contact/edit");
 
     }
 }

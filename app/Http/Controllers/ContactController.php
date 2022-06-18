@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Report;
 use App\storage\sessions;
+use App\Models\Contact_banner;
 
 
 class ContactController extends Controller
@@ -12,13 +13,18 @@ class ContactController extends Controller
     //首頁
     public function index(Request $request)
     {
+        $contact = Contact_banner::get();
         $data = session()->all();
         // dd($data);
-        return view('Contact.contact1', compact('data'));
+        return view('Contact.contact1', compact('data','contact'));
     }
 
     public function contact2(Request $request){
         // dd($request->all());
+
+        $contact = Contact_banner::get();
+
+
         session([
             'type' => $request->type,
             'company' => $request->company,
@@ -56,7 +62,7 @@ class ContactController extends Controller
         // $form = Report::orderby('id', 'desc')->take(1)->get();
 
 
-        return view('Contact.contact2', compact('data'));
+        return view('Contact.contact2', compact('data','contact'));
     }
 
 
@@ -84,7 +90,9 @@ class ContactController extends Controller
     }
 
     public function contact3(){
-        return view('Contact.contact3');
+        $contact = Contact_banner::get();
+
+        return view('Contact.contact3',compact('contact'));
     }
 
 

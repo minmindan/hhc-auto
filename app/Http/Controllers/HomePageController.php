@@ -1,6 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\FilesController;
+use App\Models\Aboutus_banner;
+use App\Models\Index_banner;
+use App\Models\Process_banner;
+use App\Models\Product_banner;
+use App\Models\Contact_banner;
 
 class HomePageController extends Controller
 {
@@ -11,11 +17,13 @@ class HomePageController extends Controller
     }
     public function aboutus()
     {
-        return view('aboutus.aboutus');
+        $abus = Aboutus_banner::get();
+        return view('aboutus.aboutus',compact('abus'));
     }
     public function product()
     {
-        return view('equipment.product');
+        $product = Product_banner::get();
+        return view('equipment.product',compact('product'));
     }
 
 
@@ -70,7 +78,8 @@ class HomePageController extends Controller
 
     public function process()
     {
-        return view('Process_cssunset.process');
+        $process = Process_banner::get();
+        return view('Process_cssunset.process',compact('process'));
     }
     public function topics()
     {

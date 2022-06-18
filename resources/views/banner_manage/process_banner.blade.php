@@ -35,7 +35,7 @@
             <div class="content-manage">
                 @foreach ($process_banner as $process)
                     <!-- 卡片 -->
-                    <form action="/banner-manage/aboutus/update/{{ $process->id }}" method="post"
+                    <form action="/banner-manage/process/update/{{ $process->id }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="content-card">

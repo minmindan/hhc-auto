@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<p>測試</p>
+<p>您的網站有新的表單！</p>
+<p>請注意查收！</p>
 </body>
 </html>

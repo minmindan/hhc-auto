@@ -37,7 +37,9 @@
                 <div class="main-section">
                     <div class="banner-img">
                         <div class="img">
-                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="" />
+                            @foreach ($process as $process)
+                            <img src="{{$process->img_path??''}}" alt="" />
+                            @endforeach
                             <div class="main-img-color"></div>
                         </div>
                         <!-- 頁面導覽塊 -->
