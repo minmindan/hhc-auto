@@ -58,6 +58,17 @@
   #main .swiper-pagination-bullet-active::after {
     width: 44px;
     height: 44px;
+    top: -5px;
+    right: -3px;
+  }
+}
+
+@media (max-width: 414px) {
+  #main .swiper-pagination-bullet-active::after {
+    width: 33px;
+    height: 33px;
+    top: 0px;
+    right: 2px;
   }
 }
 
