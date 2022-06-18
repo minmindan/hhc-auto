@@ -1,4 +1,5 @@
 @import "./_template.scss";
+@import "./_templatee.scss";
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 * {
@@ -29,12 +30,8 @@ main {
 
         @include pad {
             padding-left: 0px;
-            // max-height: 915px;
         }
 
-        @include mobile {
-            // max-height: 622px;
-        }
 
         .banner-container {
             .sub-section {
@@ -118,21 +115,21 @@ main {
 
                     .scroll-img {
                         width: 24px;
-                        height: 100px;
-                        margin-bottom: 30px;
                         overflow: hidden;
                         animation: scroll 1.2s infinite;
+
                         @include pad {
                             z-index: 10;
                         }
 
                         img {
-                            width: 100%;
-                            height: 100%;
+                            width: 24px;
+                            height: 100px;
 
                             @include pad {
                                 z-index: 10;
                             }
+
 
                         }
                     }
@@ -211,7 +208,7 @@ main {
                 }
 
                 @include mobile {
-                    // max-height: 622px;
+                    max-height: 622px;
                 }
 
                 .banner-img {
@@ -243,7 +240,7 @@ main {
                             object-fit: cover;
 
                             @include pad {
-                                // min-height: 622px;
+                                min-height: 622px;
                             }
                         }
 
@@ -309,25 +306,36 @@ main {
                         }
 
 
-
                         .scroll-img {
                             width: 24px;
-                            height: 100px;
-                            margin-bottom: 30px;
+                            overflow: hidden;
+                            animation: scroll 1.2s infinite;
 
                             @include pad {
                                 z-index: 10;
                             }
 
                             img {
-                                width: 100%;
-                                height: 100%;
+                                width: 24px;
+                                height: 100px;
 
                                 @include pad {
                                     z-index: 10;
                                 }
 
 
+                            }
+                        }
+
+                        @keyframes scroll {
+                            0% {
+                                height: 0px;
+                                margin-bottom: 130px;
+                            }
+
+                            100% {
+                                height: 100px;
+                                margin-bottom: 30px;
                             }
                         }
 
@@ -570,6 +578,8 @@ main {
 
                 h5 {
                     font-weight: 500;
+                    font-size: 20px;
+                    margin-left: 15px;
                 }
             }
 

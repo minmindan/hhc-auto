@@ -21,7 +21,7 @@
                     <!-- SCROLL示意 -->
                     <div class="scroll-box">
                         <div class="scroll-img">
-                            <img src="{{asset('image/nav/down_gray.svg')}}" alt="" />
+                            <img src="{{ asset('image/icon/Equipment/gray_dwon.svg') }}" alt="" />
                         </div>
                         <div class="scroll-text">
                             <span>SCROLL</span>
@@ -36,22 +36,24 @@
                 <div class="main-section">
                     <div class="banner-img">
                         <div class="img">
-                            <img src="./img/範例.jpg" alt="" />
+                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="" />
                             <div class="main-img-color"></div>
                         </div>
-                        <!-- 頁面導覽塊 -->
-                        <div class="progress-bar">
-                            <ul>
-                                <li>經營理念</li>
-                                <li>公司沿革</li>
-                                <li>公司簡介</li>
-                            </ul>
-                        </div>
+
                         <!-- banner直版進度條 -->
                         <div class="progress-bar-l">
                             <div class="progress-step1">INPUT</div>
                             <div class="progress-step2">CONFIRM</div>
                             <div class="progress-step3">COMPLATE</div>
+                        </div>
+                        <!-- SCROLL示意 -->
+                        <div class="scroll-box">
+                            <div class="scroll-img">
+                                <img src="{{ asset('image/icon/Equipment/gray_dwon.svg') }}" alt="" />
+                            </div>
+                            <div class="scroll-text">
+                                <span>SCROLL</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,10 +93,12 @@
                         <div class="type form-field">
                             <label>查詢類型</label>
                             <select name="type" id="">
-                                <option value="1" @if ($data['type']??'' == 1) {{ 'selected' }} @endif>類型1
-                                </option>
-                                <option value="2 " @if ($data['type']??'' == 2) {{ 'selected' }} @endif>類型2
-                                </option>
+                                <option value="1">設備</option>
+                                <option value="2">軟體</option>
+                                <option value="3">部品零件</option>
+                                <option value="4">耗材</option>
+                                <option value="5">維修</option>
+                                <option value="6">其他</option>
                             </select>
                         </div>
                         <div class="company-name form-field">
