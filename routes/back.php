@@ -93,5 +93,5 @@ Route::get('/privacypolic',[HhcAutoController::class,'privacypolic']);
 //使用條款
 Route::get('/termsofservice',[HhcAutoController::class,'termsofservice']);
 
-Route::get('/',[HhcAutoController::class,'login']);
+// Route::get('/',[HhcAutoController::class,'login']);
 
