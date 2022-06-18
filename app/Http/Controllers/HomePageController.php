@@ -7,16 +7,67 @@ class HomePageController extends Controller
     //首頁
     public function index()
     {
-        return view('index');
+        return view('equipment-detail.equipment-detail');
     }
     public function aboutus()
     {
         return view('aboutus.aboutus');
     }
-    public function equipment()
+    public function product()
     {
         return view('equipment.product');
     }
+
+
+
+
+    public function equipment()
+    {
+        return view('equipment-all.product-all');
+    }
+    public function equipmentdetail($id)
+    {
+        return view('equipment-detail.equipment-detail');
+    }
+
+    public function software()
+    {
+        return view('equipment-all.product-all');
+    }
+    public function softwaredetail($id)
+    {
+        return view('equipment-detail.equipment-detail');
+    }
+
+    public function parts()
+    {
+        return view('equipment-all.product-all');
+    }
+    public function partsdetail($id)
+    {
+        return view('equipment-detail.equipment-detail');
+    }
+
+    public function consumables()
+    {
+        return view('equipment-all.product-all');
+    }
+    public function consumablesdetail($id)
+    {
+        return view('equipment-detail.equipment-detail');
+    }
+
+    public function maintenance()
+    {
+        return view('equipment-all.product-all');
+    }public function maintenancedetail($id)
+    {
+        return view('equipment-detail.equipment-detail');
+    }
+
+
+
+
     public function process()
     {
         return view('Process_cssunset.process');
@@ -37,7 +88,7 @@ class HomePageController extends Controller
 
 
     //表單相關
-    
+
     public function contact()
     {
         $data = session()->all();
