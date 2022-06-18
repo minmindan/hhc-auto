@@ -8,7 +8,7 @@ class HhcAutoController extends Controller
 {
     //
     public function index(){
-        return view ('template.template');
+        return view ('index');
     }
 
     public function login(){
