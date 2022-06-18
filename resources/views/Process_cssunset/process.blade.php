@@ -22,7 +22,7 @@
                     <!-- SCROLL示意 -->
                     <div class="scroll-box">
                         <div class="scroll-img">
-                            <img src="./img/functionIcon/gray_dwon.svg" alt="" />
+                            <img src="{{ asset('image/index-icon/gray_dwon.svg') }}" alt="" />
                         </div>
                         <div class="scroll-text">
                             <span>SCROLL</span>
@@ -37,7 +37,7 @@
                 <div class="main-section">
                     <div class="banner-img">
                         <div class="img">
-                            <img src="./img/backImg/Group 34.png" alt="" />
+                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="" />
                             <div class="main-img-color"></div>
                         </div>
                         <!-- 頁面導覽塊 -->
@@ -51,7 +51,7 @@
                         <!-- SCROLL示意 -->
                         <div class="scroll-box">
                             <div class="scroll-img">
-                                <img src="./img/functionIcon/gray_dwon.svg" alt="" />
+                                <img src="{{ asset('image/index-icon/gray_dwon.svg') }}" alt="" />
                             </div>
                             <div class="scroll-text">
                                 <span>SCROLL</span>
@@ -78,7 +78,14 @@
                             <div class="tittle">
                                 <p>方法一</p>
                             </div>
-                            <div class="content">網頁聯繫表單</div>
+                            <div class="content">網頁聯繫表單
+                                <div class="r-section">
+                                    <span>CONTACT</span>
+                                    <div class="red-arrow">
+                                        <img src="{{ asset('image/icon/Process/red_right.svg') }}" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="sup-directions2">
                             <div class="tittle">
@@ -231,7 +238,7 @@
                                         <div class="content">
                                             <p>網頁聯繫表單</p>
                                             <span>
-                                                CONTACT<img src="/img/functionIcon/more_right.svg" alt=""></span>
+                                                CONTACT<img src="{{ asset('image/icon/Process/red_right.svg') }}" alt=""></span>
                                         </div>
                                     </div>
                                 </div>
@@ -447,13 +454,13 @@
                     <!-- 快速連結 -->
                     <div class="target-img">
                         <div class="image-box">
-                            <img src="./img/backImg/Rectangle 22(1).png" alt="">
+                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="">
                         </div>
                         <div class="content">
                             <div class="target-name">
                                 <h2>PRODUCT</h2>
                                 <div class="sup-icon">
-                                    <img src="./img/functionIcon/white_circle.svg" alt="">
+                                    <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -463,13 +470,13 @@
                 <div class="contact-link">
                     <div class="target-img">
                         <div class="image-box">
-                            <img src="./img/backImg/Rectangle 22.png" alt="">
+                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="">
                         </div>
                         <div class="content">
                             <div class="target-name">
                                 <h2>CONTACT</h2>
                                 <div class="sup-icon">
-                                    <img src="./img/functionIcon/white_circle.svg" alt="">
+                                    <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -480,7 +487,7 @@
     </main>
 @endsection
 @section('js')
-    <script src="{{asset('js/navbar.js')}}"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

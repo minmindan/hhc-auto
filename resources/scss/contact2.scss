@@ -80,7 +80,6 @@ main {
                     line-height: 59px;
                     color: #B4B4B4;
                     letter-spacing: 0.06em;
-
                     @include pad {
                         position: absolute;
                         z-index: 3;
@@ -89,15 +88,16 @@ main {
                         padding-left: 50px;
                     }
 
-                    @media (max-width:680px) {
-                        font-size: 40px;
+                    @media (max-width:662px) {
+                        font-size: 30px;
+                        margin-top: 250px;
                     }
 
                     @include screen500 {
-                        margin-top: 250px;
                         font-size: 30px;
                         padding-left: 30px;
                         line-height: 59px;
+                        font-size: 25px;
                     }
                 }
 
@@ -238,6 +238,7 @@ main {
                             width: 100%;
                             height: 100%;
                             object-fit: cover;
+                            min-height: 661px;
 
                             @include pad {
                                 min-height: 622px;

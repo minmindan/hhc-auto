@@ -30,12 +30,8 @@ body {
 
             @include pad {
                 padding-left: 0px;
-                // max-height: 915px;
             }
 
-            @include mobile {
-                // max-height: 650px;
-            }
 
 
             .banner-container {
@@ -94,15 +90,16 @@ body {
                             padding-left: 50px;
                         }
 
-                        @media (max-width:680px) {
-                            font-size: 40px;
+                        @media (max-width:662px) {
+                            font-size: 30px;
+                            margin-top: 250px;
                         }
 
                         @include screen500 {
-                            margin-top: 250px;
                             font-size: 30px;
                             padding-left: 30px;
                             line-height: 59px;
+                            font-size: 25px;
                         }
                     }
 
@@ -124,13 +121,14 @@ body {
                             margin-bottom: 30px;
                             overflow: hidden;
                             animation: scroll 1.2s infinite;
+
                             @include pad {
                                 z-index: 10;
                             }
 
                             img {
-                                width: 100%;
-                                height: 100%;
+                                width: 24px;
+                                height: 100px;
 
                                 @include pad {
                                     z-index: 10;
@@ -214,6 +212,7 @@ body {
                         margin-left: auto;
                         position: relative;
                         display: flex;
+                        display: flex;
 
                         @include pad {
                             max-width: unset;
@@ -232,9 +231,11 @@ body {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: cover;
+                                min-height: 661px;
 
-                                @include pad {
-                                    // min-height: 622px;
+
+                                @include screen500 {
+                                    min-height: 568px;
                                 }
                             }
 
@@ -307,13 +308,14 @@ body {
                                 margin-bottom: 30px;
                                 overflow: hidden;
                                 animation: scroll 1.2s infinite;
+
                                 @include pad {
                                     z-index: 10;
                                 }
 
                                 img {
-                                    width: 100%;
-                                    height: 100%;
+                                    width: 24px;
+                                    height: 100px;
 
                                     @include pad {
                                         z-index: 10;
@@ -466,6 +468,29 @@ body {
 
                             .content {
                                 font-size: 1.1rem;
+
+                                    display: flex;
+                                    .r-section {
+                                    display: flex;
+                                    position: relative;
+                                    color: $SupColor;
+                                    margin-left: 50px;
+                                    &::after {
+                                        position: absolute;
+                                        content: '';
+                                        width: 100%;
+                                        height: 2px;
+                                        background-color: $SupColor;
+                                        bottom: 0px;
+                                    }
+
+                                    .red-arrow {
+                                        width: 30px;
+                                        height: 4px;
+                                        margin-left: 15px;
+                                        transform: translateY(-1px);
+                                    }
+                                }
                             }
 
                             .tittle {
@@ -1142,6 +1167,7 @@ body {
                 width: 100%;
                 height: 100%;
                 display: flex;
+
                 .swiper-wrapper {
 
                     .swiper-slide {
@@ -1854,11 +1880,11 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-
+            margin-bottom: 50px;
 
             .function-section {
                 width: 1350px;
-                height: 389px;
+                min-height: 389px;
                 display: flex;
 
 
@@ -1999,12 +2025,11 @@ body {
                         width: 100%;
                         height: 100%;
 
+                        position: relative;
                         .image-box {
                             width: 100%;
-                            height: 100%;
-                            position: relative;
+                            height: calc(100% - 5px);
                             overflow: hidden;
-
                             &::after {
                                 content: '';
                                 position: absolute;

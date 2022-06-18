@@ -98,18 +98,19 @@ main #banner .banner-container .sub-section .tittle-ch {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 662px) {
   main #banner .banner-container .sub-section .tittle-ch {
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 250px;
   }
 }
 
 @media (max-width: 546px) {
   main #banner .banner-container .sub-section .tittle-ch {
-    margin-top: 250px;
     font-size: 30px;
     padding-left: 30px;
     line-height: 59px;
+    font-size: 25px;
   }
 }
 
@@ -280,6 +281,7 @@ main #banner .banner-container .main-section .banner-img .img img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  min-height: 661px;
 }
 
 main #banner .banner-container .main-section .banner-img .img .main-img-color {
