@@ -7,7 +7,7 @@ class HomePageController extends Controller
     //首頁
     public function index()
     {
-        return view('equipment-detail.equipment-detail');
+        return view('index');
     }
     public function aboutus()
     {

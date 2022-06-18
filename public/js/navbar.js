@@ -8,6 +8,11 @@ var entryblue = document.getElementById('entryblue');
 var entrywhite = document.getElementById('entrywhite');
 var stuffing = document.querySelectorAll('.stuffing');
 var fons = document.querySelectorAll('.fons');
+var downgray= document.querySelectorAll('.down_gray');
+var downwhite= document.querySelectorAll('.down_white');
+downwhite.forEach(white => {
+    white.style.display='none';
+});
 hoverbox.forEach(element => {
     element.addEventListener('mousemove', function () {
         nav.classList.add('blue');
@@ -17,9 +22,16 @@ hoverbox.forEach(element => {
         stuffing.forEach(navlist => {
             navlist.classList.add('white');
         });
+        console.log('11');
         minilogo.classList.add('none');
         biglogo.classList.add('none');
         whitelogo.style.display ='block';
+        downwhite.forEach(white => {
+            white.style.display='block';
+        });
+        downgray.forEach(gray => {
+            gray.style.display='none';
+        });
         stuffing[0].style.backgroundColor='white';
         stuffing[1].style.backgroundColor='white';
     });
@@ -34,6 +46,12 @@ hoverbox.forEach(element => {
         minilogo.classList.remove('none');
         biglogo.classList.remove('none');
         whitelogo.style.display='none';
+        downwhite.forEach(white => {
+            white.style.display='none';
+        });
+        downgray.forEach(gray => {
+            gray.style.display='block';
+        });
         stuffing[0].style.backgroundColor='#0146a8';
         stuffing[1].style.backgroundColor='#0146a8';
     });
