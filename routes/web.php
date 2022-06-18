@@ -46,6 +46,11 @@ Route::prefix('/hhc-auto')->group(function (){
     Route::get('/',[HomePageController::class, 'index']); //總表
     Route::get('/aboutus',[HomePageController::class, 'index']);//關於我們
     Route::get('/product',[HomePageController::class, 'product']);//產品總覽
+    Route::get('/process',[HomePageController::class, 'process']);//流程
+    Route::get('/topics',[HomePageController::class, 'topics']);//最新消息
+    Route::get('/contact',[HomePageController::class, 'contact']);//回報表單
+
+
 
     //產品分類預覽
     Route::get('/equipment',[HomePageController::class, 'equipment']);//產品分類預覽(設備)
@@ -62,9 +67,6 @@ Route::prefix('/hhc-auto')->group(function (){
     Route::get('/maintenance/{id}',[HomePageController::class, 'maintenancedetail']);//產品細項
 
 
-    Route::get('/process',[HomePageController::class, 'process']);//流程
-    Route::get('/topics',[HomePageController::class, 'topics']);//最新消息
-    Route::get('/contact',[HomePageController::class, 'contact']);//回報表單
 });
 
 // 表單 手建
@@ -79,11 +81,14 @@ Route::prefix('/hhc-auto')->group(function (){
     Route::post('/update',[ContactController::class, 'update']); //更新頁面
 
     Route::get('/contact/delete/{id}',[ContactController::class, 'delete']); //刪除頁面
+
     // 以下用不到
     //Route::get('/create',[ContactController::class, 'create']); //新增頁面
 
 
 
+
+//-----------------------------------------------------------------------------------//
 
 // 產品首頁
 // Route::get('/equipment',[Controller::class, 'equipment_index']);

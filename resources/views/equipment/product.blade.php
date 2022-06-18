@@ -21,7 +21,7 @@ About Us
            <!-- SCROLL示意 -->
            <div class="scroll-box">
                <div class="scroll-img">
-                   <img src="./img/gray_dwon.svg" alt="" />
+                   <img src="{{asset('image/icon/AboutUs/gray_dwon.svg')}}" alt="" />
                </div>
                <div class="scroll-text">
                    <span>SCROLL</span>
@@ -36,7 +36,7 @@ About Us
        <div class="main-section">
            <div class="banner-img">
                <div class="img">
-                   <img src="./img/Rectangle 22.png" alt="" />
+                   <img src="{{asset('image/product/Rectangle 22 (2).png')}}" alt="" />
                    <div class="main-img-color"></div>
                </div>
                <!-- 頁面導覽塊 -->
@@ -52,7 +52,7 @@ About Us
                <!-- SCROLL示意 -->
                <div class="scroll-box">
                    <div class="scroll-img">
-                       <img src="./img/gray_dwon.svg" alt="" />
+                       <img src="{{asset('image/icon/AboutUs/gray_dwon.svg')}}" alt="" />
                    </div>
                    <div class="scroll-text">
                        <span>SCROLL</span>
@@ -87,7 +87,7 @@ About Us
                        <div class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
-                               <img src="./img/more_right.svg" alt="">
+                               <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
                        </div>
                    </div>
@@ -154,7 +154,7 @@ About Us
                        <div class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
-                               <img src="./img/more_right.svg" alt="">
+                               <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
                        </div>
                    </div>
@@ -220,7 +220,7 @@ About Us
                        <div class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
-                               <img src="./img/more_right.svg" alt="">
+                               <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
                        </div>
                    </div>
@@ -286,7 +286,7 @@ About Us
                        <div class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
-                               <img src="./img/more_right.svg" alt="">
+                               <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
                        </div>
                    </div>
@@ -352,7 +352,7 @@ About Us
                        <div class="more-box-fixed">
                            <span>MORE</span>
                            <div class="more-img">
-                               <img src="./img/more_right.svg" alt="">
+                               <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
                        </div>
                    </div>
