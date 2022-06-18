@@ -20,7 +20,7 @@ main #tittle-list-id .list-tittle {
 }
 
 main #tittle-list-id .list-tittle h1 {
-  color: blue;
+  color: #004098;
   margin-right: 50px;
   position: relative;
 }
@@ -30,7 +30,7 @@ main #tittle-list-id .list-tittle h1::after {
   content: '';
   width: 3px;
   height: 80%;
-  background-color: blue;
+  background-color: #004098;
   top: 50%;
   right: -30px;
   -webkit-transform: translate(0%, -45%);
@@ -56,7 +56,7 @@ main #tittle-list-id .list-tittle ul li {
 
 main #tittle-list-id .list-tittle ul li:nth-child(5) {
   font-size: 1.5rem;
-  color: blue;
+  color: #004098;
   font-weight: 500;
   position: relative;
 }
@@ -68,7 +68,7 @@ main #tittle-list-id .list-tittle ul li:nth-child(5)::after {
   width: 100%;
   height: 2px;
   content: '';
-  background-color: blue;
+  background-color: #004098;
 }
 
 main #tittle-list-id .list-container {
