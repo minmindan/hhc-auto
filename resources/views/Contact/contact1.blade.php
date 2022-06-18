@@ -91,9 +91,9 @@
                         <div class="type form-field">
                             <label>查詢類型</label>
                             <select name="type" id="">
-                                <option value="1" @if ($data['type'] == 1) {{ 'selected' }} @endif>類型1
+                                <option value="1" @if ($data['type']??'' == 1) {{ 'selected' }} @endif>類型1
                                 </option>
-                                <option value="2 " @if ($data['type'] == 2) {{ 'selected' }} @endif>類型2
+                                <option value="2 " @if ($data['type']??'' == 2) {{ 'selected' }} @endif>類型2
                                 </option>
                             </select>
                         </div>

@@ -41,7 +41,7 @@ Route::get('/',[HomePageController::class,'index']);
 // 前台頁面
 // 首頁 手建
 Route::prefix('/hhc-auto')->group(function (){
-    Route::get('/',[HomePageController::class, 'index123']); //總表
+    Route::get('/',[HomePageController::class, 'index']); //總表
     Route::get('/aboutus',[HomePageController::class, 'index']);//關於我們
     Route::get('/equipment',[HomePageController::class, 'equipment']);//產品分類預覽
     Route::get('/process',[HomePageController::class, 'process']);//流程
