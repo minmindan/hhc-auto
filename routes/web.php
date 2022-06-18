@@ -70,7 +70,7 @@ Route::prefix('/hhc-auto')->group(function (){
 });
 
 // 表單 手建
-
+Route::prefix('/hhc-auto')->group(function (){
     Route::get('/contact',[ContactController::class, 'index']); //表1
     Route::post('/contact2',[ContactController::class, 'contact2']); //表2
     Route::post('/contactin',[ContactController::class, 'contactin']);
@@ -87,7 +87,7 @@ Route::prefix('/hhc-auto')->group(function (){
 
 
 
-
+});
 //-----------------------------------------------------------------------------------//
 
 // 產品首頁

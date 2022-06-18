@@ -66,6 +66,9 @@ class BannerManageController extends Controller
     // 首頁
     public function aboutus_index()
     {
+        $abus_banner = Aboutus_banner::get();
+
+        return view('banner_manage.aboutus_banner',compact('abus_banner'));
     }
 
     // 新增頁
@@ -114,6 +117,9 @@ class BannerManageController extends Controller
     // 首頁
     public function product_index()
     {
+
+        $product_banner = Product_banner::get();
+        return view('banner_manage.product_banner',compact('product_banner'));
     }
 
     // 新增頁
@@ -148,7 +154,7 @@ class BannerManageController extends Controller
 
         $product_banner->save();
 
-        return redirect("banner-manage/aboutus/edit");
+        return redirect("banner-manage/product/edit");
 
     }
 
@@ -162,7 +168,8 @@ class BannerManageController extends Controller
     // 首頁
     public function process_index()
     {
-        $process = Process_banner::get();
+        $process_banner = Process_banner::get();
+        return view('banner_manage.process_banner',compact('process_banner'));
     }
 
     // 新增頁
@@ -196,7 +203,7 @@ class BannerManageController extends Controller
 
         $process_banner->save();
 
-        return redirect("banner-manage/aboutus/edit");
+        return redirect("banner-manage/process/edit");
 
     }
 
@@ -217,7 +224,8 @@ class BannerManageController extends Controller
     // 首頁
     public function contact_index()
     {
-
+        $contact_banner = Contact_banner::get();
+        return view('banner_manage.contact_banner',compact('contact_banner'));
     }
 
     // 新增頁

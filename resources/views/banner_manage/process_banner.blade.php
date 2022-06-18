@@ -51,7 +51,7 @@
                             </div>
 
                             <!-- 功能按鈕 -->
-                            <div class="function-button{{ $process->id }}">
+                            <div class="f-button function-button{{ $process->id }}">
                                 <button type="button" onclick="chimg{{ $process->id . '()' }}">更換</button>
                             </div>
                         </div>

@@ -154,7 +154,22 @@ main #tittle-list-id .list-container .content-section .content-manage form .cont
   font-weight: 400;
 }
 
-main #tittle-list-id .list-container .content-section .content-manage form .content-card .function-button {
-  margin-top: 30px;
+main #tittle-list-id .list-container .content-section .content-manage form .content-card .f-button {
+  width: 70%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+main #tittle-list-id .list-container .content-section .content-manage form .content-card .f-button button {
+  width: 100%;
 }
 /*# sourceMappingURL=process_banner.css.map */

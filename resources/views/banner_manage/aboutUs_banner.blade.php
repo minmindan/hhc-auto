@@ -50,7 +50,7 @@
                                     </div>
 
                                     <!-- 功能按鈕 -->
-                                    <div class="function-button{{ $abus->id }}">
+                                    <div class="f-button function-button{{ $abus->id }}">
                                         <button type="button" onclick="chimg{{ $abus->id . '()' }}">更換</button>
                                     </div>
                                 </div>

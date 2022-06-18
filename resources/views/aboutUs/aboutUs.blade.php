@@ -41,9 +41,7 @@ About Us
             <div class="banner-img">
               <div class="img">
                 <div class="main-img-color"></div>
-                @foreach ($abus as $abus)
                 <img src="{{$abus[0] -> img_path ??''}}" alt="" />
-                @endforeach
               </div>
               <!-- 頁面導覽塊 -->
               <div class="page-list">
@@ -147,10 +145,10 @@ About Us
           <div class="bg-color"></div>
           <div class="img-box">
             <div class="bg-image1">
-              <img src="{{asset('image/aboutus/image2.png')}}" alt="" />
+              <img src="{{$abus[1]->img_path??''}}" alt="" />
             </div>
             <div class="bg-image2">
-              <img src="{{asset('image/aboutus/image3.png')}}" alt="" />
+              <img src="{{$abus[2]->img_path??''}}" alt="" />
             </div>
           </div>
           <div class="img-box-swiper"></div>
@@ -230,10 +228,10 @@ About Us
           <div class="bg-color"></div>
           <div class="img-box">
             <div class="bg-image3">
-              <img src="{{asset('image/aboutus/image4.png')}}" alt="" />
+              <img src="{{$abus[3]->img_path??''}}" alt="" />
             </div>
             <div class="bg-image4">
-              <img src="{{asset('image/aboutus/image5.png')}}" alt="" />
+              <img src="{{$abus[4]->img_path??''}}" alt="" />
             </div>
           </div>
         </div>

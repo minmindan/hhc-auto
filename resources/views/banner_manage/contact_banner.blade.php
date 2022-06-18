@@ -52,7 +52,7 @@
                             </div>
 
                             <!-- 功能按鈕 -->
-                            <div class="function-button{{ $contact->id }}">
+                            <div class="f-button function-button{{ $contact->id }}">
                                 <button type="button" onclick="chimg{{ $contact->id . '()' }}">更換</button>
                             </div>
                         </div>
