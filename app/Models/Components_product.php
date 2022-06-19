@@ -21,7 +21,7 @@ class Components_product extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     *
+     * 
      * @var string
      */
     protected $keyType = 'integer';
@@ -30,8 +30,4 @@ class Components_product extends Model
      * @var array
      */
     protected $fillable = ['created_at', 'updated_at', 'product_name', 'primary_img', 'model', 'primary', 'weights', 'standard', 'feature', 'illustrate'];
-    public function comments()
-    {
-        return $this->hasMany(Components_img::class,'img_id','id');
-    }
 }

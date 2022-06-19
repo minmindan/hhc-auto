@@ -1,31 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use App\Models\Consumables_product;
-use App\Models\Components_product;
-use App\Models\Equipment_product;
-use App\Models\Repair_product;
-use App\Models\Software_product;
-use App\Http\Controllers\FilesController;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\OrderShipped;
 
+use Illuminate\Http\Request;
 
 class ProductManageController extends Controller
 {
     //產品管理
 
-    public function test(){
+    public function test()
+    {
         return view('equipment-detail.equipment-detail');
     }
 
-    public function test_all(){
+    public function test_all()
+    {
         return view('equipment-all(未完成).product-all');
     }
 
-
-    
     // 設備
     // 首頁
     public function equipment_index()
@@ -36,9 +28,7 @@ class ProductManageController extends Controller
     // 新增頁
     public function equipment_create()
     {
-        // Equipment_product::create([
-        //     //
-        // ]);
+
         return view('product_create.equipment_create');
     }
 
@@ -64,12 +54,6 @@ class ProductManageController extends Controller
     public function equipment_delete()
     {}
 
-
-
-
-
-
-
     // 軟體
     // 首頁
     public function software_index()
@@ -82,12 +66,14 @@ class ProductManageController extends Controller
     public function software_create()
     {
         return view('product_create.software_create');
-
     }
 
     // 儲存頁
-    public function software_store()
-    {}
+    public function software_store(Request $request)
+    {
+        dd($request->all());
+        return redirect('/product-manage/software/');
+    }
 
     // 編輯頁
     public function software_edit()
@@ -100,14 +86,6 @@ class ProductManageController extends Controller
     // 刪除頁
     public function software_delete()
     {}
-
-
-
-
-
-
-
-
 
     // 部品零件
     // 首頁
@@ -144,11 +122,6 @@ class ProductManageController extends Controller
     public function parts_delete()
     {}
 
-
-
-
-
-
     // 耗材
     // 首頁
     public function consumables_index()
@@ -178,13 +151,6 @@ class ProductManageController extends Controller
     // 刪除頁
     public function consumables_delete()
     {}
-
-
-
-
-
-
-
 
     // 維修
     // 首頁

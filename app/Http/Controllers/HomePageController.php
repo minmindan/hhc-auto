@@ -81,7 +81,9 @@ class HomePageController extends Controller
     public function process()
     {
         $process = Process_banner::get();
-        return view('Process_cssunset.process',compact('process'));
+        $product = Product_banner::get();
+        $contact = Contact_banner::get();
+        return view('Process_cssunset.process',compact('process','product','contact'));
     }
     public function topics()
     {

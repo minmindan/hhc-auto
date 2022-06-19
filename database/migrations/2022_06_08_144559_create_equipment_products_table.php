@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('model')->nullable()->comment('型號');
             $table->string('primary')->nullable()->comment('主打商品');
             $table->string('weights')->comment('商品排序');
-            $table->string('standard')->nullable()->comment('規格');
-            $table->string('feature')->nullable()->comment('特色');
-            $table->string('illustrate')->nullable()->comment('說明');
+            $table->text('standard')->nullable()->comment('規格');
+            $table->text('feature')->nullable()->comment('特色');
+            $table->text('illustrate')->nullable()->comment('說明');
         });
     }
 
@@ -37,3 +37,7 @@ return new class extends Migration
         Schema::dropIfExists('equipment_products');
     }
 };
+
+
+
+

@@ -8,11 +8,11 @@
     <style>
         a {
             text-decoration: none;
-            color: #0000ff;
+            color: #004098;
         }
 
         a:visited {
-            color: #0000ff;
+            color: #004098;
         }
     </style>
 @endsection
@@ -84,7 +84,7 @@
                         <!-- 圖片 -->
                         <div class="add-img">
                             <a href="/product-manage/consumables/create">
-                                <img src="./img/Rectangle 154.png" alt="" />
+                                <img src="{{asset('image/product_create/add_gray_img.png')}}" alt="" />
                             </a>
                         </div>
                     </form>

@@ -37,9 +37,7 @@
                 <div class="main-section">
                     <div class="banner-img">
                         <div class="img">
-                            @foreach ($process as $process)
-                            <img src="{{$process->img_path??''}}" alt="" />
-                            @endforeach
+                            <img src="{{$process[0]->img_path??''}}" alt="" />
                             <div class="main-img-color"></div>
                         </div>
                         <!-- 頁面導覽塊 -->
@@ -456,7 +454,7 @@
                     <!-- 快速連結 -->
                     <div class="target-img">
                         <div class="image-box">
-                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="">
+                            <img src="{{ $product[0]->img_path }}" alt="">
                         </div>
                         <div class="content">
                             <div class="target-name">
@@ -472,7 +470,7 @@
                 <div class="contact-link">
                     <div class="target-img">
                         <div class="image-box">
-                            <img src="{{ asset('image/contact/Rectangle 22 (1).png') }}" alt="">
+                            <img src="{{ $contact[0]->img_path }}" alt="">
                         </div>
                         <div class="content">
                             <div class="target-name">
