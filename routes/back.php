@@ -14,19 +14,20 @@ use App\Http\Controllers\NewsController;
 
 
 
+
 // 首頁
 // HomePageController
 
 //最新消息
-Route::prefix('/banner-topics')->group(function (){
+Route::prefix('/topics-manage')->group(function (){
     Route::get('/',[NewsController::class, 'topics_index']); //總表
     Route::get('/create',[NewsController::class, 'topics_create']); //新增頁面
     Route::post('/store',[NewsController::class, 'topics_store']); //儲存頁面
-    Route::get('/edit',[NewsController::class, 'topics_edit']); //編輯頁面
+    Route::get('/delete/{id}',[NewsController::class, 'topics_delete']); //編輯頁面
     Route::post('/update/{id}',[NewsController::class, 'topics_update']); //更新頁面
 });
 //合作廠商
-Route::prefix('/banner-company')->group(function (){
+Route::prefix('/company-manage')->group(function (){
     Route::get('/',[BannerManageController::class, 'contact_index']); //總表
     Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
@@ -40,7 +41,7 @@ Route::prefix('/banner-company')->group(function (){
 // AboutUsController
 
 //公司沿革
-Route::prefix('/aboutsus-history')->group(function (){
+Route::prefix('/history-manage')->group(function (){
     Route::get('/',[BannerManageController::class, 'contact_index']); //總表
     Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
@@ -49,7 +50,7 @@ Route::prefix('/aboutsus-history')->group(function (){
 });
 
 //聯絡方式
-Route::prefix('/aboutsus-contact')->group(function (){
+Route::prefix('/contact-manage')->group(function (){
     Route::get('/',[BannerManageController::class, 'contact_index']); //總表
     Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面

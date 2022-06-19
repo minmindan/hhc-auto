@@ -15,15 +15,29 @@ class NewsController extends Controller
     //
 
     public function topics_index(){
-        $datas = News::get();
+        $datas = News::orderby('id','desc')->take(3)->get();
         return view ('basic_info.topics',compact('datas'));
     }
 
-    public function topics_create(){}
+    public function topics_create(){
+        $datas = News::orderby('id','desc')->take(2)->get();
+        return view ('basic_info.topics_create',compact('datas'));
+    }
+    public function topics_store(Request $request){
+        $data = News::create([
+            'time'=>$request->time,
+            'title'=>$request->title,
+            'content'=>$request->content,
+        ]);
+        $data->save();
+        return redirect ('/topics-manage');
+    }
 
-    public function topics_stroe(){}
-
-    public function topics_edit(Request $request,$id){
+    public function topics_delete($id){
+        $data = News::find($id);
+        $data->delete();
+        $datas = News::orderby('id','desc')->take(3)->get();
+        return redirect ('/topics-manage');
         // $datas = News::find($id);
         // return view ('formbackstage.formbackstage' , compact('datas'));
     }
