@@ -8,7 +8,9 @@ use App\Http\Controllers\BannerManageController;
 use App\Http\Controllers\ProductManageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\BasicInfoController;
 use App\Http\Controllers\NewsController;
+
 
 
 
@@ -17,21 +19,21 @@ use App\Http\Controllers\NewsController;
 // 首頁
 // HomePageController
 
-//最新消息
-Route::prefix('/banner-topics')->group(function (){
-    Route::get('/',[NewsController::class, 'topics_index']); //總表
-    Route::get('/create',[NewsController::class, 'topics_create']); //新增頁面
-    Route::post('/store',[NewsController::class, 'topics_store']); //儲存頁面
-    Route::get('/edit',[NewsController::class, 'topics_edit']); //編輯頁面
-    Route::post('/update/{id}',[NewsController::class, 'topics_update']); //更新頁面
+//最新消息 //已完成
+Route::prefix('/topics-manage')->group(function (){
+    Route::get('/',[BasicInfoController::class, 'topics_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'topics_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'topics_store']); //儲存頁面
+    Route::get('/delete/{id}',[BasicInfoController::class, 'topics_delete']); //編輯頁面
 });
+
 //合作廠商
-Route::prefix('/banner-company')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+Route::prefix('/company-manage')->group(function (){
+    Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
+    Route::get('/edit',[BasicInfoController::class, 'contact_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
 });
 
 
@@ -40,21 +42,21 @@ Route::prefix('/banner-company')->group(function (){
 // AboutUsController
 
 //公司沿革
-Route::prefix('/aboutsus-history')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+Route::prefix('/milestones-manage')->group(function (){
+    Route::get('/',[BasicInfoController::class, 'milestones_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'milestones_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'milestones_store']); //儲存頁面
+    Route::get('/edit',[BasicInfoController::class, 'milestones_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'milestones_update']); //更新頁面
 });
 
 //聯絡方式
-Route::prefix('/aboutsus-contact')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+Route::prefix('/contact-manage')->group(function (){
+    Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
+    Route::get('/edit',[BasicInfoController::class, 'contact_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
 });
 
 
@@ -62,22 +64,22 @@ Route::prefix('/aboutsus-contact')->group(function (){
 
 
 // Banner管理
-//BannerManageController
+//BasicInfoController
 Route::prefix('/banner-manage/contact')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+    Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
+    Route::get('/edit',[BasicInfoController::class, 'contact_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
 });
 // 產品管理
 //ProductManageController
 Route::prefix('/banner-manage/contact')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+    Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
+    Route::get('/edit',[BasicInfoController::class, 'contact_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
 });
 
 
@@ -86,11 +88,11 @@ Route::prefix('/banner-manage/contact')->group(function (){
 // 表單
 // ContactController
 Route::prefix('/contact/list')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contactlist_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit{id}',[BannerManageController::class, 'contactlist_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+    Route::get('/',[BasicInfoController::class, 'contactlist_index']); //總表
+    Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
+    Route::get('/edit{id}',[BasicInfoController::class, 'contactlist_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
 });
 // 隱私權政策
 Route::get('/privacypolic',[HhcAutoController::class,'privacypolic']);

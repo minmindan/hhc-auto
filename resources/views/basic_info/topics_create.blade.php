@@ -5,7 +5,9 @@
 @section('css')
     <script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/backindex.css') }}">
+    <link rel="stylesheet" href="./font.css">
     <link rel="stylesheet" href="{{ asset('css/btn_new.css') }}">
+    <link rel="stylesheet" href="../css/backnav.css">
     <style>
         body {
             margin: 0;
@@ -16,7 +18,7 @@
         * {
             font-family: 'Noto Sans TC', 'sans-serif';
             box-sizing: border-box;
-            user-select: none;
+            user-select: unset;
         }
 
         p {
@@ -37,10 +39,17 @@
             margin-top: 100px;
         }
         a{
+            color: white;
             text-decoration: none;
         }
         a:visited{
             color: white;
+        }
+        button{
+            background-color: unset;
+            border: unset;
+            color: white;
+            cursor: pointer;
         }
     </style>
 @endsection
@@ -50,15 +59,24 @@
     <div id="topics">
         <h1 class="topics_title">TOPICS</h1>
         <p>最新消息</p>
-        <div class="btnbox" style="bottom: unset;">
-            <a href="/topics-manage/create" class="btn-edit">新增</a>
-        </div>
         <div class="topicsmain">
+            <form  class="topics" action="/topics-manage/store" method="POST">
+                @csrf
+                <div  class="btnbox">
+                    <div class="btn-store"><button type="submit">儲存</button></div>
+                    <div class="btn-cancel"><a href="/topics-manage">取消</a></div>
+                </div>
+                <p class="time"><input type="text" name="time" value="TIMETIMETIME"></p>
+                <h4 class="topicsmain_title">
+                    <input type="text" name="title" value="標題標題標題標題標題標題標題標題">
+                </h4>
+                <p class="topicsmain_content">
+                    <textarea style="resize:none; width: 100%; height: 80px;" name="content" id="" cols="30" rows="10">內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容
+                    </textarea>
+                </p>
+            </form>
             <div class="topics">
                 <div class="btnbox">
-                    @if (!($datas[0]->id??'')==null)
-                    <a href="/topics-manage/delete/{{$datas[0]->id}}" class="btn-cancel">刪除</a>
-                    @endif
                 </div>
                 <p class="time">{{$datas[0]->time??''}}</p>
                 <h4 class="topicsmain_title">
@@ -70,9 +88,6 @@
             </div>
             <div class="topics">
                 <div class="btnbox">
-                   @if (!($datas[1]->id??'')==null)
-                    <a href="/topics-manage/delete/{{$datas[1]->id}}" class="btn-cancel">刪除</a>
-                    @endif
                 </div>
                 <p class="time">{{$datas[1]->time??''}}</p>
                 <h4 class="topicsmain_title">
@@ -80,20 +95,6 @@
                 </h4>
                 <p class="topicsmain_content">
                     {{$datas[1]->content??''}}
-                </p>
-            </div>
-            <div class="topics">
-                <div class="btnbox">
-                    @if (!($datas[2]->id??'')==null)
-                    <a href="/topics-manage/delete/{{($datas[2]->id)??''}}" class="btn-cancel">刪除</a>
-                    @endif
-                </div>
-                <p class="time">{{$datas[2]->time??''}}</p>
-                <h4 class="topicsmain_title">
-                    {{$datas[2]->title??''}}
-                </h4>
-                <p class="topicsmain_content">
-                    {{$datas[2]->content??''}}
                 </p>
             </div>
         </div>
