@@ -12,6 +12,8 @@
 興和川自動化有限公司由一群在業界耕耘了20年以上的有志者來提供更專業，高價值的服務，幫助客戶增加競爭力。對於半導體上片Fasford設備更有著service20年以上的經驗。
 ">
     <link rel="stylesheet" href="{{asset('css/backnav.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font.css')}}">
+    <link rel="stylesheet" href="{{asset('css/btn.css')}}">
     @yield('css')
 </head>
 <body>

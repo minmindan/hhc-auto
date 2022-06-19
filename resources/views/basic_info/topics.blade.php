@@ -5,9 +5,7 @@
 @section('css')
     <script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/backindex.css') }}">
-    <link rel="stylesheet" href="./font.css">
     <link rel="stylesheet" href="{{ asset('css/btn_new.css') }}">
-    <link rel="stylesheet" href="../css/backnav.css">
     <style>
         body {
             margin: 0;
