@@ -71,10 +71,8 @@
             <div class="bulid-btn">
               <button>新增</button>
             </div>
-          </form>
         </div>
       </div>
-      <form>
         <div id="formto">
           <div class="form-input star-items">
             <p>主打商品</p>

@@ -1,0 +1,290 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main #milestones {
+  padding: 0 428px 0 20%;
+}
+
+@media (max-width: 1500px) {
+  main #milestones {
+    margin-top: 180px;
+    padding-left: 240px;
+    padding-right: 155px;
+  }
+}
+
+@media (max-width: 992px) {
+  main #milestones {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
+
+main #milestones .milestones-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #milestones .milestones-container .left-section {
+  margin-right: 187px;
+  min-width: 160px;
+}
+
+@media (max-width: 992px) {
+  main #milestones .milestones-container .left-section {
+    margin-right: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  main #milestones .milestones-container .left-section {
+    display: none;
+  }
+}
+
+main #milestones .milestones-container .left-section .white-space {
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #milestones .milestones-container .left-section .white-space h1 {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  orientation: mixed;
+  font-size: 60px;
+  color: #EAEEF3;
+  line-height: 5rem;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  orientation: mixed;
+}
+
+main #milestones .milestones-container .right-section {
+  padding-top: 50px;
+}
+
+main #milestones .milestones-container .right-section .main-container .tittle {
+  margin-bottom: 40px;
+  color: #004098;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 0.06em;
+}
+
+main #milestones .milestones-container .right-section .main-container .content {
+  width: 100%;
+  margin-top: 15px;
+}
+
+main #milestones .milestones-container .right-section .main-container .content .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: #B4B4B4 solid 1px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+main #milestones .milestones-container .right-section .main-container .content .card .date {
+  margin-right: 70px;
+  color: #6F8BB7;
+  line-height: 30px;
+}
+
+main #milestones .milestones-container .right-section .main-container .content .card .text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.06em;
+}
+
+main #company-profile {
+  padding: 0 428px 0 20%;
+}
+
+@media (max-width: 1500px) {
+  main #company-profile {
+    margin-top: 180px;
+    padding-left: 240px;
+    padding-right: 155px;
+  }
+}
+
+@media (max-width: 992px) {
+  main #company-profile {
+    padding-right: 40px;
+    padding-left: 40px;
+    margin-top: 50px;
+  }
+}
+
+main #company-profile .company-profile-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #company-profile .company-profile-container .left-section {
+  margin-right: 187px;
+  min-width: 160px;
+}
+
+@media (max-width: 992px) {
+  main #company-profile .company-profile-container .left-section {
+    margin-right: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  main #company-profile .company-profile-container .left-section {
+    display: none;
+  }
+}
+
+main #company-profile .company-profile-container .left-section .white-space {
+  margin-right: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #company-profile .company-profile-container .left-section .white-space h1 {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  orientation: mixed;
+  font-size: 60px;
+  color: #EAEEF3;
+  line-height: 5rem;
+  writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+  orientation: mixed;
+}
+
+main #company-profile .company-profile-container .right-section {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .tittle {
+  margin-bottom: 40px;
+  color: #004098;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 0.06em;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content {
+  width: 100%;
+  margin-top: 15px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card {
+  width: 100%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #6F8BB7;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .name-field::before {
+  content: '公司名稱';
+  display: inline-block;
+  color: #6F8BB7;
+  min-width: 64px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .company-name {
+  margin-left: 60px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .build-field::before {
+  content: '設立時間';
+  display: inline-block;
+  min-width: 64px;
+  color: #6F8BB7;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .build-date {
+  margin-left: 60px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .address-field::before {
+  content: '地址　　';
+  display: inline-block;
+  min-width: 64px;
+  color: #6F8BB7;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .address {
+  margin-left: 60px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .opening-field::before {
+  content: '營業時間';
+  display: inline-block;
+  min-width: 64px;
+  color: #6F8BB7;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .opening-hours {
+  margin-left: 60px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .tel-field::before {
+  content: '聯絡電話';
+  display: inline-block;
+  min-width: 64px;
+  color: #6F8BB7;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .tel {
+  margin-left: 60px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .items-field::before {
+  content: '服務項目';
+  display: inline-block;
+  min-width: 64px;
+  color: #6F8BB7;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .service-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 60px;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .service-items ul {
+  display: inline;
+}
+
+main #company-profile .company-profile-container .right-section .main-container .content .card .service-items ul li {
+  display: inline;
+  list-style-type: none;
+}
+/*# sourceMappingURL=backaboutus.css.map */

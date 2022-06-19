@@ -8,6 +8,7 @@ use App\Http\Controllers\BannerManageController;
 use App\Http\Controllers\ProductManageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\NewsController;
 
 
 
@@ -18,11 +19,11 @@ use App\Http\Controllers\Controller;
 
 //最新消息
 Route::prefix('/banner-topics')->group(function (){
-    Route::get('/',[BannerManageController::class, 'contact_index']); //總表
-    Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit',[BannerManageController::class, 'contact_edit']); //編輯頁面
-    Route::post('/update/{id}',[BannerManageController::class, 'contact_update']); //更新頁面
+    Route::get('/',[NewsController::class, 'topics_index']); //總表
+    Route::get('/create',[NewsController::class, 'topics_create']); //新增頁面
+    Route::post('/store',[NewsController::class, 'topics_store']); //儲存頁面
+    Route::get('/edit',[NewsController::class, 'topics_edit']); //編輯頁面
+    Route::post('/update/{id}',[NewsController::class, 'topics_update']); //更新頁面
 });
 //合作廠商
 Route::prefix('/banner-company')->group(function (){

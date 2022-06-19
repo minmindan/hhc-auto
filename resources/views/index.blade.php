@@ -377,7 +377,7 @@
                     <button>more　　<img class="btnimg" src="{{ asset('image/index-icon/more_right_white.svg') }}"
                             alt=""></button>
                 </div>
-                <img src="{{ asset('image/index-icon/about us 1.png') }}" alt="">
+                <img src="{{$abus[0]->img_path??'' }}" alt="">
             </div>
         </div>
         <!-- topics -->

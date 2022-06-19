@@ -13,7 +13,9 @@ class HomePageController extends Controller
     //首頁
     public function index()
     {
-        return view('index');
+        $abus =Aboutus_banner::get();
+
+        return view('index',compact('abus'));
     }
     public function aboutus()
     {

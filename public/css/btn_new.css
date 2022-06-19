@@ -1,0 +1,130 @@
+.btn-edit {
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+  background-color: #004098;
+  color: azure;
+}
+
+.btn-edit:hover {
+  cursor: pointer;
+}
+
+.btn-store {
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+  background-color: green;
+  color: white;
+}
+.btn-store:hover {
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+}
+
+.btn-add {
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+  background-color: #004098;
+  color: azure;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+}
+
+.btn-cancel {
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+  background-color: red;
+  color: white;
+}
+
+.btn-cancel:hover {
+  cursor: pointer;
+}
+
+.btn-change {
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+  background-color: #004098;
+  color: azure;
+}
+
+.btn-change:hover {
+  cursor: pointer;
+}
+
+.btn-check {
+  width: 60px;
+  height: 30px;
+  margin: 0px 30px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 15px;
+  background-color: green;
+  color: white;
+}
+
+.btn-check:hover {
+  cursor: pointer;
+}
+.btnbox{
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.btnbox-v{
+  display: flex;
+  flex-direction: column;
+}
+.card{
+  position: relative;
+}
+/*# sourceMappingURL=btn.css.map */
