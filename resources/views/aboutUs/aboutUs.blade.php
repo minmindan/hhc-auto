@@ -46,9 +46,9 @@ About Us
               <!-- 頁面導覽塊 -->
               <div class="page-list">
                 <ul>
-                  <li>經營理念</li>
-                  <li>公司沿革</li>
-                  <li>公司簡介</li>
+                  <li><a href="#philosophy">經營理念</a></li>
+                  <li><a href="#milestones">公司沿革</a></li>
+                  <li><a href="#company-profile">公司簡介</a></li>
                 </ul>
               </div>
                <!-- SCROLL示意 -->
@@ -323,6 +323,9 @@ About Us
 
         img1.style.display="none";
         img2.style.display="block";
+
+        setTimeout("changeImg2()",5000);
+
       }
 
       function changeImg2(){
@@ -330,6 +333,9 @@ About Us
         var img2 = document.querySelector(".bg-image2");
         img1.style.display="block";
         img2.style.display="none";
+        setTimeout("changeImg1()",5000);
+
+
       }
 
       function changeImg3(){
@@ -337,6 +343,9 @@ About Us
         var img4 = document.querySelector(".bg-image4");
         img3.style.display="none";
         img4.style.display="block";
+        setTimeout("changeImg4()",5000);
+
+
       }
 
       function changeImg4(){
@@ -344,14 +353,17 @@ About Us
         var img4 = document.querySelector(".bg-image4");
         img3.style.display="block";
         img4.style.display="none";
+        setTimeout("changeImg3()",5000);
+
+
       }
 
 
       if (windowW <= 768) {
-        setInterval("changeImg1()",5000);
-        setInterval("changeImg2()",10000);
-        setInterval("changeImg3()",5000);
-        setInterval("changeImg4()",10000);
+        setTimeout("changeImg1()",5000);
+        // setInterval("changeImg2()",10001);
+        setTimeout("changeImg3()",5000);
+        // setInterval("changeImg4()",10001);
       }
     </script>
 @endsection
