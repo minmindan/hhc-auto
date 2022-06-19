@@ -7,6 +7,7 @@ use App\Models\Index_banner;
 use App\Models\Process_banner;
 use App\Models\Product_banner;
 use App\Models\Contact_banner;
+use App\Models\News;
 
 class HomePageController extends Controller
 {
@@ -14,8 +15,8 @@ class HomePageController extends Controller
     public function index()
     {
         $abus =Aboutus_banner::get();
-
-        return view('index',compact('abus'));
+        $datas = News::orderby('id','desc')->take(3)->get();
+        return view('index',compact('abus','datas'));
     }
     public function aboutus()
     {
