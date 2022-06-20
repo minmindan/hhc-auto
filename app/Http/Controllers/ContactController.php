@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderShipped;
 use App\Models\Report;
 use App\storage\sessions;
 use App\Models\Contact_banner;
@@ -66,12 +68,21 @@ class ContactController extends Controller
     }
 
 
+    // 測試Mail
+    // public function contact_mail(){
+    //     Mail::to('')->send(new OrderShipped);
+    //     $data = Report::orderby('id','desc')->take(1)->get();
+    //     return view('Mail.mail', compact('data',));
+    // }
+
+
+
     public function contactin(Request $request){
         // $data = session()->all();
         // dd($data);
         // dd($request);
 
-
+        Mail::to('xavier5232@gmail.com')->send(new OrderShipped);
         Report::create([
             'type' => session()->get('type'),
             'company' => session()->get('company'),
@@ -91,7 +102,6 @@ class ContactController extends Controller
 
     public function contact3(){
         $contact = Contact_banner::get();
-
         return view('Contact.contact3',compact('contact'));
     }
 

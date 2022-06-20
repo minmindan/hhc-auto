@@ -75,6 +75,7 @@ Route::prefix('/hhc-auto')->group(function (){
     Route::post('/contact2',[ContactController::class, 'contact2']); //表2
     Route::post('/contactin',[ContactController::class, 'contactin']);
     Route::get('/contact3',[ContactController::class, 'contact3']); //表3
+    Route::get('/mail',[ContactController::class, 'contact_mail']); //Mail
 
     Route::post('/store',[ContactController::class, 'store']); //儲存頁面
     Route::get('/edit',[ContactController::class, 'edit']); //編輯頁面

@@ -88,7 +88,7 @@
                     </h5>
                 </div>
                 <!-- 表單 -->
-                <form action="/contact2" method="post">
+                <form action="/hhc-auto/contact2" method="post">
                     @csrf
                     <!-- 表單內容 -->
                     <div class="form-section">
