@@ -1,4 +1,3 @@
-<x-guest-layout>
 <!DOCTYPE html>
 <html lang="en">
 

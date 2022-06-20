@@ -111,7 +111,13 @@ return [
         ],
     ],
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => '暱稱',
+        'account' => '帳號',
+        'password' => '密碼',
+        'password_confirm' => '密碼確認',
+    ],
 
 ];
+
 
