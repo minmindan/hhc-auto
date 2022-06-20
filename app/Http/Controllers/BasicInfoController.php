@@ -38,38 +38,37 @@ class BasicInfoController extends Controller
         $data->delete();
         $datas = News::orderby('id','desc')->take(3)->get();
         return redirect ('/topics-manage');
-        // $datas = News::find($id);
-        // return view ('formbackstage.formbackstage' , compact('datas'));
     }
 
 
 
-    //公司沿革
+    //公司沿革 已完成
     public function milestones_index(){
         $datas = Milestone::all();
         return view ('basic_info.milestones',compact('datas'));
     }
 
     public function milestones_create(){
-        $datas = News::orderby('id','desc')->take(2)->get();
+        $datas = Milestone::orderby('id','desc')->take(2)->get();
         return view ('basic_info.milestones_create',compact('datas'));
     }
-    public function milestones_store(Request $request){
-        $data = News::create([
-            'time'=>$request->time,
-            'title'=>$request->title,
+    public function milestones_edit(Request $request, $id){
+        $data = Milestone::find($id);
+        return view ('basic_info.milestones_edit',compact('data'));
+    }
+    public function milestones_store(Request $request, $id){
+        // dd('1');
+          $create = Milestone::where('id',$id)->update([
+            'years'=>$request->years,
+            'month'=>$request->month,
             'content'=>$request->content,
         ]);
-        $data->save();
         return redirect ('/milestones-manage');
     }
 
     public function milestones_delete($id){
-        $data = News::find($id);
+        $data = Milestone::find($id);
         $data->delete();
-        $datas = News::orderby('id','desc')->take(3)->get();
         return redirect ('/milestones-manage');
-        // $datas = News::find($id);
-        // return view ('formbackstage.formbackstage' , compact('datas'));
     }
 }

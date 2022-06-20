@@ -385,31 +385,32 @@
             <h1 class="topics_title">TOPICS</h1>
             <p>最新消息</p>
             <div class="topicsmain">
+
                 <div class="topics">
-                    <p class="time">TIMETIMETIME</p>
+                    <p class="time">{{$datas[0]->time??''}}</p>
                     <h4 class="topicsmain_title">
-                        標題標題標題標題標題標題標題標題
+                        {{$datas[0]->title??''}}
                     </h4>
                     <p class="topicsmain_content">
-                        內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容
+                        {{$datas[0]->content??''}}
                     </p>
                 </div>
                 <div class="topics">
-                    <p class="time">TIMETIMETIME</p>
+                    <p class="time">{{$datas[1]->time??''}}</p>
                     <h4 class="topicsmain_title">
-                        標題標題標題標題標題標題標題標題
+                        {{$datas[1]->title??''}}
                     </h4>
                     <p class="topicsmain_content">
-                        內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容
+                        {{$datas[1]->content??''}}
                     </p>
                 </div>
                 <div class="topics">
-                    <p class="time">TIMETIMETIME</p>
+                    <p class="time">{{$datas[2]->time??''}}</p>
                     <h4 class="topicsmain_title">
-                        標題標題標題標題標題標題標題標題
+                        {{$datas[2]->title??''}}
                     </h4>
                     <p class="topicsmain_content">
-                        內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容內容
+                        {{$datas[2]->content??''}}
                     </p>
                 </div>
             </div>
