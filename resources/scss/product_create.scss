@@ -115,7 +115,7 @@ main {
                     padding: 0px 50px 0px 50px;
 
                     .field-img {
-                        width: 412px;
+                        width: 300px;
                         height: 50px;
                         display: flex;
                         align-items: center;
@@ -132,7 +132,7 @@ main {
                     }
 
                     .field-radation {
-                        width: 111px;
+                        width: 100px;
                         height: 50px;
                         display: flex;
                         align-items: center;
@@ -153,6 +153,8 @@ main {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        margin-left: 15px;
+
                     }
 
                     .field-btn {
@@ -206,7 +208,7 @@ main {
 
                     // 排序
                     .image-gradation {
-                        width: 111px;
+                        width: 100px;
                         height: 42px;
                     }
 
@@ -215,7 +217,7 @@ main {
                     .date-bulid {
                         width: 150px;
                         height: 42px;
-
+                        margin-left: 15px;
                         input {
                             width: 100%;
                             text-align: center;
@@ -224,13 +226,86 @@ main {
 
                     // 新增按鈕
                     .bulid-btn {
-                        width: 100px;
+                        width: 300px;
                         height: 42px;
-
-
+                        overflow: hidden;
+                        margin-right: 50px;
+                        input{
+                            width: 100%;
+                        }
                     }
                 }
             }
+
+            .sub-section {
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: center;
+
+                &:nth-last-child(1) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-bottom: 0;
+                    padding-bottom: 30px;
+                }
+
+                .top-section {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    background-color: #f7f8fa;
+                    width: 1000px;
+                    align-items: center;
+                    padding: 15px 50px;
+
+                    // 圖片
+                    .content-img {
+                        width: 412px;
+                        height: 259px;
+                        // background-color: gainsboro;
+                        padding: 20px;
+                        margin-right: 50px;
+
+                        img {
+                            background-color: gray;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+
+                    // 排序
+                    .image-gradation {
+                        width: 100px;
+                        height: 42px;
+                    }
+
+
+                    // 新增日期
+                    .date-bulid {
+                        width: 150px;
+                        height: 42px;
+                        margin-left: 15px;
+                        input {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+
+                    // 新增按鈕
+                    .bulid-btn {
+                        width: 300px;
+                        height: 42px;
+                        overflow: hidden;
+                        margin-right: 50px;
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
         }
 
 
@@ -289,6 +364,7 @@ main {
                 .btn {
                     display: flex;
                     justify-content: center;
+                    background-color: unset !important;
 
                     button {
                         width: 56px;

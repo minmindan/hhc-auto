@@ -7,11 +7,11 @@
     <style>
         a {
             text-decoration: none;
-            color: #0000ff;
+            color: #004098;
         }
 
         a:visited {
-            color: #0000ff;
+            color: #004098;
         }
 
         .note-editable {
@@ -66,7 +66,7 @@
                             </div>
 
                             <div class="field-date">
-                                <p>修改日期</p>
+                                <p>新增日期</p>
                             </div>
 
                             <div class="field-btn"></div>

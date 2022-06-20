@@ -121,7 +121,7 @@ main #tittle-list-id .list-container .field-section .content .field-img {
 }
 
 main #tittle-list-id .list-container .field-section .content .field-name {
-  width: 111px;
+  width: 220px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,7 +149,7 @@ main #tittle-list-id .list-container .field-section .content .field-radation {
 }
 
 main #tittle-list-id .list-container .field-section .content .field-star {
-  width: 220px;
+  width: 110px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,7 +236,7 @@ main #tittle-list-id .list-container .content-section form .add-img img {
 }
 
 main #tittle-list-id .list-container .content-section form .product-name {
-  width: 111px;
+  width: 220px;
   height: 42px;
   border-radius: 5px;
   display: -webkit-box;
@@ -248,10 +248,12 @@ main #tittle-list-id .list-container .content-section form .product-name {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 main #tittle-list-id .list-container .content-section form .product-name input {
   width: 100%;
+  text-align: center;
 }
 
 main #tittle-list-id .list-container .content-section form .image-gradation {
@@ -269,7 +271,7 @@ main #tittle-list-id .list-container .content-section form .image-gradation {
 }
 
 main #tittle-list-id .list-container .content-section form .produt-star {
-  width: 220px;
+  width: 110px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,9 +282,11 @@ main #tittle-list-id .list-container .content-section form .produt-star {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 main #tittle-list-id .list-container .content-section form .produt-star input {
+  text-align: center;
   width: 100%;
 }
 
