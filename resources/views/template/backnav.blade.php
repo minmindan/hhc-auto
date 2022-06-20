@@ -18,6 +18,17 @@
         * {
             font-family: 'Noto Sans TC', 'sans-serif';
         }
+        form a{
+            color: black;
+            margin: unset !important;
+        }
+        a:visited{
+            color: black;
+        }
+        .signout{
+            height: 70px;
+            padding-top: 20px;
+        }
     </style>
     @yield('css')
 </head>
@@ -50,9 +61,17 @@
                 </div>
             </div>
             <div class="subnav signoutlist">
-                <p>，您好　<img src="./down_gray.svg" alt=""></p>
+                <p>，您好　<img src="{{asset('image/nav/down_gray.svg')}}" alt=""></p>
                 <div class="signout">
-                    <p>登出</p>
+                    <form style="display: flex;
+                    align-content: center;" method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-dropdown-link :href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </x-dropdown-link>
+                    </form>
                 </div>
             </div>
         </div>

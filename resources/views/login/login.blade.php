@@ -128,14 +128,20 @@
             color: #6F8BB7;
             letter-spacing: 0.05em;
         }
+        .w-full{
+            width: 100% !important;
+            max-width: unset !important;
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <div id="login-id">
+        <x-guest-layout>
+            <x-auth-card>
+                <div id="login-id">
+            <x-auth-session-status class="mb-4" :status="session('status')" />
             <form method="POST" action="{{ route('login') }}">
-                <x-auth-session-status class="mb-4" :status="session('status')" />
                 @csrf
                 <!-- logo -->
                 <div class="logo-img">
@@ -181,6 +187,8 @@
                 </div>
         </div>
         </form>
+    </x-auth-card>
+</x-guest-layout>
     </main>
 </body>
 
