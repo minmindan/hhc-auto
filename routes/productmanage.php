@@ -16,7 +16,7 @@ Route::prefix('/product-manage/equipment')->group(function (){
     Route::get('/',[ProductManageController::class, 'equipment_index']); //總表
     Route::get('/create',[ProductManageController::class, 'equipment_create']); //新增頁面
     Route::post('/store',[ProductManageController::class, 'equipment_store']); //儲存頁面
-    Route::get('/edit{id}',[ProductManageController::class, 'equipment_edit']); //編輯頁面
+    Route::post('/edit/{id}',[ProductManageController::class, 'equipment_edit']); //編輯頁面
     Route::post('/update',[ProductManageController::class, 'equipment_update']); //更新頁面
     Route::post('/delete/{id}',[ProductManageController::class, 'equipment_delete']); //刪除頁面
 

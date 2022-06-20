@@ -3,19 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\FilesController;
-use App\Models\Equipment_img;
-use App\Models\Equipment_product;
-use App\Models\Software_img;
-use App\Models\Software_product;
-use App\Models\Maintenance_img;
-use App\Models\Maintenance_product;
-use App\Models\Repair_img;
-use App\Models\Repair_product;
-use App\Models\Consumables_img;
-use App\Models\Consumables_product;
 use App\Models\Components_img;
 use App\Models\Components_product;
-
+use App\Models\Consumables_img;
+use App\Models\Consumables_product;
+use App\Models\Equipment_img;
+use App\Models\Equipment_product;
+use App\Models\Repair_img;
+use App\Models\Repair_product;
+use App\Models\Software_img;
+use App\Models\Software_product;
 use Illuminate\Http\Request;
 
 class ProductManageController extends Controller
@@ -31,13 +28,6 @@ class ProductManageController extends Controller
     {
         return view('equipment-all(未完成).product-all');
     }
-
-
-
-
-
-
-
 
     // 設備
     // 首頁
@@ -91,9 +81,9 @@ class ProductManageController extends Controller
     }
 
     // 編輯頁
-    public function equipment_edit()
+    public function equipment_edit($id)
     {
-
+        return view('product_edit.equipment_edit');
     }
 
     // 更新頁
@@ -105,12 +95,6 @@ class ProductManageController extends Controller
     // 刪除頁
     public function equipment_delete()
     {}
-
-
-
-
-
-
 
     // 軟體
     // 首頁
@@ -174,18 +158,6 @@ class ProductManageController extends Controller
     // 刪除頁
     public function software_delete()
     {}
-
-
-
-
-
-
-
-
-
-
-
-
 
     // 部品零件
     // 首頁
@@ -251,16 +223,6 @@ class ProductManageController extends Controller
     public function parts_delete()
     {}
 
-
-
-
-
-
-
-
-
-
-
     // 耗材
     // 首頁
     public function consumables_index()
@@ -325,15 +287,6 @@ class ProductManageController extends Controller
     public function consumables_delete()
     {}
 
-
-
-
-
-
-
-
-
-
     // 維修
     // 首頁
     public function maintenance_index()
@@ -354,15 +307,10 @@ class ProductManageController extends Controller
     public function maintenance_store(Request $request)
     {
 
-        // dd($request->all());
-
-        $path = FilesController::imgUpload($request->product_img, 'repair');
-
-        // 主要圖片
+// dd($request->all());
 
         $product = Repair_product::create([
             'product_name' => $request->product_name,
-            'primary_img' => $path,
             'model' => $request->product_model,
             'primary' => $request->items,
             'weights' => 0,
@@ -370,6 +318,15 @@ class ProductManageController extends Controller
             'feature' => $request->feature,
             'illustrate' => $request->illustrate,
         ]);
+
+        // dd($request->all());
+        if ($request->hasfile('product_img')) {
+            $path = FilesController::imgUpload($request->product_img, 'repair');
+            // 主要圖片
+            $product = Repair_product::create([
+                'primary_img' => $path,
+            ]);
+        }
 
         //次要圖片
         if ($request->hasfile('second_img')) {
