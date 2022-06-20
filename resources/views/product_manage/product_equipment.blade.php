@@ -63,10 +63,10 @@
                             </div>
                             <!-- 排序 -->
                             <div class="image-gradation">
-                                <select name="" id="">
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
+                                <select name="" id="" disabled="disabled">
+                                    <option value="0">-</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
                                 </select>
                             </div>
                             <!-- 主打產品 -->

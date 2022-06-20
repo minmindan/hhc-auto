@@ -3,6 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Equipment_img;
+use App\Models\Components_img;
+use App\Models\Consumables_img;
+use App\Models\Repair_img;
+use App\Models\Software_img;
 
 /**
  * @property integer $id
@@ -21,7 +26,7 @@ class Repair_product extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -30,4 +35,9 @@ class Repair_product extends Model
      * @var array
      */
     protected $fillable = ['created_at', 'updated_at', 'product_name', 'primary_img', 'model', 'primary', 'weights', 'standard', 'feature', 'illustrate'];
+    public function imgs(){
+
+        return $this->hasMany(Repair_img::class,'iid','id');
+
+    }
 }
