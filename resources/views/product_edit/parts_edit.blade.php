@@ -3,7 +3,7 @@
     About Us
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/product_edit.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/product_create.css') }}" />
     <style>
         a {
             text-decoration: none;
@@ -23,6 +23,7 @@
             width: 70% !important;
         }
 
+
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -38,13 +39,13 @@
                 <h1>產品管理</h1>
                 <ul>
                     <li>
-                        <div class="blue"><a href="/product-manage/equipment">設備</a></div>
+                        <div><a href="/product-manage/equipment">設備</a></div>
                     </li>
                     <li>
                         <div><a href="/product-manage/software">軟體</a></div>
                     </li>
                     <li>
-                        <div><a href="/product-manage/parts">部品零件</a></div>
+                        <div class="blue"><a href="/product-manage/parts">部品零件</a></div>
                     </li>
                     <li>
                         <div><a href="/product-manage/consumables">耗材</a></div>
@@ -54,7 +55,7 @@
                     </li>
                 </ul>
             </div>
-            <form action="/product-manage/equipment/store" method="post" enctype="multipart/form-data">
+            <form action="/product-manage/parts/store" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="list-container">
                     <div class="field-section">
@@ -68,7 +69,7 @@
                             </div>
 
                             <div class="field-date">
-                                <p>上次修改日期</p>
+                                <p>新增日期</p>
                             </div>
 
                         </div>
@@ -111,7 +112,7 @@
                             </div>
 
                             <div class="field-date">
-                                <p>上次修改日期</p>
+                                <p>新增日期</p>
                             </div>
 
                         </div>
