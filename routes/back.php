@@ -41,7 +41,7 @@ Route::prefix('/company-manage')->group(function (){
 // 關於我們
 // AboutUsController
 
-//公司沿革
+//公司沿革 //已完成
 Route::prefix('/milestones-manage')->group(function (){
     Route::get('/',[BasicInfoController::class, 'milestones_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'milestones_create']); //新增頁面

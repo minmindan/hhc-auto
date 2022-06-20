@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Milestone;
+use App\Models\profile;
+use App\Models\contact;
 use App\Models\Aboutus_banner;
 use App\Models\Index_banner;
 use App\Models\Process_banner;
@@ -58,7 +60,7 @@ class BasicInfoController extends Controller
     }
     public function milestones_store(Request $request, $id){
         // dd('1');
-          $create = Milestone::where('id',$id)->update([
+        Milestone::where('id',$id)->update([
             'years'=>$request->years,
             'month'=>$request->month,
             'content'=>$request->content,
@@ -71,4 +73,35 @@ class BasicInfoController extends Controller
         $data->delete();
         return redirect ('/milestones-manage');
     }
+
+
+    //聯絡我們
+    public function contact_index(){
+        $data = profile::get();
+        return view ('basic_info.porfile' , compact('data'));
+    }
+
+    public function contact_create(){
+        return view ('basic_info.milestones_create',compact('datas'));
+    }
+    public function contact_edit(){
+        $data = profile::get();
+        return view ('basic_info.porfile_edit',compact('data'));
+    }
+    public function contact_store(Request $request){
+        profile::where('id', 1)->update([
+            'company_name'=>$request->company_name,
+            'found'=>$request->found,
+            'address'=>$request->address,
+            'opening'=>$request->opening,
+            'phone'=>$request->phone,
+        ]);
+        return redirect ('/contact-manage');
+    }
+
+    public function contact_delete($id){
+        return redirect ('/milestones-manage');
+    }
 }
+
+
