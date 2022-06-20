@@ -7,11 +7,11 @@
     <style>
         a {
             text-decoration: none;
-            color: #0000ff;
+            color: #004098;
         }
 
         a:visited {
-            color: #0000ff;
+            color: #004098;
         }
 
         .note-editable {
@@ -65,7 +65,7 @@
                             </div>
 
                             <div class="field-date">
-                                <p>修改日期</p>
+                                <p>新增日期</p>
                             </div>
 
                             <div class="field-btn"></div>
@@ -89,7 +89,7 @@
 
                             <!-- 新增日期 -->
                             <div class="date-bulid">
-                                <input type="text" disabled />
+                                <input type="text" value="50" disabled />
                             </div>
                             <!-- 新增按鈕 -->
                             <div class="bulid-btn">
@@ -168,7 +168,7 @@
 @section('js')
     <script>
         $('#summernote1').summernote({
-            placeholder: '　H請輸入文字.....',
+            placeholder: '　請輸入文字.....',
             tabsize: 2,
             height: 120,
             toolbar: [
@@ -179,7 +179,7 @@
             ]
         });
         $('#summernote2').summernote({
-            placeholder: '　H請輸入文字.....',
+            placeholder: '　請輸入文字.....',
             tabsize: 2,
             height: 120,
             toolbar: [
