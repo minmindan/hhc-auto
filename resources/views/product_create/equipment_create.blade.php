@@ -80,13 +80,13 @@
 
                             <!-- 新增按鈕 -->
                             <div class="bulid-btn">
-                                <input type="file" name="product_img" multiple accept="image/*">
+                                <input type="file" name="product_img" accept="image/*">
                             </div>
 
                             <!-- 排序 -->
                             <div class="image-gradation">
                                 <select name="weights" id="" disabled="disabled">
-                                    <option selected value="0">-</option>
+                                    <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                 </select>
