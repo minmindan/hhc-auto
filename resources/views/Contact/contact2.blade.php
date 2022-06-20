@@ -21,6 +21,9 @@
             text-align: center;
             text-decoration: none;
         }
+        a{
+            color: black;
+        }
     </style>
 @endsection
 @section('main')
@@ -165,7 +168,7 @@
                     <!-- 表單按鈕 -->
                     <div class="button-section">
                         <div type="button" class="btn-for-a">
-                            <a href="/contact">返回修改</a>
+                            <a href="/hhc-auto/contact">返回修改</a>
                         </div>
                         <button type="submit">
                             <p>確認送出</p>
