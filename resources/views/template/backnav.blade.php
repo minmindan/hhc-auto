@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="{{asset('css/backnav.css')}}">
     <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/btn.css')}}">
+    <style>
+        * {
+            font-family: 'Noto Sans TC', 'sans-serif';
+        }
+    </style>
     @yield('css')
 </head>
 <body>

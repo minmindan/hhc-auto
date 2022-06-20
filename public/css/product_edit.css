@@ -9,6 +9,15 @@ body {
   background-color: #F7F8FA;
 }
 
+main a {
+  color: #004098;
+  text-decoration: none;
+}
+
+main a:visited {
+  color: #004098;
+}
+
 main .blue {
   font-size: 1.5rem;
   color: #004098;
@@ -38,11 +47,25 @@ main #tittle-list-id .list-tittle {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 250px;
+  padding: 25px 0px;
 }
 
 main #tittle-list-id .list-tittle h1 {
   color: #004098;
   margin-right: 50px;
+  position: relative;
+}
+
+main #tittle-list-id .list-tittle h1::after {
+  position: absolute;
+  content: '';
+  width: 3px;
+  height: 80%;
+  background-color: #004098;
+  top: 50%;
+  right: -30px;
+  -webkit-transform: translate(0%, -45%);
+          transform: translate(0%, -45%);
 }
 
 main #tittle-list-id .list-tittle ul {
@@ -106,7 +129,7 @@ main #tittle-list-id .list-container .field-section .content {
 }
 
 main #tittle-list-id .list-container .field-section .content .field-img {
-  width: 412px;
+  width: 300px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +158,7 @@ main #tittle-list-id .list-container .field-section .content .field-name {
 }
 
 main #tittle-list-id .list-container .field-section .content .field-radation {
-  width: 111px;
+  width: 100px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,6 +197,21 @@ main #tittle-list-id .list-container .field-section .content .field-date {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 15px;
+}
+
+main #tittle-list-id .list-container .field-section .content .field-btn {
+  width: 100px;
+  height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main #tittle-list-id .list-container .content-section {
@@ -201,7 +239,7 @@ main #tittle-list-id .list-container .content-section:nth-last-child(1) {
   padding-bottom: 30px;
 }
 
-main #tittle-list-id .list-container .content-section form {
+main #tittle-list-id .list-container .content-section .top-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,7 +247,7 @@ main #tittle-list-id .list-container .content-section form {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  background-color: white;
+  background-color: #f7f8fa;
   width: 1000px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -217,79 +255,48 @@ main #tittle-list-id .list-container .content-section form {
   padding: 15px 50px;
 }
 
-main #tittle-list-id .list-container .content-section form .content-img {
+main #tittle-list-id .list-container .content-section .top-section .content-img {
   width: 412px;
   height: 259px;
   padding: 20px;
   margin-right: 50px;
 }
 
-main #tittle-list-id .list-container .content-section form .content-img img {
+main #tittle-list-id .list-container .content-section .top-section .content-img img {
   background-color: gray;
   width: 100%;
   height: 100%;
 }
 
-main #tittle-list-id .list-container .content-section form .product-name {
-  width: 111px;
-  height: 42px;
-  border-radius: 5px;
-}
-
-main #tittle-list-id .list-container .content-section form .product-name input {
-  width: 100%;
-}
-
-main #tittle-list-id .list-container .content-section form .image-gradation {
-  width: 111px;
+main #tittle-list-id .list-container .content-section .top-section .image-gradation {
+  width: 100px;
   height: 42px;
 }
 
-main #tittle-list-id .list-container .content-section form .produt-star {
-  width: 220px;
-  height: 42px;
-}
-
-main #tittle-list-id .list-container .content-section form .date-fixed {
+main #tittle-list-id .list-container .content-section .top-section .date-bulid {
   width: 150px;
   height: 42px;
+  margin-left: 15px;
 }
 
-main #tittle-list-id .list-container .content-section form .date-fixed input {
+main #tittle-list-id .list-container .content-section .top-section .date-bulid input {
+  width: 100%;
+  text-align: center;
+}
+
+main #tittle-list-id .list-container .content-section .top-section .bulid-btn {
+  width: 300px;
+  height: 42px;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-container .content-section .top-section .bulid-btn input {
   width: 100%;
 }
 
-main #tittle-list-id #formto {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-main #tittle-list-id #formto .form-input {
-  margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-main #tittle-list-id #formto .form-input input {
-  width: 70%;
-  font-size: 32px;
-  border: unset;
-  background-color: white;
-  border-radius: 0;
-}
-
-main #tittle-list-id #formto .btn {
+main #tittle-list-id .list-container .sub-section {
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,20 +305,160 @@ main #tittle-list-id #formto .btn {
           justify-content: center;
 }
 
-main #tittle-list-id #formto .btn button {
+main #tittle-list-id .list-container .sub-section:nth-last-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: #f7f8fa;
+  width: 1000px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 50px;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .content-img {
+  width: 412px;
+  height: 259px;
+  padding: 20px;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .content-img img {
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .image-gradation {
+  width: 100px;
+  height: 42px;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .date-bulid {
+  width: 150px;
+  height: 42px;
+  margin-left: 15px;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .date-bulid input {
+  width: 100%;
+  text-align: center;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .bulid-btn {
+  width: 300px;
+  height: 42px;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+main #tittle-list-id .list-container .sub-section .top-section .bulid-btn input {
+  width: 100%;
+}
+
+main #tittle-list-id #bottom-section {
+  background-color: #f7f8fa;
+}
+
+main #tittle-list-id #bottom-section .formto {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 25px 0px;
+  background-color: #f7f8fa;
+}
+
+main #tittle-list-id #bottom-section .formto .form-input {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #tittle-list-id #bottom-section .formto .form-input input {
+  width: 70%;
+  font-size: 32px;
+  border: unset;
+  background-color: white;
+  border-radius: 0;
+}
+
+main #tittle-list-id #bottom-section .formto .star-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #tittle-list-id #bottom-section .formto .star-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+main #tittle-list-id #bottom-section .formto .star-items ul li {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+main #tittle-list-id #bottom-section .formto .star-items ul input {
+  display: inline-block;
+  width: unset;
+}
+
+main #tittle-list-id #bottom-section .formto .star-items ul label {
+  margin: auto 0;
+}
+
+main #tittle-list-id #bottom-section .formto .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: unset !important;
+}
+
+main #tittle-list-id #bottom-section .formto .btn button {
   width: 56px;
   height: 26px;
   border-radius: 13px;
   border: unset;
   margin: 0 10px;
-}
-
-main #tittle-list-id #formto .btn button:nth-child(1) {
-  background-color: #2C8900;
-  color: white;
-}
-
-main #tittle-list-id #formto .btn button:nth-child(1):hover {
-  background-color: #226b00;
 }
 /*# sourceMappingURL=product_edit.css.map */
