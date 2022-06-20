@@ -18,16 +18,7 @@
         .note-editing-area {
             height: 300px;
         }
-        a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
 
-        a:visited {
-            color: white;
-            font-size: 14px;
-        }
         button {
             background-color: unset;
             border: unset;
@@ -54,7 +45,8 @@
                     </div>
                 </div>
                 <!-- 右方區塊 -->
-                <div class="right-section">
+                <form action="/contact-manage/store" method="POST" class="right-section">
+                    @csrf
                     <div class="main-container">
                         <div class="tittle">
                             <h3>公司簡介</h3>
@@ -62,26 +54,32 @@
                         <div class="content">
                             <div class="card">
                                 <div class="name-field"></div>
-                                <div class="company-name">{{ $data[0]->company_name }}</span>
+                                <div class="company-name">
+                                    <span><input type="text" name="company_name" id="company_name"
+                                            value="{{ $data[0]->company_name }}"></span>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="build-field"></div>
-                                <div class="build-date">{{ $data[0]->found }}
+                                <div class="build-date"><input name="found" type="text" id="found"
+                                        value="{{ $data[0]->found }}">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="address-field"></div>
-                                <div class="address">{{ $data[0]->address }}
+                                <div class="address"><input name="address" id="address" type="text"
+                                        value="{{ $data[0]->address }}">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="opening-field"></div>
-                                <div class="opening-hours">{{ $data[0]->opening }}</div>
+                                <div class="opening-hours"><input type="text" name="opening" id="opening"
+                                        value="{{ $data[0]->opening }}"></div>
                             </div>
                             <div class="card">
                                 <div class="tel-field"></div>
-                                <div class="tel">{{ $data[0]->phone }}
+                                <div class="tel"><input name="phone" id="phone" type="text"
+                                        value="{{ $data[0]->phone }}">
                                 </div>
                             </div>
                             <div class="card">
@@ -91,14 +89,14 @@
                                 </div>
                             </div>
                             <div class="btnbox" style="margin: 0 0 0 120px;">
-                                <div class="btn-check" style="margin:30px 10px 0 auto;"><a href="/contact-manage/edit">編輯</a></div>
+                                <div class="btn-check" style="margin:30px 10px 0 auto;"><button class="submitbtn"
+                                        type="submit">儲存</button></div>
                             </div>
                         </div>
                     </div>
-                    </ㄎ>
-                </div>
             </div>
-            <div style="margin-bottom: 150px"></div>
+        </div>
+        <div style="margin-bottom: 150px"></div>
     </main>
 @endsection
 @section('js')
