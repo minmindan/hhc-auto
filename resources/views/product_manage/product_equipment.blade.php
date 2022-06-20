@@ -3,7 +3,7 @@
     About Us
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/product_equipment.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/product_equipment.css') ??''}}" />
     <style>
         a {
             text-decoration: none;
@@ -52,14 +52,15 @@
                 <!-- 內容 -->
                 <div class="content-section">
                     @foreach ($product as $product)
-                        <form action="">
+                        <form action="/product-manage/equipment/edit/{{$product->id}}" method="post">
+                            @csrf
                             <!-- 圖片 -->
                             <div class="content-img">
-                                <img src="{{ $product->primary_img }}" alt="" />
+                                <img src="{{ $product->primary_img ??''}}" alt="" />
                             </div>
                             <!-- 產品名稱 -->
                             <div class="product-name">
-                                <input value="{{ $product->product_name }}" type="text" disabled>
+                                <input value="{{ $product->product_name ??''}}" type="text" disabled>
                             </div>
                             <!-- 排序 -->
                             <div class="image-gradation">
@@ -71,12 +72,12 @@
                             </div>
                             <!-- 主打產品 -->
                             <div class="produt-star">
-                                <input type="text" value="{{ $product->primary }}" disabled />
+                                <input type="text" value="{{ $product->primary ??''}}" disabled />
                             </div>
                             <!-- 功能按鈕 -->
                             <div class="function-button">
-                                <button>編輯</button>
-                                <button onclick="delete_img({{ $product->id }})" type="button">刪除</button>
+                                <button type="submit">編輯</button>
+                                <button onclick="delete_img({{ $product->id ??''}})" type="button">刪除</button>
                             </div>
                         </form>
                     @endforeach
@@ -86,7 +87,7 @@
                         <!-- 圖片 -->
                         <div class="add-img">
                             <a href="/product-manage/equipment/create">
-                                <img src="{{ asset('image/product_create/add_gray_img.png') }}" alt="" />
+                                <img src="{{ asset('image/product_create/add_gray_img.png') ??''}}" alt="" />
                             </a>
                         </div>
                     </form>
@@ -102,7 +103,7 @@
 
             let formData = new FormData();
             // formData.append('_method', 'delete');
-            formData.append('_token', '{{ csrf_token() }}');
+            formData.append('_token', '{{ csrf_token() ??''}}');
 
 
             fetch('/product-manage/equipment/delete/' + id, {
@@ -118,5 +119,6 @@
 
                 })
         }
+
     </script>
 @endsection

@@ -3,7 +3,7 @@
     About Us
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{asset('css/product_maintenance.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/product_maintenance.css')??''}}" />
     <style>
         a {
             text-decoration: none;
@@ -54,11 +54,11 @@
                 <form action="">
                     <!-- 圖片 -->
                     <div class="content-img">
-                        <img src="{{ $product->primary_img }}" alt="" />
+                        <img src="{{ $product->primary_img ??''}}" alt="" />
                     </div>
                     <!-- 產品名稱 -->
                     <div class="product-name">
-                        <input value="{{ $product->product_name }}" type="text" disabled>
+                        <input value="{{ $product->product_name ??''}}" type="text" disabled>
                     </div>
                     <!-- 排序 -->
                     <div class="image-gradation">
@@ -70,12 +70,12 @@
                     </div>
                     <!-- 主打產品 -->
                     <div class="produt-star">
-                        <input type="text" value="{{ $product->primary }}" disabled />
+                        <input type="text" value="{{ $product->primary ??''}}" disabled />
                     </div>
                     <!-- 功能按鈕 -->
                     <div class="function-button">
                         <button>編輯</button>
-                        <button onclick="delete_img({{ $product->id }})" type="button">刪除</button>
+                        <button onclick="delete_img({{ $product->id ??''}})" type="button">刪除</button>
                     </div>
                 </form>
             @endforeach
@@ -85,7 +85,7 @@
                 <!-- 圖片 -->
                 <div class="add-img">
                     <a href="/product-manage/maintenance/create">
-                        <img src="{{ asset('image/product_create/add_gray_img.png') }}" alt="" />
+                        <img src="{{ asset('image/product_create/add_gray_img.png') ??''}}" alt="" />
                     </a>
                 </div>
             </form>
