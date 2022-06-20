@@ -46,6 +46,8 @@
                             {{'耗材'}}
                             @elseif ($data[0]->type == 5)
                             {{'維修'}}
+                            @elseif ($data[0]->type == 6)
+                            {{'其他'}}
                             @endif</td>
                     </tr>
                     <tr>

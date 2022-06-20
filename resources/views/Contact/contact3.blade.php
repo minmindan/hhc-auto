@@ -86,9 +86,11 @@ Contact
             <p>專人會儘速與您聯繫</p>
           </div>
             <!-- 返回按鈕 -->
-            <button type="submit">
-              <p>返回首頁</p>
-            </button>
+            <form action="/hhc-auto">
+                <button  type="submit">
+                  <p>返回首頁</p>
+                </button>
+            </form>
           </div>
         </div>
       </div>

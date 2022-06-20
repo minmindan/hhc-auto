@@ -82,7 +82,6 @@ class ContactController extends Controller
         // dd($data);
         // dd($request);
 
-        Mail::to('xavier5232@gmail.com')->send(new OrderShipped);
         Report::create([
             'type' => session()->get('type'),
             'company' => session()->get('company'),
@@ -94,10 +93,11 @@ class ContactController extends Controller
             'state' => 1,
             'remark' => '',
         ]);
+        $request->session()->flush();
+        // Mail::to('xavier5232@gmail.com')->send(new OrderShipped);
 
 
-
-        return redirect('/contact3');
+        return redirect('/hhc-auto/contact3');
     }
 
     public function contact3(){

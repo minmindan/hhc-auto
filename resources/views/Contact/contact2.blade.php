@@ -109,7 +109,7 @@
                     </h5>
                 </div>
                 <!-- 表單 -->
-                <form action="/contactin" method="post">
+                <form action="/hhc-auto/contactin" method="post">
                     <!-- 表單內容 -->
                     @csrf
                     <div class="form-section">

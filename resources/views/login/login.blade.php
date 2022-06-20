@@ -1,5 +1,7 @@
+<x-guest-layout>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -134,6 +136,7 @@
     <main>
         <div id="login-id">
             <form method="POST" action="{{ route('login') }}">
+                <x-auth-session-status class="mb-4" :status="session('status')" />
                 @csrf
                 <!-- logo -->
                 <div class="logo-img">
@@ -143,24 +146,24 @@
                     <div class="type-box">
                         <!-- e-mail -->
                         <div class="emailbox">
-                            <input type="text" placeholder="Email　電子郵件信箱">
+                            <input type="text" name="email" placeholder="Email　電子郵件信箱">
                         </div>
                         <!-- password -->
                         <div class="passwordbox">
-                            <input type="text" placeholder="Password 密碼">
+                            <input type="text" name="password" placeholder="Password 密碼">
                         </div>
                     </div>
                     <div class="function-box">
                         <!-- remember me -->
                         <div class="rememberbox">
                             <div class="rememberme">
-                                <input type="checkbox">
+                                <input name="remember" type="checkbox">
                                 <span>記住我</span>
                             </div>
                         </div>
                         <!-- forget password -->
                         <div class="forgetpasswordbox">
-                            <a href="">
+                            <a href="{{ route('password.request') }}">
                                 <span>忘記密碼？</span>
                             </a>
                         </div>
