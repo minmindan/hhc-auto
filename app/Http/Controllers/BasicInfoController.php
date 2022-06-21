@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\News;
 use App\Models\Milestone;
 use App\Models\profile;
+use App\Models\report;
 use App\Models\contact;
 use App\Models\Aboutus_banner;
 use App\Models\Index_banner;
@@ -100,6 +101,40 @@ class BasicInfoController extends Controller
     }
 
     public function contact_delete($id){
+        return redirect ('/milestones-manage');
+    }
+
+
+
+    //回報表單列表
+    public function contactlist_index(){
+        $datas = report::get();
+        // dd($datas);
+        return view ('formbackstage.formbackstage' , compact('datas'));
+    }
+    public function contactlist_edit($id){
+        $data = report::find($id);
+        return view ('formbackstage.formbackstage_edit',compact('data'));
+    }
+    public function contactlist_store(Request $request){
+        profile::where('id', 1)->update([
+            'company_name'=>$request->company_name,
+            'found'=>$request->found,
+            'address'=>$request->address,
+            'opening'=>$request->opening,
+            'phone'=>$request->phone,
+        ]);
+        return redirect ('/contactlist-manage');
+    }
+    public function contactlist_update(Request $request ,$id){
+
+        report::find($id)->update([
+            'state'=>$request->state,
+            'remake'=>$request->remake,
+        ]);
+        return redirect ('/contact/list');
+    }
+    public function contactlist_delete($id){
         return redirect ('/milestones-manage');
     }
 }

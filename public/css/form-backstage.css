@@ -38,13 +38,7 @@ main #page-tittle .tittle h2::after {
           transform: translate(0%, -45%);
 }
 
-main #form-report {
-  background-color: #F7F8FA;
-  height: auto;
-  padding-bottom: 50px;
-}
-
-main #form-report .content .content-tittle {
+main .content-tittle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,40 +50,46 @@ main #form-report .content .content-tittle {
   padding-top: 50px;
 }
 
-main #form-report .content .content-tittle .type {
+main .content-tittle .type {
   width: 180px;
   height: 20px;
   margin-right: 15px;
 }
 
-main #form-report .content .content-tittle .name {
+main .content-tittle .name {
   width: 180px;
   height: 20px;
   margin-right: 15px;
 }
 
-main #form-report .content .content-tittle .email {
+main .content-tittle .email {
   width: 428px;
   height: 20px;
   margin-right: 15px;
 }
 
-main #form-report .content .content-tittle .state {
+main .content-tittle .state {
   width: 207px;
   height: 20px;
   margin-right: 15px;
 }
 
-main #form-report .content .content-tittle .comment-date {
+main .content-tittle .comment-date {
   width: 207px;
   height: 20px;
   margin-right: 15px;
 }
 
-main #form-report .content .content-tittle button {
+main .content-tittle button {
   background-color: transparent;
   border: 1px solid transparent;
   color: transparent;
+}
+
+main #form-report {
+  background-color: #F7F8FA;
+  height: auto;
+  padding-bottom: 50px;
 }
 
 main #form-report .content .box {

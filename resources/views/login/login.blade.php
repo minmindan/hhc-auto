@@ -168,15 +168,15 @@
                                 </div>
                             </div>
                             <div class="function-box">
-                                <!-- remember me -->
-                                <div class="rememberbox">
-                                    <div class="rememberme">
-                                        <input name="remember" type="checkbox">
-                                        <span>記住我</span>
-                                    </div>
-                                </div>
+                                <!-- Remember Me -->
+            {{-- <div class="block">
+                <label for="remember_me" class="inline-flex items-center">
+                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                    <span class="ml-2 ">{{ __('記住我') }}</span>
+                </label>
+            </div> --}}
                                 <!-- forget password -->
-                                <div class="forgetpasswordbox">
+                                <div style="margin-left: auto;" class="forgetpasswordbox">
                                     <a href="{{ route('password.request') }}">
                                         <span>忘記密碼？</span>
                                     </a>

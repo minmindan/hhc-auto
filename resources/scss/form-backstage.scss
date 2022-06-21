@@ -38,7 +38,51 @@ main {
 
         }
     }
+    .content-tittle {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        padding-top: 50px;
 
+        .type {
+            width: 180px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        .name {
+            width: 180px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        .email {
+            width: 428px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        .state {
+            width: 207px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        .comment-date {
+            width: 207px;
+            height: 20px;
+            margin-right: 15px;
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid transparent;
+            color: transparent;
+
+
+        }
+    }
 
     #form-report {
         background-color: #F7F8FA;
@@ -47,51 +91,7 @@ main {
 
         .content {
 
-            .content-tittle {
-                display: flex;
-                text-align: center;
-                justify-content: center;
-                margin-bottom: 15px;
-                padding-top: 50px;
 
-                .type {
-                    width: 180px;
-                    height: 20px;
-                    margin-right: 15px;
-                }
-
-                .name {
-                    width: 180px;
-                    height: 20px;
-                    margin-right: 15px;
-                }
-
-                .email {
-                    width: 428px;
-                    height: 20px;
-                    margin-right: 15px;
-                }
-
-                .state {
-                    width: 207px;
-                    height: 20px;
-                    margin-right: 15px;
-                }
-
-                .comment-date {
-                    width: 207px;
-                    height: 20px;
-                    margin-right: 15px;
-                }
-
-                button {
-                    background-color: transparent;
-                    border: 1px solid transparent;
-                    color: transparent;
-
-
-                }
-            }
 
             .box {
                 height: 100px;
