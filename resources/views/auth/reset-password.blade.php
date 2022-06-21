@@ -1,4 +1,21 @@
 <x-guest-layout>
+    <style>
+        svg{
+            width: 20vw !important;
+        }
+        button{
+            background-color: white !important;
+            color: #004098 !important;
+            border: 1px #004098 solid !important;
+            font-weight: 600 !important;
+        }
+        .w-full{
+            background-color: #ffffff !important;
+            box-shadow: unset !important;
+            border: #004098 1px solid !important;
+            border-radius: unset !important;
+        }
+    </style>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -24,14 +41,14 @@
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+                <x-label for="password" :value="__('輸入新密碼')" />
 
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required />
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-label for="password_confirmation" :value="__('確認新密碼')" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                     type="password"
@@ -40,7 +57,7 @@
 
             <div class="flex items-center justify-end mt-4">
                 <x-button>
-                    {{ __('Reset Password') }}
+                    {{ __('重設密碼') }}
                 </x-button>
             </div>
         </form>

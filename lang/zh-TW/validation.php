@@ -116,6 +116,8 @@ return [
         'account' => '帳號',
         'password' => '密碼',
         'password_confirm' => '密碼確認',
+        'auth.' => '使用者名稱',
+        'failed' => '不存在',
     ],
 
 ];

@@ -128,7 +128,10 @@
             color: #6F8BB7;
             letter-spacing: 0.05em;
         }
-        .w-full{
+
+        .w-full {
+            margin: 0 !important;
+            padding: 0 !important;
             width: 100% !important;
             max-width: unset !important;
         }
@@ -139,56 +142,62 @@
     <main>
         <x-guest-layout>
             <x-auth-card>
+
                 <div id="login-id">
-            <x-auth-session-status class="mb-4" :status="session('status')" />
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-                <!-- logo -->
-                <div class="logo-img">
-                    <img src="{{asset('image/login/login-logo.svg')}}" alt="">
+                    <x-auth-session-status class="mb-4" :status="session('status')" />
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <!-- logo -->
+                        <div class="logo-img">
+                            <img src="{{ asset('image/login/login-logo.svg') }}" alt="">
+                        </div>
+                        <!-- Session Status -->
+                        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+                        <!-- Validation Errors -->
+                        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+                        <div class="container">
+                            <div class="type-box">
+                                <!-- e-mail -->
+                                <div class="emailbox">
+                                    <input type="text" name="email" placeholder="Email　電子郵件信箱">
+                                </div>
+                                <!-- password -->
+                                <div class="passwordbox">
+                                    <input type="password" name="password" placeholder="Password 密碼">
+                                </div>
+                            </div>
+                            <div class="function-box">
+                                <!-- remember me -->
+                                <div class="rememberbox">
+                                    <div class="rememberme">
+                                        <input name="remember" type="checkbox">
+                                        <span>記住我</span>
+                                    </div>
+                                </div>
+                                <!-- forget password -->
+                                <div class="forgetpasswordbox">
+                                    <a href="{{ route('password.request') }}">
+                                        <span>忘記密碼？</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- login botton -->
+                            <div class="login-btn">
+                                <button type="submit">
+                                    <div class="login-text">
+                                        <p>登入</p>
+                                    </div>
+                                    <div class="login-img">
+                                        <img src="{{ asset('image/login/blue_right.svg') }}" alt="">
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
                 </div>
-                <div class="container">
-                    <div class="type-box">
-                        <!-- e-mail -->
-                        <div class="emailbox">
-                            <input type="text" name="email" placeholder="Email　電子郵件信箱">
-                        </div>
-                        <!-- password -->
-                        <div class="passwordbox">
-                            <input type="text" name="password" placeholder="Password 密碼">
-                        </div>
-                    </div>
-                    <div class="function-box">
-                        <!-- remember me -->
-                        <div class="rememberbox">
-                            <div class="rememberme">
-                                <input name="remember" type="checkbox">
-                                <span>記住我</span>
-                            </div>
-                        </div>
-                        <!-- forget password -->
-                        <div class="forgetpasswordbox">
-                            <a href="{{ route('password.request') }}">
-                                <span>忘記密碼？</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- login botton -->
-                    <div class="login-btn">
-                        <button type="submit">
-                            <div class="login-text">
-                                <p>登入</p>
-                            </div>
-                            <div class="login-img">
-                                <img src="{{asset('image/login/blue_right.svg')}}" alt="">
-                            </div>
-                        </button>
-                    </div>
-                </div>
-        </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+                </form>
+            </x-auth-card>
+        </x-guest-layout>
     </main>
 </body>
 
