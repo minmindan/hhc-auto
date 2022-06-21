@@ -90,10 +90,8 @@ Route::prefix('/banner-manage/contact')->group(function (){
 // ContactController
 Route::prefix('/contact/list')->group(function (){
     Route::get('/',[BasicInfoController::class, 'contactlist_index']); //總表
-    Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
-    Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
-    Route::get('/edit{id}',[BasicInfoController::class, 'contactlist_edit']); //編輯頁面
-    Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
+    Route::get('/edit/{id}',[BasicInfoController::class, 'contactlist_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'contactlist_update']); //更新頁面
 });
 // 隱私權政策
 Route::get('/privacypolic',[HhcAutoController::class,'privacypolic']);
