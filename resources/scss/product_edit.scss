@@ -323,10 +323,11 @@ main {
 
                     input {
                         width: 70%;
-                        font-size: 32px;
+                        font-size: 30px;
+                        padding: 5px 0 5px 5px;
                         border: unset;
                         background-color: white;
-                        border-radius: 0;
+                        border-radius: 5px;
                     }
                 }
 
@@ -342,7 +343,6 @@ main {
 
                         li {
                             height: 30px;
-                            display: flex;
                             list-style-type: none;
                         }
 
@@ -370,14 +370,6 @@ main {
                         border: unset;
                         margin: 0 10px;
 
-                        // &:nth-child(1) {
-                        //     background-color: #2C8900;
-                        //     color: white;
-
-                        //     &:hover {
-                        //         background-color: #226b00;
-                        //     }
-                        // }
                     }
                 }
             }

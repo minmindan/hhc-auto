@@ -10,8 +10,9 @@ Route::prefix('/product-manage/equipment')->group(function () {
     Route::get('/create', [ProductManageController::class, 'equipment_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'equipment_store']); //儲存頁面
     Route::post('/edit/{id}', [ProductManageController::class, 'equipment_edit']); //編輯頁面
-    Route::post('/update', [ProductManageController::class, 'equipment_update']); //更新頁面
+    Route::post('/update/{id}', [ProductManageController::class, 'equipment_update']); //更新頁面
     Route::post('/delete/{id}', [ProductManageController::class, 'equipment_delete']); //刪除頁面
+    Route::post('/d_sec_img/{id}', [ProductManageController::class, 'd_sec_img']); //刪除頁面
 
 });
 
@@ -21,7 +22,7 @@ Route::prefix('/product-manage/software')->group(function () {
     Route::get('/create', [ProductManageController::class, 'software_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'software_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'software_edit']); //編輯頁面
-    Route::post('/update', [ProductManageController::class, 'software_update']); //更新頁面
+    Route::post('/update/{id}', [ProductManageController::class, 'software_update']); //更新頁面
     Route::post('/delete/{id}', [ProductManageController::class, 'software_delete']); //刪除頁面
 });
 
@@ -31,7 +32,7 @@ Route::prefix('/product-manage/parts')->group(function () {
     Route::get('/create', [ProductManageController::class, 'parts_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'parts_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'parts_edit']); //編輯頁面
-    Route::post('/update', [ProductManageController::class, 'parts_update']); //更新頁面
+    Route::post('/update/{id}', [ProductManageController::class, 'parts_update']); //更新頁面
     Route::post('/delete/{id}', [ProductManageController::class, 'parts_delete']); //刪除頁面
 });
 
@@ -41,7 +42,7 @@ Route::prefix('/product-manage/consumables')->group(function () {
     Route::get('/create', [ProductManageController::class, 'consumables_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'consumables_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'consumables_edit']); //編輯頁面
-    Route::post('/update', [ProductManageController::class, 'consumables_update']); //更新頁面
+    Route::post('/update/{id}', [ProductManageController::class, 'consumables_update']); //更新頁面
     Route::post('/delete/{id}', [ProductManageController::class, 'consumables_delete']); //刪除頁面
 });
 
@@ -51,6 +52,6 @@ Route::prefix('/product-manage/maintenance')->group(function () {
     Route::get('/create', [ProductManageController::class, 'maintenance_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'maintenance_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'maintenance_edit']); //編輯頁面
-    Route::post('/update', [ProductManageController::class, 'maintenance_update']); //更新頁面
+    Route::post('/update/{id}', [ProductManageController::class, 'maintenance_update']); //更新頁面
     Route::post('/delete/{id}', [ProductManageController::class, 'maintenance_delete']); //刪除頁面
 });

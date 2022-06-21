@@ -54,7 +54,8 @@
                 </ul>
             </div>
 
-            <form action="/product-manage/equipment/update" method="post" enctype="multipart/form-data">
+            <form action="/product-manage/equipment/update/{{ $product->id }}" method="post"
+                enctype="multipart/form-data">
                 @csrf
                 <div class="list-container">
                     <div class="field-section">
@@ -68,7 +69,7 @@
                             </div>
 
                             <div class="field-date">
-                                <p>上次修改日期</p>
+                                <p>更換新圖片</p>
                             </div>
 
                         </div>
@@ -84,7 +85,7 @@
 
                             <!-- 排序 -->
                             <div class="image-gradation">
-                                <select name="weights" id="" disabled="disabled">
+                                <select name="weights" id="">
                                     <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -93,7 +94,7 @@
 
                             <!-- 新增日期 -->
                             <div class="date-bulid">
-                                <input type="text" disabled />
+                                <input type="file" name="product_img" accept="image/*">
                             </div>
 
                         </div>
@@ -110,6 +111,7 @@
                             </div>
 
                             <div class="field-date">
+                                <input type="file" name="second_img[]" multiple accept="image/*" >
                             </div>
 
                         </div>
@@ -121,17 +123,26 @@
                             <div class="top-section">
 
                                 <!-- 圖片 -->
-                                <div class="content-img">
+                                <div class="content-img" id="{{ $go->id }}">
                                     <img src="{{ $go->path }}" alt="">
                                 </div>
 
                                 <!-- 排序 -->
-                                <div class="image-gradation">
+                                <div class="image-gradation"
+                                    style="display: flex; align-items:center; justify-content:center; ">
+                                    <select name="weights" id="sec_img{{ $go->id }}">
+                                        <option value="0">-</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="4">5</option>
+                                    </select>
                                 </div>
+                                <button type="button" onclick="d_sec_img({{ $go->id }})">刪除</button>
 
                                 <!-- 新增日期 -->
                                 <div class="date-bulid">
-                                    <input type="text" disabled />
                                 </div>
 
                             </div>
@@ -194,7 +205,7 @@
                         <!-- 產品說明 -->
                         <div class="form-input">
                             <p>產品說明</p>
-                            <textarea id="summernote3"  name="illustrate"></textarea>
+                            <textarea id="summernote3" name="illustrate"></textarea>
                         </div>
                         <!-- 上傳按鈕 -->
                         <div class="btn">
@@ -266,7 +277,24 @@
         note1.innerHTML = `{!! $product->standard !!}`
         note2.innerHTML = `{!! $product->feature !!}`
         note3.innerHTML = `{!! $product->illustrate !!}`
+    </script>
+
+    <script>
+        function d_sec_img(id) {
+
+            let formData = new FormData();
+            // formData.append('_method', 'delete');
+            formData.append('_token', '{{ csrf_token() ?? '' }}');
 
 
+            fetch('/product-manage/equipment/d_sec_img/' + id, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(function(response) {
+                    let element = document.querySelector('#sec_img' + id)
+                    element.parentNode.removeChild(element);
+                })
+        }
     </script>
 @endsection

@@ -91,9 +91,62 @@ class ProductManageController extends Controller
     }
 
     // 更新頁
-    public function equipment_update(Request $request)
+    public function equipment_update(Request $request, $id)
     {
-        dd($request->all());
+
+
+        $product = Equipment_product::find($id);
+
+        // dd(($request->all()),$product);
+
+
+        // 如果主要圖片有更新,套用新圖片
+
+        if ($request->hasfile('product_img')) {
+            FilesController::deleteUpload($product->primary_img); //小工具刪除圖片
+            $path = FilesController::imgUpload($request->product_img, 'product');
+
+            $product->primary_img = $path;
+        }
+
+        // 如果次要圖片有更新,套用新圖片
+
+        if ($request->hasfile('second_img')) {
+            foreach ($request->second_img as $index => $element) {
+                $path = FilesController::imgUpload($element, 'product');
+
+                Equipment_img::Create([
+                    'path' => $path,
+                    'iid' => $product->id,
+                ]);
+            }
+        }
+
+
+        // 如果有更新資料,套用新資料
+
+        if (($request->standard) != null) {
+            $product->standard = $request->standard;
+        };
+
+        if (($request->feature) != null) {
+            $product->feature = $request->feature;
+        };
+
+        if (($request->illustrate) != null) {
+            $product->illustrate = $request->illustrate;
+        };
+
+
+        $product->product_name = $request->product_name;
+        $product->model = $request->product_model;
+        $product->primary = $request->primary;
+        $product->weights = $request->weights;
+        $product->save();
+
+
+
+
         return redirect('/product-manage/equipment');
 
     }
@@ -113,6 +166,30 @@ class ProductManageController extends Controller
 
         redirect('/product-manage/equipment');
     }
+
+    // 刪除次要圖片
+
+    public function d_sec_img($id){
+
+        $img = Equipment_img::find($id);
+        FilesController::deleteUpload($img->path);
+        $img->delete();
+
+
+
+        $product = Equipment_product::find($id);
+        $product_id = $product->id;
+
+        return redirect('/product-manage/equipment/' . $product_id);
+
+    }
+
+
+
+
+
+
+
 
     // 軟體
     // 首頁
