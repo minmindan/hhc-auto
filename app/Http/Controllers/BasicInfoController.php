@@ -90,12 +90,14 @@ class BasicInfoController extends Controller
         return view ('basic_info.porfile_edit',compact('data'));
     }
     public function contact_store(Request $request){
+        // dd($request->all());
         profile::where('id', 1)->update([
             'company_name'=>$request->company_name,
             'found'=>$request->found,
             'address'=>$request->address,
             'opening'=>$request->opening,
             'phone'=>$request->phone,
+            'serve'=>$request->standard,
         ]);
         return redirect ('/contact-manage');
     }

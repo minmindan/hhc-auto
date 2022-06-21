@@ -47,12 +47,12 @@
                                         <div class="btn-delete" style="margin:  0 20px 0 0;"><a
                                                 href="/milestones-manage/delete/{{ $data->id }}">刪除</a></div>
                                     </div>
-                                    <div class="date">{{ $data->month }}@if (!($data->month == null)){{'月'}}
+                                    <div class="date">{{ $data->month??'' }}@if (!($data->month == null)){{'月'}}
                                         @endif
-                                        <br />{{ $data->years }}
+                                        <br />{{ $data->years??'' }}
                                     </div>
                                     <div class="text">
-                                        <span>{{ $data->content }}</span>
+                                        <span>{{ $data->content??'' }}</span>
                                     </div>
                                 </div>
                             @endforeach

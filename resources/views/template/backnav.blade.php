@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{asset('css/backnav.css')}}">
     <link rel="stylesheet" href="{{asset('css/font.css')}}">
     <link rel="stylesheet" href="{{asset('css/btn.css')}}">
+
+    @yield('css')
     <style>
         * {
             font-family: 'Noto Sans TC', 'sans-serif';
@@ -21,43 +23,43 @@
         form a{
             color: black;
             margin: unset !important;
+            text-emphasis: none;
         }
         a:visited{
-            color: black;
+            color: black !important;
         }
         .signout{
             height: 70px;
             padding-top: 20px;
         }
     </style>
-    @yield('css')
 </head>
 <body>
     <nav>
         <div id="logo"><img src="{{asset('image/nav/Logo_blue.svg')}}" alt=""></div>
         <div id="navlist">
-            <div class="subnav">
+            <a href="/hhc-auto" class="subnav">
                 <p>前往網頁</p>
-            </div>
+            </a>
             <div class="subnav">
                 <p>修改密碼</p>
             </div>
             <div class="subnav backstagelist">
                 <p>後台管理　<img src="{{asset('image/nav/down_gray.svg')}}" alt=""></p>
                 <div class="list">
-                    <p>最新消息</p>
+                    <a href="/topics-manage"><p>最新消息</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <p>合作客戶</p>
+                    <a href="/company-manage"><p>合作客戶</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <p>公司沿革</p>
+                    <a href="/milestones-manage"><p>公司沿革</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <p>關於我們</p>
+                    <a href="/contact-manage"><p>聯絡方式</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <p>Banner管理</p>
+                    <a href="/banner-manage/homepage"><p>Banner管理</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <p>產品管理</p>
+                    <a href="/banner-manage/contact"><p>產品管理</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <p>表單回報</p>
+                    <a href="/contact/list"><p>表單回報</p></a>
                 </div>
             </div>
             <div class="subnav signoutlist">
