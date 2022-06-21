@@ -127,7 +127,6 @@ class BasicInfoController extends Controller
         return redirect ('/contactlist-manage');
     }
     public function contactlist_update(Request $request ,$id){
-
         report::find($id)->update([
             'state'=>$request->state,
             'remake'=>$request->remake,

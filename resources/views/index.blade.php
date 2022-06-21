@@ -420,15 +420,24 @@
             <h1 class="company_title">COMPANY</h1>
             <p>合作客戶</p>
             <div class="com">
-                <img src="./image/SVG_彩圖/南茂.svg" alt="">
-                <img src="./image/SVG_彩圖/典範.svg" alt="">
-                <img src="./image/SVG_彩圖/力成.svg" alt="">
-                <img src="./image/SVG_彩圖/同欣.svg" alt="">
-                <img src="./image/SVG_彩圖/國祥.svg" alt="">
-                <img src="./image/SVG_彩圖/日月光.svg" alt="">
-                <img src="./image/SVG_彩圖/晶測.svg" alt="">
-                <img src="./image/SVG_彩圖/晶電.svg" alt="">
-                <img src="./image/SVG_彩圖/矽品.svg" alt="">
+                <img src="{{asset('image/SVG_彩圖/力成.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/日月光.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/同欣.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/典範.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/矽品.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/金屬中心.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/南茂.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/美光.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/國祥.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/晶測.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/晶電.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/華東.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/華泰.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/隆達.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/群豐.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/福懋.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/穩懋.svg')}}" alt="">
+                <img src="{{asset('image/SVG_彩圖/SanDisk.svg')}}" alt="">
             </div>
         </div>
     </main>
