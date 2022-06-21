@@ -69,6 +69,7 @@
                         <x-dropdown-link :href="route('logout')"
                                 onclick="event.preventDefault();
                                             this.closest('form').submit();">
+                                            @csrf
                             {{ __('Log Out') }}
                         </x-dropdown-link>
                     </form>
