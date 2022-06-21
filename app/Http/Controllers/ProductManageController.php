@@ -93,8 +93,22 @@ class ProductManageController extends Controller
     }
 
     // 刪除頁
-    public function equipment_delete()
-    {}
+    public function equipment_delete($id)
+    {
+
+        $main_img = Equipment_product::find($id);
+        $other_imgs = Equipment_img::where('iid', $id)->get();
+        foreach ($other_imgs as $key => $value) {
+            FilesController::deleteUpload($value->path);
+            $value->delete();
+        }
+        FilesController::deleteUpload($main_img->primary_img);
+        $main_img -> delete();
+
+
+
+        redirect ('/product-manage/equipment');
+    }
 
     // 軟體
     // 首頁

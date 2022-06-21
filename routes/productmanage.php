@@ -22,7 +22,7 @@ Route::prefix('/product-manage/software')->group(function () {
     Route::post('/store', [ProductManageController::class, 'software_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'software_edit']); //編輯頁面
     Route::post('/update', [ProductManageController::class, 'software_update']); //更新頁面
-    Route::post('/deleteedit/{id}', [ProductManageController::class, 'software_delete']); //刪除頁面
+    Route::post('/delete/{id}', [ProductManageController::class, 'software_delete']); //刪除頁面
 });
 
 // 部品零件 手建
@@ -32,7 +32,7 @@ Route::prefix('/product-manage/parts')->group(function () {
     Route::post('/store', [ProductManageController::class, 'parts_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'parts_edit']); //編輯頁面
     Route::post('/update', [ProductManageController::class, 'parts_update']); //更新頁面
-    Route::post('/deleteedit/{id}', [ProductManageController::class, 'parts_delete']); //刪除頁面
+    Route::post('/delete/{id}', [ProductManageController::class, 'parts_delete']); //刪除頁面
 });
 
 // 耗材 手建
@@ -42,7 +42,7 @@ Route::prefix('/product-manage/consumables')->group(function () {
     Route::post('/store', [ProductManageController::class, 'consumables_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'consumables_edit']); //編輯頁面
     Route::post('/update', [ProductManageController::class, 'consumables_update']); //更新頁面
-    Route::post('/deleteedit/{id}', [ProductManageController::class, 'consumables_delete']); //刪除頁面
+    Route::post('/delete/{id}', [ProductManageController::class, 'consumables_delete']); //刪除頁面
 });
 
 // 維修 手建
@@ -52,5 +52,5 @@ Route::prefix('/product-manage/maintenance')->group(function () {
     Route::post('/store', [ProductManageController::class, 'maintenance_store']); //儲存頁面
     Route::get('/editedit/{id}', [ProductManageController::class, 'maintenance_edit']); //編輯頁面
     Route::post('/update', [ProductManageController::class, 'maintenance_update']); //更新頁面
-    Route::post('/deleteedit/{id}', [ProductManageController::class, 'maintenance_delete']); //刪除頁面
+    Route::post('/delete/{id}', [ProductManageController::class, 'maintenance_delete']); //刪除頁面
 });
