@@ -102,7 +102,6 @@
 @section('js')
     <script>
         $('#summernote').summernote({
-            placeholder: '1. 機械設備製造<br>2. 自動控制設備工程<br>3. 機械批發與零售<br>4. 精密儀器批發<br>5. 軟體客製化撰寫<br>6. 電腦相關產品批發<br>',
             tabsize: 2,
             height: 120,
             toolbar: [
@@ -111,5 +110,11 @@
                 ['para', ['ul', 'ol', 'paragraph']],
             ]
         });
+    </script>
+    <script>
+        var note = document.querySelector('.note-editable');
+        console.log(note);
+        note.setAttribute('name', 'standard');
+        note.innerHTML = `{!! $data[0]->serve !!}`
     </script>
 @endsection

@@ -62,32 +62,32 @@
                         <div class="content">
                             <div class="card">
                                 <div class="name-field"></div>
-                                <div class="company-name">{{ $data[0]->company_name }}</span>
+                                <div class="company-name">{{ $data[0]->company_name??'' }}</span>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="build-field"></div>
-                                <div class="build-date">{{ $data[0]->found }}
+                                <div class="build-date">{{ $data[0]->found??'' }}
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="address-field"></div>
-                                <div class="address">{{ $data[0]->address }}
+                                <div class="address">{{ $data[0]->address??'' }}
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="opening-field"></div>
-                                <div class="opening-hours">{{ $data[0]->opening }}</div>
+                                <div class="opening-hours">{{ $data[0]->opening??'' }}</div>
                             </div>
                             <div class="card">
                                 <div class="tel-field"></div>
-                                <div class="tel">{{ $data[0]->phone }}
+                                <div class="tel">{{ $data[0]->phone??'' }}
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="items-field"></div>
                                 <div class="note">
-                                    <textarea id="summernote" name="standard"></textarea>
+                                    <textarea id="summernote" name="standard">{{$data[0]->serve}}</textarea>
                                 </div>
                             </div>
                             <div class="btnbox" style="margin: 0 0 0 120px;">
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    </ㄎ>
+                </div>
                 </div>
             </div>
             <div style="margin-bottom: 150px"></div>
@@ -104,7 +104,6 @@
 @section('js')
     <script>
         $('#summernote').summernote({
-            placeholder: '1. 機械設備製造<br>2. 自動控制設備工程<br>3. 機械批發與零售<br>4. 精密儀器批發<br>5. 軟體客製化撰寫<br>6. 電腦相關產品批發<br>',
             tabsize: 2,
             height: 120,
             toolbar: [
@@ -113,5 +112,11 @@
                 ['para', ['ul', 'ol', 'paragraph']],
             ]
         });
+    </script>
+    <script>
+        var note = document.querySelector('.note-editable');
+        console.log(note);
+        note.setAttribute('name', 'standard');
+        note.innerHTML = `{!! $data[0]->serve !!}`
     </script>
 @endsection

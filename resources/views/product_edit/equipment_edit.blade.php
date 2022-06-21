@@ -248,7 +248,6 @@
     <script>
         var gotonote = document.getElementsByClassName('note-editable')
 
-        var go = document.querySelector('.go')
 
         gotonote[0].setAttribute('id', 'standard');
         gotonote[1].setAttribute('id', 'feature');
