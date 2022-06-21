@@ -22,7 +22,6 @@
         .note-editor {
             width: 70% !important;
         }
-
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -54,7 +53,8 @@
                     </li>
                 </ul>
             </div>
-            <form action="/product-manage/equipment/store" method="post" enctype="multipart/form-data">
+
+            <form action="/product-manage/equipment/update" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="list-container">
                     <div class="field-section">
@@ -77,9 +77,9 @@
                     <div class="content-section">
                         <div class="top-section">
 
-                            <!-- 新增按鈕 -->
-                            <div class="bulid-btn">
-                                <input type="file" name="product_img" accept="image/*">
+                            <!-- 圖片 -->
+                            <div class="content-img">
+                                <img src="{{ $product->primary_img ?? '' }}" alt="">
                             </div>
 
                             <!-- 排序 -->
@@ -107,39 +107,36 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>商品排序</p>
                             </div>
 
                             <div class="field-date">
-                                <p>上次修改日期</p>
                             </div>
 
                         </div>
                     </div>
 
                     <div class="sub-section">
-                        <div class="top-section">
 
-                            <!-- 新增按鈕 -->
-                            <div class="bulid-btn">
-                                <input type="file" name="second_img[]" multiple accept="image/*">
+                        @foreach ($product->imgs as $go)
+                            <div class="top-section">
+
+                                <!-- 圖片 -->
+                                <div class="content-img">
+                                    <img src="{{ $go->path }}" alt="">
+                                </div>
+
+                                <!-- 排序 -->
+                                <div class="image-gradation">
+                                </div>
+
+                                <!-- 新增日期 -->
+                                <div class="date-bulid">
+                                    <input type="text" disabled />
+                                </div>
+
                             </div>
+                        @endforeach
 
-                            <!-- 排序 -->
-                            <div class="image-gradation">
-                                <select name="" id="" disabled="disabled">
-                                    <option selected disabled value="0">-</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
-                            </div>
-
-                            <!-- 新增日期 -->
-                            <div class="date-bulid">
-                                <input type="text" disabled />
-                            </div>
-
-                        </div>
                     </div>
 
                 </div>
@@ -177,12 +174,12 @@
                         <!-- 產品名稱 -->
                         <div class="form-input">
                             <p>產品名稱</p>
-                            <input name="product_name" type="text" />
+                            <input name="product_name" value="{{ $product->product_name }}" type="text" />
                         </div>
                         <!-- 產品款號 -->
                         <div class="form-input">
                             <p>產品款號</p>
-                            <input name="product_model" type="text" />
+                            <input name="product_model" value="{{ $product->model }}" type="text" />
                         </div>
                         <!-- 產品規格 -->
                         <div class="form-input">
@@ -197,7 +194,7 @@
                         <!-- 產品說明 -->
                         <div class="form-input">
                             <p>產品說明</p>
-                            <textarea id="summernote3" name="illustrate"></textarea>
+                            <textarea id="summernote3"  name="illustrate"></textarea>
                         </div>
                         <!-- 上傳按鈕 -->
                         <div class="btn">
@@ -207,13 +204,13 @@
                     </div>
                 </div>
             </form>
+
         </div>
     </main>
 @endsection
 @section('js')
     <script>
         $('#summernote1').summernote({
-            placeholder: '　請輸入文字.....',
             tabsize: 2,
             height: 120,
             disableDragAndDrop: false,
@@ -225,7 +222,6 @@
             ]
         });
         $('#summernote2').summernote({
-            placeholder: '　請輸入文字.....',
             tabsize: 2,
             disableDragAndDrop: true,
             height: 120,
@@ -237,7 +233,6 @@
             ]
         });
         $('#summernote3').summernote({
-            placeholder: '　如果沒有圖片，會顯示此欄位內容',
             tabsize: 2,
             disableDragAndDrop: false,
             height: 120,
@@ -248,5 +243,30 @@
                 ['table', ['table']],
             ]
         });
+    </script>
+
+    <script>
+        var gotonote = document.getElementsByClassName('note-editable')
+
+        var go = document.querySelector('.go')
+
+        gotonote[0].setAttribute('id', 'standard');
+        gotonote[1].setAttribute('id', 'feature');
+        gotonote[2].setAttribute('id', 'illustrate');
+
+        gotonote[0].setAttribute('name', 'standard');
+        gotonote[1].setAttribute('name', 'feature');
+        gotonote[2].setAttribute('name', 'illustrate');
+
+
+        var note1 = document.getElementById('standard')
+        var note2 = document.getElementById('feature')
+        var note3 = document.getElementById('illustrate')
+
+        note1.innerHTML = `{!! $product->standard !!}`
+        note2.innerHTML = `{!! $product->feature !!}`
+        note3.innerHTML = `{!! $product->illustrate !!}`
+
+
     </script>
 @endsection
