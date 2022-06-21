@@ -129,7 +129,7 @@ main #tittle-list-id .list-container .field-section .content {
 }
 
 main #tittle-list-id .list-container .field-section .content .field-img {
-  width: 300px;
+  width: 412px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -266,6 +266,8 @@ main #tittle-list-id .list-container .content-section .top-section .content-img 
   background-color: gray;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 main #tittle-list-id .list-container .content-section .top-section .image-gradation {

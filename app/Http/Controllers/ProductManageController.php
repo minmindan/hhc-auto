@@ -83,12 +83,18 @@ class ProductManageController extends Controller
     // 編輯頁
     public function equipment_edit($id)
     {
-        return view('product_edit.equipment_edit');
+
+        $product = equipment_product::find($id);
+
+
+        return view('product_edit.equipment_edit', compact('product'));
     }
 
     // 更新頁
-    public function equipment_update()
+    public function equipment_update(Request $request)
     {
+        dd($request->all());
+        return redirect('/product-manage/equipment');
 
     }
 
@@ -103,11 +109,9 @@ class ProductManageController extends Controller
             $value->delete();
         }
         FilesController::deleteUpload($main_img->primary_img);
-        $main_img -> delete();
+        $main_img->delete();
 
-
-
-        redirect ('/product-manage/equipment');
+        redirect('/product-manage/equipment');
     }
 
     // 軟體
