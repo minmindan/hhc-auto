@@ -13,6 +13,23 @@
         a:visited {
             color: #004098;
         }
+
+
+        .produt-star {
+            display: flex;
+            align-items: start;
+            justify-content:flex-start;
+            width: 93px !important;
+        }
+        .produt-star input{
+            border: 0px;
+            width: auto !important;
+        }
+
+        .image-gradation{
+            min-width: 94px !important;
+            padding-left: 10px;
+        }
     </style>
 @endsection
 @section('main')
@@ -66,14 +83,26 @@
                             <!-- 排序 -->
                             <div class="image-gradation">
                                 <select name="" id="" disabled="disabled">
-                                    <option value="0">-</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
+                                    <option value="0">{{$product->weights}}</option>
                                 </select>
                             </div>
                             <!-- 主打產品 -->
                             <div class="produt-star">
-                                <input type="text" value="{{ $product->primary ?? '' }}" disabled />
+                                <input  type="text"
+                                value=" @if ($product->primary == 1 )
+                                主打商品1
+                            @elseif ($product->primary == 2)
+                                主打商品2
+                            @elseif ($product->primary == 3)
+                                主打商品3
+                            @elseif ($product->primary == 4)
+                                主打商品4
+                            @elseif ($product->primary == 5)
+                                主打商品5
+                            @elseif ($product->primary == 6)
+                                不是主打商品
+                            @endif" disabled />
+
                             </div>
                             <!-- 功能按鈕 -->
                             <div class="function-button">

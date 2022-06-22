@@ -14,6 +14,7 @@ use App\Models\Repair_product;
 use App\Models\Software_img;
 use App\Models\Software_product;
 use Illuminate\Http\Request;
+use DB;
 
 class ProductManageController extends Controller
 {
@@ -85,12 +86,17 @@ class ProductManageController extends Controller
     public function equipment_edit($id)
     {
         $product = Equipment_product::find($id);
+
+
+        $equipment = Equipment_product::where('primary','<','6')->get();
+
+
         $imgs = equipment_img::orderby('weight', 'asc')->get();
 
 
         $count = Equipment_img::where('iid','=',$id)->count();
 
-        return view('product_edit.equipment_edit', compact('product','count','imgs'));
+        return view('product_edit.equipment_edit', compact('product','count','imgs','equipment'));
     }
 
 
@@ -128,27 +134,6 @@ class ProductManageController extends Controller
 
 
 
-        // 如果次要圖片排序改變,更新儲存回列表weight
-
-        $imgg = Equipment_img::get();
-
-        // dd($imgs[0]->id,$imgs[1]->id);
-
-
-        foreach ($imgs as $key => $value) {
-            $weight = Equipment_img::find($value);
-            dd($weight->weight.$value->id);
-
-            // dd($value, $request->get());
-            $weight->weight = '';
-        }
-
-
-
-
-
-
-
         // 如果有更新資料,套用新資料
 
         if (($request->standard) != null) {
@@ -168,7 +153,7 @@ class ProductManageController extends Controller
 
         $product->product_name = $request->product_name;
         $product->model = $request->product_model;
-        $product->primary = $request->primary;
+        $product->primary = $request->items;
         $product->weights = $request->weights;
         $product->save();
 
@@ -197,7 +182,7 @@ class ProductManageController extends Controller
 
     // 刪除次要圖片
 
-    public function d_sec_img($id){
+    public function equi_sec_img($id){
 
         $img = Equipment_img::find($id);
         FilesController::deleteUpload($img->path);
@@ -211,10 +196,6 @@ class ProductManageController extends Controller
         return redirect('/product-manage/equipment/' . $product_id);
 
     }
-
-
-
-
 
 
 
@@ -272,15 +253,117 @@ class ProductManageController extends Controller
 
     // 編輯頁
     public function software_edit()
-    {}
+    {
+        $product = Software_product::find($id);
+        $imgs = Software_img::orderby('weight', 'asc')->get();
+
+
+        $count = Software_img::where('iid','=',$id)->count();
+
+        return view('product_edit.software_edit', compact('product','count','imgs'));
+    }
 
     // 更新頁
     public function software_update()
-    {}
+    {
+
+
+        $product = software_product::find($id);
+        $imgs = software_img::where('iid','=',$id)->get();
+
+
+        // 如果主要圖片有更新,套用新圖片
+
+        if ($request->hasfile('product_img')) {
+            FilesController::deleteUpload($product->primary_img); //小工具刪除圖片
+            $path = FilesController::imgUpload($request->product_img, 'software');
+
+            $product->primary_img = $path;
+        }
+
+        // 如果次要圖片有更新,套用新圖片
+
+        if ($request->hasfile('second_img')) {
+            foreach ($request->second_img as $index => $element) {
+                $path = FilesController::imgUpload($element, 'software');
+                software_img::create([
+                    'path' => $path,
+                    'iid' => $product->id,
+                    'weight'=>'-',
+                ]);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // 如果有更新資料,套用新資料
+
+        if (($request->standard) != null) {
+            $product->standard = $request->standard;
+        };
+
+        if (($request->feature) != null) {
+            $product->feature = $request->feature;
+        };
+
+        if (($request->illustrate) != null) {
+            $product->illustrate = $request->illustrate;
+        };
+
+
+
+
+        $product->product_name = $request->product_name;
+        $product->model = $request->product_model;
+        $product->primary = $request->items;
+        $product->weights = $request->weights;
+        $product->save();
+
+
+
+
+        return redirect('/product-manage/software');
+    }
 
     // 刪除頁
     public function software_delete()
-    {}
+    {
+        $main_img = software_product::find($id);
+        $other_imgs = software_img::where('iid', $id)->get();
+        foreach ($other_imgs as $key => $value) {
+            FilesController::deleteUpload($value->path);
+            $value->delete();
+        }
+        FilesController::deleteUpload($main_img->primary_img);
+        $main_img->delete();
+
+        redirect('/product-manage/software');
+    }
+
+    // 刪除次要圖片
+
+    public function soft_sec_img($id){
+
+        $img = software_img::find($id);
+        FilesController::deleteUpload($img->path);
+        $img->delete();
+
+
+
+        $product = software_product::find($id);
+        $product_id = $product->id;
+
+        return redirect('/product-manage/software/' . $product_id);
+
+    }
 
     // 部品零件
     // 首頁
@@ -336,15 +419,119 @@ class ProductManageController extends Controller
 
     // 編輯頁
     public function parts_edit()
-    {}
+    {
+        $product = parts_product::find($id);
+        $imgs = parts_img::orderby('weight', 'asc')->get();
+
+
+        $count = parts_img::where('iid','=',$id)->count();
+
+        return view('product_edit.parts_edit', compact('product','count','imgs'));
+    }
 
     // 更新頁
     public function parts_update()
-    {}
+    {      $product = parts_product::find($id);
+        $imgs = parts_img::where('iid','=',$id)->get();
+
+
+        // 如果主要圖片有更新,套用新圖片
+
+        if ($request->hasfile('product_img')) {
+            FilesController::deleteUpload($product->primary_img); //小工具刪除圖片
+            $path = FilesController::imgUpload($request->product_img, 'parts');
+
+            $product->primary_img = $path;
+        }
+
+        // 如果次要圖片有更新,套用新圖片
+
+        if ($request->hasfile('second_img')) {
+            foreach ($request->second_img as $index => $element) {
+                $path = FilesController::imgUpload($element, 'parts');
+                parts_img::create([
+                    'path' => $path,
+                    'iid' => $product->id,
+                    'weight'=>'-',
+                ]);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // 如果有更新資料,套用新資料
+
+        if (($request->standard) != null) {
+            $product->standard = $request->standard;
+        };
+
+        if (($request->feature) != null) {
+            $product->feature = $request->feature;
+        };
+
+        if (($request->illustrate) != null) {
+            $product->illustrate = $request->illustrate;
+        };
+
+
+
+
+        $product->product_name = $request->product_name;
+        $product->model = $request->product_model;
+        $product->primary = $request->items;
+        $product->weights = $request->weights;
+        $product->save();
+
+
+
+
+        return redirect('/product-manage/parts');}
 
     // 刪除頁
     public function parts_delete()
-    {}
+    {
+
+        $main_img = parts_product::find($id);
+        $other_imgs = parts_img::where('iid', $id)->get();
+        foreach ($other_imgs as $key => $value) {
+            FilesController::deleteUpload($value->path);
+            $value->delete();
+        }
+        FilesController::deleteUpload($main_img->primary_img);
+        $main_img->delete();
+
+        redirect('/product-manage/parts');
+    }
+
+    // 刪除次要圖片
+
+    public function part_sec_img($id){
+
+        $img = parts_img::find($id);
+        FilesController::deleteUpload($img->path);
+        $img->delete();
+
+
+
+        $product = parts_product::find($id);
+        $product_id = $product->id;
+
+        return redirect('/product-manage/parts/' . $product_id);
+
+    }
+
+
+
+
+
 
     // 耗材
     // 首頁
@@ -400,15 +587,110 @@ class ProductManageController extends Controller
 
     // 編輯頁
     public function consumables_edit()
-    {}
+    {
+
+        $product = consumables_product::find($id);
+        $imgs = consumables_img::orderby('weight', 'asc')->get();
+
+
+        $count = consumables_img::where('iid','=',$id)->count();
+
+        return view('product_edit.consumables_edit', compact('product','count','imgs'));
+    }
 
     // 更新頁
     public function consumables_update()
-    {}
+    {
+
+        $product = consumables_product::find($id);
+        $imgs = consumables_img::where('iid','=',$id)->get();
+
+
+        // 如果主要圖片有更新,套用新圖片
+
+        if ($request->hasfile('product_img')) {
+            FilesController::deleteUpload($product->primary_img); //小工具刪除圖片
+            $path = FilesController::imgUpload($request->product_img, 'consumables');
+
+            $product->primary_img = $path;
+        }
+
+        // 如果次要圖片有更新,套用新圖片
+
+        if ($request->hasfile('second_img')) {
+            foreach ($request->second_img as $index => $element) {
+                $path = FilesController::imgUpload($element, 'consumables');
+                consumables_img::create([
+                    'path' => $path,
+                    'iid' => $product->id,
+                    'weight'=>'-',
+                ]);
+            }
+        }
+
+
+
+        // 如果有更新資料,套用新資料
+
+        if (($request->standard) != null) {
+            $product->standard = $request->standard;
+        };
+
+        if (($request->feature) != null) {
+            $product->feature = $request->feature;
+        };
+
+        if (($request->illustrate) != null) {
+            $product->illustrate = $request->illustrate;
+        };
+
+
+
+
+        $product->product_name = $request->product_name;
+        $product->model = $request->product_model;
+        $product->primary = $request->items;
+        $product->weights = $request->weights;
+        $product->save();
+
+
+
+
+        return redirect('/product-manage/consumables');
+    }
 
     // 刪除頁
     public function consumables_delete()
-    {}
+    {
+        $main_img = consumables_product::find($id);
+        $other_imgs = consumables_img::where('iid', $id)->get();
+        foreach ($other_imgs as $key => $value) {
+            FilesController::deleteUpload($value->path);
+            $value->delete();
+        }
+        FilesController::deleteUpload($main_img->primary_img);
+        $main_img->delete();
+
+        redirect('/product-manage/consumables');
+    }
+
+
+    // 刪除次要圖片
+
+    public function cons_sec_img($id){
+
+        $img = consumables_img::find($id);
+        FilesController::deleteUpload($img->path);
+        $img->delete();
+
+
+
+        $product = consumables_product::find($id);
+        $product_id = $product->id;
+
+        return redirect('/product-manage/consumables/' . $product_id);
+
+    }
 
     // 維修
     // 首頁
@@ -430,7 +712,6 @@ class ProductManageController extends Controller
     public function maintenance_store(Request $request)
     {
 
-// dd($request->all());
 
         $product = Repair_product::create([
             'product_name' => $request->product_name,
@@ -468,14 +749,108 @@ class ProductManageController extends Controller
 
     // 編輯頁
     public function maintenance_edit()
-    {}
+    {
+        $product =  maintenance_product::find($id);
+        $imgs =  maintenance_img::orderby('weight', 'asc')->get();
+
+
+        $count =  maintenance_img::where('iid','=',$id)->count();
+
+        return view('product_edit. maintenance_edit', compact('product','count','imgs'));
+    }
 
     // 更新頁
     public function maintenance_update()
-    {}
+    {
+        $product = maintenance_product::find($id);
+        $imgs = maintenance_img::where('iid','=',$id)->get();
+
+
+        // 如果主要圖片有更新,套用新圖片
+
+        if ($request->hasfile('product_img')) {
+            FilesController::deleteUpload($product->primary_img); //小工具刪除圖片
+            $path = FilesController::imgUpload($request->product_img, 'maintenance');
+
+            $product->primary_img = $path;
+        }
+
+        // 如果次要圖片有更新,套用新圖片
+
+        if ($request->hasfile('second_img')) {
+            foreach ($request->second_img as $index => $element) {
+                $path = FilesController::imgUpload($element, 'maintenance');
+                maintenance_img::create([
+                    'path' => $path,
+                    'iid' => $product->id,
+                    'weight'=>'-',
+                ]);
+            }
+        }
+
+
+
+        // 如果有更新資料,套用新資料
+
+        if (($request->standard) != null) {
+            $product->standard = $request->standard;
+        };
+
+        if (($request->feature) != null) {
+            $product->feature = $request->feature;
+        };
+
+        if (($request->illustrate) != null) {
+            $product->illustrate = $request->illustrate;
+        };
+
+
+
+
+        $product->product_name = $request->product_name;
+        $product->model = $request->product_model;
+        $product->primary = $request->items;
+        $product->weights = $request->weights;
+        $product->save();
+
+
+
+
+        return redirect('/product-manage/maintenance');
+    }
 
     // 刪除頁
     public function maintenance_delete()
-    {}
+    {
+
+        $main_img = maintenance_product::find($id);
+        $other_imgs = maintenance_img::where('iid', $id)->get();
+        foreach ($other_imgs as $key => $value) {
+            FilesController::deleteUpload($value->path);
+            $value->delete();
+        }
+        FilesController::deleteUpload($main_img->primary_img);
+        $main_img->delete();
+
+        redirect('/product-manage/maintenance');
+    }
+
+
+    // 刪除次要圖片
+
+    public function main_sec_img($id){
+
+        $img = maintenance_img::find($id);
+        FilesController::deleteUpload($img->path);
+        $img->delete();
+
+
+
+        $product = maintenance_product::find($id);
+        $product_id = $product->id;
+
+        return redirect('/product-manage/maintenance/' . $product_id);
+
+    }
 
 }

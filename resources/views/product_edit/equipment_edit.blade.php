@@ -151,20 +151,17 @@
                                 </div>
                                 <!-- 排序 -->
                                 <div class="image-gradation">
-                                    <select name="weight{{$go->id}}">
+                                    <select name="gggg">
                                         @for ($i = 1; $i < $count + 1; $i++)
-                                            <option value="{{$i}}">{{$i}}</option>
+                                            <option value="{{ $i }}">{{ $i }}</option>
                                         @endfor
-                                        <option @if(($go->weight) == '-') value="-" selected @endif>-</option>
                                     </select>
                                 </div>
 
                                 <!-- 新增日期 -->
                                 <div class="date-bulid" style="display: flex; justify-content:center; align-items:center;">
                                     <button type="button" onclick="d_sec_img({{ $go->id }})">刪除</button>
-
                                 </div>
-
                             </div>
                         @endforeach
 
@@ -195,30 +192,39 @@
                         <div class="form-input star-items">
                             <p>主打商品</p>
                             <ul>
+
+
                                 <li>
-                                    <input value="1" type="radio" name="items" id="items1" />
+                                    <input @if ($product->primary == 1) checked @endif value="1" type="radio"
+                                        name="items" id="items1" />
                                     <label for="items1">主打商品1</label>
                                 </li>
                                 <li>
-                                    <input value="2" type="radio" name="items" id="items2" />
+                                    <input @if ($product->primary == 2) checked @endif value="2" type="radio"
+                                        name="items" id="items2" />
                                     <label for="items2">主打商品2</label>
                                 </li>
                                 <li>
-                                    <input value="3" type="radio" name="items" id="items3" />
+                                    <input @if ($product->primary == 3) checked @endif value="3" type="radio"
+                                        name="items" id="items3" />
                                     <label for="items3">主打商品3</label>
                                 </li>
                                 <li>
-                                    <input value="4" type="radio" name="items" id="items4" />
+                                    <input @if ($product->primary == 4) checked @endif value="4" type="radio"
+                                        name="items" id="items4" />
                                     <label for="items4">主打商品4</label>
                                 </li>
                                 <li>
-                                    <input value="5" type="radio" name="items" id="items5" />
+                                    <input @if ($product->primary == 5) checked @endif value="5" type="radio"
+                                        name="items" id="items5" />
                                     <label for="items5">主打商品5</label>
                                 </li>
                                 <li>
-                                    <input value="6" type="radio" name="items" id="items6" />
+                                    <input @if ($product->primary == 6) checked @endif value="6" type="radio"
+                                        name="items" id="items6" />
                                     <label for="items6">不是主打商品</label>
                                 </li>
+
                             </ul>
                         </div>
                         <!-- 產品名稱 -->
@@ -334,6 +340,22 @@
                     let element = document.querySelector('#sec_img' + id)
                     element.parentNode.removeChild(element);
                 })
+        }
+    </script>
+
+    <script>
+        function c_sec_img(id) {
+
+            let formData = new FormData();
+            formData.append('_method', 'post');
+            formData.append('_token', '{{ csrf_token() ?? '' }}');
+
+
+            fetch('/product-manage/equipment/c_sec_img/' + id, {
+                method: 'POST',
+                body: formData
+            })
+
         }
     </script>
 @endsection
