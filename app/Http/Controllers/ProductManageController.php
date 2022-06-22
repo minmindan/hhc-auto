@@ -83,11 +83,11 @@ class ProductManageController extends Controller
     // 編輯頁
     public function equipment_edit($id)
     {
+        $product = Equipment_product::find($id);
 
-        $product = equipment_product::find($id);
+        $count = Equipment_img::where('iid','=',$id)->count();
 
-
-        return view('product_edit.equipment_edit', compact('product'));
+        return view('product_edit.equipment_edit', compact('product','count'));
     }
 
     // 更新頁
