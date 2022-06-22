@@ -8,15 +8,17 @@ use App\Models\Process_banner;
 use App\Models\Product_banner;
 use App\Models\Contact_banner;
 use App\Models\News;
+use App\Models\company;
 
 class HomePageController extends Controller
 {
     //首頁
     public function index()
     {
+        $companys = company::get();
         $abus =Aboutus_banner::get();
         $datas = News::orderby('id','desc')->take(3)->get();
-        return view('index',compact('abus','datas'));
+        return view('index',compact('abus','datas','companys'));
     }
     public function aboutus()
     {
