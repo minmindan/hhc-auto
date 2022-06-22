@@ -54,8 +54,7 @@
                 </ul>
             </div>
 
-            <form action="/product-manage/equipment/update/{{ $product->id }}" method="post"
-                enctype="multipart/form-data">
+            <form action="/product-manage/equipment/update/{{$product->id}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="list-container">
                     <div class="field-section">
@@ -65,7 +64,7 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>商品排序</p>
+                                <p>主要商品排序</p>
                             </div>
 
                             <div class="field-date">
@@ -108,10 +107,11 @@
                             </div>
 
                             <div class="field-radation">
+                                次要圖片排序
                             </div>
 
-                            <div class="field-date">
-                                <input type="file" name="second_img[]" multiple accept="image/*" >
+                            <div class="field-date" style="display: flex;direction:column; ">
+                                <p>更換圖片</p>
                             </div>
 
                         </div>
@@ -120,29 +120,27 @@
                     <div class="sub-section">
 
                         @foreach ($product->imgs as $go)
-                            <div class="top-section">
+                            <div class="top-section" id="sec_img{{$go->id}}">
 
                                 <!-- 圖片 -->
-                                <div class="content-img" id="{{ $go->id }}">
+                                <div class="content-img" id="{{$go->id}}">
                                     <img src="{{ $go->path }}" alt="">
                                 </div>
 
                                 <!-- 排序 -->
-                                <div class="image-gradation"
-                                    style="display: flex; align-items:center; justify-content:center; ">
-                                    <select name="weights" id="sec_img{{ $go->id }}">
-                                        <option value="0">-</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="4">5</option>
+                                <div class="image-gradation">
+                                    <select name="weights" >
+
+                                        @for ($i=0; $i < $count ; $i++)
+                                        <option value="{{$go->id}}">{{$i}}</option>
+                                        @endfor
                                     </select>
                                 </div>
-                                <button type="button" onclick="d_sec_img({{ $go->id }})">刪除</button>
 
                                 <!-- 新增日期 -->
                                 <div class="date-bulid">
+                                <button type="button" onclick="d_sec_img({{$go->id}})">刪除</button>
+
                                 </div>
 
                             </div>
@@ -205,7 +203,7 @@
                         <!-- 產品說明 -->
                         <div class="form-input">
                             <p>產品說明</p>
-                            <textarea id="summernote3" name="illustrate"></textarea>
+                            <textarea id="summernote3"  name="illustrate"></textarea>
                         </div>
                         <!-- 上傳按鈕 -->
                         <div class="btn">
@@ -259,6 +257,7 @@
     <script>
         var gotonote = document.getElementsByClassName('note-editable')
 
+        var go = document.querySelector('.go')
 
         gotonote[0].setAttribute('id', 'standard');
         gotonote[1].setAttribute('id', 'feature');
@@ -276,24 +275,30 @@
         note1.innerHTML = `{!! $product->standard !!}`
         note2.innerHTML = `{!! $product->feature !!}`
         note3.innerHTML = `{!! $product->illustrate !!}`
+
+
     </script>
 
-    <script>
-        function d_sec_img(id) {
+<script>
 
-            let formData = new FormData();
-            // formData.append('_method', 'delete');
-            formData.append('_token', '{{ csrf_token() ?? '' }}');
+function d_sec_img(id) {
+
+let formData = new FormData();
+// formData.append('_method', 'delete');
+formData.append('_token', '{{ csrf_token() ?? '' }}');
 
 
-            fetch('/product-manage/equipment/d_sec_img/' + id, {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(function(response) {
-                    let element = document.querySelector('#sec_img' + id)
-                    element.parentNode.removeChild(element);
-                })
-        }
-    </script>
+fetch('/product-manage/equipment/d_sec_img/' + id, {
+        method: 'POST',
+        body: formData
+    })
+    .then(function(response) {
+        let element = document.querySelector('#sec_img' + id)
+        element.parentNode.removeChild(element);
+    })
+}
+</script>
+
+
+
 @endsection
