@@ -73,6 +73,7 @@ class ProductManageController extends Controller
                 Equipment_img::Create([
                     'path' => $path,
                     'iid' => $product->id,
+                    'weight' =>0,
                 ]);
             }
         }
@@ -84,11 +85,14 @@ class ProductManageController extends Controller
     public function equipment_edit($id)
     {
         $product = Equipment_product::find($id);
+        $imgs = equipment_img::orderby('weight', 'asc')->get();
 
         $count = Equipment_img::where('iid','=',$id)->count();
 
         return view('product_edit.equipment_edit', compact('product','count'));
     }
+
+
 
     // 更新頁
     public function equipment_update(Request $request, $id)
@@ -118,9 +122,18 @@ class ProductManageController extends Controller
                 Equipment_img::Create([
                     'path' => $path,
                     'iid' => $product->id,
+                    'weight' =>0,
                 ]);
             }
         }
+
+
+        // 如果次要圖片排序改變,更新儲存回列表weight
+
+
+
+
+
 
 
         // 如果有更新資料,套用新資料
@@ -136,6 +149,8 @@ class ProductManageController extends Controller
         if (($request->illustrate) != null) {
             $product->illustrate = $request->illustrate;
         };
+
+
 
 
         $product->product_name = $request->product_name;

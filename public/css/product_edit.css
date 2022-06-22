@@ -110,7 +110,6 @@ main #tittle-list-id .list-container .field-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
 }
 
 main #tittle-list-id .list-container .field-section .content {
@@ -123,7 +122,6 @@ main #tittle-list-id .list-container .field-section .content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
   width: 1000px;
   padding: 0px 50px 0px 50px;
 }
@@ -246,7 +244,6 @@ main #tittle-list-id .list-container .content-section .top-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   background-color: #f7f8fa;
   width: 1000px;
   -webkit-box-align: center;
@@ -283,7 +280,6 @@ main #tittle-list-id .list-container .content-section .top-section .date-bulid {
 
 main #tittle-list-id .list-container .content-section .top-section .date-bulid input {
   width: 100%;
-  text-align: center;
 }
 
 main #tittle-list-id .list-container .content-section .top-section .bulid-btn {
@@ -329,7 +325,6 @@ main #tittle-list-id .list-container .sub-section .top-section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   background-color: #f7f8fa;
   width: 1000px;
   -webkit-box-align: center;
@@ -364,7 +359,6 @@ main #tittle-list-id .list-container .sub-section .top-section .date-bulid {
 
 main #tittle-list-id .list-container .sub-section .top-section .date-bulid input {
   width: 100%;
-  text-align: center;
 }
 
 main #tittle-list-id .list-container .sub-section .top-section .bulid-btn {

@@ -15,7 +15,7 @@
 @section('main')
 <main id="main">
         <!-- COMPANY -->
-        <form action="/partner-manage/create" method="post" id="company">
+        <form action="/partner-manage/create" method="post" id="company" enctype="multipart/form-data">
             @csrf
             <h1 class="company_title">COMPANY</h1>
             <p>合作客戶</p>
@@ -79,7 +79,7 @@
                     <img src="./image/SVG_彩圖/矽品.svg" alt="">
                 </div>
                 <div style="display: flex;  align-items:center;" class="create_com">
-                    <input type="file" name="company" id="com_img" accept="image/*">
+                    <input type="file" name="com_img" id="com_img" accept="image/*">
                 </div>
             </div>
         </form>

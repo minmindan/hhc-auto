@@ -13,6 +13,7 @@ Route::prefix('/product-manage/equipment')->group(function () {
     Route::post('/update/{id}', [ProductManageController::class, 'equipment_update']); //更新頁面
     Route::post('/delete/{id}', [ProductManageController::class, 'equipment_delete']); //刪除頁面
     Route::post('/d_sec_img/{id}', [ProductManageController::class, 'd_sec_img']); //刪除頁面
+    Route::post('/change_img/{id}', [ProductManageController::class, 'd_sec_img']); //刪除頁面
 
 });
 
