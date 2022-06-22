@@ -9,8 +9,11 @@
             text-decoration: none;
             color: #0000ff;
         }
-        a:visited{
-            color:#0000ff;
+        ul li a:visited{
+            color:#0000ff !important;
+        }
+        p{
+            color: black !important;
         }
     </style>
 @endsection
@@ -21,8 +24,8 @@
             <div class="list-tittle">
                 <h1>BANNER管理</h1>
                 <ul>
-                    <li><a href="/banner-manage/homepage/edit">首頁</a></li>
-                    <li><a href="/banner-manage/aboutus/edit">關於我們</a></li>
+                    <li><a style="color:white !improtant;"  href="/banner-manage/homepage/edit">首頁</a></li>
+                    <li><a style="color:white !improtant;" href="/banner-manage/aboutus/edit">關於我們</a></li>
                     <li><a href="/banner-manage/product/edit">產品介紹</a></li>
                     <li><a href="/banner-manage/process/edit">產品製作流程</a></li>
                     <li><a href="/banner-manage/contact/edit">聯絡我們</a></li>

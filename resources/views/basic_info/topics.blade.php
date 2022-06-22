@@ -42,6 +42,9 @@
         a:visited{
             color: white;
         }
+        p{
+            color: black !important;
+        }
     </style>
 @endsection
 @section('main')

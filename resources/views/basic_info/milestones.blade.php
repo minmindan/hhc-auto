@@ -18,6 +18,9 @@
         .date {
             width: 40px !important;
         }
+        p{
+            color: black !important;
+        }
     </style>
 @endsection
 @section('main')

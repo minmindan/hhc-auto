@@ -35,12 +35,20 @@
             cursor: pointer;
             font-size: 14px;
         }
+        p{
+            color: black !important;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <style>
+        a:visited{
+            color: white!important;
+        }
+    </style>
 @section('main')
     <main>
         <!-- 公司簡介 -->
@@ -87,11 +95,11 @@
                             <div class="card">
                                 <div class="items-field"></div>
                                 <div class="note">
-                                    <textarea id="summernote" name="standard">{{$data[0]->serve}}</textarea>
+                                    <p>{!!$data[0]->serve!!}</p>
                                 </div>
                             </div>
                             <div class="btnbox" style="margin: 0 0 0 120px;">
-                                <div class="btn-check" style="margin:30px 10px 0 auto;"><a href="/contact-manage/edit">編輯</a></div>
+                                <div class="btn-check" style="margin:30px 10px 0 auto;"><a style="color: white !important;" href="/contact-manage/edit">編輯</a></div>
                             </div>
                         </div>
                     </div>
@@ -100,23 +108,4 @@
             </div>
             <div style="margin-bottom: 150px"></div>
     </main>
-@endsection
-@section('js')
-    <script>
-        $('#summernote').summernote({
-            tabsize: 2,
-            height: 120,
-            toolbar: [
-                ['color', ['color']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
-            ]
-        });
-    </script>
-    <script>
-        var note = document.querySelector('.note-editable');
-        console.log(note);
-        note.setAttribute('name', 'standard');
-        note.innerHTML = `{!! $data[0]->serve !!}`
-    </script>
 @endsection

@@ -12,6 +12,9 @@
     a:visited{
         color:#0000ff;
     }
+    p{
+            color: black !important;
+        }
 </style>
 @endsection
 
