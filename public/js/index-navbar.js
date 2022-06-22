@@ -13,15 +13,17 @@ var focuss = document.getElementById('focus');
 var focusl = document.getElementById('focuslogo');
 var focusm = document.getElementById('focusmain');
 var xx = document.getElementById('XX');
+var entryblue = document.getElementById('entryblue');
+var entrywhite = document.getElementById('entrywhite');
 var entry = document.getElementById('focus-button');
 var focusbutton = document.getElementById('focus-button');
 focusbutton.addEventListener('mousemove',function(){
-    focusbutton.innerHTML = `<h1>E n t r y</h1>
-    <img src="/image/blue_white_entry.svg" alt="">`
+    entryblue.classList.remove('none');
+    entrywhite.classList.add('none');
 })
 focusbutton.addEventListener('mouseleave',function(){
-    focusbutton.innerHTML = `<h1>E n t r y</h1>
-    <img src="/image/right_white_entry.svg" alt="">`
+    entryblue.classList.add('none');
+    entrywhite.classList.remove('none');
 })
 bgli.addEventListener('click', function () {
     focuss.classList.remove('none')

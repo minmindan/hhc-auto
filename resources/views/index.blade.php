@@ -190,7 +190,9 @@
                 </div>
                 <div class="btn btn--1" id="focus-button">
                     <h1>E n t r y</h1>
-                    <img src="{{ asset('image/nav/right_white_entry.svg') }}" alt="">
+                    <img id="entrywhite" src="{{ asset('image/nav/right_white_entry.svg') }}" alt="">
+                    <img id="entryblue" class="none" src="{{ asset('image/nav/blue_white_entry.svg') }}"
+                        alt="">
                 </div>
             </div>
         </div>
@@ -272,9 +274,9 @@
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
                         src="{{ asset('image/index-video/index-banner-1.mp4') }}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                        src="./image/video/banner_3.mp4"></video></div>
+                        src="{{asset('image/index-video/index-banner-2.mp4')}}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                        src="./image/video/首頁-banner-影2.mp4"></video></div>
+                        src="{{asset('image/index-video/index-banner-2.mp4')}}"></video></div>
             </div>
             <div class="swiper-pagination" style="z-index: 1;"></div>
         </div>
@@ -492,11 +494,11 @@
                 <h2>聯絡我們</h2>
             </div>
             <div>
-                <p>地址地址地址地址地址地址地址地址地址地址</p>
-                <p>地址地址地址地址地址地址地址地址地址地址</p>
-                <p>地址地址地址地址地址地址地址地址地址地址</p>
-                <p>地址地址地址地址地址地址地址地址地址地址</p>
-                <p>地址地址地址地址地址地址地址地址地址地址</p>
+                <p>地址：高雄市楠梓區藍昌路349巷25之7號 </p>
+                <p>電話：一線: (07)360-6851/ 二線: (07)360-6871</p>
+                <p>傳真：(07)360-6838 </p>
+                <p>業務:mc@hhc-auto.com</p>
+                <p>設計開發: aaron@hhc-auto.com</p>
             </div>
         </div>
     </div>
