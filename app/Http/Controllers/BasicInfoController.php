@@ -60,13 +60,11 @@ class BasicInfoController extends Controller
         $data = Milestone::find($id);
         return view('basic_info.milestones_edit', compact('data'));
     }
-    public function milestones_store(Request $request, $id)
-    {
-        // dd('1');
-        Milestone::where('id', $id)->update([
-            'years' => $request->years,
-            'month' => $request->month,
-            'content' => $request->content,
+    public function milestones_store(Request $request){
+        Milestone::create([
+            'years'=>$request->years,
+            'month'=>$request->month,
+            'content'=>$request->content,
         ]);
         return redirect('/milestones-manage');
     }
@@ -76,6 +74,14 @@ class BasicInfoController extends Controller
         $data = Milestone::find($id);
         $data->delete();
         return redirect('/milestones-manage');
+    }
+    public function milestones_update(Request $request, $id){
+        Milestone::where('id',$id)->update([
+            'years'=>$request->years,
+            'month'=>$request->month,
+            'content'=>$request->content,
+        ]);
+        return redirect ('/milestones-manage');
     }
 
     //聯絡我們
@@ -115,35 +121,36 @@ class BasicInfoController extends Controller
     }
 
 //回報表單列表
-    public function partner_index()
-    {
-        $datas = company::get();
-        return view('basic_info.partner', compact('datas'));
+public function partner_index(){
+    $datas = company::get();
+    return view ('basic_info.partner' , compact('datas'));
+}
+public function partner_edit(){
+    $datas = company::get();
+    return view ('basic_info.partner_edit',compact('datas'));
+}
+public function partner_create(Request $request){
+    if ($request->hasfile('company')) {
+        $path = FilesController::imgUpload($request->company, 'companys_img');
     }
-    public function partner_edit()
-    {
-        $datas = company::get();
-        return view('basic_info.partner_edit', compact('datas'));
-    }
-
-    public function partner_create(Request $request)
-    {
-
-
-        // dd($request->all());
-        if ($request->hasfile('com_img')) {
-        $path = FilesController::imgUpload($request->com_img, 'companys_img');
-
-     }
-
-        company::create([
-            'com_img' => $path,
-        ]);
-        return redirect('/partner-manage');
-    }
-
-
-
+    company::create([
+        'com_img'=>$path,
+    ]);
+    return redirect ('/partner-manage/edit');
+}
+public function partner_update(Request $request ,$id){
+    report::find($id)->update([
+        'state'=>$request->state,
+        'remake'=>$request->remake,
+    ]);
+    return redirect ('/contact/list');
+}
+public function partner_delete($id){
+    $delete = company::find($id);
+    FilesController::deleteUpload($delete->com_img);
+    $delete->delete();
+    return redirect ('/partner-manage/edit');
+}
 
     public function partner_update(Request $request, $id)
     {
@@ -153,6 +160,8 @@ class BasicInfoController extends Controller
         ]);
         return redirect('/contact/list');
     }
+
+
     public function partner_delete($id)
     {
         return redirect('/milestones-manage');
@@ -184,8 +193,8 @@ class BasicInfoController extends Controller
     public function contactlist_update(Request $request, $id)
     {
         report::find($id)->update([
-            'state' => $request->state,
-            'remake' => $request->remake,
+            'state'=>$request->state,
+            'remark'=>$request->remark,
         ]);
         return redirect('/contact/list');
     }

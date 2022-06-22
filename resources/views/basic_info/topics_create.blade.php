@@ -61,13 +61,13 @@
     <!-- topics -->
     <div id="topics">
         <h1 class="topics_title">TOPICS</h1>
-        <p>最新消息</p>
+        <p style="color: #B4B4B4 !important;">最新消息</p>
         <div class="topicsmain">
             <form  class="topics" action="/topics-manage/store" method="POST">
                 @csrf
                 <div  class="btnbox">
                     <div class="btn-store"><button type="submit">儲存</button></div>
-                    <div class="btn-cancel"><a href="/topics-manage">取消</a></div>
+                    <div class="btn-cancel"><a style="color: white !important;" href="/topics-manage">取消</a></div>
                 </div>
                 <p class="time"><input type="text" name="time" value="TIMETIMETIME"></p>
                 <h4 class="topicsmain_title">

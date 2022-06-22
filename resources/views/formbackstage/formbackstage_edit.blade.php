@@ -86,7 +86,7 @@
                         <a type="submit" href="/contact/list"
                         style="display:flex;align-items: center;
                         justify-content: center; font-size:15px ;margin:0 20px 0 auto;
-          border-radius: 15px; background-color:#004098; color:white; border:1px solid #004098; height:30px; width:150px;">返回</a>
+          border-radius: 15px; background-color:#004098; color:white !important; border:1px solid #004098; height:30px; width:150px;">返回</a>
                     </div>
                 </div>
             </form>

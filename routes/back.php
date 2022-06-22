@@ -45,7 +45,7 @@ Route::prefix('/company-manage')->group(function (){
 Route::prefix('/milestones-manage')->group(function (){
     Route::get('/',[BasicInfoController::class, 'milestones_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'milestones_create']); //新增頁面
-    Route::post('/store/{id}',[BasicInfoController::class, 'milestones_store']); //儲存頁面
+    Route::post('/store',[BasicInfoController::class, 'milestones_store']); //儲存頁面
     Route::get('/edit/{id}',[BasicInfoController::class, 'milestones_edit']); //編輯頁面
     Route::post('/update/{id}',[BasicInfoController::class, 'milestones_update']); //更新頁面
     Route::get('/delete/{id}',[BasicInfoController::class, 'milestones_delete']); //編輯頁面
@@ -66,7 +66,7 @@ Route::prefix('/partner-manage')->group(function (){
     Route::post('/create',[BasicInfoController::class, 'partner_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'partner_store']); //儲存頁面
     Route::get('/edit',[BasicInfoController::class, 'partner_edit']); //編輯頁面
-    Route::post('/update/{id}',[BasicInfoController::class, 'partner_update']); //更新頁面
+    Route::get('/delete/{id}',[BasicInfoController::class, 'partner_delete']); //更新頁面
 });
 
 

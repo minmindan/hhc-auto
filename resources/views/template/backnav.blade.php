@@ -49,7 +49,7 @@
                 <div class="list">
                     <a href="/topics-manage"><p>最新消息</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <a href="/company-manage"><p>合作客戶</p></a>
+                    <a href="/partner-manage"><p>合作客戶</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <a href="/milestones-manage"><p>公司沿革</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
