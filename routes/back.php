@@ -51,13 +51,22 @@ Route::prefix('/milestones-manage')->group(function (){
     Route::get('/delete/{id}',[BasicInfoController::class, 'milestones_delete']); //編輯頁面
 });
 
-//聯絡方式
+//聯絡方式 完成
 Route::prefix('/contact-manage')->group(function (){
     Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
     Route::get('/edit',[BasicInfoController::class, 'contact_edit']); //編輯頁面
     Route::post('/update/{id}',[BasicInfoController::class, 'contact_update']); //更新頁面
+});
+
+// 合作客戶
+Route::prefix('/partner-manage')->group(function (){
+    Route::get('/',[BasicInfoController::class, 'partner_index']); //總表
+    Route::post('/create',[BasicInfoController::class, 'partner_create']); //新增頁面
+    Route::post('/store',[BasicInfoController::class, 'partner_store']); //儲存頁面
+    Route::get('/edit',[BasicInfoController::class, 'partner_edit']); //編輯頁面
+    Route::post('/update/{id}',[BasicInfoController::class, 'partner_update']); //更新頁面
 });
 
 

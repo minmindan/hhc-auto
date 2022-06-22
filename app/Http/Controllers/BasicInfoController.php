@@ -7,12 +7,14 @@ use App\Models\News;
 use App\Models\Milestone;
 use App\Models\profile;
 use App\Models\report;
+use App\Models\company;
 use App\Models\contact;
 use App\Models\Aboutus_banner;
 use App\Models\Index_banner;
 use App\Models\Process_banner;
 use App\Models\Product_banner;
 use App\Models\Contact_banner;
+use App\Http\Controllers\FilesController;
 
 class BasicInfoController extends Controller
 {
@@ -79,6 +81,7 @@ class BasicInfoController extends Controller
     //聯絡我們
     public function contact_index(){
         $data = profile::get();
+        // dd($data);
         return view ('basic_info.porfile' , compact('data'));
     }
 
@@ -106,6 +109,39 @@ class BasicInfoController extends Controller
         return redirect ('/milestones-manage');
     }
 
+
+//回報表單列表
+public function partner_index(){
+    $datas = company::get();
+    return view ('basic_info.partner' , compact('datas'));
+}
+public function partner_edit(){
+    $datas = company::get();
+    return view ('basic_info.partner_edit',compact('datas'));
+}
+public function partner_create(Request $request){
+    // dd($request->);
+
+
+    $path = FilesController::imgUpload($request->company, 'companys_img');
+
+
+
+    company::create([
+        'path'=>$path,
+    ]);
+    return redirect ('/partner-manage');
+}
+public function partner_update(Request $request ,$id){
+    report::find($id)->update([
+        'state'=>$request->state,
+        'remake'=>$request->remake,
+    ]);
+    return redirect ('/contact/list');
+}
+public function partner_delete($id){
+    return redirect ('/milestones-manage');
+}
 
 
     //回報表單列表

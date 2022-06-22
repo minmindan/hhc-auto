@@ -51,6 +51,9 @@
             color: white;
             cursor: pointer;
         }
+        p{
+            color: black !important;
+        }
     </style>
 @endsection
 @section('main')

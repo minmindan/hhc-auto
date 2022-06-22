@@ -4,6 +4,14 @@
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{asset('css/form-backstage.css')}}">
+<style>
+    a{
+        text-decoration: none;
+    }
+    p{
+            color: black !important;
+        }
+</style>
 @endsection
 @section('main')
 <main>

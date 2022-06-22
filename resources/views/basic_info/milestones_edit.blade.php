@@ -24,6 +24,9 @@
             width: 600px;
             height: 100px;
         }
+        p{
+            color: black !important;
+        }
     </style>
 @endsection
 @section('main')

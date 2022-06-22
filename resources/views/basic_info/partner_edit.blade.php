@@ -2,31 +2,25 @@
 @section('title')
     About Us
 @endsection
-<script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="{{ asset('css/backindex.css') }}">
-<link rel="stylesheet" href="{{ asset('css/font.css') }}">
-<link rel="stylesheet" href="{{ asset('css/btn_new.css') }}">
-<link rel="stylesheet" href="{{ asset('css/backnav.css') }}">
-<style>
-    .btnbox a {
-        text-decoration: none;
-        color: white;
-    }
-    .btnbox a:visited{
-        color: white !important;
-    }
-</style>
+    <script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{asset('css/backindex.css')}}">
+    <link rel="stylesheet" href="{{asset('css/font.css')}}">
+    <link rel="stylesheet" href="{{asset('css/btn_new.css')}}">
+    <link rel="stylesheet" href="{{asset('css/backnav.css')}}">
+    <style>
+
+    </style>
 </head>
 
 @section('main')
-    <main id="main">
+<main id="main">
         <!-- COMPANY -->
-        <div id="company">
+        <form action="/partner-manage/create" method="post" id="company">
+            @csrf
             <h1 class="company_title">COMPANY</h1>
             <p>合作客戶</p>
             <div class="btnbox">
-                <div class="btn-edit"><a href="/partner-manage/edit">編輯</a></div>
-                <div class="btn-store">儲存</div>
+                <button type="submit" class="btn-store">儲存</button>
                 <div class="btn-cancel">取消</div>
             </div>
             <div class="com">
@@ -84,10 +78,10 @@
                     </div>
                     <img src="./image/SVG_彩圖/矽品.svg" alt="">
                 </div>
-                <div class="create_com">
-                    <input type="file" name="com_img" id="com_img" accept="image/*">
+                <div style="display: flex;  align-items:center;" class="create_com">
+                    <input type="file" name="company" id="com_img" accept="image/*">
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 @endsection
