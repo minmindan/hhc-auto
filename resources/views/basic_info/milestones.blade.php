@@ -45,7 +45,7 @@
                             @foreach ($datas as $data)
                                 <div class="card" style="position: relative;">
                                     <div class="btnbox" style="margin: 0 0 0 60px; position: absolute; left: 100%;">
-                                        <div class="btn-check" style="margin:  0 10px 0 0;"><a
+                                        <div class="btn-check" style="margin:  0 10px 0 0;"><a style="color: white !important;"
                                                 href="/milestones-manage/edit/{{ $data->id }}">編輯</a></div>
                                         <div class="btn-delete" style="margin:  0 20px 0 0;"><a
                                                 href="/milestones-manage/delete/{{ $data->id }}">刪除</a></div>
@@ -59,6 +59,12 @@
                                     </div>
                                 </div>
                             @endforeach
+                            <div class="card" style="position: relative; border-bottom:unset;">
+                                <div class="btnbox" style="margin: 0 0 0 60px; position: absolute; left: 100%;">
+                                    <div class="btn-check" style="margin:  0 10px 0 0;"><a style="color: white !important;"
+                                            href="/milestones-manage/create">新增</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

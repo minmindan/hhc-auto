@@ -61,9 +61,8 @@ class BasicInfoController extends Controller
         $data = Milestone::find($id);
         return view ('basic_info.milestones_edit',compact('data'));
     }
-    public function milestones_store(Request $request, $id){
-        // dd('1');
-        Milestone::where('id',$id)->update([
+    public function milestones_store(Request $request){
+        Milestone::create([
             'years'=>$request->years,
             'month'=>$request->month,
             'content'=>$request->content,
@@ -74,6 +73,14 @@ class BasicInfoController extends Controller
     public function milestones_delete($id){
         $data = Milestone::find($id);
         $data->delete();
+        return redirect ('/milestones-manage');
+    }
+    public function milestones_update(Request $request, $id){
+        Milestone::where('id',$id)->update([
+            'years'=>$request->years,
+            'month'=>$request->month,
+            'content'=>$request->content,
+        ]);
         return redirect ('/milestones-manage');
     }
 
@@ -120,17 +127,13 @@ public function partner_edit(){
     return view ('basic_info.partner_edit',compact('datas'));
 }
 public function partner_create(Request $request){
-    // dd($request->);
-
-
-    $path = FilesController::imgUpload($request->company, 'companys_img');
-
-
-
+    if ($request->hasfile('company')) {
+        $path = FilesController::imgUpload($request->company, 'companys_img');
+    }
     company::create([
-        'path'=>$path,
+        'com_img'=>$path,
     ]);
-    return redirect ('/partner-manage');
+    return redirect ('/partner-manage/edit');
 }
 public function partner_update(Request $request ,$id){
     report::find($id)->update([
@@ -140,7 +143,10 @@ public function partner_update(Request $request ,$id){
     return redirect ('/contact/list');
 }
 public function partner_delete($id){
-    return redirect ('/milestones-manage');
+    $delete = company::find($id);
+    FilesController::deleteUpload($delete->com_img);
+    $delete->delete();
+    return redirect ('/partner-manage/edit');
 }
 
 
@@ -167,7 +173,7 @@ public function partner_delete($id){
     public function contactlist_update(Request $request ,$id){
         report::find($id)->update([
             'state'=>$request->state,
-            'remake'=>$request->remake,
+            'remark'=>$request->remark,
         ]);
         return redirect ('/contact/list');
     }

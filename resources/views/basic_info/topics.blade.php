@@ -52,9 +52,11 @@
     <!-- topics -->
     <div id="topics">
         <h1 class="topics_title">TOPICS</h1>
-        <p>最新消息</p>
+        <p style="
+        color: #B4B4B4 !important;">最新消息</p>
         <div class="btnbox" style="bottom: unset;">
-            <a href="/topics-manage/create" class="btn-edit">新增</a>
+            <a style="
+            color: white !important;" href="/topics-manage/create" class="btn-edit">新增</a>
         </div>
         <div class="topicsmain">
             <div class="topics">

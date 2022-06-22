@@ -77,7 +77,7 @@
           <div class="box3">
             <input type="text" disabled value="{{ $data->created_at }}"/>
           </div>
-          <a type="submit" href="/contact/list/edit/{{$data->id}}">檢視</a>
+          <a style="color: black !important; border:1px solid; padding:8px;" type="submit" href="/contact/list/edit/{{$data->id}}">檢視</a>
         </div>
       </div>
 
