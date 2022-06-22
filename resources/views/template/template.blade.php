@@ -61,8 +61,8 @@
             </div>
             <div id="focusmain" class="focus-main none">
                 <div id="focus-box">
-                    <p><a href="">關於我們</a></p>
-                    <h1>ABOUT US</h1>
+                    <p><a href="/aboutus">關於我們</a></p>
+                    <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
                         <li><a href="">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                         <li><a href="">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
@@ -70,8 +70,8 @@
                     </ul>
                 </div>
                 <div id="focus-box">
-                    <p><a href="">產品介紹</a></p>
-                    <h1><a href="">PRODUCT</a></h1>
+                    <p><a href="/product">產品介紹</a></p>
+                    <h1><a href="/product">PRODUCT</a></h1>
                     <ul>
                         <li><a href="">設備 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                         <li><a href="">軟體 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
@@ -81,12 +81,12 @@
                     </ul>
                 </div>
                 <div id="focus-box">
-                    <p><a href="">產品製作流程</a></p>
-                    <h1><a href="">PROCESS</a></h1>
+                    <p><a href="/process">產品製作流程</a></p>
+                    <h1><a href="/process">PROCESS</a></h1>
                 </div>
                 <div id="focus-box">
-                    <p><a href="">聯絡我們</a></p>
-                    <h1><a href="">CONTACT</a></h1>
+                    <p><a href="/contact">聯絡我們</a></p>
+                    <h1><a href="/contact">CONTACT</a></h1>
                 </div>
                 <div class="btn btn--1" id="focus-button">
                     <h1>E n t r y</h1>

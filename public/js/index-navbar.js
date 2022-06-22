@@ -13,15 +13,17 @@ var focuss = document.getElementById('focus');
 var focusl = document.getElementById('focuslogo');
 var focusm = document.getElementById('focusmain');
 var xx = document.getElementById('XX');
+var entryblue = document.getElementById('entryblue');
+var entrywhite = document.getElementById('entrywhite');
 var entry = document.getElementById('focus-button');
 var focusbutton = document.getElementById('focus-button');
 focusbutton.addEventListener('mousemove',function(){
-    focusbutton.innerHTML = `<h1>E n t r y</h1>
-    <img src="/image/blue_white_entry.svg" alt="">`
+    entryblue.classList.remove('none');
+    entrywhite.classList.add('none');
 })
 focusbutton.addEventListener('mouseleave',function(){
-    focusbutton.innerHTML = `<h1>E n t r y</h1>
-    <img src="/image/right_white_entry.svg" alt="">`
+    entryblue.classList.add('none');
+    entrywhite.classList.remove('none');
 })
 bgli.addEventListener('click', function () {
     focuss.classList.remove('none')
@@ -35,3 +37,22 @@ function xxlist(){
 }
 xx.addEventListener('click', xxlist);
 entry.addEventListener('click', xxlist);
+
+
+var news = document.getElementById("news");
+news.addEventListener("click", function () {
+  banner.classList.remove("onpp");
+  setTimeout("banner.classList.add('none')", 200);
+  banner.classList.add("op");
+  main.classList.remove("op");
+  setTimeout("main.classList.add('onpp')", 220);
+  setTimeout("main.classList.remove('none')", 220);
+  setTimeout("footer.classList.remove('none')", 220);
+  setTimeout("footerstamped.classList.remove('none')", 220);
+  setTimeout("location.href = '#topics'", 220);
+  subnav.classList.add("noneimportant");
+  minilogo.classList.remove("none");
+  biglogo.classList.add("none");
+  bgrlist[0].classList.add("bgblue");
+  bgrlist[1].classList.add("bgblue");
+});

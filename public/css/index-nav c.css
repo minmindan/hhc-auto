@@ -66,6 +66,12 @@ nav #focus .focus-logo {
   }
 }
 
+@media (max-width: 435px) {
+  nav #focus .focus-logo {
+    padding: 40px 20px 0;
+  }
+}
+
 nav #focus .focus-logo img {
   height: 40px;
 }
@@ -91,6 +97,12 @@ nav #focus .focus-main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
+}
+
+@media (max-width: 1530px) {
+  nav #focus .focus-main {
+    padding: 0 5%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -195,6 +207,12 @@ nav #focus .focus-main #focus-button:hover {
   border-right: unset;
 }
 
+@media (max-width: 1600px) {
+  nav #focus .focus-main #focus-button {
+    padding-left: 100px;
+  }
+}
+
 @media (max-width: 1540px) {
   nav #focus .focus-main #focus-button {
     height: 97px;
@@ -228,15 +246,20 @@ nav #focus .focus-main #focus-button h1 {
 }
 
 nav #focus .focus-main #focus-button img {
-  width: 30%;
+  width: 30% !important;
   margin-left: 80px;
   margin-top: 30px;
 }
 
-@media (max-width: 1540px) {
+@media (max-width: 1400px) {
   nav #focus .focus-main #focus-button img {
-    margin-left: 80;
-    margin-bottom: 10px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1380px) {
+  nav #focus .focus-main #focus-button img {
+    width: 40% !important;
   }
 }
 
@@ -293,7 +316,6 @@ nav #bar #subnav {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-left: auto;
-  position: relative;
 }
 
 @media (max-width: 1380px) {
@@ -312,14 +334,10 @@ nav #bar #subnav .hoverbox {
   cursor: pointer !important;
   margin-right: 54px;
   height: 100%;
-}
-
-nav #bar #subnav .hoverbox .fons {
-  margin: 0;
   position: relative;
 }
 
-nav #bar #subnav .hoverbox .fons:hover::after {
+nav #bar #subnav .hoverbox:hover .fons::after {
   content: '';
   z-index: 1;
   display: block;
@@ -352,6 +370,11 @@ nav #bar #subnav .hoverbox .fons:hover::after {
   }
 }
 
+nav #bar #subnav .hoverbox .fons {
+  margin: 0;
+  position: relative;
+}
+
 nav #bar #subnav .hoverbox .backendlist {
   display: none;
   -webkit-box-orient: horizontal;
@@ -366,9 +389,11 @@ nav #bar #subnav .hoverbox .backendlist {
           align-items: center;
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
   width: 812px;
-  background-color: #f4f7fa;
+  background-color: #0146a8;
   padding-left: 150px;
   padding-right: 150px;
   -webkit-animation-name: bbb;
@@ -377,28 +402,27 @@ nav #bar #subnav .hoverbox .backendlist {
           animation-duration: .8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  color: #B4B4B4;
 }
 
 @-webkit-keyframes bbb {
   0% {
     height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
+    background-color: rgba(1, 70, 168, 0.1);
   }
   100% {
     height: 62px;
-    background-color: #f4f7fa;
+    background-color: #0146a8;
   }
 }
 
 @keyframes bbb {
   0% {
     height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
+    background-color: rgba(1, 70, 168, 0.1);
   }
   100% {
     height: 62px;
-    background-color: #f4f7fa;
+    background-color: #0146a8;
   }
 }
 
@@ -420,9 +444,11 @@ nav #bar #subnav .hoverbox .productlist {
           align-items: center;
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
+  -webkit-transform: translateX(-15%);
+          transform: translateX(-15%);
   width: 812px;
-  background-color: #f4f7fa;
+  background-color: #0146a8;
   padding-left: 150px;
   padding-right: 150px;
   -webkit-animation-name: bbb;
@@ -431,17 +457,16 @@ nav #bar #subnav .hoverbox .productlist {
           animation-duration: .8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  color: #B4B4B4;
 }
 
 @keyframes bbb {
   0% {
     height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
+    background-color: rgba(1, 70, 168, 0.1);
   }
   100% {
     height: 62px;
-    background-color: #f4f7fa;
+    background-color: #0146a8;
   }
 }
 
@@ -464,7 +489,9 @@ nav #bar #subnav .hoverbox .aboutlist {
   position: absolute;
   overflow: hidden;
   top: 100%;
-  right: 0;
+  left: 0;
+  -webkit-transform: translateX(2%);
+          transform: translateX(2%);
   padding-left: 250px;
   padding-right: 250px;
   -webkit-animation-name: bbb;
@@ -474,17 +501,16 @@ nav #bar #subnav .hoverbox .aboutlist {
           animation-duration: .8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  color: #B4B4B4;
 }
 
 @keyframes bbb {
   0% {
     height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
+    background-color: rgba(1, 70, 168, 0.1);
   }
   100% {
     height: 62px;
-    background-color: #f4f7fa;
+    background-color: #0146a8;
   }
 }
 
@@ -535,4 +561,4 @@ nav #bar #bglist .stuffing {
   height: 3px;
   background-color: white;
 }
-/*# sourceMappingURL=index-nav.css.map */
+/*# sourceMappingURL=nav.css.map */
