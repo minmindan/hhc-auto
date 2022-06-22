@@ -293,6 +293,7 @@ nav #bar #subnav {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-left: auto;
+  position: relative;
 }
 
 @media (max-width: 1380px) {
@@ -311,7 +312,6 @@ nav #bar #subnav .hoverbox {
   cursor: pointer !important;
   margin-right: 54px;
   height: 100%;
-  position: relative;
 }
 
 nav #bar #subnav .hoverbox .fons {
@@ -366,9 +366,7 @@ nav #bar #subnav .hoverbox .backendlist {
           align-items: center;
   position: absolute;
   top: 100%;
-  left: 0;
-  -webkit-transform: translateX(-80%);
-          transform: translateX(-80%);
+  right: 0;
   width: 812px;
   background-color: #f4f7fa;
   padding-left: 150px;
@@ -422,9 +420,7 @@ nav #bar #subnav .hoverbox .productlist {
           align-items: center;
   position: absolute;
   top: 100%;
-  left: 0;
-  -webkit-transform: translateX(-15%);
-          transform: translateX(-15%);
+  right: 0;
   width: 812px;
   background-color: #f4f7fa;
   padding-left: 150px;
@@ -468,9 +464,7 @@ nav #bar #subnav .hoverbox .aboutlist {
   position: absolute;
   overflow: hidden;
   top: 100%;
-  left: 0;
-  -webkit-transform: translateX(2%);
-          transform: translateX(2%);
+  right: 0;
   padding-left: 250px;
   padding-right: 250px;
   -webkit-animation-name: bbb;
@@ -541,4 +535,4 @@ nav #bar #bglist .stuffing {
   height: 3px;
   background-color: white;
 }
-/*# sourceMappingURL=nav.css.map */
+/*# sourceMappingURL=index-nav.css.map */
