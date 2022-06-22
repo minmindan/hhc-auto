@@ -10,12 +10,13 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $updated_at
  * @property string $path
  * @property string $iid
+ * @property string $weight
  */
 class Software_img extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     *
+     * 
      * @var string
      */
     protected $keyType = 'integer';
@@ -23,8 +24,5 @@ class Software_img extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at', 'path', 'iid'];
-    public function product(){
-        $this->belongsTo(Software_product::class,'iid','id');
-    }
+    protected $fillable = ['created_at', 'updated_at', 'path', 'iid', 'weight'];
 }

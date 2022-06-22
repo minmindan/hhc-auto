@@ -73,7 +73,7 @@ class ProductManageController extends Controller
                 Equipment_img::Create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight' =>0,
+                    'weight' =>'-',
                 ]);
             }
         }
@@ -87,9 +87,10 @@ class ProductManageController extends Controller
         $product = Equipment_product::find($id);
         $imgs = equipment_img::orderby('weight', 'asc')->get();
 
+
         $count = Equipment_img::where('iid','=',$id)->count();
 
-        return view('product_edit.equipment_edit', compact('product','count'));
+        return view('product_edit.equipment_edit', compact('product','count','imgs'));
     }
 
 
@@ -100,8 +101,7 @@ class ProductManageController extends Controller
 
 
         $product = Equipment_product::find($id);
-
-        // dd(($request->all()),$product);
+        $imgs = Equipment_img::where('iid','=',$id)->get();
 
 
         // 如果主要圖片有更新,套用新圖片
@@ -118,17 +118,30 @@ class ProductManageController extends Controller
         if ($request->hasfile('second_img')) {
             foreach ($request->second_img as $index => $element) {
                 $path = FilesController::imgUpload($element, 'product');
-
-                Equipment_img::Create([
+                Equipment_img::create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight' =>0,
+                    'weight'=>'-',
                 ]);
             }
         }
 
 
+
         // 如果次要圖片排序改變,更新儲存回列表weight
+
+        $imgg = Equipment_img::get();
+
+        // dd($imgs[0]->id,$imgs[1]->id);
+
+
+        foreach ($imgs as $key => $value) {
+            $weight = Equipment_img::find($value);
+            dd($weight->weight.$value->id);
+
+            // dd($value, $request->get());
+            $weight->weight = '';
+        }
 
 
 

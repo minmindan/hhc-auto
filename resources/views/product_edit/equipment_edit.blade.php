@@ -142,20 +142,20 @@
 
                     <div class="sub-section">
 
-                        @foreach ($product->imgs as $go)
+                        @foreach ($imgs as $go)
                             <div class="top-section" id="sec_img{{ $go->id }}">
 
                                 <!-- 圖片 -->
                                 <div class="content-img" id="{{ $go->id }}">
                                     <img src="{{ $go->path }}" alt="">
                                 </div>
-
                                 <!-- 排序 -->
                                 <div class="image-gradation">
                                     <select name="weight{{$go->id}}">
-                                        @for ($i = 0; $i < $count; $i++)
-                                            <option value="{{ $go->id }}">{{ $i }}</option>
+                                        @for ($i = 1; $i < $count + 1; $i++)
+                                            <option value="{{$i}}">{{$i}}</option>
                                         @endfor
+                                        <option @if(($go->weight) == '-') value="-" selected @endif>-</option>
                                     </select>
                                 </div>
 

@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property integer $id
  * @property string $created_at
  * @property string $updated_at
+ * @property string $path
+ * @property string $iid
+ * @property string $weight
  */
 class Consumables_img extends Model
 {
@@ -21,5 +24,5 @@ class Consumables_img extends Model
     /**
      * @var array
      */
-    protected $fillable = ['created_at', 'updated_at'];
+    protected $fillable = ['created_at', 'updated_at', 'path', 'iid', 'weight'];
 }
