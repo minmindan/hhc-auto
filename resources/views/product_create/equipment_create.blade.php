@@ -149,30 +149,100 @@
                         <div class="form-input star-items">
                             <p>主打商品</p>
                             <ul>
+
+
                                 <li>
-                                    <input value="1" type="radio" name="items" id="items1" />
+                                    <input @if ($product->primary == 1) checked @endif
+                                        @foreach ($equipment as $e) @if ($e->primary == 1) disabled @endif
+                                        @endforeach
+                                    @foreach ($software as $s) @if ($s->primary == 1) disabled @endif
+                                    @endforeach
+                                    @foreach ($components as $cm) @if ($cm->primary == 1) disabled @endif
+                                    @endforeach
+                                    @foreach ($consumables as $cn) @if ($cn->primary == 1) disabled @endif
+                                    @endforeach
+                                    @foreach ($maintenance as $ma) @if ($ma->primary == 1) disabled @endif
+                                    @endforeach
+
+                                    value="1" type="radio"
+                                    name="items" id="items1" />
                                     <label for="items1">主打商品1</label>
                                 </li>
                                 <li>
-                                    <input value="2" type="radio" name="items" id="items2" />
+
+                                    <input @if ($product->primary == 2) checked @endif
+                                        @foreach ($equipment as $e) @if ($e->primary == 2) disabled @endif
+                                        @endforeach
+                                    @foreach ($software as $s) @if ($s->primary == 2) disabled @endif
+                                    @endforeach
+                                    @foreach ($components as $cm) @if ($cm->primary == 2) disabled @endif
+                                    @endforeach
+                                    @foreach ($consumables as $cn) @if ($cn->primary == 2) disabled @endif
+                                    @endforeach
+                                    @foreach ($maintenance as $ma) @if ($ma->primary == 2) disabled @endif
+                                    @endforeach
+
+                                    value="2" type="radio"
+                                    name="items" id="items2" />
                                     <label for="items2">主打商品2</label>
                                 </li>
                                 <li>
-                                    <input value="3" type="radio" name="items" id="items3" />
+                                    <input @if ($product->primary == 3) checked @endif
+                                        @foreach ($equipment as $e) @if ($e->primary == 3) disabled @endif
+                                        @endforeach
+                                    @foreach ($software as $s) @if ($s->primary == 3) disabled @endif
+                                    @endforeach
+                                    @foreach ($components as $cm) @if ($cm->primary == 3) disabled @endif
+                                    @endforeach
+                                    @foreach ($consumables as $cn) @if ($cn->primary == 3) disabled @endif
+                                    @endforeach
+                                    @foreach ($maintenance as $ma) @if ($ma->primary == 3) disabled @endif
+                                    @endforeach
+                                    value="3" type="radio"
+                                    name="items" id="items3" />
                                     <label for="items3">主打商品3</label>
                                 </li>
                                 <li>
-                                    <input value="4" type="radio" name="items" id="items4" />
+                                    <input @if ($product->primary == 4) checked @endif
+                                        @foreach ($equipment as $e) @if ($e->primary == 4) disabled @endif
+                                        @endforeach
+                                    @foreach ($software as $s) @if ($s->primary == 4) disabled @endif
+                                    @endforeach
+                                    @foreach ($components as $cm) @if ($cm->primary == 4) disabled @endif
+                                    @endforeach
+                                    @foreach ($consumables as $cn) @if ($cn->primary == 4) disabled @endif
+                                    @endforeach
+                                    @foreach ($maintenance as $ma) @if ($ma->primary == 4) disabled @endif
+                                    @endforeach
+
+                                    value="4" type="radio"
+                                    name="items" id="items4" />
                                     <label for="items4">主打商品4</label>
                                 </li>
                                 <li>
-                                    <input value="5" type="radio" name="items" id="items5" />
+                                    <input @if ($product->primary == 5) checked @endif
+                                        @foreach ($equipment as $e) @if ($e->primary == 5) disabled @endif
+                                        @endforeach
+                                    @foreach ($software as $s) @if ($s->primary == 5) disabled @endif
+                                    @endforeach
+                                    @foreach ($components as $cm) @if ($cm->primary == 5) disabled @endif
+                                    @endforeach
+                                    @foreach ($consumables as $cn) @if ($cn->primary == 5) disabled @endif
+                                    @endforeach
+                                    @foreach ($maintenance as $ma) @if ($ma->primary == 5) disabled @endif
+                                    @endforeach
+                                    value="5" type="radio"
+                                    name="items" id="items5" />
                                     <label for="items5">主打商品5</label>
                                 </li>
+
+
                                 <li>
-                                    <input value="6" type="radio" name="items" id="items6" />
+                                    <input @if ($product->primary == 6) checked @endif value="6" type="radio"
+                                        name="items" id="items6" />
                                     <label for="items6">不是主打商品</label>
                                 </li>
+
                             </ul>
                         </div>
                         <!-- 產品名稱 -->
