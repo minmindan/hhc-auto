@@ -47,6 +47,9 @@
         /* .fons a{
             color: #b4b4b4;
         } */
+        .block{
+            display: block !important;
+        }
     </style>
     @yield('css')
 </head>
@@ -64,20 +67,20 @@
                     <p><a href="/aboutus">關於我們</a></p>
                     <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
-                        <li><a href="">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="">公司簡介 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/aboutus#philosophy">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/aboutus#milestones">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/aboutus#company-profile">公司簡介 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                     </ul>
                 </div>
                 <div id="focus-box">
                     <p><a href="/product">產品介紹</a></p>
                     <h1><a href="/product">PRODUCT</a></h1>
                     <ul>
-                        <li><a href="">設備 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="">軟體 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="">部品零件 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="">耗材 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="">維修 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/equipment">設備 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/software">軟體 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/parts">部品零件 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/consumables">耗材 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/maintenance">維修 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                     </ul>
                 </div>
                 <div id="focus-box">
@@ -193,7 +196,7 @@
         </div>
     </footer>
 </body>
-<script src="{{ asset('js/navbar.js') }}"></script>
+<script src="{{asset('js/navbar.js')}}"></script>
 @yield('js')
 <script>
     var el = document.querySelector('body');
@@ -213,8 +216,8 @@
     function navin() {
         // var windowtop = document.documentElement.scrollTop; 問題待解決
         var windowtop = document.body.scrollTop;
-        console.log(windowtop);
-        console.log(banner.clientHeight);
+        // console.log(windowtop);
+        // console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
             if (windowtop > 100) {
                 subnav.classList.add("none")
@@ -238,17 +241,6 @@
             }
         }
     }
-
-    // function show(event) {
-    //     var wi = window.innerHeight //頁面高度
-    //     navin();
-    //     window.onscroll = () => {
-    //         navin();
-    //         let cH = document.documentElement.clientHeight;
-    //         let sH = document.documentElement.scrollHeight;
-    //         let sT = document.documentElement.scrollTop;
-    //     }
-    // }
 </script>
 
 </html>

@@ -927,7 +927,7 @@ main #company .com .com_img img {
   height: 100%;
   width: auto;
   max-height: 150px;
-  max-width: 80%;
+  max-width: 95%;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   -webkit-transition-duration: .2s;
@@ -936,10 +936,16 @@ main #company .com .com_img img {
 
 @media (max-width: 850px) {
   main #company .com .com_img img {
-    width: 33% !important;
+    width: auto !important;
+    height: auto !important;
   }
 }
-
+@media (max-width: 850px) {
+    #company .com_img {
+      width: 33% !important;
+      height: 150px !important;
+    }
+  }
 main #company .com .com_img img:hover {
   -webkit-filter: unset;
           filter: unset;
