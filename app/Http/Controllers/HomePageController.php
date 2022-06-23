@@ -10,6 +10,16 @@ use App\Models\Contact_banner;
 use App\Models\News;
 use App\Models\company;
 use App\Models\profile;
+use App\Models\Components_img;
+use App\Models\Components_product;
+use App\Models\Consumables_img;
+use App\Models\Consumables_product;
+use App\Models\Equipment_img;
+use App\Models\Equipment_product;
+use App\Models\Repair_img;
+use App\Models\Repair_product;
+use App\Models\Software_img;
+use App\Models\Software_product;
 
 class HomePageController extends Controller
 {
@@ -20,7 +30,21 @@ class HomePageController extends Controller
         $companys = company::get();
         $abus =Aboutus_banner::get();
         $datas = News::orderby('id','desc')->take(3)->get();
-        return view('index',compact('abus','datas','companys','profile'));
+
+
+
+// 新增圖片測試
+$equipment = Equipment_product::where('primary','<','6')->get();
+$software = Software_product::where('primary','<','6')->get();
+$components = Components_product::where('primary','<','6')->get();
+$consumables = Consumables_product::where('primary','<','6')->get();
+$maintenance = Repair_product::where('primary','<','6')->get();
+
+
+
+
+
+        return view('index',compact('abus','datas','companys','profile','equipment','software','components','consumables','maintenance'));
     }
     public function aboutus()
     {

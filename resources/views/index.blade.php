@@ -304,67 +304,381 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide productmain">
                         <div class="productbox">
-                            <div class="proimg">
-                                <img src="./image/new/ma.png" alt="">
-                            </div>
+
+
+                                    {{-- <img src="./image/new/ma.png" alt=""> --}}
+
+
+                                @foreach ($equipment as $eq)
+                                @if ($eq->primary == 1)
+                                <div class="proimg">
+                                <img src="{{$eq->primary_img}}" alt="">
+                                </div>
+                                <div class="product-types">
+                                <h1 class="product-types-title">{{$eq->product_name}}</h1>
+                                <div class="product-types-model">{{$eq->model}}</div>
+                                <div class="product-types-more">MORE　　<img
+                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                                </div>
+                                @endif
+                                @endforeach
+                                @foreach ($software as $so)
+                                @if ($so->primary == 1)
+                                <div class="proimg">
+                                <img src="{{$so->primary_img}}" alt="">
+                                </div>
+                                <div class="product-types">
+                                <h1 class="product-types-title">{{$so->product_name}}</h1>
+                                <div class="product-types-model">{{$so->model}}</div>
+                                <div class="product-types-more">MORE　　<img
+                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                                </div>
+                                @endif
+                                @endforeach
+                                @foreach ($components as $cm)
+                                @if ($cm->primary == 1)
+                                <div class="proimg">
+                                <img src="{{$cm->primary_img}}" alt="">
+                                </div>
+                                <div class="product-types">
+                                <h1 class="product-types-title">{{$cm->product_name}}</h1>
+                                <div class="product-types-model">{{$cm->model}}</div>
+                                <div class="product-types-more">MORE　　<img
+                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                                </div>
+                                @endif
+                                @endforeach
+                                @foreach ($consumables as $cn)
+                                @if ($cn->primary == 1)
+                                <div class="proimg">
+                                <img src="{{$cn->primary_img}}" alt="">
+                                </div>
+                                <div class="product-types">
+                                <h1 class="product-types-title">{{$cn->product_name}}</h1>
+                                <div class="product-types-model">{{$cn->model}}</div>
+                                <div class="product-types-more">MORE　　<img
+                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                                </div>
+                                @endif
+                                @endforeach
+                                @foreach ($maintenance as $ma)
+                                @if ($ma->primary == 1)
+                                <div class="proimg">
+                                <img src="{{$ma->primary_img}}" alt="">
+                                </div>
+                                <div class="product-types">
+                                <h1 class="product-types-title">{{$ma->product_name}}</h1>
+                                <div class="product-types-model">{{$ma->model}}</div>
+                                <div class="product-types-more">MORE　　<img
+                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                                </div>
+                                @endif
+                                @endforeach
+
+
+
+
+
+
+{{--
                             <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
                                 <div class="product-types-more">MORE　　<img
                                         src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="swiper-slide productmain">
                         <div class="productbox">
+                            @foreach ($equipment as $eq)
+                            @if ($eq->primary == 2)
                             <div class="proimg">
-                                <img src="./image/new/parts.png" alt="">
+                            <img src="{{$eq->primary_img}}" alt="">
                             </div>
                             <div class="product-types">
-                                <h1 class="product-types-title">商品名</h1>
-                                <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
+                            <div class="product-types-model">{{$eq->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
                             </div>
+                            @endif
+                            @endforeach
+                            @foreach ($software as $so)
+                            @if ($so->primary == 2)
+                            <div class="proimg">
+                            <img src="{{$so->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$so->product_name}}</h1>
+                            <div class="product-types-model">{{$so->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($components as $cm)
+                            @if ($cm->primary == 2)
+                            <div class="proimg">
+                            <img src="{{$cm->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
+                            <div class="product-types-model">{{$cm->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($consumables as $cn)
+                            @if ($cn->primary == 2)
+                            <div class="proimg">
+                            <img src="{{$cn->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
+                            <div class="product-types-model">{{$cn->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($maintenance as $ma)
+                            @if ($ma->primary == 2)
+                            <div class="proimg">
+                            <img src="{{$ma->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
+                            <div class="product-types-model">{{$ma->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+
+
+
+
                         </div>
                     </div>
                     <div class="swiper-slide productmain">
                         <div class="productbox">
+                            @foreach ($equipment as $eq)
+                            @if ($eq->primary == 3)
                             <div class="proimg">
-                                <img src="./image/AVM渲染-1.png" alt="">
+                            <img src="{{$eq->primary_img}}" alt="">
                             </div>
                             <div class="product-types">
-                                <h1 class="product-types-title">商品名</h1>
-                                <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
+                            <div class="product-types-model">{{$eq->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
                             </div>
+                            @endif
+                            @endforeach
+                            @foreach ($software as $so)
+                            @if ($so->primary == 3)
+                            <div class="proimg">
+                            <img src="{{$so->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$so->product_name}}</h1>
+                            <div class="product-types-model">{{$so->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($components as $cm)
+                            @if ($cm->primary == 3)
+                            <div class="proimg">
+                            <img src="{{$cm->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
+                            <div class="product-types-model">{{$cm->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($consumables as $cn)
+                            @if ($cn->primary == 3)
+                            <div class="proimg">
+                            <img src="{{$cn->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
+                            <div class="product-types-model">{{$cn->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($maintenance as $ma)
+                            @if ($ma->primary == 3)
+                            <div class="proimg">
+                            <img src="{{$ma->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
+                            <div class="product-types-model">{{$ma->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+
+
+
+
                         </div>
                     </div>
                     <div class="swiper-slide productmain">
                         <div class="productbox">
+                            @foreach ($equipment as $eq)
+                            @if ($eq->primary == 4)
                             <div class="proimg">
-                                <img src="./image/AVM渲染-1.png" alt="">
+                            <img src="{{$eq->primary_img}}" alt="">
                             </div>
                             <div class="product-types">
-                                <h1 class="product-types-title">商品名</h1>
-                                <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
+                            <div class="product-types-model">{{$eq->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
                             </div>
+                            @endif
+                            @endforeach
+                            @foreach ($software as $so)
+                            @if ($so->primary == 4)
+                            <div class="proimg">
+                            <img src="{{$so->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$so->product_name}}</h1>
+                            <div class="product-types-model">{{$so->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($components as $cm)
+                            @if ($cm->primary == 4)
+                            <div class="proimg">
+                            <img src="{{$cm->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
+                            <div class="product-types-model">{{$cm->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($consumables as $cn)
+                            @if ($cn->primary == 4)
+                            <div class="proimg">
+                            <img src="{{$cn->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
+                            <div class="product-types-model">{{$cn->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($maintenance as $ma)
+                            @if ($ma->primary == 4)
+                            <div class="proimg">
+                            <img src="{{$ma->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
+                            <div class="product-types-model">{{$ma->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+
+
+
+
                         </div>
                     </div>
                     <div class="swiper-slide productmain">
                         <div class="productbox">
+                            @foreach ($equipment as $eq)
+                            @if ($eq->primary == 5)
                             <div class="proimg">
-                                <img src="./image/AVM渲染-1.png" alt="">
+                            <img src="{{$eq->primary_img}}" alt="">
                             </div>
                             <div class="product-types">
-                                <h1 class="product-types-title">商品名</h1>
-                                <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
+                            <div class="product-types-model">{{$eq->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
                             </div>
+                            @endif
+                            @endforeach
+                            @foreach ($software as $so)
+                            @if ($so->primary == 5)
+                            <div class="proimg">
+                            <img src="{{$so->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$so->product_name}}</h1>
+                            <div class="product-types-model">{{$so->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($components as $cm)
+                            @if ($cm->primary == 5)
+                            <div class="proimg">
+                            <img src="{{$cm->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
+                            <div class="product-types-model">{{$cm->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($consumables as $cn)
+                            @if ($cn->primary == 5)
+                            <div class="proimg">
+                            <img src="{{$cn->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
+                            <div class="product-types-model">{{$cn->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+                            @foreach ($maintenance as $ma)
+                            @if ($ma->primary == 5)
+                            <div class="proimg">
+                            <img src="{{$ma->primary_img}}" alt="">
+                            </div>
+                            <div class="product-types">
+                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
+                            <div class="product-types-model">{{$ma->model}}</div>
+                            <div class="product-types-more">MORE　　<img
+                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
+                            </div>
+                            @endif
+                            @endforeach
+
+
+
+
                         </div>
                     </div>
                 </div>
