@@ -78,7 +78,7 @@
             const ch_img1 = document.querySelector('.function-button1')
             ch_img1.innerHTML = ""
             ch_img1.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
