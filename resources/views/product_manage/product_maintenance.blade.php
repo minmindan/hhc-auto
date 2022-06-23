@@ -12,6 +12,22 @@
         a:visited{
             color:#004098;
         }
+
+        .produt-star {
+            display: flex;
+            align-items: start;
+            justify-content:flex-start;
+            width: 93px !important;
+        }
+        .produt-star input{
+            border: 0px;
+            width: auto !important;
+        }
+
+        .image-gradation{
+            min-width: 94px !important;
+            padding-left: 10px;
+        }
     </style>
 @endsection
 @section('main')
@@ -51,7 +67,9 @@
          <!-- 內容 -->
          <div class="content-section">
             @foreach ($product as $product)
-                <form action="">
+                <form id="product_card{{ $product->id }}"
+                    action="/product-manage/mainternance/edit/{{ $product->id }}" method="post">
+                    @csrf
                     <!-- 圖片 -->
                     <div class="content-img">
                         <img src="{{ $product->primary_img ??''}}" alt="" />
@@ -70,7 +88,21 @@
                     </div>
                     <!-- 主打產品 -->
                     <div class="produt-star">
-                        <input type="text" value="{{ $product->primary ??''}}" disabled />
+                        <input  type="text"
+                        value=" @if ($product->primary == 1 )
+                        主打商品1
+                     @elseif ($product->primary == 2)
+                        主打商品2
+                     @elseif ($product->primary == 3)
+                        主打商品3
+                     @elseif ($product->primary == 4)
+                        主打商品4
+                     @elseif ($product->primary == 5)
+                        主打商品5
+                     @elseif ($product->primary == 6)
+                        不是主打商品
+                      @endif" disabled />
+
                     </div>
                     <!-- 功能按鈕 -->
                     <div class="function-button">
@@ -97,10 +129,23 @@
 
     @section('js')
     <script>
-        function QQ() {
-            const QQ = document.querySelector('.add-img')
 
-            console.log(QQ);
+
+        function delete_img(id) {
+
+            let formData = new FormData();
+            // formData.append('_method', 'delete');
+            formData.append('_token', '{{ csrf_token() ?? '' }}');
+
+
+            fetch('/product-manage/maintenance/delete/' + id, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(function(response) {
+                    let element = document.querySelector('#product_card' + id)
+                    element.parentNode.removeChild(element);
+                })
         }
     </script>
 @endsection
