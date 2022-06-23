@@ -242,7 +242,7 @@
                     <div class="fons"><a href="/process">產品製作流程</a></div>
                 </div>
                 <div class="hoverbox">
-                    <div id="news" class="fons"><a href="">最新消息</a></div>
+                    <div id="news" class="fons"><a>最新消息</a></div>
                 </div>
                 <div class="hoverbox">
                     <div class="fons"><a href="/contact">聯絡我們</a></div>

@@ -87,12 +87,12 @@ About Us
                            <h3>設備</h3>
                        </div>
                        <!-- 指示 -->
-                       <div class="more-box">
+                       <a href="/equipment" class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
                                <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
-                       </div>
+                       </a>
                    </div>
                    <!-- 內容區塊 -->
                    <div class="content">
@@ -154,12 +154,12 @@ About Us
                            <h3>軟體</h3>
                        </div>
                        <!-- 指示 -->
-                       <div class="more-box">
+                       <a href="/software" class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
                                <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
-                       </div>
+                       </a>
                    </div>
                    <!-- 內容區塊 -->
                    <div class="content">
@@ -220,12 +220,12 @@ About Us
                            <h3>部品零件</h3>
                        </div>
                        <!-- 指示 -->
-                       <div class="more-box">
+                       <a href="/parts" class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
                                <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
-                       </div>
+                       </a>
                    </div>
                    <!-- 內容區塊 -->
                    <div class="content">
@@ -286,12 +286,12 @@ About Us
                            <h3>耗材</h3>
                        </div>
                        <!-- 指示 -->
-                       <div class="more-box">
+                       <a href="/consumables" class="more-box">
                            <span>MORE</span>
                            <div class="more-img">
                                <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
-                       </div>
+                       </a>
                    </div>
                    <!-- 內容區塊 -->
                    <div class="content">
@@ -352,12 +352,12 @@ About Us
                            <h3>維修</h3>
                        </div>
                        <!-- 指示 -->
-                       <div class="more-box-fixed">
+                       <a href="/maintenance" class="more-box-fixed">
                            <span>MORE</span>
                            <div class="more-img">
                                <img src="{{asset('image/index-icon/more_right.svg')}}" alt="">
                            </div>
-                       </div>
+                       </a>
                    </div>
                    <!-- 內容區塊 -->
                    <div class="content">

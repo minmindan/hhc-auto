@@ -36,7 +36,7 @@
                 <div class="main-section">
                     <div class="banner-img">
                         <div class="img">
-                            @foreach ($contact as $contact)
+                            @foreach ($contacts as $contact)
                             <img src="{{ $contact->img_path ??''}}" alt="" />
                             @endforeach
                             <div class="main-img-color"></div>

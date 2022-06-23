@@ -48,7 +48,7 @@ Route::prefix('/')->group(function (){
     Route::get('/product',[HomePageController::class, 'product']);//產品總覽
     Route::get('/process',[HomePageController::class, 'process']);//流程
     Route::get('/topics',[HomePageController::class, 'topics']);//最新消息
-    Route::get('/contact',[HomePageController::class, 'contact']);//回報表單
+    Route::get('/contact',[ContactController::class, 'index']);//回報表單
 
 
 
@@ -71,7 +71,7 @@ Route::prefix('/')->group(function (){
 
 // 表單 手建
 Route::prefix('/hhc-auto')->group(function (){
-    Route::get('/contact',[ContactController::class, 'index']); //表1
+     //表1
     Route::post('/contact2',[ContactController::class, 'contact2']); //表2
     Route::post('/contactin',[ContactController::class, 'contactin']);
     Route::get('/contact3',[ContactController::class, 'contact3']); //表3

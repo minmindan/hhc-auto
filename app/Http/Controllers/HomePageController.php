@@ -62,7 +62,9 @@ $maintenance = Repair_product::where('primary','<','6')->get();
 
     public function equipment()
     {
-        return view('equipment-all.product-all');
+        $title = '設備';
+        $subtitle = 'Equipment';
+        return view('equipment-all.product-all' ,compact('title','subtitle') );
     }
     public function equipmentdetail($id)
     {
@@ -71,7 +73,9 @@ $maintenance = Repair_product::where('primary','<','6')->get();
 
     public function software()
     {
-        return view('equipment-all.product-all');
+        $title = '軟體';
+        $subtitle = 'Software';
+        return view('equipment-all.product-all' ,compact('title','subtitle'));
     }
     public function softwaredetail($id)
     {
@@ -80,7 +84,9 @@ $maintenance = Repair_product::where('primary','<','6')->get();
 
     public function parts()
     {
-        return view('equipment-all.product-all');
+        $title = '部品零件';
+        $subtitle = 'Parts';
+        return view('equipment-all.product-all' ,compact('title','subtitle'));
     }
     public function partsdetail($id)
     {
@@ -89,7 +95,9 @@ $maintenance = Repair_product::where('primary','<','6')->get();
 
     public function consumables()
     {
-        return view('equipment-all.product-all');
+        $title = '耗材';
+        $subtitle = 'Consumables';
+        return view('equipment-all.product-all' ,compact('title','subtitle'));
     }
     public function consumablesdetail($id)
     {
@@ -98,7 +106,9 @@ $maintenance = Repair_product::where('primary','<','6')->get();
 
     public function maintenance()
     {
-        return view('equipment-all.product-all');
+        $title = '維修';
+        $subtitle = 'Maintenance';
+        return view('equipment-all.product-all' ,compact('title','subtitle'));
     }public function maintenancedetail($id)
     {
         return view('equipment-detail.equipment-detail');

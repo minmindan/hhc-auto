@@ -109,7 +109,7 @@
         </a>
             <div id="subnav">
                 <div class="hoverbox downlist">
-                    <div><a class="fons" href="">關於我們</a></div>
+                    <div><a class="fons" href="/aboutus">關於我們</a></div>
                     <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
                     <div class="list aboutlist">
                         <p>經營理念</p>
@@ -120,40 +120,40 @@
                     </div>
                 </div>
                 <div class="hoverbox downlist">
-                    <div><a class="fons" href="">產品介紹</a></div>
+                    <div><a class="fons" href="/product">產品介紹</a></div>
                     <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
                     <div class="list productlist">
-                        <p>設備</p>
+                        <p><a style="color: #b4b4b4;" href="/equipment">設備</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>軟體</p>
+                        <p><a style="color: #b4b4b4;" href="/software">軟體</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>部品零件</p>
+                        <p><a style="color: #b4b4b4;" href="/parts">部品零件</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>耗材</p>
+                        <p><a style="color: #b4b4b4;" href="/consumables">耗材</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>維修</p>
+                        <p><a style="color: #b4b4b4;" href="/maintenance">維修</a></p>
                     </div>
                 </div>
                 <div class="hoverbox">
-                    <div><a class="fons" href="">產品製作流程</a></div>
+                    <div><a class="fons" href="/process">產品製作流程</a></div>
                 </div>
                 <div class="hoverbox">
-                    <div><a class="fons" href="">最新消息</a></div>
+                    <div><a class="fons" href="/">最新消息</a></div>
                 </div>
                 <div class="hoverbox">
-                    <div><a class="fons" href="">聯絡我們</a></div>
+                    <div><a class="fons" href="/contact">聯絡我們</a></div>
                 </div>
                 <div class="hoverbox downlist">
                     <div background><a class="fons href=''">後台管理</a></div>
                     <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
                     <div class="list backendlist">
-                        <p>關於我們</p>
+                        <p><a style="color: #b4b4b4;" href="/topics-manage">內容設定</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>Banner</p>
+                        <p><a style="color: #b4b4b4;" href="/banner-manage/contact">Banner管理</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>產品編輯</p>
+                        <p><a style="color: #b4b4b4;" href="/product-manage/equipment">產品編輯</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p>表單回報</p>
+                        <p><a style="color: #b4b4b4;" href="/contact/list">表單管理</a></p>
                     </div>
                 </div>
             </div>

@@ -38,12 +38,12 @@
     <nav>
         <div id="logo"><img src="{{asset('image/nav/Logo_blue.svg')}}" alt=""></div>
         <div id="navlist">
-            <a href="/hhc-auto" class="subnav">
+            <a href="/" class="subnav">
                 <p>前往網頁</p>
             </a>
-            <div class="subnav">
+            <a href="/forgot-password" class="subnav">
                 <p>修改密碼</p>
-            </div>
+            </a>
             <div class="subnav backstagelist">
                 <p>後台管理　<img src="{{asset('image/nav/down_gray.svg')}}" alt=""></p>
                 <div class="list">

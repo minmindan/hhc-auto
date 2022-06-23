@@ -48,11 +48,11 @@
                             <!-- 頁面導覽塊 -->
                             <div class="page-list">
                                 <ul>
-                                    <li>設備</li>
-                                    <li>軟體</li>
-                                    <li>部品零件</li>
-                                    <li>耗材</li>
-                                    <li>維修</li>
+                                    <li><a href="/equipment">設備</a></li>
+                                    <li><a href="/software">軟體</a></li>
+                                    <li><a href="/parts">部品零件</a></li>
+                                    <li><a href="/consumables">耗材</a></li>
+                                    <li><a href="/maintenance">維修</a></li>
                                 </ul>
                             </div>
                             <!-- SCROLL示意 -->
@@ -76,7 +76,7 @@
                         <!-- 背景文字區塊 -->
                         <div class="left-section">
                             <div class="white-space">
-                                <h1>Equipment</h1>
+                                <h1>{{$subtitle}}</h1>
                             </div>
                         </div>
                         <!-- 主要內容區塊 -->
@@ -86,7 +86,7 @@
                                 <div class="tittle-box">
                                     <!-- 標題名稱 -->
                                     <div class="tittle-text">
-                                        <h3>設備</h3>
+                                        <h3>{{$title}}</h3>
                                     </div>
                                 </div>
                                 <!-- 內容區塊 -->

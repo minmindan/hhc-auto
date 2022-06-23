@@ -15,10 +15,10 @@ class ContactController extends Controller
     //首頁
     public function index(Request $request)
     {
-        $contact = Contact_banner::get();
+        $contacts = Contact_banner::get();
         $data = session()->all();
         // dd($data);
-        return view('Contact.contact1', compact('data','contact'));
+        return view('Contact.contact1', compact('data','contacts'));
     }
 
     public function contact2(Request $request){
