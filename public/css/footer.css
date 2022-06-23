@@ -198,7 +198,7 @@ footer #footer-main .subservebtn .footer-servelist img {
   }
 }
 
-footer #footer-main .subservebtn:focus .footer-servelist {
+footer #footer-main .subservebtn:hover .footer-servelist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +253,7 @@ footer #footer-main .subaboutbtn .footer-aboutlist img {
   }
 }
 
-footer #footer-main .subaboutbtn:focus .footer-aboutlist {
+footer #footer-main .subaboutbtn:hover .footer-aboutlist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

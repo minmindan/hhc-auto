@@ -20,17 +20,27 @@
         * {
             font-family: 'Noto Sans TC', 'sans-serif';
         }
+        a{
+            text-decoration: none;
+        }
         form a{
             color: black;
             margin: unset !important;
             text-emphasis: none;
         }
-        a:visited{
+        #navlist a:visited{
             color: black !important;
         }
         .signout{
             height: 70px;
             padding-top: 20px;
+        }
+
+        li a{
+            color: #004098 !important;
+        }
+        li a:visited{
+            color: #004098 !important;
         }
     </style>
 </head>
@@ -57,7 +67,7 @@
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <a href="/banner-manage/homepage"><p>Banner管理</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <a href="/banner-manage/contact"><p>產品管理</p></a>
+                    <a href="/product-manage/equipment"><p>產品管理</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <a href="/contact/list"><p>表單回報</p></a>
                 </div>

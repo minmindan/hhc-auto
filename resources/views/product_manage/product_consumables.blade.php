@@ -6,14 +6,6 @@
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}">
     <style>
-        a {
-            text-decoration: none;
-            color: #004098;
-        }
-
-        a:visited {
-            color: #004098;
-        }
 
         .produt-star {
             display: flex;

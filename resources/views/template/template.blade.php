@@ -27,6 +27,9 @@
 
         * {
             box-sizing: border-box font-family: 'Noto Sans TC', 'sans-serif';
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            select:none;
         }
 
         .none {
@@ -50,6 +53,7 @@
         .block{
             display: block !important;
         }
+
     </style>
     @yield('css')
 </head>
@@ -172,26 +176,26 @@
             <div class="footer-btn subaboutbtn" tabindex="0">
                 <h1>關於我們 <img src="{{ asset('image/nav/down_gray.svg') }}" alt=""></h1>
                 <div class="footer-aboutlist">
-                    <p>經營理念</p>
+                    <p><a href="/aboutus">經營理念</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p>公司沿革</p>
+                    <p><a href="/aboutus">公司沿革</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p>公司簡介</p>
+                    <p><a href="/aboutus">公司簡介</a></p>
                 </div>
             </div>
             <div class="footer-btn subservebtn" tabindex="0">
                 <h1>支援服務 <img src="{{ asset('image/nav/down_gray.svg') }}" alt=""></h1>
                 <div class="footer-servelist">
-                    <p>關於我們</p>
+                    <p><a href="/aboutus">關於我們</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p>如何前往</p>
+                    <p><a href="/aboutus#company-profile">如何前往</a></p>
                 </div>
             </div>
             <div class="footer-btn">
-                <h1>網站使用條款</h1>
+                <h1><a href="/termsofservice">網站使用條款</a></h1>
             </div>
             <div class="footer-btn">
-                <h1>隱私權政策</h1>
+                <h1><a href="/privacypolic">隱私權政策</a></h1>
             </div>
         </div>
     </footer>

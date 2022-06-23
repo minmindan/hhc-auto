@@ -3,69 +3,74 @@
     About Us
 @endsection
 @section('css')
-<link rel="stylesheet" href="{{asset('css/index_banner.css')}}" />
-<style>
-    a {
-        text-decoration: none;
-        color: #0000ff;
-    }
-    a:visited{
-        color:#0000ff;
-    }
-    p{
+    <link rel="stylesheet" href="{{ asset('css/index_banner.css') }}" />
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        li a {
+            color: #004098 !important;
+        }
+
+        li a:visited {
+            color: #004098 !important;
+        }
+
+        p {
             color: black !important;
         }
-</style>
+    </style>
 @endsection
 
 @section('main')
-<main>
-  <!-- 頁面標題列表 -->
-  <div id="tittle-list-id">
-    <div class="list-tittle">
-      <h1>BANNER管理</h1>
-      <ul>
-        <li><a href="/banner-manage/homepage/edit">首頁</a></li>
-        <li><a href="/banner-manage/aboutus/edit">關於我們</a></li>
-        <li><a href="/banner-manage/product/edit">產品介紹</a></li>
-        <li><a href="/banner-manage/process/edit">產品製作流程</a></li>
-        <li><a href="/banner-manage/contact/edit">聯絡我們</a></li>
-      </ul>
-    </div>
-    <div class="list-container">
+    <main>
+        <!-- 頁面標題列表 -->
+        <div id="tittle-list-id">
+            <div class="list-tittle">
+                <h1>BANNER管理</h1>
+                <ul>
+                    <li><a href="/banner-manage/homepage/edit">首頁</a></li>
+                    <li><a href="/banner-manage/aboutus/edit">關於我們</a></li>
+                    <li><a href="/banner-manage/product/edit">產品介紹</a></li>
+                    <li><a href="/banner-manage/process/edit">產品製作流程</a></li>
+                    <li><a href="/banner-manage/contact/edit">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="list-container">
 
-        <div class="content-section">
-            <div class="content-manage">
-                @foreach ($index_banner as $index)
-                    <!-- 卡片 -->
-                    <form action="/banner-manage/homepage/update/{{ $index->id }}" method="post"
-                        enctype="multipart/form-data">
-                        @csrf
-                        <div class="content-card">
-                            <!-- 圖片 -->
-                            <div class="content-img">
-                                <img src="{{ $index->img_path ?? '' }}" alt="no img" />
-                            </div>
+                <div class="content-section">
+                    <div class="content-manage">
+                        @foreach ($index_banner as $index)
+                            <!-- 卡片 -->
+                            <form action="/banner-manage/homepage/update/{{ $index->id }}" method="post"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="content-card">
+                                    <!-- 圖片 -->
+                                    <div class="content-img">
+                                        <img src="{{ $index->img_path ?? '' }}" alt="no img" />
+                                    </div>
 
-                            <!-- 說明 -->
-                            <div class="directions">
-                                <h2>{{ $index->tittle }}</h2>
-                                <h3>{{ $index->subtittle }}</h3>
-                            </div>
+                                    <!-- 說明 -->
+                                    <div class="directions">
+                                        <h2>{{ $index->tittle }}</h2>
+                                        <h3>{{ $index->subtittle }}</h3>
+                                    </div>
 
-                            <!-- 功能按鈕 -->
-                            <div class="f-button function-button{{ $index->id }}">
-                                <button type="button" onclick="chimg{{ $index->id . '()' }}">更換</button>
-                            </div>
-                        </div>
+                                    <!-- 功能按鈕 -->
+                                    <div class="f-button function-button{{ $index->id }}">
+                                        <button type="button" onclick="chimg{{ $index->id . '()' }}">更換</button>
+                                    </div>
+                                </div>
 
-                    </form>
-                @endforeach
+                            </form>
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-  </div>
-</main>
+    </main>
 @endsection
 @section('js')
     <script>
@@ -142,4 +147,3 @@
         }
     </script>
 @endsection
-
