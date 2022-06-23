@@ -22,8 +22,6 @@
         .note-editor {
             width: 70% !important;
         }
-
-
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -152,8 +150,7 @@
 
 
                                 <li>
-                                    <input @if ($product->primary == 1) checked @endif
-                                        @foreach ($equipment as $e) @if ($e->primary == 1) disabled @endif
+                                    <input @foreach ($equipment as $e) @if ($e->primary == 1) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 1) disabled @endif
                                     @endforeach
@@ -170,8 +167,7 @@
                                 </li>
                                 <li>
 
-                                    <input @if ($product->primary == 2) checked @endif
-                                        @foreach ($equipment as $e) @if ($e->primary == 2) disabled @endif
+                                    <input @foreach ($equipment as $e) @if ($e->primary == 2) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 2) disabled @endif
                                     @endforeach
@@ -187,8 +183,7 @@
                                     <label for="items2">主打商品2</label>
                                 </li>
                                 <li>
-                                    <input @if ($product->primary == 3) checked @endif
-                                        @foreach ($equipment as $e) @if ($e->primary == 3) disabled @endif
+                                    <input @foreach ($equipment as $e) @if ($e->primary == 3) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 3) disabled @endif
                                     @endforeach
@@ -203,8 +198,7 @@
                                     <label for="items3">主打商品3</label>
                                 </li>
                                 <li>
-                                    <input @if ($product->primary == 4) checked @endif
-                                        @foreach ($equipment as $e) @if ($e->primary == 4) disabled @endif
+                                    <input @foreach ($equipment as $e) @if ($e->primary == 4) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 4) disabled @endif
                                     @endforeach
@@ -220,8 +214,7 @@
                                     <label for="items4">主打商品4</label>
                                 </li>
                                 <li>
-                                    <input @if ($product->primary == 5) checked @endif
-                                        @foreach ($equipment as $e) @if ($e->primary == 5) disabled @endif
+                                    <input @foreach ($equipment as $e) @if ($e->primary == 5) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 5) disabled @endif
                                     @endforeach
@@ -238,8 +231,7 @@
 
 
                                 <li>
-                                    <input @if ($product->primary == 6) checked @endif value="6" type="radio"
-                                        name="items" id="items6" />
+                                    <input value="6" type="radio" name="items" id="items6" />
                                     <label for="items6">不是主打商品</label>
                                 </li>
 

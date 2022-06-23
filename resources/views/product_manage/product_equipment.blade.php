@@ -91,17 +91,17 @@
                                 <input  type="text"
                                 value=" @if ($product->primary == 1 )
                                 主打商品1
-                            @elseif ($product->primary == 2)
+                             @elseif ($product->primary == 2)
                                 主打商品2
-                            @elseif ($product->primary == 3)
+                             @elseif ($product->primary == 3)
                                 主打商品3
-                            @elseif ($product->primary == 4)
+                             @elseif ($product->primary == 4)
                                 主打商品4
-                            @elseif ($product->primary == 5)
+                             @elseif ($product->primary == 5)
                                 主打商品5
-                            @elseif ($product->primary == 6)
+                             @elseif ($product->primary == 6)
                                 不是主打商品
-                            @endif" disabled />
+                              @endif" disabled />
 
                             </div>
                             <!-- 功能按鈕 -->
