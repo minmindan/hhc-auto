@@ -454,7 +454,7 @@
                     <!-- 快速連結 -->
                     <div class="target-img">
                         <div class="image-box">
-                            <img src="{{ $product[0]->img_path }}" alt="">
+                            <img src="{{ $product[0]->img_path??'' }}" alt="">
                         </div>
                         <div class="content">
                             <div class="target-name">
@@ -470,7 +470,7 @@
                 <div class="contact-link">
                     <div class="target-img">
                         <div class="image-box">
-                            <img src="{{ $contact[0]->img_path }}" alt="">
+                            <img src="{{ $contact[0]->img_path??'' }}" alt="">
                         </div>
                         <div class="content">
                             <div class="target-name">

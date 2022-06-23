@@ -373,7 +373,12 @@
                                         src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
                                 </div>
                                 @endif
+
+
                                 @endforeach
+
+
+
 
 
 

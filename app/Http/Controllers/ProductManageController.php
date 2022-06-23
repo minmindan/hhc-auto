@@ -41,6 +41,13 @@ class ProductManageController extends Controller
     // 新增頁
     public function equipment_create()
     {
+
+        $equipment = Equipment_product::where('primary','<','6')->get();
+        $software = Software_product::where('primary','<','6')->get();
+        $components = Components_product::where('primary','<','6')->get();
+        $consumables = Consumables_product::where('primary','<','6')->get();
+        $maintenance = Repair_product::where('primary','<','6')->get();
+
         return view('product_create.equipment_create');
     }
     // 儲存頁
@@ -211,6 +218,13 @@ class ProductManageController extends Controller
     // 新增頁
     public function software_create()
     {
+
+        $equipment = Equipment_product::where('primary','<','6')->get();
+        $software = Software_product::where('primary','<','6')->get();
+        $components = Components_product::where('primary','<','6')->get();
+        $consumables = Consumables_product::where('primary','<','6')->get();
+        $maintenance = Repair_product::where('primary','<','6')->get();
+
         return view('product_create.software_create');
     }
 
@@ -380,6 +394,11 @@ class ProductManageController extends Controller
     // 新增頁
     public function parts_create()
     {
+        $equipment = Equipment_product::where('primary','<','6')->get();
+        $software = Software_product::where('primary','<','6')->get();
+        $components = Components_product::where('primary','<','6')->get();
+        $consumables = Consumables_product::where('primary','<','6')->get();
+        $maintenance = Repair_product::where('primary','<','6')->get();
 
         return view('product_create.parts_create');
 
@@ -553,6 +572,13 @@ class ProductManageController extends Controller
     // 新增頁
     public function consumables_create()
     {
+
+        $equipment = Equipment_product::where('primary','<','6')->get();
+        $software = Software_product::where('primary','<','6')->get();
+        $components = Components_product::where('primary','<','6')->get();
+        $consumables = Consumables_product::where('primary','<','6')->get();
+        $maintenance = Repair_product::where('primary','<','6')->get();
+
         return view('product_create.consumables_create');
 
     }
@@ -716,6 +742,13 @@ class ProductManageController extends Controller
     // 新增頁
     public function maintenance_create()
     {
+
+        $equipment = Equipment_product::where('primary','<','6')->get();
+        $software = Software_product::where('primary','<','6')->get();
+        $components = Components_product::where('primary','<','6')->get();
+        $consumables = Consumables_product::where('primary','<','6')->get();
+        $maintenance = Repair_product::where('primary','<','6')->get();
+
         return view('product_create.maintenance_create');
 
     }
