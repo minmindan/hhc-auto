@@ -12,7 +12,7 @@ use App\Http\Controllers\Controller;
 
 // BANNER管理
 // 首頁 手建
-Route::prefix('/banner-manage/homepage')->group(function (){
+Route::prefix('/banner-manage/homepage')->middleware(['auth'])->group(function (){
     Route::get('/',[BannerManageController::class, 'homepage_index']); //總表
     Route::get('/create',[BannerManageController::class, 'homepage_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'homepage_store']); //儲存頁面
@@ -21,7 +21,7 @@ Route::prefix('/banner-manage/homepage')->group(function (){
 });
 
 // 關於我們 手建
-Route::prefix('/banner-manage/aboutus')->group(function (){
+Route::prefix('/banner-manage/aboutus')->middleware(['auth'])->group(function (){
     Route::get('/',[BannerManageController::class, 'aboutus_index']); //總表
     Route::post('/create',[BannerManageController::class, 'aboutus_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'aboutus_store']); //儲存頁面
@@ -30,7 +30,7 @@ Route::prefix('/banner-manage/aboutus')->group(function (){
 });
 
 // 產品介紹 手建
-Route::prefix('/banner-manage/product')->group(function (){
+Route::prefix('/banner-manage/product')->middleware(['auth'])->group(function (){
     Route::get('/',[BannerManageController::class, 'product_index']); //總表
     Route::get('/create',[BannerManageController::class, 'product_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'product_store']); //儲存頁面
@@ -39,7 +39,7 @@ Route::prefix('/banner-manage/product')->group(function (){
 });
 
 // 產品製作流程 手建
-Route::prefix('/banner-manage/process')->group(function (){
+Route::prefix('/banner-manage/process')->middleware(['auth'])->group(function (){
     Route::get('/',[BannerManageController::class, 'process_index']); //總表
     Route::get('/create',[BannerManageController::class, 'process_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'process_store']); //儲存頁面
@@ -48,7 +48,7 @@ Route::prefix('/banner-manage/process')->group(function (){
 });
 
 // 聯絡我們 手建
-Route::prefix('/banner-manage/contact')->group(function (){
+Route::prefix('/banner-manage/contact')->middleware(['auth'])->group(function (){
     Route::get('/',[BannerManageController::class, 'contact_index']); //總表
     Route::get('/create',[BannerManageController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BannerManageController::class, 'contact_store']); //儲存頁面

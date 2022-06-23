@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-    Contact
+興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/contact1.css') }}" />
@@ -143,7 +143,7 @@
                     <!-- 隱私權政策 -->
                     <div class="privacy-policy">
                         <input id="privacy-policy" name="privacy" type="checkbox" />
-                        <label for="privacy-policy">隱私權政策</label>
+                        <label for="privacy-policy"><a style="color: black;" target="_blank" href="/privacypolic">隱私權政策</a></label>
                     </div>
                     <!-- 表單按鈕 -->
                     <button type="submit">

@@ -20,7 +20,7 @@ use App\Http\Controllers\NewsController;
 // HomePageController
 
 //最新消息 //已完成
-Route::prefix('/topics-manage')->group(function (){
+Route::prefix('/topics-manage')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'topics_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'topics_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'topics_store']); //儲存頁面
@@ -28,7 +28,7 @@ Route::prefix('/topics-manage')->group(function (){
 });
 
 //合作廠商
-Route::prefix('/company-manage')->group(function (){
+Route::prefix('/company-manage')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
@@ -42,7 +42,7 @@ Route::prefix('/company-manage')->group(function (){
 // AboutUsController
 
 //公司沿革 //已完成
-Route::prefix('/milestones-manage')->group(function (){
+Route::prefix('/milestones-manage')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'milestones_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'milestones_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'milestones_store']); //儲存頁面
@@ -52,7 +52,7 @@ Route::prefix('/milestones-manage')->group(function (){
 });
 
 //聯絡方式 完成
-Route::prefix('/contact-manage')->group(function (){
+Route::prefix('/contact-manage')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
@@ -61,7 +61,7 @@ Route::prefix('/contact-manage')->group(function (){
 });
 
 // 合作客戶
-Route::prefix('/partner-manage')->group(function (){
+Route::prefix('/partner-manage')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'partner_index']); //總表
     Route::post('/create',[BasicInfoController::class, 'partner_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'partner_store']); //儲存頁面
@@ -75,7 +75,7 @@ Route::prefix('/partner-manage')->group(function (){
 
 // Banner管理
 //BasicInfoController
-Route::prefix('/banner-manage/contact')->group(function (){
+Route::prefix('/banner-manage/contact')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
@@ -84,7 +84,7 @@ Route::prefix('/banner-manage/contact')->group(function (){
 });
 // 產品管理
 //ProductManageController
-Route::prefix('/banner-manage/contact')->group(function (){
+Route::prefix('/banner-manage/contact')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'contact_index']); //總表
     Route::get('/create',[BasicInfoController::class, 'contact_create']); //新增頁面
     Route::post('/store',[BasicInfoController::class, 'contact_store']); //儲存頁面
@@ -97,7 +97,7 @@ Route::prefix('/banner-manage/contact')->group(function (){
 
 // 表單
 // ContactController
-Route::prefix('/contact/list')->group(function (){
+Route::prefix('/contact/list')->middleware(['auth'])->group(function (){
     Route::get('/',[BasicInfoController::class, 'contactlist_index']); //總表
     Route::get('/edit/{id}',[BasicInfoController::class, 'contactlist_edit']); //編輯頁面
     Route::post('/update/{id}',[BasicInfoController::class, 'contactlist_update']); //更新頁面

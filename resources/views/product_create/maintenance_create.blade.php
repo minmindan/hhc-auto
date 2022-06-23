@@ -1,6 +1,6 @@
 @extends('template.backnav')
 @section('title')
-    About Us
+興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product_create.css') }}" />
@@ -152,7 +152,7 @@
 
 
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 1) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 1) disabled @endif
@@ -170,7 +170,7 @@
                                 </li>
                                 <li>
 
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 2) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 2) disabled @endif
@@ -187,7 +187,7 @@
                                     <label for="items2">主打商品2</label>
                                 </li>
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 3) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 3) disabled @endif
@@ -203,7 +203,7 @@
                                     <label for="items3">主打商品3</label>
                                 </li>
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 4) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 4) disabled @endif
@@ -220,7 +220,7 @@
                                     <label for="items4">主打商品4</label>
                                 </li>
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 5) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 5) disabled @endif

@@ -1,6 +1,6 @@
 @extends('template.backnav')
 @section('title')
-    About Us
+興和川自動化有限公司
 @endsection
 <script src="https://kit.fontawesome.com/99e51d1c05.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="{{ asset('css/backindex.css') }}">
