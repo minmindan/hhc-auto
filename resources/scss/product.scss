@@ -11,6 +11,7 @@
 
 body {
     main {
+
         // Banner大圖
         #banner {
             padding-left: 316px;
@@ -31,8 +32,7 @@ body {
                 padding-left: 0px;
             }
 
-            @include mobile {
-            }
+            @include mobile {}
 
             .banner-container {
                 .sub-section {
@@ -295,6 +295,11 @@ body {
 
                                 li {
                                     margin-bottom: 16px;
+
+                                    a {
+                                        display: flex;
+                                        justify-content: flex-end;
+                                    }
                                 }
                             }
                         }
@@ -321,23 +326,23 @@ body {
 
                             .scroll-img {
                                 width: 24px;
-                        overflow: hidden;
-                        animation: scroll 1.2s infinite;
+                                overflow: hidden;
+                                animation: scroll 1.2s infinite;
 
-                        @include pad {
-                            z-index: 10;
-                        }
+                                @include pad {
+                                    z-index: 10;
+                                }
 
-                        img {
-                            width: 24px;
-                            height: 100px;
+                                img {
+                                    width: 24px;
+                                    height: 100px;
 
-                            @include pad {
-                                z-index: 10;
-                            }
+                                    @include pad {
+                                        z-index: 10;
+                                    }
 
 
-                        }
+                                }
                             }
 
 
@@ -1125,9 +1130,11 @@ body {
 
                         .white-space {
                             width: 100%;
+
                             @media (max-width:500px) {
                                 max-width: 80px;
                             }
+
                             h1 {
                                 @include bgTextSet;
 
@@ -1281,6 +1288,7 @@ body {
                                 .porduct-content2 {
                                     display: flex;
                                     justify-content: start;
+
                                     @media (max-width:376px) {
                                         width: 255px;
                                     }

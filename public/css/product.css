@@ -341,6 +341,15 @@ body main #banner .banner-container .main-section .banner-img .page-list ul li {
   margin-bottom: 16px;
 }
 
+body main #banner .banner-container .main-section .banner-img .page-list ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 body main #banner .banner-container .main-section .banner-img .scroll-box {
   position: absolute;
   left: 0;
