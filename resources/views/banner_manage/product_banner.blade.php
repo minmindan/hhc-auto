@@ -73,7 +73,7 @@
             const ch_img1 = document.querySelector('.function-button1')
             ch_img1.innerHTML = ""
             ch_img1.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
@@ -85,7 +85,7 @@
             const ch_img2 = document.querySelector('.function-button2')
             ch_img2.innerHTML = ""
             ch_img2.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
@@ -97,7 +97,7 @@
             const ch_img3 = document.querySelector('.function-button3')
             ch_img3.innerHTML = ""
             ch_img3.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
@@ -109,7 +109,7 @@
             const ch_img4 = document.querySelector('.function-button4')
             ch_img4.innerHTML = ""
             ch_img4.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
@@ -121,7 +121,7 @@
             const ch_img5 = document.querySelector('.function-button5')
             ch_img5.innerHTML = ""
             ch_img5.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
@@ -133,7 +133,7 @@
             const ch_img6 = document.querySelector('.function-button6')
             ch_img6.innerHTML = ""
             ch_img6.innerHTML += `
-            <div style="display:flex; flex-direction:column;">
+            <div style="display:flex; flex-direction:column;width:80%;">
             <input type="file"  accept="image/png, image/jpeg" name="img_path">
             <button type="submit">儲存圖片</button>
             <button>取消</button>
