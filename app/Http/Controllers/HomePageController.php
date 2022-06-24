@@ -56,7 +56,7 @@ class HomePageController extends Controller
         $software = Software_product::orderBy('weights', 'asc')->take(2)->get();
         $components = Components_product::orderBy('weights', 'asc')->take(2)->get();
         $consumables = Consumables_product::orderBy('weights', 'asc')->take(2)->get();
-        $maintenance = Repair_product::orderBy('weights', 'asc')->take(2)->get();
+        $maintenance = Repair_product::orderBy('weights', 'asc')->take(1)->get();
 
         $product = Product_banner::get();
         return view('equipment.product', compact('product', 'equipment', 'software', 'components', 'consumables', 'maintenance'));
