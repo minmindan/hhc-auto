@@ -149,6 +149,7 @@
                 <div class="hoverbox">
                     <div><a class="fons" href="/contact">聯絡我們</a></div>
                 </div>
+                @auth
                 <div class="hoverbox downlist">
                     <div background><a class="fons href=''">後台管理</a></div>
                     <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
@@ -162,6 +163,7 @@
                         <p><a style="color: #b4b4b4;" href="/contact/list">表單管理</a></p>
                     </div>
                 </div>
+                @endauth
             </div>
             <div id="bglist">
                 <div class="stuffing"></div>
