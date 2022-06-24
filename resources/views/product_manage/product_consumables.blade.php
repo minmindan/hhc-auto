@@ -1,16 +1,26 @@
 @extends('template.backnav')
 @section('title')
-    興和川自動化有限公司
+興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}">
     <style>
-        .produt-star {
+          a {
+            text-decoration: none;
+            color: #004098;
+        }
+
+        a:visited {
+            color: #004098;
+        }
+        .content-section .produt-star {
             display: flex;
             align-items: start;
             justify-content: flex-start;
-            width: 93px !important;
+            min-width: 93px !important;
+            max-width: 93px !important;
+
         }
 
         .produt-star input {
@@ -20,7 +30,13 @@
 
         .image-gradation {
             min-width: 94px !important;
-            padding-left: 10px;
+        }
+
+        .produt-star p{
+            width: 100%;
+            font-size: 0.8rem;
+            border: 1px solid #bebebe;
+            color: #737373;
         }
     </style>
 @endsection
@@ -82,19 +98,19 @@
                             </div>
                             <!-- 主打產品 -->
                             <div class="produt-star">
-                                <input type="text"
-                                    value=" @if ($product->primary == 1) 主打商品1
-                         @elseif ($product->primary == 2)
-                            主打商品2
+                        @if ($product->primary == 1)
+                        <p>主打商品1</p>
+                        @elseif ($product->primary == 2)
+                        <p>主打商品2</p>
                          @elseif ($product->primary == 3)
-                            主打商品3
+                         <p>主打商品3</p>
                          @elseif ($product->primary == 4)
-                            主打商品4
+                         <p>主打商品4</p>
                          @elseif ($product->primary == 5)
-                            主打商品5
+                         <p>主打商品5</p>
                          @elseif ($product->primary == 6)
-                            不是主打商品 @endif"
-                                    disabled />
+                         <p>不是主打商品</p>
+                         @endif
 
                             </div>
                             <!-- 功能按鈕 -->

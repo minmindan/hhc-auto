@@ -9,6 +9,35 @@ body {
 }
 
 // 導覽列
+
+nav{
+    #navlist{
+        a{
+            color: black;
+            &:visited{
+                color: black;
+            }
+            p{
+                color: black;
+            }
+        }   
+        .subnav{
+
+            .list{
+                a{
+                    color: black;
+                    &:visited{
+                        color: black;
+                    }
+                    p{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
 // 頁面內容
 main {
     a {
@@ -261,6 +290,9 @@ main {
                         // background-color: gainsboro;
                         padding: 20px;
                         margin-right: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
 
                         background-color: gray;
                         img {

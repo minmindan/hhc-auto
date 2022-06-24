@@ -9,6 +9,30 @@ body {
   background-color: #F7F8FA;
 }
 
+nav #navlist a {
+  color: black;
+}
+
+nav #navlist a:visited {
+  color: black;
+}
+
+nav #navlist a p {
+  color: black;
+}
+
+nav #navlist .subnav .list a {
+  color: black;
+}
+
+nav #navlist .subnav .list a:visited {
+  color: black;
+}
+
+nav #navlist .subnav .list a p {
+  color: black;
+}
+
 main a {
   color: #004098;
   text-decoration: none;
@@ -347,6 +371,15 @@ main #tittle-list-id .list-container .sub-section .top-section .content-img {
   height: 259px;
   padding: 20px;
   margin-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: gray;
 }
 

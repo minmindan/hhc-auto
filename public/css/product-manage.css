@@ -5,6 +5,18 @@
           box-sizing: border-box;
 }
 
+nav #navlist .subnav .list a {
+  color: black !important;
+}
+
+nav #navlist .subnav .list a:visited {
+  color: black !important;
+}
+
+nav #navlist .subnav .list a p {
+  color: black !important;
+}
+
 main #tittle-list-id {
   background-color: white;
 }

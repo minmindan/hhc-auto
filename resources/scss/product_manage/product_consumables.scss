@@ -10,6 +10,23 @@
 }
 
 // 導覽列
+nav{
+    #navlist{
+        .subnav{
+            .list{
+                a{
+                    color: black !important;
+                    &:visited{
+                        color: black !important;
+                    }
+                    p{
+                        color: black !important;
+                    }
+                }
+            }
+        }
+    }
+}
 // 頁面內容
 main {
 

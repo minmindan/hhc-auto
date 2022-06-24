@@ -17,7 +17,7 @@
 <main>
   <div id="page-tittle">
     <div class="tittle">
-      <h2>表單回報 |</h2>
+      <h2>表單回報</h2>
     </div>
   </div>
 

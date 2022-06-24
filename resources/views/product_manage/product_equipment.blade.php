@@ -14,21 +14,29 @@
             color: #004098;
         }
 
-
-        .produt-star {
+        .content-section .produt-star {
             display: flex;
             align-items: start;
-            justify-content:flex-start;
-            width: 93px !important;
+            justify-content: flex-start;
+            min-width: 93px !important;
+            max-width: 93px !important;
+
         }
-        .produt-star input{
+
+        .produt-star input {
             border: 0px;
             width: auto !important;
         }
 
-        .image-gradation{
+        .image-gradation {
             min-width: 94px !important;
-            padding-left: 10px;
+        }
+
+        .produt-star p{
+            width: 100%;
+            font-size: 0.8rem;
+            border: 1px solid #bebebe;
+            color: #737373;
         }
     </style>
 @endsection
@@ -96,20 +104,19 @@
                             </div>
                             <!-- 主打產品 -->
                             <div class="produt-star">
-                                <input  type="text"
-                                value=" @if ($product->primary == 1 )
-                                主打商品1
-                             @elseif ($product->primary == 2)
-                                主打商品2
-                             @elseif ($product->primary == 3)
-                                主打商品3
-                             @elseif ($product->primary == 4)
-                                主打商品4
-                             @elseif ($product->primary == 5)
-                                主打商品5
-                             @elseif ($product->primary == 6)
-                                不是主打商品
-                              @endif" disabled />
+                                @if ($product->primary == 1)
+                                <p>主打商品1</p>
+                                @elseif ($product->primary == 2)
+                                <p>主打商品2</p>
+                                 @elseif ($product->primary == 3)
+                                 <p>主打商品3</p>
+                                 @elseif ($product->primary == 4)
+                                 <p>主打商品4</p>
+                                 @elseif ($product->primary == 5)
+                                 <p>主打商品5</p>
+                                 @elseif ($product->primary == 6)
+                                 <p>不是主打商品</p>
+                                 @endif
 
                             </div>
                             <!-- 功能按鈕 -->
