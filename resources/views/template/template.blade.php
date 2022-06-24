@@ -220,12 +220,13 @@
     // show(), false;
     navin();
     function navin() {
-        // var windowtop = document.documentElement.scrollTop; 問題待解決
-        var windowtop = document.body.scrollTop;
-        // console.log(windowtop);
-        // console.log(banner.clientHeight);
+        var windowtop = document.documentElement.scrollTop; //問題待解決
+        // var windowtop = document.body.scrollTop;
+        console.log(windowtop);
+        console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
             if (windowtop > 100) {
+                console.log('123');
                 subnav.classList.add("none")
                 biglogo.classList.add('none')
             } else {
