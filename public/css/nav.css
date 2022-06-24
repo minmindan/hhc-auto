@@ -615,4 +615,39 @@ nav #bar #bglist .stuffing {
     background-color: white;
   }
 }
+
+@media (max-width: 768px) and (max-height: 760px) {
+    nav #focus .focus-main {
+      height: calc(100vh - 130px) !important;
+    }
+  }
+  @media (max-height: 880px) {
+    nav #focus .focus-main h1 {
+      font-size: 30px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+  @media (max-height: 880px) {
+    nav #focus .focus-main h1 {
+      font-size: 20px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+  @media (max-height: 880px) {
+    nav #focus .focus-main #focus-box {
+      margin: 0 auto 0;
+    }
+  }
+
+  @media (max-height: 880px) {
+    nav #focus .focus-main #focus-box ul li:nth-last-child(1){
+      margin: 0 auto 0;
+    }
+  }
+  @media (max-height: 760px) {
+    nav #focus .focus-main #focus-button {
+      height: 50px !important;
+    }
+  }
+
 /*# sourceMappingURL=nav.css.map */
