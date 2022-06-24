@@ -3,7 +3,7 @@
     About Us
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/product_create.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/product_edit.css') }}" />
     <style>
         a {
             text-decoration: none;
@@ -24,6 +24,24 @@
         }
 
 
+        .image-build {
+            display: flex;
+            align-items: center;
+            width: 150px;
+            height: 42px;
+            margin-left: 15px;
+            padding-left: 50px;
+        }
+
+        .image-build input {
+            width: 150px;
+        }
+
+        .image-gradation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
@@ -55,7 +73,8 @@
                     </li>
                 </ul>
             </div>
-            <form action="/product-manage/software/store" method="post" enctype="multipart/form-data">
+            <form action="/product-manage/software/update/{{ $product->id }}" method="post"
+                enctype="multipart/form-data">
                 @csrf
                 <div class="list-container">
                     <div class="field-section">
@@ -65,11 +84,11 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>商品排序</p>
+                                <p>主要商品排序</p>
                             </div>
 
                             <div class="field-date">
-                                <p>新增日期</p>
+                                <p>更換新圖片</p>
                             </div>
 
                         </div>
@@ -78,23 +97,31 @@
                     <div class="content-section">
                         <div class="top-section">
 
-                            <!-- 新增按鈕 -->
-                            <div class="bulid-btn">
-                                <input type="file" name="product_img" accept="image/*">
+                            <!-- 圖片 -->
+                            <div class="content-img">
+                                <img src="{{ $product->primary_img ?? '' }}" alt="">
                             </div>
 
                             <!-- 排序 -->
                             <div class="image-gradation">
-                                <select name="weights" id="" disabled="disabled">
-                                    <option value="0">-</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
+                                <select name="weights" id="">
+                                    <option value="1" @if ($product->weights == 1) selected @endif
+                                        @foreach ($software2 as $so2) @if ($so2->weights == 1)
+                                        hidden @endif
+                                        @endforeach
+                                        >1</option>
+                                    <option value="2" @if ($product->weights == 2) selected @endif
+                                        @foreach ($software2 as $so2) @if ($so2->weights == 2)
+                                        hidden @endif
+                                        @endforeach
+                                        >2</option>
+                                    <option value="3" @if ($product->weights == 3) selected @endif>-</option>
                                 </select>
                             </div>
 
                             <!-- 新增日期 -->
-                            <div class="date-bulid">
-                                <input type="text" disabled />
+                            <div class="image-build">
+                                <input type="file" name="product_img" accept="image/*">
                             </div>
 
                         </div>
@@ -108,39 +135,55 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>商品排序</p>
                             </div>
 
-                            <div class="field-date">
-                                <p>新增日期</p>
+                            <div class="field-date" style="display: flex;direction:column; ">
+                                <p>刪除圖片</p>
                             </div>
 
                         </div>
                     </div>
 
                     <div class="sub-section">
-                        <div class="top-section">
 
-                            <!-- 新增按鈕 -->
-                            <div class="bulid-btn">
-                                <input type="file" name="second_img[]" multiple accept="image/*">
+                        @foreach ($imgs as $go)
+                            <div class="top-section" id="sec_img{{ $go->id }}">
+
+                                <!-- 圖片 -->
+                                <div class="content-img" id="{{ $go->id }}">
+                                    <img src="{{ $go->path }}" alt="">
+                                </div>
+                                <!-- 排序 -->
+                                <div class="image-gradation">
+
+                                </div>
+
+                                <!-- 新增日期 -->
+                                <div class="date-bulid" style="display: flex; justify-content:center; align-items:center;">
+                                    <button type="button" onclick="d_sec_img({{ $go->id }})">刪除</button>
+                                </div>
                             </div>
+                        @endforeach
 
-                            <!-- 排序 -->
-                            <div class="image-gradation">
-                                <select name="" id="" disabled="disabled">
-                                    <option selected disabled value="0">-</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
+
+                        <div class="field-section" style="margin-top: 50px;">
+                            <div class="content">
+                                <div class="field-img">
+                                    <p>新增其他圖片</p>
+
+                                </div>
+
+                                <div class="field-radation"
+                                    style=" width:150px !important; display:flex; align-items:center; justify-content:center;">
+                                    <input type="file" name="second_img[]" multiple accept="image/*">
+                                </div>
+
+                                <div class="field-date" style="display: flex;direction:column; ">
+                                </div>
+
                             </div>
-
-                            <!-- 新增日期 -->
-                            <div class="date-bulid">
-                                <input type="text" disabled />
-                            </div>
-
                         </div>
+
                     </div>
 
                 </div>
@@ -248,12 +291,12 @@
                         <!-- 產品名稱 -->
                         <div class="form-input">
                             <p>產品名稱</p>
-                            <input name="product_name" type="text" />
+                            <input name="product_name" value="{{ $product->product_name }}" type="text" />
                         </div>
                         <!-- 產品款號 -->
                         <div class="form-input">
                             <p>產品款號</p>
-                            <input name="product_model" type="text" />
+                            <input name="product_model" value="{{ $product->model }}" type="text" />
                         </div>
                         <!-- 產品規格 -->
                         <div class="form-input">
@@ -278,13 +321,13 @@
                     </div>
                 </div>
             </form>
+
         </div>
     </main>
 @endsection
 @section('js')
     <script>
         $('#summernote1').summernote({
-            placeholder: '　請輸入文字.....',
             tabsize: 2,
             height: 120,
             disableDragAndDrop: false,
@@ -296,7 +339,6 @@
             ]
         });
         $('#summernote2').summernote({
-            placeholder: '　請輸入文字.....',
             tabsize: 2,
             disableDragAndDrop: true,
             height: 120,
@@ -308,7 +350,6 @@
             ]
         });
         $('#summernote3').summernote({
-            placeholder: '　如果沒有圖片，會顯示此欄位內容',
             tabsize: 2,
             disableDragAndDrop: false,
             height: 120,
@@ -319,5 +360,63 @@
                 ['table', ['table']],
             ]
         });
+    </script>
+
+    <script>
+        var gotonote = document.getElementsByClassName('note-editable')
+
+        var go = document.querySelector('.go')
+
+        gotonote[0].setAttribute('id', 'standard');
+        gotonote[1].setAttribute('id', 'feature');
+        gotonote[2].setAttribute('id', 'illustrate');
+
+        gotonote[0].setAttribute('name', 'standard');
+        gotonote[1].setAttribute('name', 'feature');
+        gotonote[2].setAttribute('name', 'illustrate');
+
+
+        var note1 = document.getElementById('standard')
+        var note2 = document.getElementById('feature')
+        var note3 = document.getElementById('illustrate')
+
+        note1.innerHTML = `{!! $product->standard !!}`
+        note2.innerHTML = `{!! $product->feature !!}`
+        note3.innerHTML = `{!! $product->illustrate !!}`
+    </script>
+
+    <script>
+        function d_sec_img(id) {
+
+            let formData = new FormData();
+            // formData.append('_method', 'delete');
+            formData.append('_token', '{{ csrf_token() ?? '' }}');
+
+
+            fetch('/product-manage/software/d_sec_img/' + id, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(function(response) {
+                    let element = document.querySelector('#sec_img' + id)
+                    element.parentNode.removeChild(element);
+                })
+        }
+    </script>
+
+    <script>
+        function c_sec_img(id) {
+
+            let formData = new FormData();
+            formData.append('_method', 'post');
+            formData.append('_token', '{{ csrf_token() ?? '' }}');
+
+
+            fetch('/product-manage/software/c_sec_img/' + id, {
+                method: 'POST',
+                body: formData
+            })
+
+        }
     </script>
 @endsection

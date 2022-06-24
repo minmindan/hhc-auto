@@ -68,7 +68,7 @@
          <div class="content-section">
             @foreach ($product as $product)
                 <form id="product_card{{ $product->id }}"
-                    action="/product-manage/mainternance/edit/{{ $product->id }}" method="post">
+                    action="/product-manage/maintenance/edit/{{ $product->id }}" method="post">
                     @csrf
                     <!-- 圖片 -->
                     <div class="content-img">
@@ -81,9 +81,15 @@
                     <!-- 排序 -->
                     <div class="image-gradation">
                         <select name="" id="" disabled="disabled">
-                            <option value="0">-</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option value="{{$product->weights}}">
+                                @if ($product->weights == 1 )
+                                1
+                                @elseif ($product->weights == 2)
+                                2
+                                @else
+                                -
+                                @endif
+                            </option>
                         </select>
                     </div>
                     <!-- 主打產品 -->
@@ -106,7 +112,7 @@
                     </div>
                     <!-- 功能按鈕 -->
                     <div class="function-button">
-                        <button>編輯</button>
+                        <button type="submit">編輯</button>
                         <button onclick="delete_img({{ $product->id ??''}})" type="button">刪除</button>
                     </div>
                 </form>

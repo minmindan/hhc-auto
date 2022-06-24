@@ -154,8 +154,9 @@ main #product-detail #product-section .page-container .product-content .image-bo
           transform: translate(20%, 50%);
 }
 
-main #product-detail #product-section .page-container .product-content .image-box .product-img .product-introduction .intro-content .product-name {
+main #product-detail #product-section .page-container .product-content .image-box .product-img .product-introduction .intro-content .product-name h4 {
   font-size: 1.5rem;
+  font-weight: 500;
 }
 
 main #product-detail #product-section .page-container .product-content .image-box .product-img .product-introduction .intro-content .product-number {
@@ -166,6 +167,11 @@ main #product-detail #product-section .page-container .product-content .image-bo
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+main #product-detail #product-section .page-container .product-content .image-box .product-img .product-introduction .intro-content .product-number h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 main #product-detail #product-section .page-container .product-content .image-box .product-img .product-introduction .section-r {
@@ -432,9 +438,13 @@ main #product-detail #product-section .page-container-m .bottom-section {
   }
 }
 
+main #product-detail #product-section .page-container-m .bottom-section .section-l {
+  margin-left: 15px;
+}
+
 main #product-detail #product-section .page-container-m .bottom-section .section-l .product-name h4 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 main #product-detail #product-section .page-container-m .bottom-section .section-l .product-number h4 {

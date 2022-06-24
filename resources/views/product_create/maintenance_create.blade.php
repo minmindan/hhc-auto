@@ -86,9 +86,9 @@
                             <!-- 排序 -->
                             <div class="image-gradation">
                                 <select name="weights" id="" disabled="disabled">
-                                    <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
+                                    <option value="3" selected>-</option>
                                 </select>
                             </div>
 
@@ -108,7 +108,7 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>商品排序</p>
+                                {{-- <p>商品排序</p> --}}
                             </div>
 
                             <div class="field-date">
@@ -128,11 +128,11 @@
 
                             <!-- 排序 -->
                             <div class="image-gradation">
-                                <select name="" id="" disabled="disabled">
+                                {{-- <select name="" id="" disabled="disabled">
                                     <option selected disabled value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                </select>
+                                </select> --}}
                             </div>
 
                             <!-- 新增日期 -->
@@ -152,7 +152,7 @@
 
 
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 1) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 1) disabled @endif
@@ -170,7 +170,7 @@
                                 </li>
                                 <li>
 
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 2) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 2) disabled @endif
@@ -187,7 +187,7 @@
                                     <label for="items2">主打商品2</label>
                                 </li>
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 3) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 3) disabled @endif
@@ -203,7 +203,7 @@
                                     <label for="items3">主打商品3</label>
                                 </li>
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 4) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 4) disabled @endif
@@ -220,7 +220,7 @@
                                     <label for="items4">主打商品4</label>
                                 </li>
                                 <li>
-                                    <input 
+                                    <input
                                         @foreach ($equipment as $e) @if ($e->primary == 5) disabled @endif
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 5) disabled @endif

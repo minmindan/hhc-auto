@@ -62,7 +62,7 @@ Route::prefix('/')->group(function (){
     //個別產品詳情
     Route::get('/equipment/{id}',[HomePageController::class, 'equipmentdetail']);//產品細項
     Route::get('/software/{id}',[HomePageController::class, 'softwaredetail']);//產品細項
-    Route::get('/parts/{id}',[HomePageController::class, 'parts']);//產品細項
+    Route::get('/parts/{id}',[HomePageController::class, 'partsdetail']);//產品細項
     Route::get('/consumables/{id}',[HomePageController::class, 'consumablesdetail']);//產品細項
     Route::get('/maintenance/{id}',[HomePageController::class, 'maintenancedetail']);//產品細項
 

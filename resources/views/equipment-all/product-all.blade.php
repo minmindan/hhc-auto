@@ -5,6 +5,21 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product-all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper.css') }}">
+
+    <style>
+
+
+
+        .item-content a {
+            color:black;
+            margin-bottom: 30px;
+        }
+        .item-content a:visited{
+            color: black;
+        }
+
+
+    </style>
 @endsection
 
 </head>
@@ -93,87 +108,54 @@
                                 <div class="content">
                                     <!-- 該項目的商品圖片 -->
                                     <div class="product-items">
-                                        <!-- 商品 -->
-                                        <div class="item-content">
-                                            <!-- 圖片 -->
-                                            <div class="image-box">
-                                                <img src="{{ asset('image/product-all/AVM-1.png') }}" alt="">
-                                            </div>
-                                            <!-- 文字說明 -->
-                                            <div class="product-directions">
-                                                <div class="product-name">
-                                                    <h3>商品名稱</h3>
-                                                </div>
-                                                <div class="product-number">
-                                                    <p>款號</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                        @foreach ($product as $product)
 
                                         <!-- 商品 -->
-                                        <div class="item-content">
-                                            <!-- 圖片 -->
-                                            <div class="image-box">
-                                                <img src="{{ asset('image/product-all/AVM-2(建議規格).png') }}" alt="">
-                                            </div>
-                                            <!-- 文字說明 -->
-                                            <div class="product-directions">
-                                                <div class="product-name">
-                                                    <h3>商品名稱</h3>
+                                            <div class="item-content">
+                                                <!-- 圖片 -->
+                                                <a href="/{{$item}}/{{$product->id}}">
+                                                <div class="image-box">
+                                                    <img src="{{ asset('image/product-all/AVM-1.png') }}" alt="">
                                                 </div>
-                                                <div class="product-number">
-                                                    <p>款號</p>
+
+                                                <!-- 文字說明 -->
+                                                <div class="product-directions">
+                                                    <div class="product-name">
+                                                        <h3>{{$product->product_name}}</h3>
+                                                    </div>
+                                                    <div class="product-number">
+                                                        <p>{{$product->model}}</p>
+                                                    </div>
                                                 </div>
+                                               </a>
                                             </div>
-                                        </div>
-                                        <!-- 商品 -->
-                                        <div class="item-content">
-                                            <!-- 圖片 -->
-                                            <div class="image-box">
-                                                <img src="{{ asset('image/product-all/productimg.png') }}" alt="">
-                                            </div>
-                                            <!-- 文字說明 -->
-                                            <div class="product-directions">
-                                                <div class="product-name">
-                                                    <h3>商品名稱</h3>
-                                                </div>
-                                                <div class="product-number">
-                                                    <p>款號</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 商品 -->
-                                        <div class="item-content">
-                                            <!-- 圖片 -->
-                                            <div class="image-box">
-                                                <img src="{{ asset('image/product-all/AVM-1.png') }}" alt="">
-                                            </div>
-                                            <!-- 文字說明 -->
-                                            <div class="product-directions">
-                                                <div class="product-name">
-                                                    <h3>商品名稱</h3>
-                                                </div>
-                                                <div class="product-number">
-                                                    <p>款號</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- 商品 -->
-                                        <div class="item-content">
-                                            <!-- 圖片 -->
-                                            <div class="image-box">
-                                                <img src="{{ asset('image/product-all/AVM-1.png') }}" alt="">
-                                            </div>
-                                            <!-- 文字說明 -->
-                                            <div class="product-directions">
-                                                <div class="product-name">
-                                                    <h3>商品名稱</h3>
-                                                </div>
-                                                <div class="product-number">
-                                                    <p>款號</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                                        @endforeach
+
+
+
+
+
+{{--
+ <!-- 商品 -->
+ <div class="item-content">
+    <!-- 圖片 -->
+    <div class="image-box">
+        <img src="{{ asset('image/product-all/AVM-1.png') }}" alt="">
+    </div>
+    <!-- 文字說明 -->
+    <div class="product-directions">
+        <div class="product-name">
+            <h3>商品名稱</h3>
+        </div>
+        <div class="product-number">
+            <p>款號</p>
+        </div>
+    </div>
+</div> --}}
+
+
                                     </div>
 
 

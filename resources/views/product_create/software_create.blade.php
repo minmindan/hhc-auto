@@ -86,9 +86,9 @@
                             <!-- 排序 -->
                             <div class="image-gradation">
                                 <select name="weights" id="" disabled="disabled">
-                                    <option value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
+                                    <option value="3" selected>-</option>
                                 </select>
                             </div>
 
@@ -108,7 +108,7 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>商品排序</p>
+                                {{-- <p>商品排序</p> --}}
                             </div>
 
                             <div class="field-date">
@@ -128,11 +128,11 @@
 
                             <!-- 排序 -->
                             <div class="image-gradation">
-                                <select name="" id="" disabled="disabled">
+                                {{-- <select name="" id="" disabled="disabled">
                                     <option selected disabled value="0">-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                </select>
+                                </select> --}}
                             </div>
 
                             <!-- 新增日期 -->

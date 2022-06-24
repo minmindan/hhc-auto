@@ -106,9 +106,22 @@
                             <!-- 排序 -->
                             <div class="image-gradation">
                                 <select name="weights" id="">
-                                    <option value="0">-</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
+                                    <option value="1" @if ($product->weights == 1) selected @endif
+                                        @foreach ($equipment2 as $eq2)
+                                        @if ($eq2->weights == 1)
+                                        hidden
+                                        @endif
+                                        @endforeach
+                                        >1</option>
+                                    <option value="2" @if ($product->weights == 2) selected @endif
+                                        @foreach ($equipment2 as $eq2)
+                                        @if ($eq2->weights == 2)
+                                        hidden
+                                        @endif
+                                        @endforeach
+                                        >2</option>
+                                    <option value="3" @if ($product->weights == 3) selected @endif
+                                        >-</option>
                                 </select>
                             </div>
 
@@ -128,9 +141,6 @@
                             </div>
 
                             <div class="field-radation">
-                                <p>
-                                    次要圖片排序
-                                </p>
                             </div>
 
                             <div class="field-date" style="display: flex;direction:column; ">
@@ -151,11 +161,7 @@
                                 </div>
                                 <!-- 排序 -->
                                 <div class="image-gradation">
-                                    <select name="gggg">
-                                        @for ($i = 1; $i < $count + 1; $i++)
-                                            <option value="{{ $i }}">{{ $i }}</option>
-                                        @endfor
-                                    </select>
+                                   
                                 </div>
 
                                 <!-- 新增日期 -->

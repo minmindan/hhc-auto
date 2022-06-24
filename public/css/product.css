@@ -621,8 +621,8 @@ body main #product-container #equipment-section .equipment-content .right-sectio
 }
 
 body main #product-container #equipment-section .equipment-content .right-section .main-section .content .product-content .image-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -844,8 +844,8 @@ body main #product-container #software-section .software-content .right-section 
 }
 
 body main #product-container #software-section .software-content .right-section .main-section .content .product-content .image-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1067,8 +1067,8 @@ body main #product-container #parts-section .parts-content .right-section .main-
 }
 
 body main #product-container #parts-section .parts-content .right-section .main-section .content .product-content .image-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1290,8 +1290,8 @@ body main #product-container #consumables-section .consumables-content .right-se
 }
 
 body main #product-container #consumables-section .consumables-content .right-section .main-section .content .product-content .image-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1536,8 +1536,8 @@ body main #product-container #maintenance-section .maintenance-content .right-se
 }
 
 body main #product-container #maintenance-section .maintenance-content .right-section .main-section .content .product-content-fixed .image-box img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }

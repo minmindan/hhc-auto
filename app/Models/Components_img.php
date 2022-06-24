@@ -16,7 +16,7 @@ class Components_img extends Model
 {
     /**
      * The "type" of the auto-incrementing ID.
-     * 
+     *
      * @var string
      */
     protected $keyType = 'integer';
@@ -25,4 +25,9 @@ class Components_img extends Model
      * @var array
      */
     protected $fillable = ['created_at', 'updated_at', 'path', 'iid', 'weight'];
-}
+    public function product(){
+
+        return $this->BelongsTo(Components_product::class,'iid','id');
+
+    }
+    }
