@@ -30,7 +30,7 @@
                             <h1>{{ $subtitle ?? '' }}</h1>
                         </div>
                         <!-- 頁面名稱 -->
-                        <div class="sub-tittle">
+                        <div id="banner" class="sub-tittle">
                             <p>產品介紹／{{ $title ?? '' }}</p>
                         </div>
                     </div>
