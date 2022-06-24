@@ -1,24 +1,24 @@
 @extends('template.backnav')
 @section('title')
-    About Us
+    興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/product_consumables.css') }}">
     <style>
-
         .produt-star {
             display: flex;
             align-items: start;
-            justify-content:flex-start;
+            justify-content: flex-start;
             width: 93px !important;
         }
-        .produt-star input{
+
+        .produt-star input {
             border: 0px;
             width: auto !important;
         }
 
-        .image-gradation{
+        .image-gradation {
             min-width: 94px !important;
             padding-left: 10px;
         }
@@ -58,39 +58,32 @@
                         </div>
                     </div>
                 </div>
-              <!-- 內容 -->
-              <div class="content-section">
-                @foreach ($product as $product)
-                    <form id="product_card{{ $product->id }}"
-                        action="/product-manage/consumables/edit/{{ $product->id }}" method="post">
-                    @csrf
-                    <!-- 圖片 -->
-                        <div class="content-img">
-                            <img src="{{ $product->primary_img ??''}}" alt="" />
-                        </div>
-                        <!-- 產品名稱 -->
-                        <div class="product-name">
-                            <input value="{{ $product->product_name ??''}}" type="text" disabled>
-                        </div>
-                        <!-- 排序 -->
-                        <div class="image-gradation">
-                            <select name="" id="" disabled="disabled">
-                                <option value="{{$product->weights}}">
-                                    @if ($product->weights == 1 )
-                                    1
-                                    @elseif ($product->weights == 2)
-                                    2
-                                    @else
-                                    -
-                                    @endif
-                                </option>
-                            </select>
-                        </div>
-                        <!-- 主打產品 -->
-                        <div class="produt-star">
-                            <input  type="text"
-                            value=" @if ($product->primary == 1 )
-                            主打商品1
+                <!-- 內容 -->
+                <div class="content-section">
+                    @foreach ($product as $product)
+                        <form id="product_card{{ $product->id }}"
+                            action="/product-manage/consumables/edit/{{ $product->id }}" method="post">
+                            @csrf
+                            <!-- 圖片 -->
+                            <div class="content-img">
+                                <img src="{{ $product->primary_img ?? '' }}" alt="" />
+                            </div>
+                            <!-- 產品名稱 -->
+                            <div class="product-name">
+                                <input value="{{ $product->product_name ?? '' }}" type="text" disabled>
+                            </div>
+                            <!-- 排序 -->
+                            <div class="image-gradation">
+                                <select name="" id="" disabled="disabled">
+                                    <option value="0">-</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                            <!-- 主打產品 -->
+                            <div class="produt-star">
+                                <input type="text"
+                                    value=" @if ($product->primary == 1) 主打商品1
                          @elseif ($product->primary == 2)
                             主打商品2
                          @elseif ($product->primary == 3)
@@ -100,51 +93,50 @@
                          @elseif ($product->primary == 5)
                             主打商品5
                          @elseif ($product->primary == 6)
-                            不是主打商品
-                          @endif" disabled />
+                            不是主打商品 @endif"
+                                    disabled />
 
-                        </div>
-                        <!-- 功能按鈕 -->
-                        <div class="function-button">
-                            <button type="submit">編輯</button>
-                            <button onclick="delete_img({{ $product->id ??''}})" type="button">刪除</button>
+                            </div>
+                            <!-- 功能按鈕 -->
+                            <div class="function-button">
+                                <button>編輯</button>
+                                <button id="deletebtn" onclick="delete_img({{ $product->id ?? '' }})"
+                                    type="button">刪除</button>
+                            </div>
+                        </form>
+                    @endforeach
+
+
+                    <form>
+                        <!-- 圖片 -->
+                        <div class="add-img">
+                            <a href="/product-manage/consumables/create">
+                                <img src="{{ asset('image/product_create/add_gray_img.png') ?? '' }}" alt="" />
+                            </a>
                         </div>
                     </form>
-                @endforeach
-
-
-                <form>
-                    <!-- 圖片 -->
-                    <div class="add-img">
-                        <a href="/product-manage/consumables/create">
-                            <img src="{{ asset('image/product_create/add_gray_img.png') ??''}}" alt="" />
-                        </a>
-                    </div>
-                </form>
-            </div>
+                </div>
             </div>
         </div>
     </main>
 @endsection
 @section('js')
-<script>
+    <script>
+        function delete_img(id) {
+            if (confirm('是否要刪除') == true) {
+                let formData = new FormData();
+                formData.append('_token', '{{ csrf_token() ?? '' }}');
 
 
-    function delete_img(id) {
-
-        let formData = new FormData();
-        // formData.append('_method', 'delete');
-        formData.append('_token', '{{ csrf_token() ?? '' }}');
-
-
-        fetch('/product-manage/consumables/delete/' + id, {
-                method: 'POST',
-                body: formData
-            })
-            .then(function(response) {
-                let element = document.querySelector('#product_card' + id)
-                element.parentNode.removeChild(element);
-            })
-    }
-</script>
+                fetch('/product-manage/consumables/delete/' + id, {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(function(response) {
+                        let element = document.querySelector('#product_card' + id)
+                        element.parentNode.removeChild(element);
+                    })
+            }
+        }
+    </script>
 @endsection

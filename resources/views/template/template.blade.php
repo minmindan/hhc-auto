@@ -8,6 +8,8 @@
     <title>
         @yield('pagetitle' ?? '')
     </title>
+    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
     <meta name="keywords" content="興和川自動化,半導體封裝,工業4.0,半導體設備,自動化生產,履歷管理">
     <meta name="description" content="半導體封裝業界經歷了崛起，成長等趨勢轉變後，接下來面臨著工業4.0的需求與挑戰，需要更加智能化的自動化生產來做量產的履歷管理。
 興和川自動化有限公司由一群在業界耕耘了20年以上的有志者來提供更專業，高價值的服務，幫助客戶增加競爭力。對於半導體上片Fasford設備更有著service20年以上的經驗。
@@ -104,7 +106,7 @@
             </div>
         </div>
         <div id="bar">
-            <a href="/hhc-auto">
+            <a href="/">
             <div id="logo">
                 <img id="minilogo" src="{{ asset('image/nav/blue_logo_mini.png') }}" alt="">
                 <img id="biglogo" src="{{ asset('image/nav/blue_logo.png') }}" alt="">
@@ -192,10 +194,10 @@
                 </div>
             </div>
             <div class="footer-btn">
-                <h1><a href="/termsofservice">網站使用條款</a></h1>
+                <h1><a target="_blank" href="/termsofservice">網站使用條款</a></h1>
             </div>
             <div class="footer-btn">
-                <h1><a href="/privacypolic">隱私權政策</a></h1>
+                <h1><a target="_blank" href="/privacypolic">隱私權政策</a></h1>
             </div>
         </div>
     </footer>
@@ -218,12 +220,13 @@
     // show(), false;
     navin();
     function navin() {
-        // var windowtop = document.documentElement.scrollTop; 問題待解決
-        var windowtop = document.body.scrollTop;
-        // console.log(windowtop);
-        // console.log(banner.clientHeight);
+        var windowtop = document.documentElement.scrollTop; //問題待解決
+        // var windowtop = document.body.scrollTop;
+        console.log(windowtop);
+        console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
             if (windowtop > 100) {
+                console.log('123');
                 subnav.classList.add("none")
                 biglogo.classList.add('none')
             } else {

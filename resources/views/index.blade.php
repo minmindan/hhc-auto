@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HHC-AUTO</title>
+    <title>興和川自動化有限公司</title>
+    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
     <meta name="keywords" content="興和川自動化,半導體封裝,工業4.0,半導體設備,自動化生產,履歷管理">
     <meta name="description"
         content="半導體封裝業界經歷了崛起，成長等趨勢轉變後，接下來面臨著工業4.0的需求與挑戰，需要更加智能化的自動化生產來做量產的履歷管理。
@@ -146,18 +148,22 @@
                 margin-bottom: 20px;
             }
         }
-        nav a{
+
+        nav a {
             color: white;
             text-decoration: none;
         }
-        nav a:visited{
+
+        nav a:visited {
             color: white;
         }
-        a{
+
+        a {
             color: white;
             text-decoration: none;
         }
-        a:visited{
+
+        a:visited {
             color: white;
         }
     </style>
@@ -178,20 +184,28 @@
                     <p><a href="/aboutus">關於我們</a></p>
                     <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
-                        <li><a href="/aboutus">經營理念</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li><a href="/aboutus">公司沿革</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li><a href="/aboutus">公司簡介</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
+                        <li><a href="/aboutus">經營理念</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="/aboutus">公司沿革</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="/aboutus">公司簡介</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
                     </ul>
                 </div>
                 <div id="focus-box">
                     <p><a href="/product">產品介紹</a></p>
                     <h1><a href="/product">PRODUCT</a></h1>
                     <ul>
-                        <li><a href="">設備</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li><a href="">軟體</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li><a href="">部品零件</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li><a href="">耗材</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
-                        <li><a href="">維修</a>  <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></li>
+                        <li><a href="">設備</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="">軟體</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="">部品零件</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="">耗材</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="">維修</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
                     </ul>
                 </div>
                 <div id="focus-box">
@@ -254,20 +268,22 @@
                 <div class="hoverbox">
                     <div class="fons"><a href="/contact">聯絡我們</a></div>
                 </div>
-                <div class="hoverbox downlist">
-                    <div class="fons background"><a href="">後台管理</a></div>
-                    <img width="15px" style="margin-left:10px ;" src="{{ asset('image/nav/down_white.svg') }}"
-                        alt=""></i>
-                    <div class="list backendlist">
-                        <p><a style="color: #B4B4B4;" href="/topics-manage">內容編輯</a></p>
-                        <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p><a style="color: #B4B4B4;" href="">Banner</a></p>
-                        <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p><a style="color: #B4B4B4;" href="">產品編輯</a></p>
-                        <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p><a style="color: #B4B4B4;" href="/contact/list">表單回報</a></p>
+                @auth
+                    <div class="hoverbox downlist">
+                        <div class="fons background"><a href="">後台管理</a></div>
+                        <img width="15px" style="margin-left:10px ;" src="{{ asset('image/nav/down_white.svg') }}"
+                            alt=""></i>
+                        <div class="list backendlist">
+                            <p><a style="color: #B4B4B4;" href="/topics-manage">內容編輯</a></p>
+                            <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
+                            <p><a style="color: #B4B4B4;" href="">Banner</a></p>
+                            <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
+                            <p><a style="color: #B4B4B4;" href="">產品編輯</a></p>
+                            <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
+                            <p><a style="color: #B4B4B4;" href="/contact/list">表單回報</a></p>
+                        </div>
                     </div>
-                </div>
+                @endauth
             </div>
             <div id="bglist">
                 <div class="stuffing"></div>
@@ -288,9 +304,9 @@
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
                         src="{{ asset('image/index-video/index-banner-1.mp4') }}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                        src="{{asset('image/index-video/index-banner-2.mp4')}}"></video></div>
+                        src="{{ asset('image/index-video/index-banner-2.mp4') }}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                        src="{{asset('image/index-video/index-banner-2.mp4')}}"></video></div>
+                        src="{{ asset('image/index-video/index-banner-2.mp4') }}"></video></div>
             </div>
             <div class="swiper-pagination" style="z-index: 1;"></div>
         </div>
@@ -313,76 +329,79 @@
                         <div class="productbox">
 
 
-                                    {{-- <img src="./image/new/ma.png" alt=""> --}}
+                            {{-- <img src="./image/new/ma.png" alt=""> --}}
 
 
-                                @foreach ($equipment as $eq)
+                            @foreach ($equipment as $eq)
                                 @if ($eq->primary == 1)
-                                <div class="proimg">
-                                <img src="{{$eq->primary_img}}" alt="">
-                                </div>
-                                <div class="product-types">
-                                <h1 class="product-types-title">{{$eq->product_name}}</h1>
-                                <div class="product-types-model">{{$eq->model}}</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                                </div>
+                                    <div class="proimg">
+                                        <img src="{{ $eq->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $eq->product_name }}</h1>
+                                        <div class="product-types-model">{{ $eq->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
                                 @endif
-                                @endforeach
-                                @foreach ($software as $so)
+                            @endforeach
+                            @foreach ($software as $so)
                                 @if ($so->primary == 1)
-                                <div class="proimg">
-                                <img src="{{$so->primary_img}}" alt="">
-                                </div>
-                                <div class="product-types">
-                                <h1 class="product-types-title">{{$so->product_name}}</h1>
-                                <div class="product-types-model">{{$so->model}}</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                                </div>
+                                    <div class="proimg">
+                                        <img src="{{ $so->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $so->product_name }}</h1>
+                                        <div class="product-types-model">{{ $so->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
                                 @endif
-                                @endforeach
-                                @foreach ($components as $cm)
+                            @endforeach
+                            @foreach ($components as $cm)
                                 @if ($cm->primary == 1)
-                                <div class="proimg">
-                                <img src="{{$cm->primary_img}}" alt="">
-                                </div>
-                                <div class="product-types">
-                                <h1 class="product-types-title">{{$cm->product_name}}</h1>
-                                <div class="product-types-model">{{$cm->model}}</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                                </div>
+                                    <div class="proimg">
+                                        <img src="{{ $cm->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cm->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cm->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
                                 @endif
-                                @endforeach
-                                @foreach ($consumables as $cn)
+                            @endforeach
+                            @foreach ($consumables as $cn)
                                 @if ($cn->primary == 1)
-                                <div class="proimg">
-                                <img src="{{$cn->primary_img}}" alt="">
-                                </div>
-                                <div class="product-types">
-                                <h1 class="product-types-title">{{$cn->product_name}}</h1>
-                                <div class="product-types-model">{{$cn->model}}</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                                </div>
+                                    <div class="proimg">
+                                        <img src="{{ $cn->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cn->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cn->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
                                 @endif
-                                @endforeach
-                                @foreach ($maintenance as $ma)
+                            @endforeach
+                            @foreach ($maintenance as $ma)
                                 @if ($ma->primary == 1)
-                                <div class="proimg">
-                                <img src="{{$ma->primary_img}}" alt="">
-                                </div>
-                                <div class="product-types">
-                                <h1 class="product-types-title">{{$ma->product_name}}</h1>
-                                <div class="product-types-model">{{$ma->model}}</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                                </div>
+                                    <div class="proimg">
+                                        <img src="{{ $ma->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $ma->product_name }}</h1>
+                                        <div class="product-types-model">{{ $ma->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
                                 @endif
-
-
-                                @endforeach
+                            @endforeach
 
 
 
@@ -392,8 +411,7 @@
 
 
 
-{{--
-                            <div class="product-types">
+                            {{-- <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
                                 <div class="product-types-more">MORE　　<img
@@ -404,69 +422,74 @@
                     <div class="swiper-slide productmain">
                         <div class="productbox">
                             @foreach ($equipment as $eq)
-                            @if ($eq->primary == 2)
-                            <div class="proimg">
-                            <img src="{{$eq->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
-                            <div class="product-types-model">{{$eq->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($eq->primary == 2)
+                                    <div class="proimg">
+                                        <img src="{{ $eq->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $eq->product_name }}</h1>
+                                        <div class="product-types-model">{{ $eq->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($software as $so)
-                            @if ($so->primary == 2)
-                            <div class="proimg">
-                            <img src="{{$so->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$so->product_name}}</h1>
-                            <div class="product-types-model">{{$so->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($so->primary == 2)
+                                    <div class="proimg">
+                                        <img src="{{ $so->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $so->product_name }}</h1>
+                                        <div class="product-types-model">{{ $so->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($components as $cm)
-                            @if ($cm->primary == 2)
-                            <div class="proimg">
-                            <img src="{{$cm->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
-                            <div class="product-types-model">{{$cm->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cm->primary == 2)
+                                    <div class="proimg">
+                                        <img src="{{ $cm->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cm->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cm->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($consumables as $cn)
-                            @if ($cn->primary == 2)
-                            <div class="proimg">
-                            <img src="{{$cn->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
-                            <div class="product-types-model">{{$cn->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cn->primary == 2)
+                                    <div class="proimg">
+                                        <img src="{{ $cn->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cn->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cn->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($maintenance as $ma)
-                            @if ($ma->primary == 2)
-                            <div class="proimg">
-                            <img src="{{$ma->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
-                            <div class="product-types-model">{{$ma->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($ma->primary == 2)
+                                    <div class="proimg">
+                                        <img src="{{ $ma->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $ma->product_name }}</h1>
+                                        <div class="product-types-model">{{ $ma->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
 
 
@@ -477,69 +500,74 @@
                     <div class="swiper-slide productmain">
                         <div class="productbox">
                             @foreach ($equipment as $eq)
-                            @if ($eq->primary == 3)
-                            <div class="proimg">
-                            <img src="{{$eq->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
-                            <div class="product-types-model">{{$eq->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($eq->primary == 3)
+                                    <div class="proimg">
+                                        <img src="{{ $eq->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $eq->product_name }}</h1>
+                                        <div class="product-types-model">{{ $eq->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($software as $so)
-                            @if ($so->primary == 3)
-                            <div class="proimg">
-                            <img src="{{$so->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$so->product_name}}</h1>
-                            <div class="product-types-model">{{$so->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($so->primary == 3)
+                                    <div class="proimg">
+                                        <img src="{{ $so->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $so->product_name }}</h1>
+                                        <div class="product-types-model">{{ $so->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($components as $cm)
-                            @if ($cm->primary == 3)
-                            <div class="proimg">
-                            <img src="{{$cm->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
-                            <div class="product-types-model">{{$cm->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cm->primary == 3)
+                                    <div class="proimg">
+                                        <img src="{{ $cm->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cm->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cm->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($consumables as $cn)
-                            @if ($cn->primary == 3)
-                            <div class="proimg">
-                            <img src="{{$cn->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
-                            <div class="product-types-model">{{$cn->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cn->primary == 3)
+                                    <div class="proimg">
+                                        <img src="{{ $cn->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cn->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cn->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($maintenance as $ma)
-                            @if ($ma->primary == 3)
-                            <div class="proimg">
-                            <img src="{{$ma->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
-                            <div class="product-types-model">{{$ma->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($ma->primary == 3)
+                                    <div class="proimg">
+                                        <img src="{{ $ma->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $ma->product_name }}</h1>
+                                        <div class="product-types-model">{{ $ma->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
 
 
@@ -550,69 +578,74 @@
                     <div class="swiper-slide productmain">
                         <div class="productbox">
                             @foreach ($equipment as $eq)
-                            @if ($eq->primary == 4)
-                            <div class="proimg">
-                            <img src="{{$eq->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
-                            <div class="product-types-model">{{$eq->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($eq->primary == 4)
+                                    <div class="proimg">
+                                        <img src="{{ $eq->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $eq->product_name }}</h1>
+                                        <div class="product-types-model">{{ $eq->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($software as $so)
-                            @if ($so->primary == 4)
-                            <div class="proimg">
-                            <img src="{{$so->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$so->product_name}}</h1>
-                            <div class="product-types-model">{{$so->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($so->primary == 4)
+                                    <div class="proimg">
+                                        <img src="{{ $so->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $so->product_name }}</h1>
+                                        <div class="product-types-model">{{ $so->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($components as $cm)
-                            @if ($cm->primary == 4)
-                            <div class="proimg">
-                            <img src="{{$cm->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
-                            <div class="product-types-model">{{$cm->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cm->primary == 4)
+                                    <div class="proimg">
+                                        <img src="{{ $cm->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cm->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cm->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($consumables as $cn)
-                            @if ($cn->primary == 4)
-                            <div class="proimg">
-                            <img src="{{$cn->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
-                            <div class="product-types-model">{{$cn->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cn->primary == 4)
+                                    <div class="proimg">
+                                        <img src="{{ $cn->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cn->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cn->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($maintenance as $ma)
-                            @if ($ma->primary == 4)
-                            <div class="proimg">
-                            <img src="{{$ma->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
-                            <div class="product-types-model">{{$ma->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($ma->primary == 4)
+                                    <div class="proimg">
+                                        <img src="{{ $ma->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $ma->product_name }}</h1>
+                                        <div class="product-types-model">{{ $ma->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
 
 
@@ -623,69 +656,74 @@
                     <div class="swiper-slide productmain">
                         <div class="productbox">
                             @foreach ($equipment as $eq)
-                            @if ($eq->primary == 5)
-                            <div class="proimg">
-                            <img src="{{$eq->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$eq->product_name}}</h1>
-                            <div class="product-types-model">{{$eq->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($eq->primary == 5)
+                                    <div class="proimg">
+                                        <img src="{{ $eq->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $eq->product_name }}</h1>
+                                        <div class="product-types-model">{{ $eq->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($software as $so)
-                            @if ($so->primary == 5)
-                            <div class="proimg">
-                            <img src="{{$so->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$so->product_name}}</h1>
-                            <div class="product-types-model">{{$so->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($so->primary == 5)
+                                    <div class="proimg">
+                                        <img src="{{ $so->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $so->product_name }}</h1>
+                                        <div class="product-types-model">{{ $so->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($components as $cm)
-                            @if ($cm->primary == 5)
-                            <div class="proimg">
-                            <img src="{{$cm->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cm->product_name}}</h1>
-                            <div class="product-types-model">{{$cm->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cm->primary == 5)
+                                    <div class="proimg">
+                                        <img src="{{ $cm->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cm->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cm->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($consumables as $cn)
-                            @if ($cn->primary == 5)
-                            <div class="proimg">
-                            <img src="{{$cn->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$cn->product_name}}</h1>
-                            <div class="product-types-model">{{$cn->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($cn->primary == 5)
+                                    <div class="proimg">
+                                        <img src="{{ $cn->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $cn->product_name }}</h1>
+                                        <div class="product-types-model">{{ $cn->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
                             @foreach ($maintenance as $ma)
-                            @if ($ma->primary == 5)
-                            <div class="proimg">
-                            <img src="{{$ma->primary_img}}" alt="">
-                            </div>
-                            <div class="product-types">
-                            <h1 class="product-types-title">{{$ma->product_name}}</h1>
-                            <div class="product-types-model">{{$ma->model}}</div>
-                            <div class="product-types-more">MORE　　<img
-                                    src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div>
-                            @endif
+                                @if ($ma->primary == 5)
+                                    <div class="proimg">
+                                        <img src="{{ $ma->primary_img }}" alt="">
+                                    </div>
+                                    <div class="product-types">
+                                        <h1 class="product-types-title">{{ $ma->product_name }}</h1>
+                                        <div class="product-types-model">{{ $ma->model }}</div>
+                                        <div class="product-types-more">MORE　　<img
+                                                src="{{ asset('image/index-icon/more_right.svg') }}"
+                                                alt=""></div>
+                                    </div>
+                                @endif
                             @endforeach
 
 
@@ -712,7 +750,7 @@
                     <button>more　　<img class="btnimg" src="{{ asset('image/index-icon/more_right_white.svg') }}"
                             alt=""></button>
                 </div>
-                <img src="{{$abus[0]->img_path??'' }}" alt="">
+                <img src="{{ $abus[0]->img_path ?? '' }}" alt="">
             </div>
         </div>
         <!-- topics -->
@@ -722,30 +760,30 @@
             <div class="topicsmain">
 
                 <div class="topics">
-                    <p class="time">{{$datas[0]->time??''}}</p>
+                    <p class="time">{{ $datas[0]->time ?? '' }}</p>
                     <h4 class="topicsmain_title">
-                        {{$datas[0]->title??''}}
+                        {{ $datas[0]->title ?? '' }}
                     </h4>
                     <p class="topicsmain_content">
-                        {{$datas[0]->content??''}}
+                        {{ $datas[0]->content ?? '' }}
                     </p>
                 </div>
                 <div class="topics">
-                    <p class="time">{{$datas[1]->time??''}}</p>
+                    <p class="time">{{ $datas[1]->time ?? '' }}</p>
                     <h4 class="topicsmain_title">
-                        {{$datas[1]->title??''}}
+                        {{ $datas[1]->title ?? '' }}
                     </h4>
                     <p class="topicsmain_content">
-                        {{$datas[1]->content??''}}
+                        {{ $datas[1]->content ?? '' }}
                     </p>
                 </div>
                 <div class="topics">
-                    <p class="time">{{$datas[2]->time??''}}</p>
+                    <p class="time">{{ $datas[2]->time ?? '' }}</p>
                     <h4 class="topicsmain_title">
-                        {{$datas[2]->title??''}}
+                        {{ $datas[2]->title ?? '' }}
                     </h4>
                     <p class="topicsmain_content">
-                        {{$datas[2]->content??''}}
+                        {{ $datas[2]->content ?? '' }}
                     </p>
                 </div>
             </div>
@@ -756,9 +794,9 @@
             <p>合作客戶</p>
             <div class="com">
                 @foreach ($companys as $company)
-                <div class="com_img">
-                    <img src="{{asset($company->com_img)}}" alt="">
-                </div>
+                    <div class="com_img">
+                        <img src="{{ asset($company->com_img) }}" alt="">
+                    </div>
                 @endforeach
                 {{-- <div class="com_img">
                     <img src="./image/SVG_彩圖/南茂.svg" alt="">
@@ -837,11 +875,12 @@
     </div>
     <footer id="footer" class="none">
         <div id="footer-logo">
-            <img src="./image/1x/資產 1.png" alt="">
+            <img src="{{ asset('image/nav/white_logo.png') }}" alt="">
         </div>
         <div id="footer-main">
             <div class="footer-btn subaboutbtn" tabindex="0">
-                <h1 id="footeraboutus">關於我們 <img src="{{ asset('image/nav/down_white.svg') }}" alt=""></h1>
+                <h1 id="footeraboutus">關於我們 <img src="{{ asset('image/nav/down_white.svg') }}" alt="">
+                </h1>
                 <div class="footer-aboutlist">
                     <p><a href="/aboutus">經營理念</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -859,10 +898,10 @@
                 </div>
             </div>
             <div class="footer-btn">
-                <h1><a href="/termsofservice">網站使用條款</a></h1>
+                <h1><a target="_blank" href="/termsofservice">網站使用條款</a></h1>
             </div>
             <div class="footer-btn">
-                <h1><a href="/privacypolic">隱私權政策</a></h1>
+                <h1><a target="_blank" href="/privacypolic">隱私權政策</a></h1>
             </div>
         </div>
     </footer>

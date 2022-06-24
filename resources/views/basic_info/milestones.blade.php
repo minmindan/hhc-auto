@@ -1,6 +1,6 @@
 @extends('template.backnav')
 @section('title')
-    About Us
+興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/backaboutus.css') }}" />

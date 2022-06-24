@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 // 產品管理頁面
 // 設備 手建
-Route::prefix('/product-manage/equipment')->group(function () {
+Route::prefix('/product-manage/equipment')->middleware(['auth'])->group(function () {
     Route::get('/', [ProductManageController::class, 'equipment_index']); //總表
     Route::get('/create', [ProductManageController::class, 'equipment_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'equipment_store']); //儲存頁面
@@ -17,7 +17,7 @@ Route::prefix('/product-manage/equipment')->group(function () {
 });
 
 // 軟體 手建
-Route::prefix('/product-manage/software')->group(function () {
+Route::prefix('/product-manage/software')->middleware(['auth'])->group(function () {
     Route::get('/', [ProductManageController::class, 'software_index']); //總表
     Route::get('/create', [ProductManageController::class, 'software_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'software_store']); //儲存頁面
@@ -28,7 +28,7 @@ Route::prefix('/product-manage/software')->group(function () {
 });
 
 // 部品零件 手建
-Route::prefix('/product-manage/parts')->group(function () {
+Route::prefix('/product-manage/parts')->middleware(['auth'])->group(function () {
     Route::get('/', [ProductManageController::class, 'parts_index']); //總表
     Route::get('/create', [ProductManageController::class, 'parts_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'parts_store']); //儲存頁面
@@ -39,7 +39,7 @@ Route::prefix('/product-manage/parts')->group(function () {
 });
 
 // 耗材 手建
-Route::prefix('/product-manage/consumables')->group(function () {
+Route::prefix('/product-manage/consumables')->middleware(['auth'])->group(function () {
     Route::get('/', [ProductManageController::class, 'consumables_index']); //總表
     Route::get('/create', [ProductManageController::class, 'consumables_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'consumables_store']); //儲存頁面
@@ -50,7 +50,7 @@ Route::prefix('/product-manage/consumables')->group(function () {
 });
 
 // 維修 手建
-Route::prefix('/product-manage/maintenance')->group(function () {
+Route::prefix('/product-manage/maintenance')->middleware(['auth'])->group(function () {
     Route::get('/', [ProductManageController::class, 'maintenance_index']); //總表
     Route::get('/create', [ProductManageController::class, 'maintenance_create']); //新增頁面
     Route::post('/store', [ProductManageController::class, 'maintenance_store']); //儲存頁面

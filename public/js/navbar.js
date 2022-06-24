@@ -10,6 +10,7 @@ var stuffing = document.querySelectorAll('.stuffing');
 var fons = document.querySelectorAll('.fons');
 var downgray= document.querySelectorAll('.down_gray');
 var downwhite= document.querySelectorAll('.down_white');
+var subbar = document.getElementById('subnav')
 downwhite.forEach(white => {
     white.style.display='none';
 });
@@ -35,7 +36,7 @@ hoverbox.forEach(element => {
         stuffing[0].style.backgroundColor='white';
         stuffing[1].style.backgroundColor='white';
     });
-    nav.addEventListener('mouseleave', function () {
+    subbar.addEventListener('mouseleave', function () {
         nav.classList.remove('blue');
         fons.forEach(element => {
             element.style.color='#B4B4B4'

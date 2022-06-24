@@ -1,6 +1,6 @@
 @extends('template.backnav')
 @section('title')
-    About Us
+興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product_software.css') ??''}}" />
@@ -140,6 +140,7 @@
 
     function delete_img(id) {
 
+        if (confirm('是否要刪除') == true){
         let formData = new FormData();
         // formData.append('_method', 'delete');
         formData.append('_token', '{{ csrf_token() ?? '' }}');
@@ -153,6 +154,7 @@
                 let element = document.querySelector('#product_card' + id)
                 element.parentNode.removeChild(element);
             })
+        }
     }
 </script>
 @endsection
