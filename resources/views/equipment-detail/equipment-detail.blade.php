@@ -39,7 +39,6 @@
                         <div class="image-box">
                             <!-- 圖片 -->
                             <div class="product-img">
-                                <div class="image">
                                     <div class="swiper mySwiper">
                                         <div class="swiper-wrapper">
 
@@ -55,7 +54,6 @@
 
                                         </div>
                                     </div>
-                                </div>
                                 <!-- 產品介紹 -->
                                 <div class="product-introduction">
                                     <div class="intro-content">
