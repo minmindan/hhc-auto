@@ -220,13 +220,13 @@
     // show(), false;
     navin();
     function navin() {
-        var windowtop = document.documentElement.scrollTop; //問題待解決
-        // var windowtop = document.body.scrollTop;
+        var windowtop = document.documentElement.scrollTop;
+        var windowtop2 = document.body.scrollTop;
         console.log(windowtop);
+        console.log(windowtop2);
         console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
-            if (windowtop > 100) {
-                console.log('123');
+            if (windowtop > 100 || windowtop2 > 100) {
                 subnav.classList.add("none")
                 biglogo.classList.add('none')
             } else {
@@ -235,7 +235,7 @@
             }
         } else {
             main.style.margin='-150px 0 0 0'
-            if (windowtop > banner.clientHeight - 75) {
+            if (windowtop > banner.clientHeight - 75 || windowtop2 > banner.clientHeight - 75) {
                 whitelogo.classList.add('none');
                 minilogo.classList.add('block');
                 bgrlist[1].classList.add('bgblue');

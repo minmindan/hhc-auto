@@ -19,7 +19,7 @@
                             <h1>equipment</h1>
                         </div>
                         <!-- 頁面名稱 -->
-                        <div class="sub-tittle">
+                        <div id="banner" class="sub-tittle">
                             <p>產品介紹／設備</p>
                         </div>
                     </div>
