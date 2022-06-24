@@ -301,12 +301,16 @@
         </div>
         <div class="swiper banner swiper-no-swiping" style="width: 100%;height: calc(100vh + 5px) ;">
             <div class="swiper-wrapper swiper-no-swiping" style="width: 100%; height: 100%;">
+                @foreach ($banners as $banner)
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
+                    src="{{$banner->img_path}}"></video></div>
+                @endforeach
+                {{-- <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
                         src="{{ asset('image/index-video/index-banner-1.mp4') }}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
                         src="{{ asset('image/index-video/index-banner-2.mp4') }}"></video></div>
                 <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                        src="{{ asset('image/index-video/index-banner-2.mp4') }}"></video></div>
+                        src="{{ asset('image/index-video/index-banner-2.mp4') }}"></video></div> --}}
             </div>
             <div class="swiper-pagination" style="z-index: 1;"></div>
         </div>
