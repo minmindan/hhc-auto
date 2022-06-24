@@ -1,6 +1,6 @@
 @extends('template.backnav')
 @section('title')
-興和川自動化有限公司
+    興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/index_banner.css') }}" />
@@ -66,6 +66,10 @@
 
                             </form>
                         @endforeach
+
+                        <form class="tra_space" style="background-color:transparent;">
+                            <div class="content-card" style="background-color:transparent;"></div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -144,6 +148,17 @@
             <button>取消</button>
             </div>
             `
+        }
+    </script>
+    <script>
+        var child = document.querySelector('.content-manage')
+        var length = child.getElementsByTagName('form').length
+        var tra_space = document.querySelector('.tra_space')
+        if (length > 4) {
+            var child = document.querySelector('.content-manage')
+            var length = child.getElementsByTagName('form').length
+            var tra_space = document.querySelector('.tra_space')
+            tra_space.style.display="none";
         }
     </script>
 @endsection
