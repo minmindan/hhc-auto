@@ -773,7 +773,7 @@ class ProductManageController extends Controller
             $path = FilesController::imgUpload($request->product_img, 'repair');
             // 主要圖片
             // dd($path);
-            $product = Repair_product::create([
+            $product = Repair_product::orderby('id','desc')->take(1)->update([
             'product_name' => $request->product_name,
             'model' => $request->product_model,
             'primary' => $request->items,
