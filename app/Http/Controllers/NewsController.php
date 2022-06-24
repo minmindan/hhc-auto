@@ -15,12 +15,12 @@ class NewsController extends Controller
     //
 
     public function topics_index(){
-        $datas = News::orderby('id','desc')->take(3)->get();
+        $datas = News::orderBy('id','desc')->take(3)->get();
         return view ('basic_info.topics',compact('datas'));
     }
 
     public function topics_create(){
-        $datas = News::orderby('id','desc')->take(2)->get();
+        $datas = News::orderBy('id','desc')->take(2)->get();
         return view ('basic_info.topics_create',compact('datas'));
     }
     public function topics_store(Request $request){
@@ -36,7 +36,7 @@ class NewsController extends Controller
     public function topics_delete($id){
         $data = News::find($id);
         $data->delete();
-        $datas = News::orderby('id','desc')->take(3)->get();
+        $datas = News::orderBy('id','desc')->take(3)->get();
         return redirect ('/topics-manage');
         // $datas = News::find($id);
         // return view ('formbackstage.formbackstage' , compact('datas'));

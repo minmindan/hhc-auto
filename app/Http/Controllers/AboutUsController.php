@@ -7,7 +7,7 @@ class AboutUsController extends Controller
     //首頁
     public function index()
     {
-        return view('aboutus.aboutus');
+        return view('aboutUs.aboutUs');
     }
 
     // 新增頁

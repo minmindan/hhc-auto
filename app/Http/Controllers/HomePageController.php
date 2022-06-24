@@ -45,7 +45,7 @@ class HomePageController extends Controller
     public function aboutus()
     {
         $abus = Aboutus_banner::get();
-        return view('aboutus.aboutus', compact('abus'));
+        return view('aboutUs.aboutUs', compact('abus'));
     }
 
     public function product()

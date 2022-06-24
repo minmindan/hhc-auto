@@ -12,6 +12,18 @@
         text-decoration: none;
     }
 </style>
+<style>
+    .com .com_img{
+        position: relative !important;
+    }
+    .com .com_img .stop{
+        position: absolute !important;
+        top: 0 !important;
+        left: 35px !important;
+        z-index: 1 !important;
+    }
+
+</style>
 </head>
 
 @section('main')
@@ -31,11 +43,11 @@
             <div class="com">
                 @foreach ($datas as $data)
                     <div class="com_img">
-                        <div class="stop">
-                            <a class="stop_" href="/partner-manage/delete/{{$data->id}}">
+                        <a class="stop" href="/partner-manage/delete/{{$data->id}}">
+                            <div class="stop_">
                                 <div class="stop_"></div>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                         <img src="{{ asset($data->com_img) }}" alt="">
                     </div>
                 @endforeach
@@ -45,4 +57,6 @@
             </div>
         </form>
     </main>
+@endsection
+@section('js')
 @endsection

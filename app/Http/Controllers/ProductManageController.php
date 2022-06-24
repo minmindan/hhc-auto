@@ -83,7 +83,7 @@ class ProductManageController extends Controller
                 Equipment_img::Create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight' =>'-',
+
                 ]);
 
             }
@@ -106,7 +106,7 @@ class ProductManageController extends Controller
 
 
 
-        $imgs = equipment_img::orderby('weight', 'asc')->get();
+        $imgs = Equipment_img::orderby('weight', 'asc')->get();
         $count = Equipment_img::where('iid','=',$id)->count();
 
         return view('product_edit.equipment_edit', compact('product','count','imgs','equipment','equipment2','software','components','consumables','maintenance'));
@@ -140,7 +140,6 @@ class ProductManageController extends Controller
                 Equipment_img::create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight'=>'-',
                 ]);
             }
         }
@@ -295,8 +294,8 @@ class ProductManageController extends Controller
     {
 
 
-        $product = software_product::find($id);
-        $imgs = software_img::where('iid','=',$id)->get();
+        $product = Software_product::find($id);
+        $imgs = Software_img::where('iid','=',$id)->get();
 
 
         // 如果主要圖片有更新,套用新圖片
@@ -313,10 +312,9 @@ class ProductManageController extends Controller
         if ($request->hasfile('second_img')) {
             foreach ($request->second_img as $index => $element) {
                 $path = FilesController::imgUpload($element, 'software');
-                software_img::create([
+                Software_img::create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight'=>'-',
                 ]);
             }
         }
@@ -363,8 +361,8 @@ class ProductManageController extends Controller
     // 刪除頁
     public function software_delete($id)
     {
-        $main_img = software_product::find($id);
-        $other_imgs = software_img::where('iid', $id)->get();
+        $main_img = Software_product::find($id);
+        $other_imgs = Software_img::where('iid', $id)->get();
         foreach ($other_imgs as $key => $value) {
             FilesController::deleteUpload($value->path);
             $value->delete();
@@ -379,13 +377,13 @@ class ProductManageController extends Controller
 
     public function soft_sec_img($id){
 
-        $img = software_img::find($id);
+        $img = Software_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
 
 
 
-        $product = software_product::find($id);
+        $product = Software_product::find($id);
         $product_id = $product->id;
 
         return redirect('/product-manage/software/' . $product_id);
@@ -491,7 +489,6 @@ class ProductManageController extends Controller
                 Components_img::create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight'=>'-',
                 ]);
             }
         }
@@ -635,8 +632,8 @@ class ProductManageController extends Controller
     public function consumables_edit($id)
     {
 
-        $product = consumables_product::find($id);
-        $imgs = consumables_img::orderby('weight', 'asc')->get();
+        $product = Consumables_product::find($id);
+        $imgs = Consumables_img::orderby('weight', 'asc')->get();
         $equipment = Equipment_product::where('primary','<','6')->get();
         $software = Software_product::where('primary','<','6')->get();
         $components = Components_product::where('primary','<','6')->get();
@@ -645,7 +642,7 @@ class ProductManageController extends Controller
 
         $consumables2 = Consumables_product::where('weights','<','3')->get();
 
-        $count = consumables_img::where('iid','=',$id)->count();
+        $count = Consumables_img::where('iid','=',$id)->count();
 
         return view('product_edit.consumables_edit', compact('product','count','imgs','equipment','software','components','consumables','consumables2','maintenance'));
     }
@@ -654,8 +651,8 @@ class ProductManageController extends Controller
     public function consumables_update(Request $request, $id)
     {
 
-        $product = consumables_product::find($id);
-        $imgs = consumables_img::where('iid','=',$id)->get();
+        $product = Consumables_product::find($id);
+        $imgs = Consumables_img::where('iid','=',$id)->get();
 
 
         // 如果主要圖片有更新,套用新圖片
@@ -672,10 +669,9 @@ class ProductManageController extends Controller
         if ($request->hasfile('second_img')) {
             foreach ($request->second_img as $index => $element) {
                 $path = FilesController::imgUpload($element, 'consumables');
-                consumables_img::create([
+                Consumables_img::create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight'=>'-',
                 ]);
             }
         }
@@ -714,8 +710,8 @@ class ProductManageController extends Controller
     // 刪除頁
     public function consumables_delete($id)
     {
-        $main_img = consumables_product::find($id);
-        $other_imgs = consumables_img::where('iid', $id)->get();
+        $main_img = Consumables_product::find($id);
+        $other_imgs = Consumables_img::where('iid', $id)->get();
         foreach ($other_imgs as $key => $value) {
             FilesController::deleteUpload($value->path);
             $value->delete();
@@ -731,13 +727,13 @@ class ProductManageController extends Controller
 
     public function cons_sec_img($id){
 
-        $img = consumables_img::find($id);
+        $img = Consumables_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
 
 
 
-        $product = consumables_product::find($id);
+        $product = Consumables_product::find($id);
         $product_id = $product->id;
 
         return redirect('/product-manage/consumables/' . $product_id);
@@ -860,7 +856,6 @@ class ProductManageController extends Controller
                 Repair_img::create([
                     'path' => $path,
                     'iid' => $product->id,
-                    'weight'=>'-',
                 ]);
             }
         }

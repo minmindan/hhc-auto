@@ -68,7 +68,7 @@ class BannerManageController extends Controller
     {
         $abus_banner = Aboutus_banner::get();
 
-        return view('banner_manage.aboutus_banner',compact('abus_banner'));
+        return view('banner_manage.aboutUs_banner',compact('abus_banner'));
     }
 
     // 新增頁
@@ -86,7 +86,7 @@ class BannerManageController extends Controller
     {
         $abus_banner = Aboutus_banner::get();
 
-        return view('banner_manage.aboutus_banner', compact('abus_banner'));
+        return view('banner_manage.aboutUs_banner', compact('abus_banner'));
     }
 
     // 更新頁

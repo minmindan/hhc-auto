@@ -61,7 +61,7 @@ class ContactController extends Controller
         //     'img_path' => '',
         // ]);
 
-        // $form = Report::orderby('id', 'desc')->take(1)->get();
+        // $form = Report::B('id', 'desc')->take(1)->get();
 
 
         return view('Contact.contact2', compact('data','contact'));
@@ -71,7 +71,7 @@ class ContactController extends Controller
     // 測試Mail
     // public function contact_mail(){
     //     Mail::to('')->send(new OrderShipped);
-    //     $data = Report::orderby('id','desc')->take(1)->get();
+    //     $data = Report::B('id','desc')->take(1)->get();
     //     return view('Mail.mail', compact('data',));
     // }
 
@@ -120,7 +120,7 @@ class ContactController extends Controller
 
      // 刪除頁
      public function delete($id){
-        $form = Report::orderby('id', 'desc')->take(1)->delete($id);
+        $form = Report::orderBy('id', 'desc')->take(1)->delete($id);
 
         return view('Contact.contact1');
      }
