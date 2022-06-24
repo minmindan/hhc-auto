@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Controller;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,4 +73,16 @@ Route::prefix('/hhc-auto')->group(function (){
     Route::post('/update',[ContactController::class, 'update']); //更新頁面
 
     Route::get('/contact/delete/{id}',[ContactController::class, 'delete']); //刪除頁面
+});
+
+
+// 沒新增頁
+Route::prefix('/weneedtoaddmoreinfonmation')->middleware(['auth'])->group(function (){
+Route::get('/createtosql',[Controller::class,'createtosql']);
+Route::post('/cminfo',[Controller::class,'cminfo']);
+Route::post('/index_b',[Controller::class,'index_b']);
+Route::post('/abus_b',[Controller::class,'abus_b']);
+Route::post('/cont_b',[Controller::class,'cont_b']);
+Route::post('/poces_b',[Controller::class,'poces_b']);
+Route::post('/product_b',[Controller::class,'product_b']);
 });
