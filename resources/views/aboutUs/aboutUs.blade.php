@@ -2,7 +2,7 @@
 @section('title')
 興和川自動化有限公司
 @endsection
-    <link rel="stylesheet" href="{{ asset('css/aboutUs.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/aboutus.css') }}" />
     <!-- swiper -->
     {{-- <link
       rel="stylesheet"
