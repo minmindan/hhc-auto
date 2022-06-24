@@ -125,9 +125,10 @@ class HomePageController extends Controller
         $item = 'equipment';
         $product = Equipment_product::where('id', $id)->get();
         $product2 = Equipment_img::where('iid', $id)->get();
+        $product3 = Equipment_img::where('iid', $id)->get();
 
 
-        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2'));
+        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2','product3'));
     }
 
     public function softwaredetail($id)
@@ -137,8 +138,9 @@ class HomePageController extends Controller
         $item = 'software';
         $product = Software_product::where('id', $id)->get();
         $product2 = Software_img::where('iid', $id)->get();
+        $product3 = Software_img::where('iid', $id)->get();
 
-        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2'));
+        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2','product3'));
     }
 
     public function partsdetail($id)
@@ -148,9 +150,10 @@ class HomePageController extends Controller
         $item = 'parts';
         $product = Components_product::where('id', $id)->get();
         $product2 = Components_img::where('iid', $id)->get();
+        $product3 = Components_img::where('iid', $id)->get();
         dd($product2);
 
-        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2'));
+        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2','product3'));
     }
 
     public function consumablesdetail($id)
@@ -160,7 +163,8 @@ class HomePageController extends Controller
         $item = 'consumables';
         $product = Consumables_product::where('id', $id)->get();
         $product2 = Consumables_img::where('iid', $id)->get();
-        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2'));
+        $product3 = Consumables_img::where('iid', $id)->get();
+        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2','product3'));
     }
 
     public function maintenancedetail($id)
@@ -170,7 +174,8 @@ class HomePageController extends Controller
         $item = 'maintenance';
         $product = Repair_product::where('id', $id)->get();
         $product2 = Repair_img::where('iid', $id)->get();
-        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2'));
+        $product3 = Repair_img::where('iid', $id)->get();
+        return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2','product3'));
     }
 
     public function process()

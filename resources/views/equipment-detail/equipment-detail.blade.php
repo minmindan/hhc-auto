@@ -91,11 +91,15 @@
                             <div class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="{{ asset('image/equipment-detail/productimg.png') }}" alt="">
+                                        <img src="{{ $product[0]->primary_img ?? '' }}" alt="">
                                     </div>
+
+                                    @foreach ($product3 as $product3)
                                     <div class="swiper-slide">
-                                        <img src="{{ asset('image/equipment-detail/productimg.png') }}" alt="">
+                                        <img src="{{ $product3->path ?? '' }}" alt="">
                                     </div>
+                                    @endforeach
+
                                 </div>
                             </div>
                         </div>

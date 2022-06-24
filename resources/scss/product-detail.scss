@@ -86,36 +86,36 @@ main {
 
                             // background-color: #F7F8FA;
 
-                                .swiper {
-                                    width: 100%;
-                                    height: 100%;
-                                    margin-left: 150px;
+                            .swiper {
+                                width: 100%;
+                                height: 100%;
+                                margin-left: 150px;
 
 
-                                    @media (max-width:1350px) {
-                                        margin-left: 100px;
-                                    }
+                                @media (max-width:1350px) {
+                                    margin-left: 100px;
+                                }
 
-                                    @media (max-width:1250px) {
-                                        margin-left: 30px;
-                                    }
+                                @media (max-width:1250px) {
+                                    margin-left: 30px;
+                                }
 
-                                    .swiper-slide {
-                                        padding: 50px;
-                                        text-align: center;
-                                        font-size: 18px;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
+                                .swiper-slide {
+                                    padding: 50px;
+                                    text-align: center;
+                                    font-size: 18px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
 
-                                        img {
-                                            max-width: 100%;
-                                            max-height: 100%;
-                                            width: auto;
-                                            height: auto;
-                                        }
+                                    img {
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                        width: auto;
+                                        height: auto;
                                     }
                                 }
+                            }
 
                             .product-introduction {
                                 position: absolute;
@@ -137,7 +137,8 @@ main {
                                         width: 100%;
                                         display: flex;
                                         justify-content: flex-end;
-                                        h4{
+
+                                        h4 {
                                             font-size: 1.2rem;
                                             font-weight: 400;
                                         }
@@ -198,18 +199,12 @@ main {
             // 手機板
             .page-container-m {
                 display: none;
-                height: 75vh;
                 background-color: #F7F8FA;
-                padding-top: 50px;
+                padding-top: 150px;
                 width: 100%;
 
                 @include pad {
                     display: block;
-                    max-height: 827px;
-                }
-
-                @media (max-width:550px) {
-                    max-height: 568px;
                 }
 
                 // 上方區塊 標題與圖
@@ -245,66 +240,74 @@ main {
                         margin-top: 30px;
                         margin-left: 50px;
                         background-color: #F7F8FA;
-                        width: 668px;
-                        height: 504px;
+                        max-width: 668px;
+                        max-height: 504px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        min-height: 250px;
 
-                        @media (max-width:800px) {
-                            width: 500px;
-                            height: auto;
-                            margin-top: 0;
-                            margin-left: 60px;
-                            margin-bottom: 50px;
-                        }
-
-                        @media (max-width:680px) {
-                            width: 410px;
-                            height: auto;
-                            margin-top: 30px;
-                            margin-left: 60px;
-                            margin-bottom: 0px;
-                        }
-
-                        @media (max-width:550px) {
-                            width: 334px;
-                            height: auto;
-                            margin-top: 30px;
-                            margin-left: 60px;
-                        }
-
-
-                        @media (max-width:414px) {
-                            width: 221px;
-                            height: auto;
-                            margin-top: 50px;
-                            margin-left: 60px;
+                        @media (max-width:805px) {
+                            max-width: 100%;
+                            max-height: 100%;
                         }
 
 
                         .swiper {
                             width: 100%;
                             height: 100%;
-
-                            @media (max-width:992px) {
-                                background-color: gray;
-                                margin-right: 30px;
-                            }
-
-                            .swiper-slide {
-                                text-align: center;
-                                font-size: 18px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .swiper-wrapper {
+                                width: 100%;
                                 height: 100%;
-                                img {
+
+                                @media (max-width:805px) {
+                                    max-width: 557px;
+                                    max-height: 403px;
+                                }
+
+                                @media (max-width:600px) {
+                                    max-width: 443px;
+                                    max-height: 300px;
+                                }
+
+                                @media (max-width:500px) {
+                                    max-width: 334px;
+                                    max-height: 250px;
+                                }
+
+                                @media (max-width:414px) {
+                                    max-width: 264px;
+                                    max-height: 145px;
+                                }
+
+                                .swiper-slide {
+                                    text-align: center;
+                                    font-size: 18px;
                                     width: 100%;
                                     height: 100%;
-                                    max-width: 559px;
-                                    max-height: 334px;
-                                    object-fit: cover;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    @media (max-width:414px) {
+                                        max-width: 280px;
+                                        max-height: 170px;
+                                    }
+
+                                    img {
+                                        max-width: 559px;
+                                        max-height: 334px;
+                                        display: flex;
+                                        max-width: 100%;
+                                        max-height: 100%;
+                                        object-fit: cover;
+
+
+
+                                    }
                                 }
                             }
                         }
@@ -340,6 +343,7 @@ main {
 
                     .section-l {
                         margin-left: 15px;
+
                         .product-name {
                             h4 {
                                 font-size: 1.5rem;
