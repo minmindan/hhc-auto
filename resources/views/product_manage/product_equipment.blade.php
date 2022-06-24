@@ -130,9 +130,8 @@
 @section('js')
     <script>
 
-
         function delete_img(id) {
-
+            if (confirm('是否要刪除') == true){
             let formData = new FormData();
             // formData.append('_method', 'delete');
             formData.append('_token', '{{ csrf_token() ?? '' }}');
@@ -146,6 +145,7 @@
                     let element = document.querySelector('#product_card' + id)
                     element.parentNode.removeChild(element);
                 })
+            }
         }
     </script>
 @endsection

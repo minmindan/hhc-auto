@@ -772,8 +772,16 @@ class ProductManageController extends Controller
         if ($request->hasfile('product_img')) {
             $path = FilesController::imgUpload($request->product_img, 'repair');
             // 主要圖片
+            // dd($path);
             $product = Repair_product::create([
-                'primary_img' => $path,
+            'product_name' => $request->product_name,
+            'model' => $request->product_model,
+            'primary' => $request->items,
+            'weights' => 0,
+            'standard' => $request->standard,
+            'feature' => $request->feature,
+            'illustrate' => $request->illustrate,
+            'primary_img' => $path,
             ]);
         }
 
