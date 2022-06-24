@@ -276,9 +276,9 @@
                         <div class="list backendlist">
                             <p><a style="color: #B4B4B4;" href="/topics-manage">內容編輯</a></p>
                             <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                            <p><a style="color: #B4B4B4;" href="">Banner</a></p>
+                            <p><a style="color: #B4B4B4;" href="/banner-manage/homepage">Banner</a></p>
                             <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                            <p><a style="color: #B4B4B4;" href="">產品編輯</a></p>
+                            <p><a style="color: #B4B4B4;" href="/product-manage/equipment">產品編輯</a></p>
                             <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
                             <p><a style="color: #B4B4B4;" href="/contact/list">表單回報</a></p>
                         </div>
