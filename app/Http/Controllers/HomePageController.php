@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Models\company;
 use App\Models\profile;
+use App\Models\Index_banner;
 use App\Models\Aboutus_banner;
 use App\Models\Contact_banner;
 use App\Models\Process_banner;
@@ -37,8 +38,8 @@ class HomePageController extends Controller
         $components = Components_product::where('primary', '<', '6')->get();
         $consumables = Consumables_product::where('primary', '<', '6')->get();
         $maintenance = Repair_product::where('primary', '<', '6')->get();
-
-        return view('index', compact('abus', 'datas', 'companys', 'profile', 'equipment', 'software', 'components', 'consumables', 'maintenance'));
+        $banners = Index_banner::get();
+        return view('index', compact('abus', 'datas', 'companys', 'profile', 'equipment', 'software', 'components', 'consumables', 'maintenance','banners'));
     }
 
     public function aboutus()
