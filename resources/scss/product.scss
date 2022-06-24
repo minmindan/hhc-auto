@@ -406,10 +406,13 @@ body {
 
                         @include mobile {
                             margin-right: 40px;
+                            min-width: 80px;
+
                         }
 
                         @media (max-width:550px) {
                             margin-right: 20px;
+                            min-width: 80px;
                         }
 
                         .white-space {
@@ -578,6 +581,7 @@ body {
                     .left-section {
                         margin-right: 150px;
                         width: 100%;
+                            min-width: 80px;
 
                         @include pad {
                             margin-right: 100px;
@@ -757,6 +761,7 @@ body {
                     .left-section {
                         margin-right: 150px;
                         width: 100%;
+                            min-width: 80px;
 
                         @include pad {
                             margin-right: 100px;
@@ -936,6 +941,7 @@ body {
                     .left-section {
                         margin-right: 150px;
                         width: 100%;
+                            min-width: 80px;
 
                         @include pad {
                             margin-right: 100px;
@@ -1115,6 +1121,7 @@ body {
                     .left-section {
                         margin-right: 150px;
                         width: 100%;
+                            min-width: 80px;
 
                         @include pad {
                             margin-right: 100px;

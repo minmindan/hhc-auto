@@ -106,7 +106,7 @@ class ProductManageController extends Controller
 
 
 
-        $imgs = Equipment_img::orderby('weight', 'asc')->get();
+        $imgs = Equipment_img::orderBy('weight', 'asc')->get();
         $count = Equipment_img::where('iid','=',$id)->count();
 
         return view('product_edit.equipment_edit', compact('product','count','imgs','equipment','equipment2','software','components','consumables','maintenance'));
@@ -273,7 +273,7 @@ class ProductManageController extends Controller
     public function software_edit($id)
     {
         $product = Software_product::find($id);
-        $imgs = Software_img::orderby('weight', 'asc')->get();
+        $imgs = Software_img::orderBy('weight', 'asc')->get();
 
         $equipment = Equipment_product::where('primary','<','6')->get();
         $software = Software_product::where('primary','<','6')->get();
@@ -451,7 +451,7 @@ class ProductManageController extends Controller
     public function parts_edit($id)
     {
         $product = Components_product::find($id);
-        $imgs = Components_img::orderby('weight', 'asc')->get();
+        $imgs = Components_img::orderBy('weight', 'asc')->get();
 
         $equipment = Equipment_product::where('primary','<','6')->get();
         $software = Software_product::where('primary','<','6')->get();
@@ -633,7 +633,7 @@ class ProductManageController extends Controller
     {
 
         $product = Consumables_product::find($id);
-        $imgs = Consumables_img::orderby('weight', 'asc')->get();
+        $imgs = Consumables_img::orderBy('weight', 'asc')->get();
         $equipment = Equipment_product::where('primary','<','6')->get();
         $software = Software_product::where('primary','<','6')->get();
         $components = Components_product::where('primary','<','6')->get();
@@ -783,7 +783,7 @@ class ProductManageController extends Controller
             $path = FilesController::imgUpload($request->product_img, 'repair');
             // 主要圖片
             // dd($path);
-            $product = Repair_product::orderby('id','desc')->take(1)->update([
+            $product = Repair_product::orderBy('id','desc')->take(1)->update([
             'product_name' => $request->product_name,
             'model' => $request->product_model,
             'primary' => $request->items,
@@ -816,7 +816,7 @@ class ProductManageController extends Controller
     public function maintenance_edit($id)
     {
         $product =  Repair_product::find($id);
-        $imgs =  Repair_img::orderby('weight', 'asc')->get();
+        $imgs =  Repair_img::orderBy('weight', 'asc')->get();
 
         $equipment = Equipment_product::where('primary','<','6')->get();
         $software = Software_product::where('primary','<','6')->get();

@@ -30,7 +30,7 @@ class HomePageController extends Controller
         // $profile = profile::get();
         $companys = company::get();
         $abus = Aboutus_banner::get();
-        $datas = News::orderby('id', 'desc')->take(3)->get();
+        $datas = News::orderBy('id', 'desc')->take(3)->get();
 
         // 新增圖片測試
         $equipment = Equipment_product::where('primary', '<', '6')->get();
@@ -56,7 +56,7 @@ class HomePageController extends Controller
         $software = Software_product::orderBy('weights', 'asc')->take(2)->get();
         $components = Components_product::orderBy('weights', 'asc')->take(2)->get();
         $consumables = Consumables_product::orderBy('weights', 'asc')->take(2)->get();
-        $maintenance = Repair_product::orderBy('weights', 'asc')->take(2)->get();
+        $maintenance = Repair_product::orderBy('weights', 'asc')->take(1)->get();
 
         $product = Product_banner::get();
         return view('equipment.product', compact('product', 'equipment', 'software', 'components', 'consumables', 'maintenance'));
@@ -236,7 +236,7 @@ class HomePageController extends Controller
         //     'img_path' => '',
         // ]);
 
-        // $form = Report::orderby('id', 'desc')->take(1)->get();
+        // $form = Report::orderBy('id', 'desc')->take(1)->get();
 
         return view('Contact.contact2', compact('data'));
     }
