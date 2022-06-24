@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\company;
-use App\Models\profile;
+use App\Models\Profile;
 use App\Models\Index_banner;
 use App\Models\Aboutus_banner;
 use App\Models\Contact_banner;
@@ -27,7 +27,9 @@ class HomePageController extends Controller
     //首頁
     public function index()
     {
-        $profile = profile::get();
+        $profile = Profile::get();
+
+
         $companys = company::get();
         $abus = Aboutus_banner::get();
         $datas = News::orderby('id', 'desc')->take(3)->get();

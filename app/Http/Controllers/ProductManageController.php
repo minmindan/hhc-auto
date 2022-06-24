@@ -55,6 +55,7 @@ class ProductManageController extends Controller
     public function equipment_store(Request $request)
     {
 
+
         // dd($request->all());
 
         $path = FilesController::imgUpload($request->product_img, 'equipment');
@@ -72,16 +73,19 @@ class ProductManageController extends Controller
             'illustrate' => $request->illustrate,
         ]);
 
+
         //次要圖片
+
         if ($request->hasfile('second_img')) {
             foreach ($request->second_img as $index => $element) {
-                $path = FilesController::imgUpload($element, 'equipment');
 
+                $path = FilesController::imgUpload($element, 'equipment');
                 Equipment_img::Create([
                     'path' => $path,
                     'iid' => $product->id,
                     'weight' =>'-',
                 ]);
+
             }
         }
 

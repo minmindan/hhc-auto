@@ -231,7 +231,7 @@
 
 
                                 <li>
-                                    <input value="6" type="radio" name="items" id="items6" />
+                                    <input value="6" type="radio" name="items" id="items6"  checked/>
                                     <label for="items6">不是主打商品</label>
                                 </li>
 
@@ -240,12 +240,12 @@
                         <!-- 產品名稱 -->
                         <div class="form-input">
                             <p>產品名稱</p>
-                            <input name="product_name" type="text" />
+                            <input name="product_name" type="text" required="required"/>
                         </div>
                         <!-- 產品款號 -->
                         <div class="form-input">
                             <p>產品款號</p>
-                            <input name="product_model" type="text" />
+                            <input name="product_model" type="text" required="required"/>
                         </div>
                         <!-- 產品規格 -->
                         <div class="form-input">

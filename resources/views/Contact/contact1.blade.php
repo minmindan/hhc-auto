@@ -117,7 +117,7 @@
                         </div>
                         <div class="company-name form-field">
                             <label>您的公司名稱/個人</label>
-                            <input name="company" type="text" value="{{ $data['company'] ?? '' }}" />
+                            <input name="company" type="text" value="{{ $data['company'] ?? '' }}" required="required"/>
                         </div>
                         <div class="appellation form-field">
                             <label for="text">職稱</label>
@@ -125,24 +125,24 @@
                         </div>
                         <div class="youname form-field">
                             <label>姓名</label>
-                            <input name="name" type="text" value="{{ $data['name'] ?? '' }}" />
+                            <input name="name" type="text" value="{{ $data['name'] ?? '' }}" required="required"/>
                         </div>
                         <div class="tel-number form-field">
                             <label>電話號碼</label>
-                            <input name="tel" type="text" value="{{ $data['phone'] ?? '' }}" />
+                            <input name="tel" type="text" value="{{ $data['phone'] ?? '' }}" required="required"/>
                         </div>
                         <div class="email-address form-field">
                             <label>電子郵件</label>
-                            <input name="email" type="text" value="{{ $data['address'] ?? '' }}" />
+                            <input name="email" type="text" value="{{ $data['address'] ?? '' }}" required="required"/>
                         </div>
                         <div class="demand form-field">
                             <label>需求說明</label>
-                            <textarea name="demand" id="" cols="30" rows="10">{{ $data['demand'] ?? '' }}</textarea>
+                            <textarea required="required" name="demand" id="" cols="30" rows="10">{{ $data['demand'] ?? '' }}</textarea>
                         </div>
                     </div>
                     <!-- 隱私權政策 -->
                     <div class="privacy-policy">
-                        <input id="privacy-policy" name="privacy" type="checkbox" />
+                        <input required="required" id="privacy-policy" name="privacy" type="checkbox" />
                         <label for="privacy-policy"><a style="color: black;" target="_blank" href="/privacypolic">隱私權政策</a></label>
                     </div>
                     <!-- 表單按鈕 -->
