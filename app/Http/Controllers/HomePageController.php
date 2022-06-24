@@ -27,9 +27,7 @@ class HomePageController extends Controller
     //首頁
     public function index()
     {
-        $profile = Profile::get();
-
-
+        // $profile = profile::get();
         $companys = company::get();
         $abus = Aboutus_banner::get();
         $datas = News::orderby('id', 'desc')->take(3)->get();
@@ -41,7 +39,7 @@ class HomePageController extends Controller
         $consumables = Consumables_product::where('primary', '<', '6')->get();
         $maintenance = Repair_product::where('primary', '<', '6')->get();
         $banners = Index_banner::get();
-        return view('index', compact('abus', 'datas', 'companys', 'profile', 'equipment', 'software', 'components', 'consumables', 'maintenance','banners'));
+        return view('index', compact('abus', 'datas', 'companys', 'equipment', 'software', 'components', 'consumables', 'maintenance','banners'));
     }
 
     public function aboutus()
