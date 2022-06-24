@@ -441,6 +441,7 @@ body {
                         }
 
                         .white-space {
+                            min-width: 80px;
                             h1 {
                                 @include bgTextSet;
 

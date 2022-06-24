@@ -467,12 +467,14 @@ body main #product-container #equipment-section .equipment-content .left-section
 @media (max-width: 768px) {
   body main #product-container #equipment-section .equipment-content .left-section {
     margin-right: 40px;
+    min-width: 80px;
   }
 }
 
 @media (max-width: 550px) {
   body main #product-container #equipment-section .equipment-content .left-section {
     margin-right: 20px;
+    min-width: 80px;
   }
 }
 
@@ -679,6 +681,7 @@ body main #product-container #software-section .software-content {
 body main #product-container #software-section .software-content .left-section {
   margin-right: 150px;
   width: 100%;
+  min-width: 80px;
 }
 
 @media (max-width: 992px) {
@@ -902,6 +905,7 @@ body main #product-container #parts-section .parts-content {
 body main #product-container #parts-section .parts-content .left-section {
   margin-right: 150px;
   width: 100%;
+  min-width: 80px;
 }
 
 @media (max-width: 992px) {
@@ -1125,6 +1129,7 @@ body main #product-container #consumables-section .consumables-content {
 body main #product-container #consumables-section .consumables-content .left-section {
   margin-right: 150px;
   width: 100%;
+  min-width: 80px;
 }
 
 @media (max-width: 992px) {
@@ -1348,6 +1353,7 @@ body main #product-container #maintenance-section .maintenance-content {
 body main #product-container #maintenance-section .maintenance-content .left-section {
   margin-right: 150px;
   width: 100%;
+  min-width: 80px;
 }
 
 @media (max-width: 992px) {

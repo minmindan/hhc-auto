@@ -558,6 +558,10 @@ body main #product-single #product-section .product-content .left-section {
   }
 }
 
+body main #product-single #product-section .product-content .left-section .white-space {
+  min-width: 80px;
+}
+
 body main #product-single #product-section .product-content .left-section .white-space h1 {
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
