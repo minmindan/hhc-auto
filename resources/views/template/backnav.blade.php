@@ -75,7 +75,7 @@
                 </div>
             </div>
             <div class="subnav signoutlist">
-                <p>，您好　<img src="{{asset('image/nav/down_gray.svg')}}" alt=""></p>
+                <p>{{Auth::user()->name;}}，您好　<img src="{{asset('image/nav/down_gray.svg')}}" alt=""></p>
                 <div class="signout">
                     <form style="display: flex;
                     align-content: center;" method="POST" action="{{ route('logout') }}">
