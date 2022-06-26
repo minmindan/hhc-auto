@@ -80,10 +80,12 @@
                             </div>
                             <div class="content">網頁聯繫表單
                                 <div class="r-section">
+                                    <a href="/contact">
                                     <span>CONTACT</span>
                                     <div class="red-arrow">
                                         <img src="{{ asset('image/icon/Process/red_right.svg') }}" alt="">
                                     </div>
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -237,8 +239,11 @@
                                     <div class="sub-content">
                                         <div class="content">
                                             <p>網頁聯繫表單</p>
+                                        <a href="/contact">
+
                                             <span>
                                                 CONTACT<img src="{{ asset('image/icon/Process/red_right.svg') }}" alt=""></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -453,6 +458,8 @@
                 <div class="product-link">
                     <!-- 快速連結 -->
                     <div class="target-img">
+                        <a href="/product">
+
                         <div class="image-box">
                             <img src="{{ $product[0]->img_path??'' }}" alt="">
                         </div>
@@ -464,11 +471,15 @@
                                 </div>
                             </div>
                         </div>
+                    </a>
+
                     </div>
                 </div>
                 <!-- 快速連結 -->
                 <div class="contact-link">
                     <div class="target-img">
+                        <a href="/contact">
+
                         <div class="image-box">
                             <img src="{{ $contact[0]->img_path??'' }}" alt="">
                         </div>
@@ -478,8 +489,11 @@
                                 <div class="sup-icon">
                                     <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
                                 </div>
+
                             </div>
                         </div>
+                    </a>
+
                     </div>
                 </div>
             </div>

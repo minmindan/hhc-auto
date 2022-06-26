@@ -584,7 +584,16 @@ body main #process-container .process1 .section-r .step-content .sup-directions1
   margin-left: 50px;
 }
 
-body main #process-container .process1 .section-r .step-content .sup-directions1 .content .r-section::after {
+body main #process-container .process1 .section-r .step-content .sup-directions1 .content .r-section a {
+  color: #C7000B;
+  text-decoration: none;
+}
+
+body main #process-container .process1 .section-r .step-content .sup-directions1 .content .r-section a:visited {
+  color: #C7000B;
+}
+
+body main #process-container .process1 .section-r .step-content .sup-directions1 .content .r-section a::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -593,7 +602,7 @@ body main #process-container .process1 .section-r .step-content .sup-directions1
   bottom: 0px;
 }
 
-body main #process-container .process1 .section-r .step-content .sup-directions1 .content .r-section .red-arrow {
+body main #process-container .process1 .section-r .step-content .sup-directions1 .content .r-section a .red-arrow {
   width: 30px;
   height: 4px;
   margin-left: 15px;
@@ -1555,7 +1564,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-
   font-weight: 400;
 }
 
-body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step1 .sub-content .content span {
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step1 .sub-content .content a span {
   color: #c7000b;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1572,7 +1581,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-
   letter-spacing: 0.06em;
 }
 
-body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step1 .sub-content .content span::after {
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step1 .sub-content .content a span::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -1581,7 +1590,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-
   background-color: #C7000B;
 }
 
-body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step1 .sub-content .content span img {
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step1 .sub-content .content a span img {
   width: 30px;
   height: 5px;
 }
