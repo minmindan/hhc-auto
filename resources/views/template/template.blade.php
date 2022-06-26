@@ -8,10 +8,11 @@
     <title>
         @yield('pagetitle' ?? '')
     </title>
-    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
     <meta name="keywords" content="興和川自動化,半導體封裝,工業4.0,半導體設備,自動化生產,履歷管理">
-    <meta name="description" content="半導體封裝業界經歷了崛起，成長等趨勢轉變後，接下來面臨著工業4.0的需求與挑戰，需要更加智能化的自動化生產來做量產的履歷管理。
+    <meta name="description"
+        content="半導體封裝業界經歷了崛起，成長等趨勢轉變後，接下來面臨著工業4.0的需求與挑戰，需要更加智能化的自動化生產來做量產的履歷管理。
 興和川自動化有限公司由一群在業界耕耘了20年以上的有志者來提供更專業，高價值的服務，幫助客戶增加競爭力。對於半導體上片Fasford設備更有著service20年以上的經驗。
 ">
     <link rel="stylesheet" href="{{ asset('css/nav.css') }}">
@@ -31,31 +32,77 @@
             box-sizing: border-box font-family: 'Noto Sans TC', 'sans-serif';
             -webkit-user-select: none;
             -moz-user-select: none;
-            select:none;
+            select: none;
         }
 
         .none {
             display: none !important;
         }
-        a{
+
+        a {
             color: white;
-            text-decoration:none;
+            text-decoration: none;
             display: flex;
             justify-content: start;
         }
-        a:visited{
+
+        a:visited {
             color: white;
         }
-        .bgblue{
+
+        .bgblue {
             background-color: #004098 !important;
         }
+
         /* .fons a{
             color: #b4b4b4;
         } */
-        .block{
+        .block {
             display: block !important;
         }
+    </style>
 
+    {{-- 翻譯欄位 --}}
+    <style>
+        .tra-bar {
+            width: calc(100% - 20px);
+            height: auto;
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width:1000px) {
+            .tra-bar {
+                width: calc(100% - 20px);
+                height: auto;
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+            }
+        }
+
+
+        .goog-te-gadget-simple {
+            display: flex !important;
+        }
+
+        .tra-bar .container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 152px;
+
+        }
+
+
+        @media screen and (max-width:850px) {
+            .tra-bar .container {
+                display: flex;
+                justify-content: flex-end;
+                padding: 0 70px;
+            }
+        }
     </style>
     @yield('css')
 </head>
@@ -65,28 +112,36 @@
         <div id="focus" class="none">
             <div id="focuslogo" class="focus-logo none">
                 <img src="{{ asset('image/nav/white_logo.png') }}" alt="">
-                <img id="XX" style="cursor: pointer;" height="40px" src="{{ asset('image/nav/burger_white_X.svg') }}"
-                    alt="">
+                <img id="XX" style="cursor: pointer;" height="40px"
+                    src="{{ asset('image/nav/burger_white_X.svg') }}" alt="">
             </div>
             <div id="focusmain" class="focus-main none">
                 <div id="focus-box">
                     <p><a href="/aboutus">關於我們</a></p>
                     <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
-                        <li><a href="/aboutus#philosophy">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="/aboutus#milestones">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="/aboutus#company-profile">公司簡介 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/aboutus#philosophy">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
+                        <li><a href="/aboutus#milestones">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
+                        <li><a href="/aboutus#company-profile">公司簡介 <img
+                                    src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                     </ul>
                 </div>
                 <div id="focus-box">
                     <p><a href="/product">產品介紹</a></p>
                     <h1><a href="/product">PRODUCT</a></h1>
                     <ul>
-                        <li><a href="/equipment">設備 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="/software">軟體 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="/parts">部品零件 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="/consumables">耗材 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
-                        <li><a href="/maintenance">維修 <img src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/equipment">設備 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
+                        <li><a href="/software">軟體 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
+                        <li><a href="/parts">部品零件 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
+                        <li><a href="/consumables">耗材 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
+                        <li><a href="/maintenance">維修 <img src="{{ asset('image/nav/white_right.svg') }}"
+                                    alt=""></a></li>
                     </ul>
                 </div>
                 <div id="focus-box">
@@ -107,16 +162,19 @@
         </div>
         <div id="bar">
             <a href="/">
-            <div id="logo">
-                <img id="minilogo" src="{{ asset('image/nav/blue_logo_mini.png') }}" alt="">
-                <img id="biglogo" src="{{ asset('image/nav/blue_logo.png') }}" alt="">
-                <img id="white-logo" src="{{ asset('image/nav/white_logo.png') }}" alt="">
-            </div>
-        </a>
+                <div id="logo">
+                    <img id="minilogo" src="{{ asset('image/nav/blue_logo_mini.png') }}" alt="">
+                    <img id="biglogo" src="{{ asset('image/nav/blue_logo.png') }}" alt="">
+                    <img id="white-logo" src="{{ asset('image/nav/white_logo.png') }}" alt="">
+                </div>
+            </a>
             <div id="subnav">
                 <div class="hoverbox downlist">
                     <div><a class="fons" href="/aboutus">關於我們</a></div>
-                    <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
+                    <img width="15px" style="margin-left:10px ;" class="down_gray"
+                        src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px"
+                        style="margin-left:10px ;" class="down_white" src="{{ asset('image/nav/down_white.svg') }}"
+                        alt="">
                     <div class="list aboutlist">
                         <p>經營理念</p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -127,7 +185,10 @@
                 </div>
                 <div class="hoverbox downlist">
                     <div><a class="fons" href="/product">產品介紹</a></div>
-                    <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
+                    <img width="15px" style="margin-left:10px ;" class="down_gray"
+                        src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px"
+                        style="margin-left:10px ;" class="down_white" src="{{ asset('image/nav/down_white.svg') }}"
+                        alt="">
                     <div class="list productlist">
                         <p><a style="color: #b4b4b4;" href="/equipment">設備</a></p>
                         <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -150,19 +211,22 @@
                     <div><a class="fons" href="/contact">聯絡我們</a></div>
                 </div>
                 @auth
-                <div class="hoverbox downlist">
-                    <div background><a class="fons href=''">後台管理</a></div>
-                    <img width="15px" style="margin-left:10px ;" class="down_gray" src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px" style="margin-left:10px ;" class="down_white" src="{{asset('image/nav/down_white.svg')}}" alt="">
-                    <div class="list backendlist">
-                        <p><a style="color: #b4b4b4;" href="/topics-manage">內容設定</a></p>
-                        <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p><a style="color: #b4b4b4;" href="/banner-manage/contact">Banner管理</a></p>
-                        <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p><a style="color: #b4b4b4;" href="/product-manage/equipment">產品編輯</a></p>
-                        <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                        <p><a style="color: #b4b4b4;" href="/contact/list">表單管理</a></p>
+                    <div class="hoverbox downlist">
+                        <div background><a class="fons href=''">後台管理</a></div>
+                        <img width="15px" style="margin-left:10px ;" class="down_gray"
+                            src="{{ asset('image/nav/down_gray.svg') }}"alt=""><img width="15px"
+                            style="margin-left:10px ;" class="down_white" src="{{ asset('image/nav/down_white.svg') }}"
+                            alt="">
+                        <div class="list backendlist">
+                            <p><a style="color: #b4b4b4;" href="/topics-manage">內容設定</a></p>
+                            <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
+                            <p><a style="color: #b4b4b4;" href="/banner-manage/contact">Banner管理</a></p>
+                            <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
+                            <p><a style="color: #b4b4b4;" href="/product-manage/equipment">產品編輯</a></p>
+                            <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
+                            <p><a style="color: #b4b4b4;" href="/contact/list">表單管理</a></p>
+                        </div>
                     </div>
-                </div>
                 @endauth
             </div>
             <div id="bglist">
@@ -202,9 +266,53 @@
                 <h1><a target="_blank" href="/privacypolic">隱私權政策</a></h1>
             </div>
         </div>
+        {{-- 翻譯欄位 --}}
+        <div class="tra-bar">
+            <div class="container">
+                <div class="pull-right" style="margin-left:15px;">
+                    <div id="google_translate_element">
+                        <div class="skiptranslate goog-te-gadget" dir="ltr" style="">
+
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var googleCurrLang = navigator.language;
+                        if (googleCurrLang == undefined) {
+                            googleCurrLang = navigator.browserLanguage;
+                        }
+                        if (typeof(currLang) != "undefined") {
+                            googleCurrLang = currLang;
+                        }
+                        if (typeof(defGoogleLang) != "undefined") {
+                            googleCurrLang = defGoogleLang;
+                        }
+
+                        function googleTranslateElementInit() {
+                            setTimeout(function() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: googleCurrLang,
+                                    includedLanguages: 'en',
+                                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                }, 'google_translate_element');
+                            }, 1300)
+                        }
+                    </script>
+                    <script async="" type="text/javascript"
+                        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+                <div class="pull-right">
+                    <ul class="list-inline social-icons">
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <ul class="list-inline">
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
-<script src="{{asset('js/navbar.js')}}"></script>
+<script src="{{ asset('js/navbar.js') }}"></script>
 @yield('js')
 <script>
     var el = document.querySelector('body');
@@ -221,12 +329,10 @@
     el.addEventListener('DOMMouseScroll', navin, false);
     // show(), false;
     navin();
+
     function navin() {
         var windowtop = document.documentElement.scrollTop;
         var windowtop2 = document.body.scrollTop;
-        console.log(windowtop);
-        console.log(windowtop2);
-        console.log(banner.clientHeight);
         if (window.innerWidth > 993) {
             if (windowtop > 100 || windowtop2 > 100) {
                 subnav.classList.add("none")
@@ -236,7 +342,7 @@
                 biglogo.classList.remove('none')
             }
         } else {
-            main.style.margin='-150px 0 0 0'
+            main.style.margin = '-150px 0 0 0'
             if (windowtop > banner.clientHeight - 75 || windowtop2 > banner.clientHeight - 75) {
                 whitelogo.classList.add('none');
                 minilogo.classList.add('block');

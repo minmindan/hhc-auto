@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>興和川自動化有限公司</title>
-    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
     <meta name="keywords" content="興和川自動化,半導體封裝,工業4.0,半導體設備,自動化生產,履歷管理">
     <meta name="description"
@@ -167,6 +167,47 @@
             color: white;
         }
     </style>
+    {{-- 翻譯欄位 --}}
+    <style>
+
+        .tra-bar {
+            width: calc(100% - 20px);
+            height: auto;
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            overflow: hidden;
+        }
+
+        @media screen and (max-width:1000px){
+            .tra-bar {
+                width: calc(100% - 20px);
+            height: auto;
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+        }
+        }
+
+
+
+
+        .tra-bar .container{
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 152px;
+
+        }
+
+
+        @media screen and (max-width:850px){
+            .tra-bar .container{
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 70px;
+        }
+        }
+    </style>
     <link rel="stylesheet" href="{{ asset('css/swiper_circle.css') }}">
 </head>
 
@@ -302,8 +343,8 @@
         <div class="swiper banner swiper-no-swiping" style="width: 100%;height: calc(100vh + 5px) ;">
             <div class="swiper-wrapper swiper-no-swiping" style="width: 100%; height: 100%;">
                 @foreach ($banners as $banner)
-                <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
-                    src="{{$banner->img_path}}"></video></div>
+                    <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
+                            src="{{ $banner->img_path }}"></video></div>
                 @endforeach
                 {{-- <div class="swiper-slide"><video muted="true" preload="auto" loop="true" autoplay="true"
                         src="{{ asset('image/index-video/index-banner-1.mp4') }}"></video></div>
@@ -906,6 +947,50 @@
             </div>
             <div class="footer-btn">
                 <h1><a target="_blank" href="/privacypolic">隱私權政策</a></h1>
+            </div>
+        </div>
+        {{-- 翻譯欄位 --}}
+        <div class="tra-bar">
+            <div class="container">
+                <div class="pull-right" style="margin-left:15px;">
+                    <div id="google_translate_element">
+                        <div class="skiptranslate goog-te-gadget" dir="ltr" style="">
+
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var googleCurrLang = navigator.language;
+                        if (googleCurrLang == undefined) {
+                            googleCurrLang = navigator.browserLanguage;
+                        }
+                        if (typeof(currLang) != "undefined") {
+                            googleCurrLang = currLang;
+                        }
+                        if (typeof(defGoogleLang) != "undefined") {
+                            googleCurrLang = defGoogleLang;
+                        }
+
+                        function googleTranslateElementInit() {
+                            setTimeout(function() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: googleCurrLang,
+                                    includedLanguages: 'en',
+                                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                }, 'google_translate_element');
+                            }, 1300)
+                        }
+                    </script>
+                    <script async="" type="text/javascript"
+                        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                </div>
+                <div class="pull-right">
+                    <ul class="list-inline social-icons">
+                    </ul>
+                </div>
+                <div class="pull-right">
+                    <ul class="list-inline">
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
