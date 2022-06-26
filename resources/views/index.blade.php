@@ -169,7 +169,6 @@
     </style>
     {{-- 翻譯欄位 --}}
     <style>
-
         .tra-bar {
             width: calc(100% - 20px);
             height: auto;
@@ -179,20 +178,20 @@
             overflow: hidden;
         }
 
-        @media screen and (max-width:1000px){
+        @media screen and (max-width:1000px) {
             .tra-bar {
                 width: calc(100% - 20px);
-            height: auto;
-            position: absolute;
-            bottom: 10px;
-            left: 15px;
+                height: auto;
+                position: absolute;
+                bottom: 10px;
+                left: 15px;
+            }
         }
-        }
 
 
 
 
-        .tra-bar .container{
+        .tra-bar .container {
             display: flex;
             justify-content: flex-end;
             padding: 0 152px;
@@ -200,12 +199,12 @@
         }
 
 
-        @media screen and (max-width:850px){
-            .tra-bar .container{
-            display: flex;
-            justify-content: flex-end;
-            padding: 0 70px;
-        }
+        @media screen and (max-width:850px) {
+            .tra-bar .container {
+                display: flex;
+                justify-content: flex-end;
+                padding: 0 70px;
+            }
         }
     </style>
     <link rel="stylesheet" href="{{ asset('css/swiper_circle.css') }}">
@@ -456,12 +455,13 @@
 
 
 
-                            {{-- <div class="product-types">
+                            <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <div class="product-types-more">MORE　　<img
-                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt=""></div>
-                            </div> --}}
+                                <a class="product-types-more">MORE　　<img
+                                        src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide productmain">
@@ -474,9 +474,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more">MORE　　<img
+                                        <a href="/equipment/{{ $eq->id }}" class="product-types-more">MORE　　<img
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -488,9 +488,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more">MORE　　<img
+                                        <a href="/software/{{ $so->id }}" class="product-types-more">MORE　　<img
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -502,9 +502,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more">MORE　　<img
+                                        <a href="/parts/{{ $cm->id }}" class="product-types-more">MORE　　<img
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a href="/equipment/{{ $eq->id }}">
                                     </div>
                                 @endif
                             @endforeach
@@ -516,9 +516,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more">MORE　　<img
+                                        <a href="/consumables/{{ $cn->id }}" class="product-types-more">MORE　　<img
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -530,9 +530,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more">MORE　　<img
+                                        <a href="/maintenance/{{ $ma->id }}" class="product-types-more">MORE　　<img
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
