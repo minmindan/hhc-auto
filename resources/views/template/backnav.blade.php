@@ -65,7 +65,7 @@
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <a href="/milestones-manage"><p>公司沿革</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
-                    <a href="/contact-manage"><p>聯絡方式</p></a>
+                    <a href="/contact-manage"><p>公司簡介</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">
                     <a href="/banner-manage/homepage"><p>Banner管理</p></a>
                     <img src="{{asset('image/nav/gray_line.svg')}}" alt="">

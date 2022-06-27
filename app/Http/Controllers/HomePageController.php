@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Models\company;
 use App\Models\Profile;
+use App\Models\Milestone;
 use App\Models\Index_banner;
 use App\Models\Aboutus_banner;
 use App\Models\Contact_banner;
@@ -45,7 +46,10 @@ class HomePageController extends Controller
     public function aboutus()
     {
         $abus = Aboutus_banner::get();
-        return view('aboutUs.aboutUs', compact('abus'));
+        $Profile = Profile::get();
+        $Milestones = Milestone::get();
+        // dd($Milestones);
+        return view('aboutUs.aboutUs', compact('abus' , 'Profile' , 'Milestones'));
     }
 
     public function product()
