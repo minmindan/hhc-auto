@@ -171,52 +171,14 @@
                 <h3>公司沿革</h3>
               </div>
               <div class="content">
+                @foreach ($Milestones as $Milestone)
                 <div class="card">
-                  <div class="date">4月<br />2015</div>
-                  <div class="text">
-                    <span>興和川自動化有限公司，於2015年創立於台灣封裝重點區域
-                      -高雄，專營各式客製化封裝檢測設備、耗材和加工件</span>
+                    <div class="date">{{$Milestone->month}}<br />{{$Milestone->years}}</div>
+                    <div class="text">
+                      <span>{{$Milestone->content}}</span>
+                    </div>
                   </div>
-                </div>
-                <div class="card">
-                  <div class="date">2017</div>
-                  <div class="text">
-                    興和川花費2年的時間成功取得台灣過半數的半導體合格商資格，服務範圍擴及全台
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="date">2018</div>
-                  <div class="text">
-                    業務範圍成功地拓展到中國市場，推廣生產線高精度加工件，展現興和川客製化實力
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="date">12月<br />2019</div>
-                  <div class="text">
-                    與封裝大廠合力開發半導體全新製程設備:
-                    超音波清洗檢驗機，解決高階車用產品三大目標:
-                    低汙染、低人力、高良率
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="date">5月<br />2020</div>
-                  <div class="text">
-                    協助客戶導入IOT工業4.0大數據系統，提升客戶生產之晶片品質
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="date">6月<br />2021</div>
-                  <div class="text">
-                    與NIKON合作開發晶圓移載量測設備:
-                    AVM-3020，解決晶圓廠人員移載風險與產品良率
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="date">12月<br />2021</div>
-                  <div class="text">
-                    在多角化經營理念下，興和川服務拓展到中古設備、機台元件買賣以及其售後服務
-                  </div>
-                </div>
+                @endforeach
               </div>
             </div>
           </div>
@@ -256,42 +218,29 @@
                 <div class="card">
                   <div class="name-field"></div>
                   <div class="company-name">
-                    <span>興和川自動化有限公司</span>
+                    <span>{{$Profile[0]->company_name}}</span>
                   </div>
                 </div>
                 <div class="card">
                   <div class="build-field"></div>
-                  <div class="build-date">104年04月15日</div>
+                  <div class="build-date">{{$Profile[0]->found}}</div>
                 </div>
                 <div class="card">
                   <div class="address-field"></div>
-                  <div class="address">高雄市楠梓區藍昌路349巷25-7號</div>
+                  <div class="address">{{$Profile[0]->address}}</div>
                 </div>
                 <div class="card">
                   <div class="opening-field"></div>
-                  <div class="opening-hours">9:00-18:00</div>
+                  <div class="opening-hours">{{$Profile[0]->opening}}</div>
                 </div>
                 <div class="card">
                   <div class="tel-field"></div>
-                  <div class="tel">07-3606871</div>
+                  <div class="tel">{{$Profile[0]->phone}}</div>
                 </div>
                 <div class="card">
                   <div class="items-field"></div>
                   <div class="service-items">
-                    <ul>
-                      <li>1. 機械設備製造</li>
-                      <br />
-                      <li>2. 自動控制設備工程</li>
-                      <br />
-                      <li>3. 機械批發與零售</li>
-                      <br />
-                      <li>4. 精密儀器批發</li>
-                      <br />
-                      <li>5. 軟體客製化撰寫</li>
-                      <br />
-                      <li>6. 電腦相關產品批發</li>
-                      <br />
-                    </ul>
+                    <p>{{$Profile[0]->serve}}</p>
                   </div>
                 </div>
               </div>
