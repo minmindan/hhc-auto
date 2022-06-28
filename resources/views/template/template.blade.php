@@ -236,7 +236,7 @@
         </div>
     </nav>
     @yield('main')
-    <footer id="footer">
+    <footer id="footer" class="none" style="margin-top: 120px;">
         <div id="footer-logo">
             <img src="{{ asset('image/nav/white_logo.png') }}" alt="">
         </div>
