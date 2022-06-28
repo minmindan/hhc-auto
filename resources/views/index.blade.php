@@ -228,11 +228,11 @@
                     <p><a href="/aboutus">關於我們</a></p>
                     <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
-                        <li><a href="/aboutus">經營理念</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/aboutus/#philosophy">經營理念</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
-                        <li><a href="/aboutus">公司沿革</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/aboutus/#milestones">公司沿革</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
-                        <li><a href="/aboutus">公司簡介</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/aboutus/#company-profile">公司簡介</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
                     </ul>
                 </div>
@@ -874,11 +874,11 @@
                 <h1 id="footeraboutus">關於我們 <img src="{{ asset('image/nav/down_white.svg') }}" alt="">
                 </h1>
                 <div class="footer-aboutlist">
-                    <p><a href="/aboutus">經營理念</a></p>
+                    <p><a href="/aboutus/#philosophy">經營理念</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p><a href="/aboutus">公司沿革</a></p>
+                    <p><a href="/aboutus/#milestones">公司沿革</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p><a href="/aboutus">公司簡介</a></p>
+                    <p><a href="/aboutus/#company-profile">公司簡介</a></p>
                 </div>
             </div>
             <div class="footer-btn subservebtn" tabindex="0">
