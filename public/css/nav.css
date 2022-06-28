@@ -614,13 +614,6 @@ nav #bar #bglist .stuffing {
   nav #bar #bglist .stuffing {
     background-color: white;
   }
-}
-
-@media (max-width: 768px) and (max-height: 760px) {
-    nav #focus .focus-main {
-      height: calc(100vh - 130px) !important;
-    }
-  }
   @media (max-height: 880px) {
     nav #focus .focus-main h1 {
       font-size: 30px !important;
@@ -649,5 +642,13 @@ nav #bar #bglist .stuffing {
       height: 50px !important;
     }
   }
+}
+
+@media (max-width: 768px) and (max-height: 760px) {
+    nav #focus .focus-main {
+      height: calc(100vh - 130px) !important;
+    }
+  }
+
 
 /*# sourceMappingURL=nav.css.map */
