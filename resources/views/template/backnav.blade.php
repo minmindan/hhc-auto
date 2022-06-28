@@ -53,7 +53,7 @@
             <a href="/" class="subnav">
                 <p>前往網頁</p>
             </a>
-            <a href="/forgot-password" class="subnav">
+            <a href="/repassword" class="subnav">
                 <p>修改密碼</p>
             </a>
             <div class="subnav backstagelist">
