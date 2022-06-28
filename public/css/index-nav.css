@@ -508,8 +508,8 @@ nav #bar #subnav .hoverbox .aboutlist {
   overflow: hidden;
   top: 100%;
   right: 0;
-  padding-left: 250px;
-  padding-right: 250px;
+  padding-left: 200px;
+  padding-right: 200px;
   -webkit-animation-name: bbb;
           animation-name: bbb;
   width: calc(100% + 54px);
