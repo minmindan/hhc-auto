@@ -631,16 +631,21 @@ main #about_us .about_background .about_main button {
   border-radius: 16px;
   -webkit-transition: .5s;
   transition: .5s;
-  position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main #about_us .about_background .about_main button .btnimg {
-  width: 30px;
-  height: auto;
-  position: absolute;
+  width: 20px;
+  height:auto;
   left: 50px !important;
   top: 50%;
+  z-index: 1;
+  position: unset;
+  margin-left:10px ;
+  margin-top: 5px;
 }
 
 main #about_us .about_background .about_main button:hover {
@@ -754,7 +759,6 @@ main #topics p {
   margin-top: 0px;
   font-size: 30px;
   color: #B4B4B4;
-  letter-spacing: 3px;
 }
 
 main #topics .topicsmain {
@@ -777,7 +781,6 @@ main #topics .topicsmain .topics {
   padding: 0 20px;
   padding-top: 25px;
   margin: auto;
-  border-left: #B4B4B4 1px solid;
 }
 
 @media (max-width: 1000px) {

@@ -367,7 +367,7 @@
                 <h1>Product</h1>
                 <div class="productsubtitle">
                     <div class="productmoretitle">產品介紹</div>
-                    <a class="productmore blod">MORE<img src="{{ asset('image/index-icon/more_right.svg') }}"
+                    <a class="productmore blod">MORE<img style="margin-left:20px;" src="{{ asset('image/index-icon/more_right.svg') }}"
                             alt=""></a>
                 </div>
             </div>
@@ -388,7 +388,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -402,7 +402,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -416,7 +416,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -430,7 +430,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -444,7 +444,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -454,18 +454,13 @@
 
 
 
-
-
-
-
-
-                            <div class="product-types">
+                            {{-- <div class="product-types">
                                 <h1 class="product-types-title">商品名</h1>
                                 <div class="product-types-model">型號型號型號型號型號型號</div>
-                                <a class="product-types-more blod blod">MORE　　<img
+                                <a class="product-types-more blod blod">MORE<img style="margin-left: 20px;"
                                         src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="swiper-slide productmain">
@@ -478,7 +473,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <a href="/equipment/{{ $eq->id }}" class="product-types-more blod">MORE　　<img
+                                        <a href="/equipment/{{ $eq->id }}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></a>
                                     </div>
@@ -492,7 +487,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <a href="/software/{{ $so->id }}" class="product-types-more blod">MORE　　<img
+                                        <a href="/software/{{ $so->id }}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></a>
                                     </div>
@@ -506,7 +501,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <a href="/parts/{{ $cm->id }}" class="product-types-more blod">MORE　　<img
+                                        <a href="/parts/{{ $cm->id }}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></a href="/equipment/{{ $eq->id }}">
                                     </div>
@@ -520,7 +515,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <a href="/consumables/{{ $cn->id }}" class="product-types-more blod">MORE　　<img
+                                        <a href="/consumables/{{ $cn->id }}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></a>
                                     </div>
@@ -534,7 +529,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <a href="/maintenance/{{ $ma->id }}" class="product-types-more blod">MORE　　<img
+                                        <a href="/maintenance/{{ $ma->id }}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></a>
                                     </div>
@@ -556,7 +551,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -570,7 +565,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -584,7 +579,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -598,7 +593,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -612,7 +607,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -634,7 +629,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -648,7 +643,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -662,7 +657,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -676,7 +671,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -690,7 +685,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -712,7 +707,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -726,7 +721,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -740,7 +735,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -754,7 +749,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -768,7 +763,7 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE　　<img
+                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
                                                 alt=""></div>
                                     </div>
@@ -796,7 +791,7 @@
                     <h1 class="about_us_title">About us</h1>
                     <p>關於我們</p>
                     <p class="pmain">以誠為本、追求創新、培育未來、滿足客戶</p>
-                    <button class="blod">MORE<img class="btnimg" src="{{ asset('image/index-icon/more_right_white.svg') }}"
+                    <button class="blod">MORE<img class="btnimg" src="{{ asset('image/index-icon/more_right_white2.svg') }}"
                             alt=""></button>
                 </div>
                 <img src="{{ $abus[0]->img_path ?? '' }}" alt="">
@@ -856,12 +851,12 @@
                 <h1>CONTACT<br>US</h1>
                 <h2>聯絡我們</h2>
             </div>
-            <div>
+            <div style="text-align: right; ">
                 <p>地址：高雄市楠梓區藍昌路349巷25之7號 </p>
-                <p>電話：一線: (07)360-6851/ 二線: (07)360-6871</p>
+                <p>電話：一線 (07)360-6851　/　二線 (07)360-6871</p>
                 <p>傳真：(07)360-6838 </p>
-                <p>業務:mc@hhc-auto.com</p>
-                <p>設計開發: aaron@hhc-auto.com</p>
+                <p>業務：mc@hhc-auto.com</p>
+                <p>設計開發： aaron@hhc-auto.com</p>
             </div>
         </div>
     </div>
@@ -886,7 +881,7 @@
                 <div class="footer-servelist">
                     <p><a href="/aboutus">關於我們</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p><a href="/aboutus#company-profile">如何前往</a></p>
+                    <p><a href="/aboutus#location-map">如何前往</a></p>
                 </div>
             </div>
             <div class="footer-btn">

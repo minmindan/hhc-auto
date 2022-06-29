@@ -15,7 +15,7 @@ body {
         // Banner大圖
         #banner {
             padding-left: 316px;
-
+            margin-bottom: 120px;
             @include screen1600 {
                 padding-left: 280px;
             }
@@ -431,7 +431,7 @@ body {
                         width: 70px;
                         height: 70px;
                         background-color: white;
-                        border: 1px solid $themeColor;
+                        border: 2px solid $themeColor;
 
                         font-size: 40px;
 
@@ -461,7 +461,6 @@ body {
                     .step-content {
                         padding-top: 30px;
                         width: 83%;
-
                         .sup-directions1 {
                             display: flex;
                             margin-bottom: 15px;
@@ -516,7 +515,7 @@ body {
 
                         .sup-directions2 {
                             display: flex;
-                            margin-bottom: 60px;
+                            margin-bottom: 30px;
 
                             .tittle {
                                 p {
@@ -533,11 +532,10 @@ body {
                                 ul {
                                     li {
                                         list-style-type: none;
-
+                                        margin-bottom: 15px;
                                         &:nth-child(1) {
                                             font-weight: 500;
                                             font-size: 1.1rem;
-
                                             letter-spacing: 0.06em;
                                         }
 
@@ -619,7 +617,7 @@ body {
                         width: 70px;
                         height: 70px;
                         background-color: white;
-                        border: 1px solid $themeColor;
+                        border: 2px solid $themeColor;
 
                         font-size: 40px;
 
@@ -768,7 +766,7 @@ body {
                         width: 70px;
                         height: 70px;
                         background-color: white;
-                        border: 1px solid $themeColor;
+                        border: 2px solid $themeColor;
 
                         font-size: 40px;
 
@@ -905,7 +903,7 @@ body {
                         width: 70px;
                         height: 70px;
                         background-color: white;
-                        border: 1px solid $themeColor;
+                        border: 2px solid $themeColor;
 
                         font-size: 40px;
 
@@ -1055,7 +1053,7 @@ body {
                         width: 70px;
                         height: 70px;
                         background-color: white;
-                        border: 1px solid $themeColor;
+                        border: 2px solid $themeColor;
 
                         font-size: 40px;
 
@@ -1880,10 +1878,23 @@ body {
 
 
         .line {
-            width: 100%;
+            width: 1350px;
             height: 2px;
             background-color: #B4B4B4;
+            margin: 0 auto;
             margin-bottom: 100px;
+            margin-top: 55px;
+            @include screen1440 {
+                width: 80%;
+                max-width: 1132px;
+            }
+            @include pad {
+                width: 100%;
+            }
+
+            @include mobile {
+                margin: 5px 0 60px 0;
+            }
         }
 
 
@@ -1900,12 +1911,8 @@ body {
                 min-height: 389px;
                 display: flex;
 
-
-
                 @include screen1440 {
                     width: 80%;
-                    max-width: 1132px;
-                    min-width: unset;
                 }
 
                 @include pad {
@@ -1920,10 +1927,8 @@ body {
 
                 // 快速連結
                 .product-link {
-                    width: 50%;
                     height: 100%;
                     position: relative;
-
                     @include pad {
                         width: 100%;
                     }
@@ -1931,7 +1936,7 @@ body {
                     .target-img {
                         width: 100%;
                         height: 100%;
-
+                        display: flex;
                         .image-box {
                             width: 100%;
                             height: 100%;
@@ -1962,12 +1967,10 @@ body {
                         }
 
                         .content {
-                            margin-bottom: 15px;
                             position: absolute;
                             top: 50%;
-                            left: calc(50% - (372px / 2));
-
-
+                            left: 50%;
+                            transform: translate(-50%,-50%);
                             @media (max-width:400px) {
                                 left: 30px;
                             }
@@ -1975,21 +1978,10 @@ body {
                             .target-name {
                                 display: flex;
                                 align-items: center;
-
                                 h2 {
                                     color: white;
                                     letter-spacing: 0.2em;
                                     font-size: 40px;
-                                    margin-right: 100px;
-
-                                    @include screen1200 {
-                                        margin-right: 50px;
-                                        margin-left: 10px;
-                                    }
-
-                                    @include pad {
-                                        margin-right: 0px;
-                                    }
 
                                     @media (max-width:400px) {
                                         font-size: 30px;
@@ -1999,11 +1991,9 @@ body {
                                 .sup-icon {
                                     width: 32px;
                                     height: 32px;
-                                    transform: translate(50%, 0%);
-                                    margin-left: 50px;
-
+                                    margin-top: 3px;
+                                    margin-left: 30px;
                                     @media (max-width:400px) {
-                                        margin-left: 20px;
                                         width: 25px;
                                         height: 25px;
                                     }
@@ -2026,24 +2016,21 @@ body {
 
                 // // 快速連結
                 .contact-link {
-                    width: 50%;
                     height: 100%;
                     position: relative;
-
                     @include pad {
                         width: 100%;
                     }
-
                     .target-img {
                         width: 100%;
                         height: 100%;
-
-                        position: relative;
-
+                        display: flex;
                         .image-box {
                             width: 100%;
-                            height: calc(100% - 5px);
+                            height: 100%;
+                            position: relative;
                             overflow: hidden;
+                            background-color: transparent;
 
                             &::after {
                                 content: '';
@@ -2068,11 +2055,10 @@ body {
                         }
 
                         .content {
-                            margin-bottom: 15px;
                             position: absolute;
                             top: 50%;
-                            left: calc(50% - (372px / 2));
-
+                            left: 50%;
+                            transform: translate(-50%,-50%);
                             @media (max-width:400px) {
                                 left: 30px;
                             }
@@ -2080,15 +2066,14 @@ body {
                             .target-name {
                                 display: flex;
                                 align-items: center;
-
+                                margin-right:30px;
                                 h2 {
                                     color: white;
                                     letter-spacing: 0.2em;
                                     font-size: 40px;
-                                    margin-right: 100px;
 
                                     @include screen1200 {
-                                        margin-right: 50px;
+                                        margin-right: 30px;
                                         margin-left: 10px;
                                     }
 
@@ -2104,11 +2089,10 @@ body {
                                 .sup-icon {
                                     width: 32px;
                                     height: 32px;
-                                    transform: translate(50%, 0%);
-                                    margin-left: 50px;
+                                    margin-top: 3px;
+                                    margin-left: 30px;
 
                                     @media (max-width:400px) {
-                                        margin-left: 20px;
                                         width: 25px;
                                         height: 25px;
                                     }
@@ -2124,6 +2108,7 @@ body {
                                     }
                                 }
                             }
+
                         }
                     }
                 }

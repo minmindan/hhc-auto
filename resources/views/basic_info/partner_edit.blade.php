@@ -52,7 +52,7 @@
                     </div>
                 @endforeach
                 <div style="display: flex;  align-items:center;" class="create_com">
-                    <input type="file" multiple name="com_img" id="com_img" accept="image/*">
+                    <input type="file" name="com_img" id="com_img" accept="image/*">
                 </div>
             </div>
         </form>

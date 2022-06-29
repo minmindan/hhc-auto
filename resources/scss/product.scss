@@ -15,6 +15,7 @@ body {
         // Banner大圖
         #banner {
             padding-left: 316px;
+            margin-bottom: 120px;
 
             @include screen1600 {
                 padding-left: 280px;

@@ -15,6 +15,7 @@ main {
     // Banner大圖
     #banner {
         padding-left: 316px;
+        margin-bottom: 120px;
 
         @include screen1600 {
             padding-left: 280px;
@@ -429,29 +430,42 @@ main {
     #contact-id {
         display: flex;
         justify-content: center;
-        margin-top: 150px;
+        margin-left: 316px;
+        position: relative;
 
+        @include screen1600 {
+            margin-left: 280px;
+        }
+
+        @include screen1440 {
+            margin-left: 153px;
+        }
+
+        @include screen1200 {
+            margin-left: 50px;
+        }
 
         @include pad {
-            padding-left: 0px;
+            margin-left: 0px;
             flex-direction: column;
         }
 
+
         // 直版表單進度條
         .progress-bar-l {
-            width: 280px;
             height: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
 
-            @include screen1600 {
-                width: 150px;
-            }
 
             @include pad {
                 display: none;
             }
+
 
             .progress-step1 {
                 color: #F5D5C4;
@@ -559,16 +573,18 @@ main {
         .form-container {
             margin-top: 50px;
 
+           @include screen1440 {
+                padding-left: 50px;
+            }
+
             @include pad {
                 padding-left: 50px;
-                padding-right: 15px;
             }
 
             @include mobile {
                 padding-left: 0;
-                padding-right: 0px;
-
             }
+
 
             // 說明文字
             .directions {
@@ -577,7 +593,6 @@ main {
                 h5 {
                     font-weight: 500;
                     font-size: 20px;
-                    margin-left: 15px;
                 }
             }
 
@@ -657,6 +672,7 @@ main {
                             width: 679px;
                             height: 282px;
                             resize: none;
+                            padding-left: 15px;
 
                             @media (max-width:1060px) {
                                 width: 620px;

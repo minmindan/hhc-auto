@@ -10,6 +10,7 @@
 
 main #banner {
   padding-left: 316px;
+  margin-bottom: 120px;
 }
 
 @media (max-width: 1600px) {
@@ -495,12 +496,31 @@ main #contact-id {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 150px;
+  margin-left: 316px;
+  position: relative;
+}
+
+@media (max-width: 1600px) {
+  main #contact-id {
+    margin-left: 280px;
+  }
+}
+
+@media (max-width: 1440px) {
+  main #contact-id {
+    margin-left: 153px;
+  }
+}
+
+@media (max-width: 1200px) {
+  main #contact-id {
+    margin-left: 50px;
+  }
 }
 
 @media (max-width: 992px) {
   main #contact-id {
-    padding-left: 0px;
+    margin-left: 0px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -509,7 +529,6 @@ main #contact-id {
 }
 
 main #contact-id .progress-bar-l {
-  width: 280px;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,12 +540,9 @@ main #contact-id .progress-bar-l {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-@media (max-width: 1600px) {
-  main #contact-id .progress-bar-l {
-    width: 150px;
-  }
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 @media (max-width: 992px) {
@@ -640,6 +656,12 @@ main #contact-id .form-container {
   margin-top: 50px;
 }
 
+@media (max-width: 1440px) {
+  main #contact-id .form-container {
+    padding-left: 50px;
+  }
+}
+
 @media (max-width: 992px) {
   main #contact-id .form-container {
     padding-left: 50px;
@@ -659,7 +681,6 @@ main #contact-id .form-container .directions {
 main #contact-id .form-container .directions h5 {
   font-weight: 500;
   font-size: 20px;
-  margin-left: 15px;
 }
 
 main #contact-id .form-container form .form-section .form-field {
