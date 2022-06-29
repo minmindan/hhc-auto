@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-興和川自動化有限公司
+    興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/contact1.css') }}" />
@@ -37,7 +37,7 @@
                     <div class="banner-img">
                         <div class="img">
                             @foreach ($contacts as $contact)
-                            <img src="{{ $contact->img_path ??''}}" alt="" />
+                                <img src="{{ $contact->img_path ?? '' }}" alt="" />
                             @endforeach
                             <div class="main-img-color"></div>
                         </div>
@@ -95,29 +95,24 @@
                         <div class="type form-field">
                             <label>查詢類型</label>
                             <select name="type" id="">
-                                <option value="1" @if (($data['type']??'') == 1)
-                                {{'selected'}}
-                                @endif>設備</option>
-                                <option value="2" @if (($data['type']??'') == 2)
-                                {{'selected'}}
-                                @endif>軟體</option>
-                                <option value="3" @if (($data['type']??'') == 3)
-                                {{'selected'}}
-                                @endif>部品零件</option>
-                                <option value="4" @if (($data['type']??'') == 4)
-                                {{'selected'}}
-                                @endif>耗材</option>
-                                <option value="5" @if (($data['type']??'') == 5)
-                                {{'selected'}}
-                                @endif>維修</option>
-                                <option value="6" @if (($data['type']??'') == 6)
-                                {{'selected'}}
-                                @endif>其他</option>
+                                <option value="1" @if (($data['type'] ?? '') == 1) {{ 'selected' }} @endif>設備
+                                </option>
+                                <option value="2" @if (($data['type'] ?? '') == 2) {{ 'selected' }} @endif>軟體
+                                </option>
+                                <option value="3" @if (($data['type'] ?? '') == 3) {{ 'selected' }} @endif>部品零件
+                                </option>
+                                <option value="4" @if (($data['type'] ?? '') == 4) {{ 'selected' }} @endif>耗材
+                                </option>
+                                <option value="5" @if (($data['type'] ?? '') == 5) {{ 'selected' }} @endif>維修
+                                </option>
+                                <option value="6" @if (($data['type'] ?? '') == 6) {{ 'selected' }} @endif>其他
+                                </option>
                             </select>
                         </div>
                         <div class="company-name form-field">
                             <label>您的公司名稱/個人</label>
-                            <input name="company" type="text" value="{{ $data['company'] ?? '' }}" required="required"/>
+                            <input name="company" type="text" value="{{ $data['company'] ?? '' }}"
+                                required="required" />
                         </div>
                         <div class="appellation form-field">
                             <label for="text">職稱</label>
@@ -125,15 +120,17 @@
                         </div>
                         <div class="youname form-field">
                             <label>姓名</label>
-                            <input name="name" type="text" value="{{ $data['name'] ?? '' }}" required="required"/>
+                            <input name="name" type="text" value="{{ $data['name'] ?? '' }}" required="required" />
                         </div>
                         <div class="tel-number form-field">
                             <label>電話號碼</label>
-                            <input name="tel" type="text" value="{{ $data['phone'] ?? '' }}" required="required"/>
+                            <input name="tel" type="text" value="{{ $data['phone'] ?? '' }}"
+                                required="required" />
                         </div>
                         <div class="email-address form-field">
                             <label>電子郵件</label>
-                            <input name="email" type="text" value="{{ $data['address'] ?? '' }}" required="required"/>
+                            <input name="email" type="text" value="{{ $data['address'] ?? '' }}"
+                                required="required" />
                         </div>
                         <div class="demand form-field">
                             <label>需求說明</label>
@@ -143,12 +140,18 @@
                     <!-- 隱私權政策 -->
                     <div class="privacy-policy">
                         <input required="required" id="privacy-policy" name="privacy" type="checkbox" />
-                        <label for="privacy-policy"><a style="color: black;" target="_blank" href="/privacypolic">隱私權政策</a></label>
+                        <label for="privacy-policy"><a style="color: black;" target="_blank"
+                                href="/privacypolic">隱私權政策</a></label>
                     </div>
                     <!-- 表單按鈕 -->
-                    <button type="submit">
-                        <p>確認送出</p>
-                    </button>
+                    <div class="contant-btn">
+                        <button type="submit">
+                            <div class="bgcl"></div>
+                            <p>確認送出</p>
+                            <img id="go_img" src="{{ asset('image/contact/blue_right.svg') }}" alt="">
+                            <img id="go_img2" src="{{ asset('image/contact/white_right.svg') }}" alt="">
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

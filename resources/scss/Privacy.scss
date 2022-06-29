@@ -21,6 +21,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 0.1em;
 }
@@ -31,6 +32,7 @@ h2 {
     color: $subTittleColor;
     display: flex;
     justify-content: center;
+    font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: 0.1em;
 }
@@ -38,6 +40,7 @@ h2 {
 // h3 頁面副標題
 h3 {
     width: 100%;
+    font-weight: 800;
     color: $themeColor;
     display: flex;
     justify-content: center;

@@ -21,6 +21,7 @@ h1 {
     display: flex;
     justify-content: center;
     font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 10px;
     letter-spacing: 0.1em;
 }
@@ -31,6 +32,7 @@ h2 {
     color: $subTittleColor;
     display: flex;
     justify-content: center;
+    font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: 0.1em;
 }
@@ -40,6 +42,7 @@ h3 {
     width: 100%;
     color: $themeColor;
     display: flex;
+    font-weight: 800;
     justify-content: center;
     margin-top: 50px;
     letter-spacing: 0.1em;
@@ -60,19 +63,19 @@ body {
         padding: 0 28% 30px;
         @media (max-width:1600px) {
             padding: 0 18% 30px;
-            
+
         }
         @media (max-width:1440px) {
             padding: 0 8% 30px;
-            
+
         }
         @media (max-width:992px) {
             padding: 0 5% 30px;
-            
+
         }
         @media (max-width:768px) {
             padding: 0 50px 30px;
-            
+
         }
         .container {
             width: 100%;

@@ -80,6 +80,7 @@ main {
                     line-height: 59px;
                     color: #B4B4B4;
                     letter-spacing: 0.06em;
+
                     @include pad {
                         position: absolute;
                         z-index: 3;
@@ -593,10 +594,12 @@ main {
                         flex-wrap: nowrap;
                         margin-bottom: 50px;
                         border: none;
+
                         @media (max-width:1060px) {
                             min-width: 620px;
 
                         }
+
                         label {
                             margin-right: 30px;
 
@@ -613,6 +616,7 @@ main {
                             height: 65px;
                             width: 679px;
                             padding: 0 15px;
+
                             @media (max-width:1060px) {
                                 width: 620px;
                             }
@@ -632,6 +636,7 @@ main {
                             height: 65px;
                             width: 679px;
                             padding: 0 15px;
+
                             @media (max-width:1060px) {
                                 width: 620px;
 
@@ -676,24 +681,175 @@ main {
                 .button-section {
                     display: flex;
                     justify-content: space-between;
+                    padding: 0 15px;
 
-                    button {
-                        margin-top: 50px;
+                    .prev-btn {
                         width: 45%;
-                        height: 65px;
-                        margin-bottom: 50px;
-                        background-color: white;
-                        border: 1px solid $themeColor;
-                        border-radius: 5px;
 
-                        &:hover {
-                            cursor: pointer;
+                        button {
+                            margin-top: 50px;
+                            width: 100%;
+                            height: 65px;
+                            margin-bottom: 50px;
+                            background-color: white;
+                            border: 1px solid $themeColor;
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            .bgcl {
+                                position: absolute;
+                                width: 0px;
+                                height: 65px;
+                                background-color: $themeColor;
+                                right: 0;
+                            }
+
+                            &:hover>.bgcl {
+                                width: 100%;
+                                transition: .3s;
+                                z-index: -1;
+                            }
+
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: transparent;
+                            }
+
+
+                            &:hover>p {
+                                cursor: pointer;
+                                color: #fff;
+                            }
+
+                            &:hover>#go_img {
+                                display: none;
+                            }
+
+                            &:hover>#go_img2 {
+                                display: block;
+                            }
+
+
+                            #go_img2 {
+                                display: none;
+                            }
+
+
+                            @include screen500{
+                                padding-right: 15px;
+                                justify-content: flex-end;
+                            }
+
+                            p {
+                                font-weight: 400;
+                                letter-spacing: 0.05em;
+                                color: $themeColor;
+                            }
+
+                            img {
+                                width: 61px;
+                                height: 7px;
+                                margin-right: 50px;
+
+                                @include pad {
+                                    position: absolute;
+                                    margin: 0px;
+                                    left: 30px;
+                                }
+
+                                @include mobile{
+                                    left: 15px;
+                                }
+                            }
                         }
+                    }
 
-                        p {
-                            font-weight: 400;
-                            letter-spacing: 0.05em;
-                            color: $themeColor;
+                    .next-btn {
+                        width: 45%;
+
+                        button {
+                            margin-top: 50px;
+                            width: 100%;
+                            height: 65px;
+                            margin-bottom: 50px;
+                            background-color: white;
+                            border: 1px solid $themeColor;
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            .bgcl {
+                                position: absolute;
+                                width: 0px;
+                                height: 65px;
+                                background-color: $themeColor;
+                                left: 0;
+                            }
+
+                            &:hover>.bgcl {
+
+                                width: 100%;
+                                transition: .3s;
+                                z-index: -1;
+                            }
+
+
+                            &:hover {
+                                cursor: pointer;
+                                background-color: transparent;
+                            }
+
+
+                            &:hover>p {
+                                cursor: pointer;
+                                color: #fff;
+                            }
+
+                            &:hover>#go_img3 {
+                                display: none;
+                            }
+
+                            &:hover>#go_img4 {
+                                display: block;
+                            }
+
+
+                            #go_img4 {
+                                display: none;
+                            }
+
+                            @include screen500{
+                                justify-content: flex-start;
+                                padding-left: 15px;
+                            }
+                            p {
+                                font-weight: 400;
+                                letter-spacing: 0.05em;
+                                color: $themeColor;
+                            }
+
+                            img {
+                                width: 61px;
+                                height: 7px;
+                                margin-left: 50px;
+
+                                @include pad {
+                                    position: absolute;
+                                    margin: 0px;
+                                    right: 30px;
+                                }
+                                @include mobile{
+                                    right: 15px;
+                                }
+
+
+                            }
                         }
                     }
                 }

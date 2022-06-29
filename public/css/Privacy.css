@@ -19,6 +19,7 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: 0.1em;
 }
@@ -32,12 +33,14 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 700;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
 }
 
 h3 {
   width: 100%;
+  font-weight: 800;
   color: #004098;
   display: -webkit-box;
   display: -ms-flexbox;

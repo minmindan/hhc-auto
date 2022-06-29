@@ -81,6 +81,7 @@ main {
                     line-height: 59px;
                     color: #B4B4B4;
                     letter-spacing: 0.06em;
+
                     @include pad {
                         position: absolute;
                         z-index: 3;
@@ -626,6 +627,7 @@ main {
                             height: 65px;
                             width: 679px;
                             padding: 0 15px;
+
                             @media (max-width:1060px) {
                                 width: 620px;
                             }
@@ -667,6 +669,7 @@ main {
                             width: 679px;
                             height: 282px;
                             resize: none;
+                            padding-left: 15px;
 
                             @media (max-width:1060px) {
                                 width: 620px;
@@ -700,19 +703,90 @@ main {
                     }
                 }
 
-                button {
-                    margin-top: 50px;
-                    width: 100%;
-                    height: 65px;
-                    margin-bottom: 50px;
-                    background-color: white;
-                    border: 1px solid $themeColor;
-                    border-radius: 5px;
+                .contant-btn {
+                    @include pad {
+                        padding: 0 15px;
+                    }
 
-                    p {
-                        font-weight: 400;
-                        letter-spacing: 0.05em;
-                        color: $themeColor;
+
+
+                    button {
+                        margin-top: 50px;
+                        width: 100%;
+                        height: 65px;
+                        margin-bottom: 50px;
+                        background-color: white;
+                        border: 1px solid $themeColor;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        position: relative;
+
+                        .bgcl {
+                            position: absolute;
+                            width: 0px;
+                            height: 65px;
+                            background-color: $themeColor;
+                            left: 0;
+                        }
+
+                        &:hover>.bgcl {
+
+                            width: 100%;
+                            transition: .3s;
+                            z-index: -1;
+                        }
+
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: transparent;
+                        }
+
+
+                        &:hover>p {
+                            cursor: pointer;
+                            color: #fff;
+                        }
+
+                        &:hover>#go_img {
+                            display: none;
+                        }
+
+                        &:hover>#go_img2 {
+                            display: block;
+                        }
+
+
+                        #go_img2 {
+                            display: none;
+                        }
+
+                        p {
+                            font-weight: 400;
+                            letter-spacing: 0.05em;
+                            color: $themeColor;
+                            margin-right: 50px;
+                            margin-left: 200px;
+
+                            @include pad {
+                                margin: 0px;
+                            }
+                        }
+
+                        img {
+                            width: 61px;
+                            height: 7px;
+                            margin-left: 150px;
+
+                            @include pad {
+                                position: absolute;
+                                margin: 0px;
+                                right: 30px;
+                            }
+                        }
                     }
                 }
             }

@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-興和川自動化有限公司
+    興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/contact2.css') }}" />
@@ -21,7 +21,8 @@
             text-align: center;
             text-decoration: none;
         }
-        a{
+
+        a {
             color: black;
         }
     </style>
@@ -58,7 +59,7 @@
                     <div class="banner-img">
                         <div class="img">
                             @foreach ($contact as $contact)
-                            <img src="{{  $contact->img_path ??'' }}" alt="" />
+                                <img src="{{ $contact->img_path ?? '' }}" alt="" />
                             @endforeach
                             <div class="main-img-color"></div>
                         </div>
@@ -118,12 +119,18 @@
                         <div class="type form-field">
                             <label>查詢類型</label>
                             <select disabled name="type" id="">
-                                <option value="1" @if ($data['type'] == 1) {{ 'selected' }} @endif>設備</option>
-                                <option value="2" @if ($data['type'] == 2) {{ 'selected' }} @endif>軟體</option>
-                                <option value="3" @if ($data['type'] == 3) {{ 'selected' }} @endif>部品零件</option>
-                                <option value="4" @if ($data['type'] == 4) {{ 'selected' }} @endif>耗材</option>
-                                <option value="5" @if ($data['type'] == 5) {{ 'selected' }} @endif>維修</option>
-                                <option value="6" @if ($data['type'] == 6) {{ 'selected' }} @endif>其他</option>
+                                <option value="1" @if ($data['type'] == 1) {{ 'selected' }} @endif>設備
+                                </option>
+                                <option value="2" @if ($data['type'] == 2) {{ 'selected' }} @endif>軟體
+                                </option>
+                                <option value="3" @if ($data['type'] == 3) {{ 'selected' }} @endif>部品零件
+                                </option>
+                                <option value="4" @if ($data['type'] == 4) {{ 'selected' }} @endif>耗材
+                                </option>
+                                <option value="5" @if ($data['type'] == 5) {{ 'selected' }} @endif>維修
+                                </option>
+                                <option value="6" @if ($data['type'] == 6) {{ 'selected' }} @endif>其他
+                                </option>
                             </select>
                         </div>
 
@@ -167,12 +174,22 @@
                     </div>
                     <!-- 表單按鈕 -->
                     <div class="button-section">
-                        <button type="button">
-                            <p><a style="color: #004098" href="/contact">返回前頁</a></p>
-                        </button>
-                        <button type="submit">
-                            <p>確認送出</p>
-                        </button>
+                        <div class="prev-btn">
+                            <a style="color: #004098" href="/contact"> <button type="button">
+                                <div class="bgcl"></div>
+                                <img id="go_img" src="{{ asset('image/contact/blue_left.svg') }}" alt="">
+                                <img id="go_img2" src="{{ asset('image/contact/white_left.svg') }}" alt="">
+                                    <p>返回前頁</p>
+                                </button></a>
+                        </div>
+                        <div class="next-btn">
+                            <button type="submit">
+                                <div class="bgcl"></div>
+                                <p>確認送出</p>
+                                <img id="go_img3" src="{{ asset('image/contact/blue_right.svg') }}" alt="">
+                                <img id="go_img4" src="{{ asset('image/contact/white_right.svg') }}" alt="">
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>

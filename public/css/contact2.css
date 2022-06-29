@@ -799,25 +799,198 @@ main #contact-id .form-container form .button-section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 15px;
 }
 
-main #contact-id .form-container form .button-section button {
-  margin-top: 50px;
+main #contact-id .form-container form .button-section .prev-btn {
   width: 45%;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button {
+  margin-top: 50px;
+  width: 100%;
   height: 65px;
   margin-bottom: 50px;
   background-color: white;
   border: 1px solid #004098;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
-main #contact-id .form-container form .button-section button:hover {
+main #contact-id .form-container form .button-section .prev-btn button .bgcl {
+  position: absolute;
+  width: 0px;
+  height: 65px;
+  background-color: #004098;
+  right: 0;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button:hover > .bgcl {
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: -1;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button:hover {
   cursor: pointer;
+  background-color: transparent;
 }
 
-main #contact-id .form-container form .button-section button p {
+main #contact-id .form-container form .button-section .prev-btn button:hover > p {
+  cursor: pointer;
+  color: #fff;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button:hover > #go_img {
+  display: none;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button:hover > #go_img2 {
+  display: block;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button #go_img2 {
+  display: none;
+}
+
+@media (max-width: 546px) {
+  main #contact-id .form-container form .button-section .prev-btn button {
+    padding-right: 15px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+main #contact-id .form-container form .button-section .prev-btn button p {
   font-weight: 400;
   letter-spacing: 0.05em;
   color: #004098;
+}
+
+main #contact-id .form-container form .button-section .prev-btn button img {
+  width: 61px;
+  height: 7px;
+  margin-right: 50px;
+}
+
+@media (max-width: 992px) {
+  main #contact-id .form-container form .button-section .prev-btn button img {
+    position: absolute;
+    margin: 0px;
+    left: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  main #contact-id .form-container form .button-section .prev-btn button img {
+    left: 15px;
+  }
+}
+
+main #contact-id .form-container form .button-section .next-btn {
+  width: 45%;
+}
+
+main #contact-id .form-container form .button-section .next-btn button {
+  margin-top: 50px;
+  width: 100%;
+  height: 65px;
+  margin-bottom: 50px;
+  background-color: white;
+  border: 1px solid #004098;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+main #contact-id .form-container form .button-section .next-btn button .bgcl {
+  position: absolute;
+  width: 0px;
+  height: 65px;
+  background-color: #004098;
+  left: 0;
+}
+
+main #contact-id .form-container form .button-section .next-btn button:hover > .bgcl {
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  z-index: -1;
+}
+
+main #contact-id .form-container form .button-section .next-btn button:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+main #contact-id .form-container form .button-section .next-btn button:hover > p {
+  cursor: pointer;
+  color: #fff;
+}
+
+main #contact-id .form-container form .button-section .next-btn button:hover > #go_img3 {
+  display: none;
+}
+
+main #contact-id .form-container form .button-section .next-btn button:hover > #go_img4 {
+  display: block;
+}
+
+main #contact-id .form-container form .button-section .next-btn button #go_img4 {
+  display: none;
+}
+
+@media (max-width: 546px) {
+  main #contact-id .form-container form .button-section .next-btn button {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 15px;
+  }
+}
+
+main #contact-id .form-container form .button-section .next-btn button p {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: #004098;
+}
+
+main #contact-id .form-container form .button-section .next-btn button img {
+  width: 61px;
+  height: 7px;
+  margin-left: 50px;
+}
+
+@media (max-width: 992px) {
+  main #contact-id .form-container form .button-section .next-btn button img {
+    position: absolute;
+    margin: 0px;
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  main #contact-id .form-container form .button-section .next-btn button img {
+    right: 15px;
+  }
 }
 /*# sourceMappingURL=contact2.css.map */

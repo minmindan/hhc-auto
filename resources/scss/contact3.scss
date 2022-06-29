@@ -586,27 +586,86 @@ main {
             }
 
             //   返回按鈕
-            button {
-                margin-top: 20px;
-                width: 100%;
-                height: 65px;
-                margin-bottom: 20px;
-                background-color: white;
-                border: 1px solid $themeColor;
-                border-radius: 5px;
-
+            .back-btn {
                 @include pad {
-                    width: 40%;
+                    padding: 0 15px;
                 }
+                button {
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 65px;
+                    margin-bottom: 20px;
+                    background-color: white;
+                    border: 1px solid $themeColor;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
 
-                &:hover {
-                    cursor: pointer;
-                }
 
-                p {
-                    font-weight: 400;
-                    letter-spacing: 0.05em;
-                    color: $themeColor;
+                    position: relative;
+
+                    .bgcl {
+                        position: absolute;
+                        width: 0px;
+                        height: 65px;
+                        background-color: $themeColor;
+                        left: 0;
+                    }
+
+                    &:hover>.bgcl {
+
+                        width: 100%;
+                        transition: .3s;
+                        z-index: -1;
+                    }
+
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: transparent;
+                    }
+
+
+                    &:hover>p {
+                        cursor: pointer;
+                        color: #fff;
+                    }
+
+                    &:hover>#go_img {
+                        display: none;
+                    }
+
+                    &:hover>#go_img2 {
+                        display: block;
+                    }
+
+
+                    #go_img2 {
+                        display: none;
+                    }
+
+                    p {
+                        font-weight: 400;
+                        letter-spacing: 0.05em;
+                        color: $themeColor;
+                        margin-right: 50px;
+                        position: absolute;
+
+                    }
+
+                    img {
+                        width: 61px;
+                        height: 7px;
+                        margin-left: 150px;
+                            position: absolute;
+                            margin: 0px;
+                            right: 120px;
+                            @include screen1200 {
+                                right: 50px;
+                            }
+                    }
                 }
             }
         }
