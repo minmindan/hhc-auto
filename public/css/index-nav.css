@@ -175,6 +175,7 @@ nav #focus .focus-main #focus-box ul li:hover::after {
   bottom: 0;
 }
 
+
 nav #focus .focus-main #focus-box ul li:hover img {
   display: block;
 }
@@ -370,12 +371,26 @@ nav #bar #subnav .hoverbox .fons:hover::after {
   height: 2px;
   background-color: #0146a8;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   -webkit-animation-name: identifier;
           animation-name: identifier;
   -webkit-animation-duration: 0.2s;
           animation-duration: 0.2s;
 }
+nav #bar #subnav .hoverbox:hover .fons::before {
+    content: '';
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: calc(100% - 1px);
+    -webkit-animation-name: identifier;
+            animation-name: identifier;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+  }
 
 @-webkit-keyframes identifier {
   from {

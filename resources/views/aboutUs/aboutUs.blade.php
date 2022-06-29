@@ -2,12 +2,14 @@
 @section('title')
 興和川自動化有限公司
 @endsection
-    <link rel="stylesheet" href="{{ asset('css/aboutus.css') }}" />
-    <!-- swiper -->
-    {{-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    /> --}}
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/aboutus.css') }}" />
+<!-- swiper -->
+{{-- <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/> --}}
+@endsection
 @section('main')
 <main>
 
