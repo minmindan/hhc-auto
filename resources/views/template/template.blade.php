@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        @yield('pagetitle' ?? '')
+        @yield('title' ?? '')
     </title>
     <link rel="icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon" />
     <link rel="shortcut icon" href="{{ asset('image/favicon.ico') }}" type="image/x-icon">
@@ -65,34 +65,35 @@
     {{-- 翻譯欄位 --}}
     <style>
         .tra-bar {
-            width: calc(100% - 20px);
+            width: 100%;
             height: auto;
             position: absolute;
             bottom: 50px;
-            left: 0;
+            display: flex;
+            right:  0;
             overflow: hidden;
+            justify-content: flex-end;
+
         }
 
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width:1090px) {
             .tra-bar {
-                width: calc(100% - 20px);
-                height: auto;
-                position: absolute;
-                bottom: 10px;
-                left: 15px;
+                width: unset;
+                height: unset;
+                position: unset;
+                bottom: unset;
+                right:  unset;
+
             }
         }
 
 
-        .goog-te-gadget-simple {
-            display: flex !important;
-        }
 
         .tra-bar .container {
             display: flex;
             justify-content: flex-end;
             padding: 0 152px;
-
+            margin-top: 30px;
         }
 
 
@@ -101,7 +102,12 @@
                 display: flex;
                 justify-content: flex-end;
                 padding: 0 70px;
+                margin: 0 auto;
             }
+        }
+
+        .goog-te-gadget-simple{
+            display: flex !important;
         }
     </style>
     @yield('css')
@@ -244,11 +250,11 @@
             <div class="footer-btn subaboutbtn" tabindex="0">
                 <h1>關於我們 <img src="{{ asset('image/nav/down_gray.svg') }}" alt=""></h1>
                 <div class="footer-aboutlist">
-                    <p><a href="/aboutus">經營理念</a></p>
+                    <p><a href="/aboutus/#philosophy">經營理念</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p><a href="/aboutus">公司沿革</a></p>
+                    <p><a href="/aboutus/#milestones">公司沿革</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
-                    <p><a href="/aboutus">公司簡介</a></p>
+                    <p><a href="/aboutus/#company-profile">公司簡介</a></p>
                 </div>
             </div>
             <div class="footer-btn subservebtn" tabindex="0">

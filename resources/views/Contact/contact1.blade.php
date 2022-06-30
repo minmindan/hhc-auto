@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-    興和川自動化有限公司
+    興和川自動化有限公司 - 聯絡我們
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/contact1.css') }}" />

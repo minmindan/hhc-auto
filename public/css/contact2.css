@@ -528,12 +528,6 @@ main #contact-id {
   }
 }
 
-@media (max-width: 768px) {
-  main #contact-id {
-    margin-top: 60px;
-  }
-}
-
 main #contact-id .progress-bar-l {
   height: auto;
   display: -webkit-box;

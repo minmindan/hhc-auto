@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-興和川自動化有限公司
+興和川自動化有限公司 - 關於我們
 @endsection
     <link rel="stylesheet" href="{{ asset('css/aboutus.css') }}" />
     <!-- swiper -->

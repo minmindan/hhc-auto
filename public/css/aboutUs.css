@@ -413,29 +413,31 @@ main #banner .banner-container .main-section .banner-img .scroll-box .scroll-tex
 }
 
 main #philosophy {
-  padding: 0 428px 0 20%;
-  margin-top: 120px;
+  padding: 0 20.3% 0 22.1%;
   margin-bottom: 100px;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1600px) {
   main #philosophy {
-    margin-top: 120px;
-    padding-left: 240px;
-    padding-right: 155px;
+    padding: 0 18.3% 0 16%;
+  }
+}
+
+@media (max-width: 1440px) {
+  main #philosophy {
+    padding: 0 16.6% 0 10%;
   }
 }
 
 @media (max-width: 1200px) {
   main #philosophy {
-    padding-left: 120px;
+    padding: 0 13% 0 8%;
   }
 }
 
 @media (max-width: 992px) {
   main #philosophy {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 0 40px;
   }
 }
 
@@ -443,6 +445,13 @@ main #philosophy .philosophy-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 1053px;
+}
+
+@media (max-width: 1440px) {
+  main #philosophy .philosophy-container {
+    min-width: unset;
+  }
 }
 
 main #philosophy .philosophy-container .left-section {

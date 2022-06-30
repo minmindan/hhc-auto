@@ -364,27 +364,32 @@ main {
 
     // 經營理念
     #philosophy {
-        padding: 0 428px 0 20%;
-        margin-top: 120px;
+        padding: 0 20.3% 0 22.1%;
         margin-bottom: 100px;
 
-        @include screen1500 {
-            margin-top: 120px;
-            padding-left: 240px;
-            padding-right: 155px;
+        @include screen1600 {
+            padding:0 18.3% 0 16%;
+        }
+
+        @include screen1440 {
+            padding: 0 16.6% 0 10%;
         }
 
         @include screen1200 {
-            padding-left: 120px;
+            padding: 0 13% 0 8%;
         }
 
         @include pad {
-            padding-right: 40px;
-            padding-left: 40px;
+            padding: 0 40px;
         }
 
         .philosophy-container {
             display: flex;
+            min-width: 1053px;
+
+            @include screen1440{
+                min-width: unset;
+            }
 
             // 左區塊
             .left-section {

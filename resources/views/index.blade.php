@@ -174,24 +174,24 @@
     {{-- 翻譯欄位 --}}
     <style>
         .tra-bar {
-            width: calc(100% - 20px);
+            width: 100%;
             height: auto;
             position: absolute;
             bottom: 50px;
-            left: 0;
+            right:  0;
             overflow: hidden;
         }
 
-        @media screen and (max-width:1000px) {
+        @media screen and (max-width:1090px) {
             .tra-bar {
-                width: calc(100% - 20px);
-                height: auto;
-                position: absolute;
-                bottom: 10px;
-                left: 15px;
+                width: unset;
+                height: unset;
+                position: unset;
+                bottom: unset;
+                right:  unset;
+
             }
         }
-
 
 
 
@@ -208,6 +208,7 @@
                 display: flex;
                 justify-content: flex-end;
                 padding: 0 70px;
+                margin: 0 auto;
             }
         }
     </style>

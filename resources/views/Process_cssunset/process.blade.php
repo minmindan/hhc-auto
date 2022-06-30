@@ -5,6 +5,13 @@
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/process.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    {{-- 字體 --}}
+    <link href="http://fonts.cdnfonts.com/css/din-alternate" rel="stylesheet">
+
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/din-alternate');
+    </style>
 @endsection
 @section('main')
     <main>
