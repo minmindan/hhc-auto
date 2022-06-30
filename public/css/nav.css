@@ -433,7 +433,7 @@ nav #bar #subnav .hoverbox .backendlist {
           align-items: center;
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   /* -webkit-transform: translateX(-80%);
           transform: translateX(-80%); */
   width: 812px;
@@ -489,7 +489,7 @@ nav #bar #subnav .hoverbox .productlist {
           align-items: center;
   position: absolute;
   top: 100%;
-  left: 0;
+  right: 0;
   /* -webkit-transform: translateX(-15%);
           transform: translateX(-15%); */
   width: 812px;
@@ -535,7 +535,7 @@ nav #bar #subnav .hoverbox .aboutlist {
   position: absolute;
   overflow: hidden;
   top: 100%;
-  left: 0;
+  right: 0;
   /* -webkit-transform: translateX(2%);
           transform: translateX(2%); */
   padding-left: 250px;
