@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-興和川自動化有限公司
+產品介紹
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/product-detail.css') }}">

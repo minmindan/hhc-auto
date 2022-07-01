@@ -1,6 +1,6 @@
 @extends('template.template')
 @section('title')
-    興和川自動化有限公司
+聯絡我們
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/contact2.css') }}" />
@@ -105,7 +105,7 @@
                 <!-- 說明文字 -->
                 <div class="directions">
                     <h5>
-                        若您有任何疑問或建議,歡迎留下您寶貴的建議,<br />
+                        若您有任何疑問或建議,歡迎留下您寶貴的建議,<br class="none-in-450" />
                         我們將盡速與您聯擊,感謝!
                     </h5>
                 </div>

@@ -1407,7 +1407,7 @@ body main #process-m * {
 }
 
 body main #process-m .swiper {
-  width: 100%;
+  width: 85%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1439,6 +1439,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide:nth-child(3n) {
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 {
+  min-width: 250px;
   min-height: 550px;
   padding: 15px 30px;
   width: 300px;
@@ -1666,14 +1667,22 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-
   height: 15px;
   color: red;
   font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card1 .step-content .step3 h2 {
   font-weight: 400;
   font-size: 20px;
+  text-align: left;
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 {
+  min-width: 250px;
   min-height: 550px;
   padding: 15px;
   width: 300px;
@@ -1738,6 +1747,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step1
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step1 h3 {
   font-weight: 400;
+  text-align: left;
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step2 .sub-t {
@@ -1796,6 +1806,10 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step2
   margin-right: 15px;
 }
 
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step2 .content .num1 p {
+  text-align: left;
+}
+
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step2 .content .num2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1817,12 +1831,18 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step2
   margin-right: 15px;
 }
 
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step2 .content .num2 p {
+  text-align: left;
+}
+
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card2 .step3 h4 {
   font-size: 20px;
   font-weight: 400;
+  text-align: left;
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card3 {
+  min-width: 250px;
   min-height: 550px;
   padding: 15px;
   width: 300px;
@@ -1925,6 +1945,10 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card3 .step2
   margin-right: 15px;
 }
 
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card3 .step2 .num1 p {
+  text-align: left;
+}
+
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card3 .step3 .num2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1946,7 +1970,12 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card3 .step3
   margin-right: 15px;
 }
 
+body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card3 .step3 .num2 p {
+  text-align: left;
+}
+
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card4 {
+  min-width: 250px;
   min-height: 550px;
   padding: 15px;
   width: 300px;
@@ -2044,6 +2073,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card4 .step1
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card4 .step1 h3 {
   font-weight: 400;
   font-size: 1.2rem;
+  text-align: left;
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card4 .step2 {
@@ -2129,10 +2159,12 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card4 .step2
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card4 .step3 h4 {
   font-weight: 400;
+  text-align: left;
   font-size: 1.2rem;
 }
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card5 {
+  min-width: 250px;
   min-height: 550px;
   padding: 15px;
   width: 300px;
@@ -2292,6 +2324,7 @@ body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card5 .step-
 
 body main #process-m .swiper .swiper-wrapper .swiper-slide .process-card5 .step-content .step3 h3 {
   font-size: 1.2rem;
+  text-align: left;
   font-weight: 400;
 }
 

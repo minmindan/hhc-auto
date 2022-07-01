@@ -438,6 +438,7 @@ main {
         justify-content: center;
         margin-left: 316px;
         position: relative;
+
         @include screen1600 {
             margin-left: 280px;
         }
@@ -584,6 +585,24 @@ main {
             .directions {
                 margin-bottom: 60px;
 
+                .none-in-450 {
+                    @media (max-width:450px) {
+                        display: none;
+                    }
+                }
+
+                @include pad {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                @include mobile {
+                    justify-content: unset;
+                    text-align: unset;
+                    padding: 0 15px;
+                }
+
                 h5 {
                     font-weight: 500;
                     font-size: 20px;
@@ -605,7 +624,6 @@ main {
                         border: none;
 
 
-
                         @media (max-width:1060px) {
                             min-width: 620px;
 
@@ -613,6 +631,7 @@ main {
 
                         label {
                             margin-right: 30px;
+                            margin-bottom: 10px;
 
                         }
 

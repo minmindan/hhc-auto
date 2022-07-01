@@ -678,6 +678,34 @@ main #contact-id .form-container .directions {
   margin-bottom: 60px;
 }
 
+@media (max-width: 450px) {
+  main #contact-id .form-container .directions .none-in-450 {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  main #contact-id .form-container .directions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  main #contact-id .form-container .directions {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    text-align: unset;
+    padding: 0 15px;
+  }
+}
+
 main #contact-id .form-container .directions h5 {
   font-weight: 500;
   font-size: 20px;
@@ -710,6 +738,7 @@ main #contact-id .form-container form .form-section .form-field {
 
 main #contact-id .form-container form .form-section .form-field label {
   margin-right: 30px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {

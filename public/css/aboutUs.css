@@ -431,7 +431,7 @@ main #philosophy {
 
 @media (max-width: 1200px) {
   main #philosophy {
-    padding: 0 13% 0 8%;
+    padding: 0 62px 0 62px;
   }
 }
 
@@ -448,6 +448,14 @@ main #philosophy .philosophy-container {
   min-width: 1053px;
 }
 
+@media (max-width: 900px) {
+  main #philosophy .philosophy-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 @media (max-width: 1440px) {
   main #philosophy .philosophy-container {
     min-width: unset;
@@ -462,6 +470,12 @@ main #philosophy .philosophy-container .left-section {
 @media (max-width: 992px) {
   main #philosophy .philosophy-container .left-section {
     margin-right: 130px;
+  }
+}
+
+@media (max-width: 900px) {
+  main #philosophy .philosophy-container .left-section {
+    margin-right: 0px;
   }
 }
 
@@ -493,6 +507,18 @@ main #philosophy .philosophy-container .left-section .white-space h1 {
 
 main #philosophy .philosophy-container .right-section {
   padding-top: 50px;
+}
+
+@media (max-width: 900px) {
+  main #philosophy .philosophy-container .right-section {
+    width: 530px;
+  }
+}
+
+@media (max-width: 768px) {
+  main #philosophy .philosophy-container .right-section {
+    width: unset;
+  }
 }
 
 main #philosophy .philosophy-container .right-section .main-container {

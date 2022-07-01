@@ -376,7 +376,7 @@ main {
         }
 
         @include screen1200 {
-            padding: 0 13% 0 8%;
+            padding: 0 62px 0 62px;
         }
 
         @include pad {
@@ -386,6 +386,9 @@ main {
         .philosophy-container {
             display: flex;
             min-width: 1053px;
+            @media (max-width:900px) {
+                justify-content: space-between;
+            }
 
             @include screen1440{
                 min-width: unset;
@@ -398,6 +401,10 @@ main {
 
                 @include pad {
                     margin-right: 130px;
+                }
+
+                @media (max-width:900px) {
+                    margin-right: 0px;
                 }
 
                 @include mobile {
@@ -418,6 +425,14 @@ main {
             // 右區塊
             .right-section {
                 padding-top: 50px;
+
+                @media (max-width:900px) {
+                    width: 530px;
+                }
+
+                @include mobile {
+                    width: unset;
+                }
 
                 .main-container {
                     @include textArea;
