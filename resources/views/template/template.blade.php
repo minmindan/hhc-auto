@@ -117,13 +117,13 @@
     <nav id="nav">
         <div id="focus" class="none">
             <div id="focuslogo" class="focus-logo none">
-                <img id="smalllogo" src="{{asset('image/nav/small_white.svg')}}" alt="">
-                <img src="{{ asset('image/nav/white_logo.png') }}" alt="">
+                <img id="slogo" src="{{asset('image/nav/small_white.svg')}}" alt="">
+                <img id="blogo" src="{{ asset('image/nav/white_logo.png') }}" alt="">
                 <img id="XX" style="cursor: pointer;" height="40px"
                     src="{{ asset('image/nav/burger_white_X.svg') }}" alt="">
             </div>
             <div id="focusmain" class="focus-main none">
-                <div id="focus-box">
+                <div class="focus-box">
                     <p><a href="/aboutus">關於我們</a></p>
                     <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
@@ -135,7 +135,7 @@
                                     src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
                     </ul>
                 </div>
-                <div id="focus-box">
+                <div class="focus-box">
                     <p><a href="/product">產品介紹</a></p>
                     <h1><a href="/product">PRODUCT</a></h1>
                     <ul>
@@ -151,11 +151,11 @@
                                     alt=""></a></li>
                     </ul>
                 </div>
-                <div id="focus-box">
+                <div class="focus-box">
                     <p><a href="/process">產品製作流程</a></p>
                     <h1><a href="/process">PROCESS</a></h1>
                 </div>
-                <div id="focus-box">
+                <div class="focus-box">
                     <p><a href="/contact">聯絡我們</a></p>
                     <h1><a href="/contact">CONTACT</a></h1>
                 </div>
