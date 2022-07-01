@@ -126,6 +126,7 @@
     <nav id="nav">
         <div id="focus" class="none">
             <div id="focuslogo" class="focus-logo none">
+                <img id="smalllogo" src="{{asset('image/nav/small_white.svg')}}" alt="">
                 <img src="{{ asset('image/nav/white_logo.png') }}" alt="">
                 <img id="XX" style="cursor: pointer;" height="40px"
                     src="{{ asset('image/nav/burger_white_X.svg') }}" alt="">

@@ -95,7 +95,7 @@ nav #focus .focus-main {
 
 @media (max-width: 768px) {
   nav #focus .focus-main {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 130px);
     margin-top: 0;
   }
 }
@@ -192,6 +192,7 @@ nav #focus .focus-main #focus-button {
   bottom: 50px;
   width: 43.75%;
   height: 112px;
+  text-transform:unset;
   padding-left: 135px;
   background-color: #004098;
   display: -webkit-box;
@@ -202,7 +203,11 @@ nav #focus .focus-main #focus-button {
           align-items: center;
 }
 
-
+@media (max-width: 993px) {
+    nav #focus .focus-main #focus-button {
+      padding: 0 15%;
+    }
+  }
 nav #focus .focus-main #focus-button:hover {
   border: #004098 2px solid;
   border-right: unset;
@@ -260,6 +265,7 @@ nav #focus .focus-main #focus-button:hover {
 }
 @media (max-width: 768px) {
   nav #focus .focus-main #focus-button {
+    height: 60px !important;
     bottom: 0;
   }
   nav #focus .focus-main #focus-button:hover {
@@ -283,7 +289,13 @@ nav #focus .focus-main #focus-button img {
     margin-bottom: 10px;
   }
 }
-
+@media (max-width: 993px) {
+    nav #focus .focus-main #focus-button img {
+      width: 30% !important;
+      min-width: 25vw;
+      margin: 0;
+    }
+  }
 nav #bar {
   width: 100%;
   height: 100%;
