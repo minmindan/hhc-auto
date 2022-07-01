@@ -104,6 +104,15 @@
                 padding: 0 70px;
                 margin: 0 auto;
             }
+
+            .tra-bar {
+                width: unset;
+                height: unset;
+                position: unset;
+                bottom: unset;
+                right:  unset;
+                margin-top: 30px;
+            }
         }
 
         .goog-te-gadget-simple{

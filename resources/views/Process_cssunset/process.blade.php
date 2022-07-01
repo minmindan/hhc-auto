@@ -1,6 +1,5 @@
 @extends('template.template')
 @section('title')
-興和川自動化有限公司
 @endsection
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/process.css') }}">
@@ -44,7 +43,7 @@
                 <div class="main-section">
                     <div class="banner-img">
                         <div class="img">
-                            <img src="{{$process[0]->img_path??''}}" alt="" />
+                            <img src="{{ $process[0]->img_path ?? '' }}" alt="" />
                             <div class="main-img-color"></div>
                         </div>
                         <!-- 頁面導覽塊 -->
@@ -88,11 +87,11 @@
                             <div class="content">網頁聯繫表單
                                 <div class="r-section">
                                     <a href="/contact">
-                                    <span>CONTACT</span>
-                                    <div class="red-arrow">
-                                        <img src="{{ asset('image/icon/Process/red_right.svg') }}" alt="">
-                                    </div>
-                                </a>
+                                        <span>CONTACT</span>
+                                        <div class="red-arrow">
+                                            <img src="{{ asset('image/icon/Process/red_right.svg') }}" alt="">
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -246,10 +245,11 @@
                                     <div class="sub-content">
                                         <div class="content">
                                             <p>網頁聯繫表單</p>
-                                        <a href="/contact">
+                                            <a href="/contact">
 
-                                            <span>
-                                                CONTACT<img src="{{ asset('image/icon/Process/red_right.svg') }}" alt=""></span>
+                                                <span>
+                                                    CONTACT<img src="{{ asset('image/icon/Process/red_right.svg') }}"
+                                                        alt=""></span>
                                             </a>
                                         </div>
                                     </div>
@@ -467,18 +467,18 @@
                     <div class="target-img">
                         <a href="/product">
 
-                        <div class="image-box">
-                            <img src="{{ $product[0]->img_path??'' }}" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="target-name">
-                                <h2>PRODUCT</h2>
-                                <div class="sup-icon">
-                                    <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
+                            <div class="image-box">
+                                <img src="{{ $product[0]->img_path ?? '' }}" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="target-name">
+                                    <h2>PRODUCT</h2>
+                                    <div class="sup-icon">
+                                        <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
 
                     </div>
                 </div>
@@ -487,19 +487,19 @@
                     <div class="target-img">
                         <a href="/contact">
 
-                        <div class="image-box">
-                            <img src="{{ $contact[0]->img_path??'' }}" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="target-name">
-                                <h2>CONTACT</h2>
-                                <div class="sup-icon">
-                                    <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
-                                </div>
-
+                            <div class="image-box">
+                                <img src="{{ $contact[0]->img_path ?? '' }}" alt="">
                             </div>
-                        </div>
-                    </a>
+                            <div class="content">
+                                <div class="target-name">
+                                    <h2>CONTACT</h2>
+                                    <div class="sup-icon">
+                                        <img src="{{ asset('image/process/white_circle.svg') }}" alt="">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </a>
 
                     </div>
                 </div>
@@ -515,6 +515,10 @@
 
     <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {});
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 70,
+            centeredSlides: true,
+        });
     </script>
 @endsection

@@ -33,7 +33,6 @@ body {
                 padding-left: 0px;
             }
 
-            @include mobile {}
 
             .banner-container {
                 .sub-section {
@@ -396,10 +395,12 @@ body {
                     width: auto;
                     justify-content: center;
 
-                    // 背景文字
-                    .left-section {
+
+                     // 背景文字
+                     .left-section {
                         margin-right: 150px;
                         width: 100%;
+                            min-width: 80px;
 
                         @include pad {
                             margin-right: 100px;
@@ -408,12 +409,12 @@ body {
                         @include mobile {
                             margin-right: 40px;
                             min-width: 80px;
-
+                            width: auto;
                         }
+
 
                         @media (max-width:550px) {
                             margin-right: 20px;
-                            min-width: 80px;
                         }
 
                         .white-space {
@@ -433,7 +434,8 @@ body {
                         }
                     }
 
-                    // 主要內容區塊
+
+                   // 主要內容區塊
                     .right-section {
                         .main-section {
                             padding-top: 50px;
@@ -467,12 +469,12 @@ body {
                                         }
                                     }
 
-                                    @include screen1200 {
-                                        position: absolute;
-                                        right: 0;
-                                        margin-right: 20px;
+                                    // @include screen1200 {
+                                    //     position: absolute;
+                                    //     right: 0;
+                                    //     margin-right: 20px;
 
-                                    }
+                                    // }
 
                                     @include mobile {
                                         position: unset;
@@ -590,7 +592,10 @@ body {
 
                         @include mobile {
                             margin-right: 40px;
+                            min-width: 80px;
+                            width: auto;
                         }
+
 
                         @media (max-width:550px) {
                             margin-right: 20px;
@@ -647,12 +652,12 @@ body {
                                         }
                                     }
 
-                                    @include screen1200 {
-                                        position: absolute;
-                                        right: 0;
-                                        margin-right: 20px;
+                                    // @include screen1200 {
+                                    //     position: absolute;
+                                    //     right: 0;
+                                    //     margin-right: 20px;
 
-                                    }
+                                    // }
 
                                     @include mobile {
                                         position: unset;
@@ -770,7 +775,10 @@ body {
 
                         @include mobile {
                             margin-right: 40px;
+                            min-width: 80px;
+                            width: auto;
                         }
+
 
                         @media (max-width:550px) {
                             margin-right: 20px;
@@ -827,12 +835,12 @@ body {
                                         }
                                     }
 
-                                    @include screen1200 {
-                                        position: absolute;
-                                        right: 0;
-                                        margin-right: 20px;
+                                    // @include screen1200 {
+                                    //     position: absolute;
+                                    //     right: 0;
+                                    //     margin-right: 20px;
 
-                                    }
+                                    // }
 
                                     @include mobile {
                                         position: unset;
@@ -950,7 +958,10 @@ body {
 
                         @include mobile {
                             margin-right: 40px;
+                            min-width: 80px;
+                            width: auto;
                         }
+
 
                         @media (max-width:550px) {
                             margin-right: 20px;
@@ -1007,12 +1018,12 @@ body {
                                         }
                                     }
 
-                                    @include screen1200 {
-                                        position: absolute;
-                                        right: 0;
-                                        margin-right: 20px;
+                                    // @include screen1200 {
+                                    //     position: absolute;
+                                    //     right: 0;
+                                    //     margin-right: 20px;
 
-                                    }
+                                    // }
 
                                     @include mobile {
                                         position: unset;
@@ -1130,7 +1141,10 @@ body {
 
                         @include mobile {
                             margin-right: 40px;
+                            min-width: 80px;
+                            width: auto;
                         }
+
 
                         @media (max-width:550px) {
                             margin-right: 20px;
