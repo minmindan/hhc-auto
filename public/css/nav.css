@@ -107,7 +107,7 @@ nav #focus .focus-main {
 
 @media (max-width: 768px) {
   nav #focus .focus-main {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 130px);
     margin-top: 0;
   }
   nav #focus .focus-main h1 {
@@ -193,6 +193,7 @@ nav #focus .focus-main #focus-button {
   width: 43.75%;
   height: 112px;
   padding-left: 135px;
+  text-transform:unset;
   background-color: #004098;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -231,9 +232,15 @@ nav #focus .focus-main #focus-button:hover {
             justify-content: space-between;
   }
 }
+@media (max-width: 993px) {
+    nav #focus .focus-main #focus-button {
+      padding: 0 15%;
+    }
+  }
 
 @media (max-width: 768px) {
   nav #focus .focus-main #focus-button {
+    height: 60px !important;
     bottom: 0;
   }
   nav #focus .focus-main #focus-button:hover {
@@ -262,6 +269,13 @@ nav #focus .focus-main #focus-button img {
     width: 40% !important;
   }
 }
+@media (max-width: 993px) {
+    nav #focus .focus-main #focus-button img {
+      width: 30% !important;
+      min-width: 25vw;
+      margin: 0;
+    }
+  }
 
 nav #bar {
   width: 100%;
