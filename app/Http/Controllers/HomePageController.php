@@ -74,8 +74,9 @@ class HomePageController extends Controller
         $item = 'equipment';
 
         $product = Equipment_product::orderBy('weights', 'asc')->get();
+        $product2 = Equipment_product::orderBy('weights', 'asc')->get();
 
-        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item'));
+        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item','product2'));
     }
 
     public function software()
@@ -85,8 +86,9 @@ class HomePageController extends Controller
         $item = 'software';
 
         $product = Software_product::orderBy('weights', 'asc')->get();
+        $product2 = Software_product::orderBy('weights', 'asc')->get();
 
-        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item'));
+        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item','product2'));
     }
 
     public function parts()
@@ -96,8 +98,9 @@ class HomePageController extends Controller
         $item = 'parts';
 
         $product = Components_product::orderBy('weights', 'asc')->get();
+        $product2 = Components_product::orderBy('weights', 'asc')->get();
 
-        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item'));
+        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item','product2'));
     }
 
     public function consumables()
@@ -107,8 +110,9 @@ class HomePageController extends Controller
         $item = 'consumables';
 
         $product = Consumables_product::orderBy('weights', 'asc')->get();
+        $product2 = Consumables_product::orderBy('weights', 'asc')->get();
 
-        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item'));
+        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item','product2'));
     }
 
     public function maintenance()
@@ -118,8 +122,9 @@ class HomePageController extends Controller
         $item = 'maintenance';
 
         $product = Repair_product::orderBy('weights', 'asc')->get();
+        $product2 = Repair_product::orderBy('weights', 'asc')->get();
 
-        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item'));
+        return view('equipment-all.product-all', compact('title', 'subtitle', 'product', 'item','product2'));
     }
 
     // 產品詳細頁面

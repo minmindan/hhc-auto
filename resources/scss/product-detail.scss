@@ -69,7 +69,7 @@ main {
 
                 // 圖片
                 .product-content {
-                    transform: translateY(-20%);
+                    transform: translateY(-128px);
 
                     .image-box {
                         padding: 0 14%;
@@ -124,7 +124,6 @@ main {
                                 transform: translate(20%, 50%);
 
 
-
                                 .intro-content {
                                     .product-name {
                                         h4 {
@@ -137,6 +136,7 @@ main {
                                         width: 100%;
                                         display: flex;
                                         justify-content: flex-end;
+                                        margin: 10px 0;
 
                                         h4 {
                                             font-size: 1.2rem;
@@ -259,6 +259,7 @@ main {
                             display: flex;
                             align-items: center;
                             justify-content: center;
+
                             .swiper-wrapper {
                                 width: 100%;
                                 height: 100%;
@@ -409,7 +410,12 @@ main {
                     width: 70%;
 
                     @include pad {
-                        padding: 0 0 0 5%;
+                        padding: 0 0 0 62px;
+                        margin-top: 128px;
+                    }
+
+                    @include mobile{
+                        padding: 0 0 0 40px ;
                     }
 
                     // 產品規格
@@ -476,7 +482,14 @@ main {
                 @media (max-width:992px) {
                     position: absolute;
                     bottom: -50px;
+                    right: 62px;
+                margin-right: 0px;
                 }
+
+                @include mobile{
+                    right: 40px;
+                margin-right: 0px;
+            }
 
                 .img {
                     width: 60px;

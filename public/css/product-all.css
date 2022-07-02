@@ -443,9 +443,10 @@ body main #product-single {
   padding-top: 150px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   body main #product-single {
     height: 100%;
+    padding-top: 0px;
   }
 }
 
@@ -491,9 +492,9 @@ body main #product-single #product-section {
 @media (max-width: 992px) {
   body main #product-single #product-section {
     padding-left: 0px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

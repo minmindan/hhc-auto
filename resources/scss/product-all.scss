@@ -364,9 +364,9 @@ body {
         #product-single {
             padding-top: 150px;
 
-            @media (max-width:991px) {
+            @include pad{
                 height: 100%;
-
+                padding-top: 0px;
             }
 
             // 商品區塊
@@ -396,7 +396,7 @@ body {
 
                 @media (max-width:992px) {
                     padding-left: 0px;
-                    justify-content: space-between;
+                    justify-content: center;
                 }
 
                 @media (max-width:414px) {

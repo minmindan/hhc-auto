@@ -116,7 +116,7 @@
                                                 <!-- 圖片 -->
                                                 <a href="/{{$item}}/{{$product->id}}">
                                                 <div class="image-box">
-                                                    <img src="{{ asset('image/product-all/AVM-1.png') }}" alt="">
+                                                    <img src="{{ $product->primary_img??'' }}" alt="">
                                                 </div>
 
                                                 <!-- 文字說明 -->
@@ -164,26 +164,33 @@
                                     <div class="product-swiper">
                                         <div class="swiper mySwiper">
                                             <div class="tittle">
-                                                <h3>設備</h3>
+                                                <h3>{{$title}}</h3>
                                             </div>
                                             <div class="swiper-wrapper">
+
+                                        @foreach ($product2 as $product)
+
                                                 <div class="swiper-slide">
                                                     <!-- 商品相關資訊 -->
                                                     <div class="product-directions">
                                                         <div class="product-name">
-                                                            <h3>商品名稱</h3>
+                                                            <h3>{{$product->product_name??''}}</h3>
                                                         </div>
                                                         <div class="product-number">
-                                                            <p>款號</p>
+                                                            <p>{{$product->model??''}}</p>
                                                         </div>
                                                     </div>
                                                     <!-- 商品圖片 -->
                                                     <div class="img-box">
-                                                        <img src="{{ asset('image/product-all/AVM-1.png') }}"
+                                                        <img src="{{ $product->primary_img??'' }}"
                                                             alt="">
                                                     </div>
                                                 </div>
-                                                <div class="swiper-slide">
+
+                                        @endforeach
+
+
+                                                {{-- <div class="swiper-slide">
                                                     <!-- 商品相關資訊 -->
                                                     <div class="product-directions">
                                                         <div class="product-name">
@@ -214,7 +221,7 @@
                                                         <img src="{{ asset('image/product-all/productimg.png') }}"
                                                             alt="">
                                                     </div>
-                                                </div>
+                                                </div> --}}
 
                                             </div>
                                             <div class="swiper-pagination"></div>
