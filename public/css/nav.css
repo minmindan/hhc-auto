@@ -230,6 +230,7 @@ nav #focus .focus-main #focus-button:hover {
 @media (max-width: 1540px) {
   nav #focus .focus-main #focus-button {
     height: 97px;
+    padding-left: 80px;
   }
 }
 
@@ -266,7 +267,7 @@ nav #focus .focus-main #focus-button h1 {
 }
 
 nav #focus .focus-main #focus-button img {
-  width: 30% !important;
+  width: 10vw !important;
   margin-left: 80px;
   margin-top: 30px;
 }
@@ -285,7 +286,7 @@ nav #focus .focus-main #focus-button img {
 @media (max-width: 993px) {
     nav #focus .focus-main #focus-button img {
       width: 30% !important;
-      min-width: 25vw;
+      min-width: 10vw;
       margin: 0;
     }
   }
@@ -692,4 +693,16 @@ nav #bar #bglist .stuffing {
         margin-bottom: 15px !important;
     }
 }
+
+
+@media (max-width:993px) {
+    li{
+      margin-bottom:10px ;
+    }
+    nav #focus .focus-main h1{
+      margin-top: 15px !important;
+      margin-bottom: 25px !important;
+    }
+  }
+
 /*# sourceMappingURL=nav.css.map */
