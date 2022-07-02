@@ -1959,9 +1959,9 @@ body {
 
                 // 快速連結
                 .product-link {
-                    height: 100%;
+                    height: 389px;
                     position: relative;
-
+width: 50%;
                     @include pad {
                         width: 100%;
                     }
@@ -2053,8 +2053,9 @@ body {
 
                 // // 快速連結
                 .contact-link {
-                    height: 100%;
+                    height: 389px;
                     position: relative;
+                    width: 50%;
 
                     @include pad {
                         width: 100%;

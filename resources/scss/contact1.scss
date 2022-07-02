@@ -574,11 +574,17 @@ main {
             }
 
             @include pad {
-                padding-left: 50px;
+                padding: 0 62px;
             }
 
             @include mobile {
-                padding-left: 0;
+                padding: 0 40px;
+            }
+
+
+            @media (max-width:550px) {
+                padding: 0 20px;
+
             }
 
             // 說明文字
@@ -624,10 +630,19 @@ main {
                         border: none;
 
 
+
                         @media (max-width:1060px) {
                             min-width: 620px;
-
                         }
+
+
+                        @include mobile {
+                            flex-direction: column;
+                            min-width: unset;
+                            border-radius: 15px;
+                        }
+
+
 
                         label {
                             margin-right: 30px;
@@ -636,12 +651,6 @@ main {
                         }
 
 
-                        @include mobile {
-                            flex-direction: column;
-                            min-width: unset;
-                            padding: 0 15px;
-                            border-radius: 15px;
-                        }
 
                         input {
                             height: 65px;

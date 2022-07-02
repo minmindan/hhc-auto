@@ -578,13 +578,18 @@ main {
             }
 
             @include pad {
-                padding-left: 50px;
+                padding: 0 62px;
             }
 
             @include mobile {
-                padding-left: 0;
+                padding: 0 40px;
             }
 
+
+            @media (max-width:550px) {
+                padding: 0 20px;
+
+            }
 
             // 說明文字
             .directions {
@@ -642,7 +647,6 @@ main {
                         @include mobile {
                             flex-direction: column;
                             min-width: unset;
-                            padding: 0 15px;
                         }
 
                         input {

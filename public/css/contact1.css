@@ -664,13 +664,19 @@ main #contact-id .form-container {
 
 @media (max-width: 992px) {
   main #contact-id .form-container {
-    padding-left: 50px;
+    padding: 0 62px;
   }
 }
 
 @media (max-width: 768px) {
   main #contact-id .form-container {
-    padding-left: 0;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  main #contact-id .form-container {
+    padding: 0 20px;
   }
 }
 
@@ -736,11 +742,6 @@ main #contact-id .form-container form .form-section .form-field {
   }
 }
 
-main #contact-id .form-container form .form-section .form-field label {
-  margin-right: 30px;
-  margin-bottom: 10px;
-}
-
 @media (max-width: 768px) {
   main #contact-id .form-container form .form-section .form-field {
     -webkit-box-orient: vertical;
@@ -748,9 +749,13 @@ main #contact-id .form-container form .form-section .form-field label {
         -ms-flex-direction: column;
             flex-direction: column;
     min-width: unset;
-    padding: 0 15px;
     border-radius: 15px;
   }
+}
+
+main #contact-id .form-container form .form-section .form-field label {
+  margin-right: 30px;
+  margin-bottom: 10px;
 }
 
 main #contact-id .form-container form .form-section .form-field input {

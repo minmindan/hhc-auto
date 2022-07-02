@@ -318,32 +318,30 @@ main {
                 // 下方區塊 商品資訊與箭頭
                 .bottom-section {
                     display: flex;
-                    transform: translateY(10%);
-                    justify-content: space-between;
-                    padding: 0 50px;
-
-
-                    @media (max-width:850px) {
-                        transform: translateY(10%);
+                    justify-content: end;
+                    padding: 0 62px;
+                    position: relative;
+                    @include mobile {
+                        padding: 0 40px;
                     }
 
                     @media (max-width:790px) {
                         padding-top: 100px;
                     }
 
-
                     @media (max-width:550px) {
-                        transform: translateY(50%);
-                        margin-top: 0px;
-                        padding-top: 0px;
-                    }
+                        padding: 0 20px;
 
-                    @media (max-width:375px) {
-                        transform: translateY(40%);
                     }
 
                     .section-l {
-                        margin-left: 15px;
+                        position: absolute;
+                        bottom: 65px;
+                        left: 62px;
+                        margin-right: 105px;
+                        @include mobile{
+                            left: 40px;
+                        }
 
                         .product-name {
                             h4 {
@@ -364,6 +362,7 @@ main {
                         width: auto;
                         display: flex;
                         justify-content: center;
+                        transform: translateY(135px);
 
                         .arrow {
                             width: 35px;
@@ -414,8 +413,8 @@ main {
                         margin-top: 128px;
                     }
 
-                    @include mobile{
-                        padding: 0 0 0 40px ;
+                    @include mobile {
+                        padding: 0 0 0 40px;
                     }
 
                     // 產品規格
@@ -483,13 +482,13 @@ main {
                     position: absolute;
                     bottom: -50px;
                     right: 62px;
-                margin-right: 0px;
+                    margin-right: 0px;
                 }
 
-                @include mobile{
+                @include mobile {
                     right: 40px;
-                margin-right: 0px;
-            }
+                    margin-right: 0px;
+                }
 
                 .img {
                     width: 60px;

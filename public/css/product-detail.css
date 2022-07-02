@@ -407,18 +407,16 @@ main #product-detail #product-section .page-container-m .bottom-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transform: translateY(10%);
-          transform: translateY(10%);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0 50px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding: 0 62px;
+  position: relative;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   main #product-detail #product-section .page-container-m .bottom-section {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    padding: 0 40px;
   }
 }
 
@@ -430,22 +428,21 @@ main #product-detail #product-section .page-container-m .bottom-section {
 
 @media (max-width: 550px) {
   main #product-detail #product-section .page-container-m .bottom-section {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    margin-top: 0px;
-    padding-top: 0px;
-  }
-}
-
-@media (max-width: 375px) {
-  main #product-detail #product-section .page-container-m .bottom-section {
-    -webkit-transform: translateY(40%);
-            transform: translateY(40%);
+    padding: 0 20px;
   }
 }
 
 main #product-detail #product-section .page-container-m .bottom-section .section-l {
-  margin-left: 15px;
+  position: absolute;
+  bottom: 65px;
+  left: 62px;
+  margin-right: 105px;
+}
+
+@media (max-width: 768px) {
+  main #product-detail #product-section .page-container-m .bottom-section .section-l {
+    left: 40px;
+  }
 }
 
 main #product-detail #product-section .page-container-m .bottom-section .section-l .product-name h4 {
@@ -466,6 +463,8 @@ main #product-detail #product-section .page-container-m .bottom-section .section
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transform: translateY(135px);
+          transform: translateY(135px);
 }
 
 main #product-detail #product-section .page-container-m .bottom-section .section-r .arrow {
