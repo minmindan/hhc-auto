@@ -258,7 +258,7 @@
         </div>
         <div id="footer-main">
             <div class="footer-btn subaboutbtn" tabindex="0">
-                <h1>關於我們 <img src="{{ asset('image/nav/down_gray.svg') }}" alt=""></h1>
+                <h1>關於我們 <img src="{{ asset('image/index-icon/white_dwon.svg') }}" alt=""></h1>
                 <div class="footer-aboutlist">
                     <p><a href="/aboutus/#philosophy">經營理念</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
@@ -268,7 +268,7 @@
                 </div>
             </div>
             <div class="footer-btn subservebtn" tabindex="0">
-                <h1>支援服務 <img src="{{ asset('image/nav/down_gray.svg') }}" alt=""></h1>
+                <h1>支援服務 <img src="{{ asset('image/index-icon/white_dwon.svg') }}" alt=""></h1>
                 <div class="footer-servelist">
                     <p><a href="/aboutus">關於我們</a></p>
                     <img src="{{ asset('image/nav/gray_line.svg') }}" alt="">
