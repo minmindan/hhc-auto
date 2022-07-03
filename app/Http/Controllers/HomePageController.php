@@ -161,7 +161,7 @@ class HomePageController extends Controller
         $product = Components_product::where('id', $id)->get();
         $product2 = Components_img::where('iid', $id)->get();
         $product3 = Components_img::where('iid', $id)->get();
-        dd($product2);
+        // dd($product2);
 
         return view('equipment-detail.equipment-detail', compact('title', 'subtitle', 'item', 'product','product2','product3'));
     }
