@@ -95,13 +95,13 @@ nav #focus .focus-main {
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+      justify-content: space-between;
   position: relative;
 }
 
 @media (max-width: 1530px) {
   nav #focus .focus-main {
-    padding: 0 5%;
+    padding: 0 80px;
   }
 }
 
@@ -133,7 +133,7 @@ nav #focus .focus-main h1 {
 }
 
 nav #focus .focus-main .focus-box {
-  margin: 0 auto;
+  margin: 0 ;
 }
 
 @media (max-width: 1380px) {
@@ -146,7 +146,7 @@ nav #focus .focus-main .focus-box {
 @media (max-width: 768px) {
   nav #focus .focus-main .focus-box {
     min-width: 80%;
-    margin: auto;
+    margin: 0;
     margin-bottom: 0;
   }
 }
@@ -230,6 +230,7 @@ nav #focus .focus-main #focus-button:hover {
 @media (max-width: 1540px) {
   nav #focus .focus-main #focus-button {
     height: 97px;
+    padding-left: 80px;
   }
 }
 
@@ -247,18 +248,25 @@ nav #focus .focus-main #focus-button:hover {
 }
 @media (max-width: 993px) {
     nav #focus .focus-main #focus-button {
-      padding: 0 15%;
+      padding: 0 18%;
+    }
+    nav #focus .focus-main #focus-button h1{
+        font-size: 52px !important;
     }
   }
 
 @media (max-width: 768px) {
   nav #focus .focus-main #focus-button {
+    padding: 0 20%;
     height: 60px !important;
     bottom: 0;
   }
   nav #focus .focus-main #focus-button:hover {
     border: #004098 2px solid;
   }
+  nav #focus .focus-main #focus-button h1{
+    font-size: 36px !important;
+}
 }
 
 nav #focus .focus-main #focus-button h1 {
@@ -266,7 +274,7 @@ nav #focus .focus-main #focus-button h1 {
 }
 
 nav #focus .focus-main #focus-button img {
-  width: 30% !important;
+  width: 10vw !important;
   margin-left: 80px;
   margin-top: 30px;
 }
@@ -285,7 +293,7 @@ nav #focus .focus-main #focus-button img {
 @media (max-width: 993px) {
     nav #focus .focus-main #focus-button img {
       width: 30% !important;
-      min-width: 25vw;
+      min-width: 10vw;
       margin: 0;
     }
   }
@@ -655,7 +663,7 @@ nav #bar #bglist .stuffing {
   }
   @media (max-height: 880px) {
     nav #focus .focus-main .focus-box {
-      margin: 0 auto 0;
+      margin: 0;
     }
   }
 
@@ -692,4 +700,16 @@ nav #bar #bglist .stuffing {
         margin-bottom: 15px !important;
     }
 }
+
+
+@media (max-width:993px) {
+    li{
+      margin-bottom:10px ;
+    }
+    nav #focus .focus-main h1{
+      margin-top: 15px !important;
+      margin-bottom: 25px !important;
+    }
+  }
+
 /*# sourceMappingURL=nav.css.map */
