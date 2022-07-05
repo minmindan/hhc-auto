@@ -238,7 +238,7 @@ nav #focus .focus-main #focus-button:hover {
   nav #focus .focus-main #focus-button {
     width: 100%;
     height: 97px;
-    padding: 0 30%;
+    padding: 0 25%;
     left: 0;
     top: 100%;
     -webkit-box-pack: justify;
@@ -275,7 +275,7 @@ nav #focus .focus-main #focus-button h1 {
 }
 
 nav #focus .focus-main #focus-button img {
-  width: 10vw !important;
+  width: 142px !important;
   margin-left: 80px;
   margin-top: 30px;
 }
