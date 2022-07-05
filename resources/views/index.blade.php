@@ -242,15 +242,15 @@
                     <p><a href="/product">產品介紹</a></p>
                     <h1><a href="/product">PRODUCT</a></h1>
                     <ul>
-                        <li><a href="">設備</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/equipment">設備</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
-                        <li><a href="">軟體</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/software">軟體</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
-                        <li><a href="">部品零件</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/parts">部品零件</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
-                        <li><a href="">耗材</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/consumables">耗材</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
-                        <li><a href="">維修</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                        <li><a href="/maintenance">維修</a> <img src="{{ asset('image/nav/white_right.svg') }}"
                                 alt=""></li>
                     </ul>
                 </div>
