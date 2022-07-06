@@ -369,7 +369,7 @@
                 <h1>Product</h1>
                 <div class="productsubtitle">
                     <div class="productmoretitle">產品介紹</div>
-                    <a class="productmore blod">MORE<img style="margin-left:20px;" src="{{ asset('image/index-icon/more_right.svg') }}"
+                    <a href="/product" class="productmore blod">MORE<img style="margin-left:20px;" src="{{ asset('image/index-icon/more_right.svg') }}"
                             alt=""></a>
                 </div>
             </div>
