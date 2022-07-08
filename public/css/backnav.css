@@ -90,4 +90,12 @@ nav #navlist .signoutlist:hover .signout {
 nav #navlist img {
   width: 15px;
 }
+
+nav #navlist a{
+    color:black;
+}
+
+nav #navlist a:visited{
+    color:black;
+}
 /*# sourceMappingURL=backnav.css.map */
