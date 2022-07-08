@@ -101,12 +101,13 @@ class ProductManageController extends Controller
         $components = Components_product::where('primary','<','6')->get();
         $consumables = Consumables_product::where('primary','<','6')->get();
         $maintenance = Repair_product::where('primary','<','6')->get();
-
         $equipment2 = Equipment_product::where('weights','<','3')->get();
 
 
 
         $imgs = Equipment_img::orderBy('weight', 'asc')->get();
+
+
         $count = Equipment_img::where('iid','=',$id)->count();
 
         return view('product_edit.equipment_edit', compact('product','count','imgs','equipment','equipment2','software','components','consumables','maintenance'));

@@ -259,7 +259,7 @@
     </main>
 @endsection
 @section('js')
-<script src="../navbar.js"></script>
+<script src="{{asset('js/navbar.js')}}"></script>
     <script>
       var img1 = document.querySelector(".bg-image1");
       var img2 = document.querySelector(".bg-image2");
