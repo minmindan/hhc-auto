@@ -390,9 +390,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/equipment/{{$eq->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -404,9 +404,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/software/{{$so->id}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -418,9 +418,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/components/{{$cm->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -432,9 +432,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/consumables/{{$cn->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -446,9 +446,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/maintenance/{{$ma->id}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -553,9 +553,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/equipment/{{$eq->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -567,9 +567,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/software/{{$so->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -581,9 +581,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/components/{{$cm->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -595,9 +595,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/consumables/{{$cn->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -609,9 +609,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/maintenance/{{$ma->id}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -631,9 +631,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/equipment/{{$ed->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -645,9 +645,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/software/{{$so->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -659,9 +659,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/components/{{$cm->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -673,9 +673,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/consumables/{{$cn->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -687,9 +687,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/maintenance/{{$ma->id}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -709,9 +709,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $eq->product_name }}</h1>
                                         <div class="product-types-model">{{ $eq->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/equipment/{{$eq->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -723,9 +723,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $so->product_name }}</h1>
                                         <div class="product-types-model">{{ $so->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/software/{{$so->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -737,9 +737,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cm->product_name }}</h1>
                                         <div class="product-types-model">{{ $cm->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/components/{{$cm->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -751,9 +751,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $cn->product_name }}</h1>
                                         <div class="product-types-model">{{ $cn->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/consumables/{{$cn->id??''}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
@@ -765,9 +765,9 @@
                                     <div class="product-types">
                                         <h1 class="product-types-title">{{ $ma->product_name }}</h1>
                                         <div class="product-types-model">{{ $ma->model }}</div>
-                                        <div class="product-types-more blod">MORE<img style="margin-left: 20px;"
+                                        <a href="/maintenance/{{$ma->id}}" class="product-types-more blod">MORE<img style="margin-left: 20px;"
                                                 src="{{ asset('image/index-icon/more_right.svg') }}"
-                                                alt=""></div>
+                                                alt=""></a>
                                     </div>
                                 @endif
                             @endforeach
