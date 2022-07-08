@@ -7,6 +7,7 @@ use App\Models\company;
 use App\Models\Milestone;
 use App\Models\News;
 use App\Models\Profile;
+use App\Models\Newprofile;
 use App\Models\Report;
 use Illuminate\Http\Request;
 use App\Models\Aboutus_banner;
@@ -94,7 +95,7 @@ class BasicInfoController extends Controller
     //聯絡我們
     public function contact_index()
     {
-        $data = Profile::get();
+        $data = Newprofile::get();
         // dd($data);
         return view('basic_info.porfile', compact('data'));
     }
@@ -105,13 +106,13 @@ class BasicInfoController extends Controller
     }
     public function contact_edit()
     {
-        $data = Profile::get();
+        $data = Newprofile::get();
         return view('basic_info.porfile_edit', compact('data'));
     }
     public function contact_store(Request $request)
     {
         // dd($request->all());
-        Profile::where('id', 1)->update([
+        Newprofile::where('id', 1)->update([
             'company_name' => $request->company_name,
             'found' => $request->found,
             'address' => $request->address,
