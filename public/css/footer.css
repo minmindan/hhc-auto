@@ -151,10 +151,13 @@ footer #footer-main .footer-btn img {
 }
 
 footer #footer-main .subservebtn .footer-servelist {
-  display: none;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   position: absolute;
-  width: 0px;
+  width: 300px;
+  opacity: 0;
+  transition-duration:.2s;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -183,7 +186,7 @@ footer #footer-main .subservebtn .footer-servelist p {
 
 footer #footer-main .subservebtn .footer-servelist img {
   height: 15px;
-  margin: 5px 15px 0 15px;
+  margin: 0 15px 0 15px;
 }
 
 @media (max-width: 500px) {
@@ -201,15 +204,17 @@ footer #footer-main .subservebtn .footer-servelist img {
 footer #footer-main .subservebtn:hover .footer-servelist {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  width: 300px;
+  opacity: 1;
 }
 
 footer #footer-main .subaboutbtn .footer-aboutlist {
-  display: none;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   position: absolute;
-  width: 0px;
+  width: 300px;
+  opacity: 0;
+  transition-duration:.2s;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -238,7 +243,7 @@ footer #footer-main .subaboutbtn .footer-aboutlist p {
 
 footer #footer-main .subaboutbtn .footer-aboutlist img {
   height: 15px;
-  margin: 5px 15px 0 15px;
+  margin: 0 15px 0 15px;
 }
 
 @media (max-width: 500px) {
@@ -256,7 +261,6 @@ footer #footer-main .subaboutbtn .footer-aboutlist img {
 footer #footer-main .subaboutbtn:hover .footer-aboutlist {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  width: 300px;
+  opacity: 1;
 }
 /*# sourceMappingURL=footer.css.map */

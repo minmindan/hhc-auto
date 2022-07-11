@@ -1,415 +1,441 @@
 @import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+
 * {
-  font-family: 'Noto Sans TC', 'sans-serif';
+    font-family: 'Noto Sans TC', 'sans-serif';
 }
 
 ul {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 li {
-  list-style: none;
-  margin-bottom: 25px;
-  position: relative;
+    list-style: none;
+    margin-bottom: 25px;
+    position: relative;
 }
 
 li::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 0;
-  bottom: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
 }
 
 nav {
-  width: 100%;
-  height: 150px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  color: white;
-  z-index: 20;
+    width: 100%;
+    height: 150px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    color: white;
+    z-index: 20;
 }
 
 nav #focus {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  background-color: #002354;
-  z-index: 99 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #002354;
+    z-index: 99 !important;
 }
 
 @media (max-width: 768px) {
-  nav #focus {
-    height: 100vh;
-  }
+    nav #focus {
+        height: 100vh;
+    }
 }
 
 nav #focus .focus-logo {
-  width: 100%;
-  padding: 40px 80px 0 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    width: 100%;
+    padding: 40px 80px 0 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 @media (max-width: 550px) {
-  nav #focus .focus-logo {
-    padding: 40px 40px 0;
-  }
+    nav #focus .focus-logo {
+        padding: 40px 40px 0;
+    }
 }
 
 nav #focus .focus-logo img {
-  height: 40px;
+    height: 40px;
 }
 
 nav #focus .focus-logo img:last-child {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 nav #focus .focus-main {
-  width: 100%;
-  padding: 0 80px 30px;
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-between;
-  position: relative;
+    width: 100%;
+    padding: 0 80px 30px;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-between;
+    position: relative;
 }
 
 @media (max-width: 768px) {
-  nav #focus .focus-main {
-    height: calc(100vh - 130px);
-    margin-top: 0;
-  }
+    nav #focus .focus-main {
+        height: calc(100vh - 130px);
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 550px) {
     nav #focus .focus-main {
-      padding-left: 40px;
-      padding-right: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 }
 
 @media (max-width: 768px) and (max-height: 760px) {
-  nav #focus .focus-main {
-    height: calc(100vh - 130px) !important;
-  }
+    nav #focus .focus-main {
+        height: calc(100vh - 130px) !important;
+    }
 }
 
 @media (max-width: 768px) {
-  nav #focus .focus-main h1 {
-    font-size: 34px !important;
-    margin-bottom: 15px;
-  }
+    nav #focus .focus-main h1 {
+        font-size: 34px !important;
+        margin-bottom: 15px;
+    }
 }
 
 nav #focus .focus-main p {
-  margin: 0;
+    margin: 0;
 }
 
 nav #focus .focus-main h1 {
-  font-size: 50px;
-  letter-spacing: 9px;
-  margin-top: -5px;
+    font-size: 50px;
+    letter-spacing: 9px;
+    margin-top: -5px;
 }
 
 
 nav #focus .focus-main .focus-box {
-  margin: 0 ;
+    margin: 0;
 }
 
 @media (max-width: 1380px) {
-  nav #focus .focus-main .focus-box {
-    min-width: 35%;
-    margin-bottom: 30px;
-  }
+    nav #focus .focus-main .focus-box {
+        min-width: 35%;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 768px) {
-  nav #focus .focus-main .focus-box {
-    min-width: 80%;
-    margin: 0;
-    margin-bottom: 0;
-  }
+    nav #focus .focus-main .focus-box {
+        min-width: 80%;
+        margin: 0;
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 550px) {
     nav #focus .focus-main .focus-box {
-      min-width: 80%;
-      margin: 15px auto 0 0 !important;
+        min-width: 80%;
+        margin: 15px auto 0 0 !important;
     }
 }
 
 @media (max-width: 768px) {
-  nav #focus .focus-main .focus-box ul li {
-    margin-bottom: 15px;
-  }
+    nav #focus .focus-main .focus-box ul li {
+        margin-bottom: 15px;
+    }
 }
 
 nav #focus .focus-main .focus-box ul li:nth-last-child(1) {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 nav #focus .focus-main .focus-box ul li:hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+}
+
+nav #focus .focus-main .focus-box ul li::after {
+    content: '';
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition-duration: .5s;
 }
 
 nav #focus .focus-main .focus-box ul li:hover::after {
-  content: '';
-  height: 1px;
-  background-color: white;
-  position: absolute;
-  bottom: 0;
-}
-
-
-nav #focus .focus-main .focus-box ul li:hover img {
-  display: block;
+    opacity: 1;
 }
 
 nav #focus .focus-main .focus-box ul li img {
-  display: none;
-  margin-top: 7px;
-  height: 5px;
+    /* display: none; */
+    opacity: 0;
+    margin-top: 7px;
+    margin-right: 15px;
+    margin-left: auto;
+    height: 5px;
+    transition-duration: .5s;
+}
+
+nav #focus .focus-main .focus-box ul li:hover img {
+    /* display: block; */
+    opacity: 1;
+    margin-top: 7px;
+    margin-right: 0;
+    margin-left: auto;
+    height: 5px;
+    transition-duration: .5s;
 }
 
 nav #focus .focus-main #focus-button {
-  position: absolute;
-  right: 0;
-  bottom: 50px;
-  width: 43.75%;
-  height: 112px;
-  text-transform:unset;
-  padding-left: 135px;
-  background-color: #004098;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    width: 43.75%;
+    height: 112px;
+    text-transform: unset;
+    padding-left: 135px;
+    background-color: #004098;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 @media (max-width: 993px) {
     nav #focus .focus-main #focus-button {
-      padding: 0 15%;
+        padding: 0 15%;
     }
-    nav #focus .focus-main #focus-button h1{
+
+    nav #focus .focus-main #focus-button h1 {
         font-size: 52px !important;
     }
-  }
+}
+
 nav #focus .focus-main #focus-button:hover {
-  border: #004098 2px solid;
-  border-right: unset;
+    border: #004098 2px solid;
+    border-right: unset;
 }
 
 @media (max-width: 1540px) {
-  nav #focus .focus-main #focus-button {
-    height: 100px;
-    padding-left: 80px;
-  }
+    nav #focus .focus-main #focus-button {
+        height: 100px;
+        padding-left: 80px;
+    }
 }
 
 @media (max-width: 1380px) {
-  nav #focus .focus-main #focus-button {
-    width: 100%;
-    height: 100px;
-    padding: 0 25%;
-    left: 0;
-    top: 100%;
-    -webkit-box-pack: justify;
+    nav #focus .focus-main #focus-button {
+        width: 100%;
+        height: 100px;
+        padding: 0 25%;
+        left: 0;
+        top: 100%;
+        -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+        justify-content: space-between;
+    }
 }
+
 @media (max-width:993px) {
     @media (max-height: 880px) {
         nav #focus .focus-main h1 {
-          font-size: 30px !important;
-          margin-bottom: 0 !important;
+            font-size: 30px !important;
+            margin-bottom: 0 !important;
         }
-      }
+    }
 
-      @media (max-height: 880px) {
+    @media (max-height: 880px) {
         nav #focus .focus-main h1 {
-          font-size: 20px !important;
-          margin-bottom: 0 !important;
+            font-size: 20px !important;
+            margin-bottom: 0 !important;
         }
-      }
-
-    @media (max-height: 880px) {
-      nav #focus .focus-main .focus-box {
-        margin:0;
-      }
     }
 
     @media (max-height: 880px) {
-      nav #focus .focus-main .focus-box ul {
-        margin: 0 auto 0;
-      }
+        nav #focus .focus-main .focus-box {
+            margin: 0;
+        }
     }
+
+    @media (max-height: 880px) {
+        nav #focus .focus-main .focus-box ul {
+            margin: 0 auto 0;
+        }
+    }
+
     @media (max-height: 760px) {
-      nav #focus .focus-main #focus-button {
-        height: 50px !important;
-      }
+        nav #focus .focus-main #focus-button {
+            height: 50px !important;
+        }
     }
 }
+
 @media (max-width: 768px) {
-  nav #focus .focus-main #focus-button {
-    padding: 0 20%;
-    height: 60px !important;
-    bottom: 0;
-  }
-  nav #focus .focus-main #focus-button:hover {
-    border: #004098 2px solid;
-  }
-  nav #focus .focus-main #focus-button h1{
-    font-size: 36px !important;
-  }
+    nav #focus .focus-main #focus-button {
+        padding: 0 20%;
+        height: 60px !important;
+        bottom: 0;
+    }
+
+    nav #focus .focus-main #focus-button:hover {
+        border: #004098 2px solid;
+    }
+
+    nav #focus .focus-main #focus-button h1 {
+        font-size: 36px !important;
+    }
 }
 
 nav #focus .focus-main #focus-button h1 {
-  margin: 0;
+    margin: 0;
 }
 
 nav #focus .focus-main #focus-button img {
-  width: 142px;
-  margin-left: 80px;
-  margin-top: 30px;
+    width: 142px;
+    margin-left: 80px;
+    margin-top: 30px;
 }
 
 @media (max-width: 1540px) {
-  nav #focus .focus-main #focus-button img {
-    margin-left: 80;
-    margin-bottom: 10px;
-  }
+    nav #focus .focus-main #focus-button img {
+        margin-left: 80;
+        margin-bottom: 10px;
+    }
 }
+
 @media (max-width: 993px) {
     nav #focus .focus-main #focus-button img {
-      width: 30% !important;
-      min-width: 10vw;
-      margin: 0;
+        width: 30% !important;
+        min-width: 10vw;
+        margin: 0;
     }
-  }
+}
+
 nav #bar {
-  width: 100%;
-  height: 100%;
-  padding: 0 62px 0 62px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 62px 0 62px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
-  nav #bar {
-    padding: 0 40px;
-  }
+    nav #bar {
+        padding: 0 40px;
+    }
 }
 
 @media (max-width: 550px) {
-  nav #bar {
-    padding: 0 20px;
-    height: 80px;
-  }
+    nav #bar {
+        padding: 0 20px;
+        height: 80px;
+    }
 }
 
 nav #bar #logo {
-  cursor: pointer;
-  overflow: hidden;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
-  nav #bar #logo {
-    width: 50px;
-  }
+    nav #bar #logo {
+        width: 50px;
+    }
 }
 
 nav #bar #logo img {
-  height: 43px;
+    height: 43px;
 }
 
 nav #bar #subnav {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-left: auto;
-  position: relative;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin-left: auto;
+    position: relative;
 }
 
 @media (max-width: 1380px) {
-  nav #bar #subnav {
-    display: none !important;
-  }
+    nav #bar #subnav {
+        display: none !important;
+    }
 }
 
 nav #bar #subnav .hoverbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer !important;
-  margin-right: 54px;
-  height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer !important;
+    margin-right: 54px;
+    height: 100%;
 }
 
 nav #bar #subnav .hoverbox .fons {
-  margin: 0;
-  position: relative;
+    margin: 0;
+    position: relative;
 }
 
 nav #bar #subnav .hoverbox .fons:hover::after {
-  content: '';
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #0146a8;
-  position: absolute;
-  top: calc(100% + 1px);
-  -webkit-animation-name: identifier;
-          animation-name: identifier;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
+    content: '';
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #0146a8;
+    position: absolute;
+    top: calc(100% + 1px);
+    -webkit-animation-name: identifier;
+    animation-name: identifier;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
 }
+
 nav #bar #subnav .hoverbox:hover .fons::before {
     content: '';
     z-index: 1;
@@ -420,222 +446,229 @@ nav #bar #subnav .hoverbox:hover .fons::before {
     position: absolute;
     top: calc(100% - 1px);
     -webkit-animation-name: identifier;
-            animation-name: identifier;
+    animation-name: identifier;
     -webkit-animation-duration: 0.2s;
-            animation-duration: 0.2s;
-  }
+    animation-duration: 0.2s;
+}
 
 @-webkit-keyframes identifier {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 100%;
-  }
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes identifier {
-  from {
-    width: 0px;
-  }
-  to {
-    width: 100%;
-  }
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 nav #bar #subnav .hoverbox .backendlist {
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: calc(100% + 54px);
-  background-color: #f4f7fa;
-  padding-left: 150px;
-  padding-right: 150px;
-  -webkit-animation-name: bbb;
-          animation-name: bbb;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  color: #B4B4B4;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: calc(100% + 54px);
+    background-color: #f4f7fa;
+    padding-left: 150px;
+    padding-right: 150px;
+    -webkit-animation-name: bbb;
+    animation-name: bbb;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    color: #B4B4B4;
 }
 
 @-webkit-keyframes bbb {
-  0% {
-    height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
-  }
-  100% {
-    height: 62px;
-    background-color: #f4f7fa;
-  }
+    0% {
+        height: 0;
+        background-color: rgba(244, 247, 250, 0.1);
+    }
+
+    100% {
+        height: 62px;
+        background-color: #f4f7fa;
+    }
 }
 
 @keyframes bbb {
-  0% {
-    height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
-  }
-  100% {
-    height: 62px;
-    background-color: #f4f7fa;
-  }
+    0% {
+        height: 0;
+        background-color: rgba(244, 247, 250, 0.1);
+    }
+
+    100% {
+        height: 62px;
+        background-color: #f4f7fa;
+    }
 }
 
 nav #bar #subnav .hoverbox .backendlist img {
-  width: 10px;
+    width: 10px;
 }
 
 nav #bar #subnav .hoverbox .productlist {
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: calc(100% + 54px);
-  background-color: #f4f7fa;
-  padding-left: 150px;
-  padding-right: 150px;
-  -webkit-animation-name: bbb;
-          animation-name: bbb;
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  color: #B4B4B4;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: calc(100% + 54px);
+    background-color: #f4f7fa;
+    padding-left: 150px;
+    padding-right: 150px;
+    -webkit-animation-name: bbb;
+    animation-name: bbb;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    color: #B4B4B4;
 }
 
 @keyframes bbb {
-  0% {
-    height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
-  }
-  100% {
-    height: 62px;
-    background-color: #f4f7fa;
-  }
+    0% {
+        height: 0;
+        background-color: rgba(244, 247, 250, 0.1);
+    }
+
+    100% {
+        height: 62px;
+        background-color: #f4f7fa;
+    }
 }
 
 nav #bar #subnav .hoverbox .productlist img {
-  width: 10px;
+    width: 10px;
 }
 
 nav #bar #subnav .hoverbox .aboutlist {
-  display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  overflow: hidden;
-  top: 100%;
-  right: 0;
-  padding-left: 200px;
-  padding-right: 200px;
-  -webkit-animation-name: bbb;
-          animation-name: bbb;
-  width: calc(100% + 54px);
-  -webkit-animation-duration: .8s;
-          animation-duration: .8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  color: #B4B4B4;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    top: 100%;
+    right: 0;
+    padding-left: 200px;
+    padding-right: 200px;
+    -webkit-animation-name: bbb;
+    animation-name: bbb;
+    width: calc(100% + 54px);
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    color: #B4B4B4;
 }
 
 @keyframes bbb {
-  0% {
-    height: 0;
-    background-color: rgba(244, 247, 250, 0.1);
-  }
-  100% {
-    height: 62px;
-    background-color: #f4f7fa;
-  }
+    0% {
+        height: 0;
+        background-color: rgba(244, 247, 250, 0.1);
+    }
+
+    100% {
+        height: 62px;
+        background-color: #f4f7fa;
+    }
 }
 
 nav #bar #subnav .hoverbox .aboutlist img {
-  width: 10px;
+    width: 10px;
 }
 
 nav #bar #subnav .hoverbox:hover .backendlist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 nav #bar #subnav .hoverbox:hover .productlist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 nav #bar #subnav .hoverbox:hover .aboutlist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 nav #bar #subnav .hoverbox i {
-  margin-left: 3px;
+    margin-left: 3px;
 }
 
 nav #bar #bglist {
-  width: 24px;
-  height: 12px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+    width: 24px;
+    height: 12px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 nav #bar #bglist .stuffing {
-  width: 100%;
-  height: 3px;
-  background-color: white;
+    width: 100%;
+    height: 3px;
+    background-color: white;
 }
 
-#slogo{
+#slogo {
     display: none;
 }
 
 @media (max-width: 993px) {
-    #blogo{
+    #blogo {
         display: none;
     }
-    #slogo{
+
+    #slogo {
         display: block;
     }
 }
@@ -645,12 +678,14 @@ nav #bar #bglist .stuffing {
 } */
 
 @media (max-width:993px) {
-  li{
-    margin-bottom:10px ;
-  }
-  nav #focus .focus-main h1{
-    margin-top: 5px !important;
-    margin-bottom: 25px !important;
-  }
+    li {
+        margin-bottom: 10px;
+    }
+
+    nav #focus .focus-main h1 {
+        margin-top: 5px !important;
+        margin-bottom: 25px !important;
+    }
 }
+
 /*# sourceMappingURL=index-nav.css.map */
