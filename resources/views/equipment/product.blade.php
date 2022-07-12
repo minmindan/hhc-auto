@@ -103,7 +103,9 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <img src="{{ $eq->primary_img ?? '' }}" alt="">
+                                            <a href="/equipment/{{$eq->id}}">
+                                                <img src="{{ $eq->primary_img ?? '' }}" alt="">
+                                            </a>
                                         </div>
                                         <!-- 文字說明 -->
                                         <div class="product-directions">
@@ -159,7 +161,9 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <img src="{{ $so->primary_img ?? '' }}" alt="">
+                                            <a href="/equipment/{{$so->id}}">
+                                                <img src="{{ $so->primary_img ?? '' }}" alt="">
+                                            </a>
                                         </div>
                                         <!-- 文字說明 -->
                                         <div class="product-directions">
@@ -203,7 +207,7 @@
                                 <a href="/parts" class="more-box">
                                     <span>MORE</span>
                                     <div class="more-img">
-                                        <img src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
+                                            <img src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
                                     </div>
                                 </a>
                             </div>
@@ -214,7 +218,9 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <img src="{{ $cm->primary_img ?? '' }}" alt="">
+                                            <a href="/equipment/{{$cm->id}}">
+                                                <img src="{{ $cm->primary_img ?? '' }}" alt="">
+                                            </a>
                                         </div>
                                         <!-- 文字說明 -->
                                         <div class="product-directions">
@@ -259,7 +265,7 @@
                                 <a href="/consumables" class="more-box">
                                     <span>MORE</span>
                                     <div class="more-img">
-                                        <img src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
+                                            <img src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
                                     </div>
                                 </a>
                             </div>
@@ -270,7 +276,9 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <img src="{{ $cn->primary_img ?? '' }}" alt="">
+                                            <a href="/equipment/{{$cn->id}}">
+                                                <img src="{{ $cn->primary_img ?? '' }}" alt="">
+                                            </a>
                                         </div>
                                         <!-- 文字說明 -->
                                         <div class="product-directions">
@@ -315,7 +323,7 @@
                                 <a href="/maintenance" class="more-box-fixed">
                                     <span>MORE</span>
                                     <div class="more-img">
-                                        <img src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
+                                            <img src="{{ asset('image/index-icon/more_right.svg') }}" alt="">
                                     </div>
                                 </a>
                             </div>
@@ -328,7 +336,9 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <img src="{{ $ma->primary_img ?? '' }}" alt="">
+                                            <a href="/equipment/{{$ma->id}}">
+                                                <img src="{{ $ma->primary_img ?? '' }}" alt="">
+                                            </a>
                                         </div>
                                         <!-- 文字說明 -->
                                         <div class="product-directions">
