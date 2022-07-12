@@ -161,7 +161,7 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <a href="/equipment/{{$so->id}}">
+                                            <a href="/software/{{$so->id}}">
                                                 <img src="{{ $so->primary_img ?? '' }}" alt="">
                                             </a>
                                         </div>
@@ -218,7 +218,7 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <a href="/equipment/{{$cm->id}}">
+                                            <a href="/parts/{{$cm->id}}">
                                                 <img src="{{ $cm->primary_img ?? '' }}" alt="">
                                             </a>
                                         </div>
@@ -276,7 +276,7 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <a href="/equipment/{{$cn->id}}">
+                                            <a href="/consumables/{{$cn->id}}">
                                                 <img src="{{ $cn->primary_img ?? '' }}" alt="">
                                             </a>
                                         </div>
@@ -336,7 +336,7 @@
                                     <div class="product-content">
                                         <!-- 圖片 -->
                                         <div class="image-box">
-                                            <a href="/equipment/{{$ma->id}}">
+                                            <a href="/maintenance/{{$ma->id}}">
                                                 <img src="{{ $ma->primary_img ?? '' }}" alt="">
                                             </a>
                                         </div>
