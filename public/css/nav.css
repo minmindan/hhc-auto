@@ -12,6 +12,8 @@ li {
     list-style: none;
     margin-bottom: 25px;
     position: relative;
+    display: flex;
+    justify-content: start;
 }
 
 li::after {
@@ -168,10 +170,10 @@ nav #focus .focus-main .focus-box {
 }
 
 nav #focus .focus-main .focus-box ul li:nth-last-child(1) {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
-nav #focus .focus-main .focus-box ul li a:hover {
+nav #focus .focus-main .focus-box ul li:hover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -208,7 +210,7 @@ nav #focus .focus-main .focus-box ul li img {
     transition-duration: .5s;
 }
 
-nav #focus .focus-main .focus-box ul li a:hover img {
+nav #focus .focus-main .focus-box ul li:hover img {
     /* display: block; */
     opacity: 1;
     margin-top: 7px;
