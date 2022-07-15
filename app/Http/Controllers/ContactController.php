@@ -91,7 +91,7 @@ class ContactController extends Controller
             'address' => session()->get('address'),
             'demand' => session()->get('demand'),
             'state' => 1,
-            'remark' => '',
+            'img_path' => '',
         ]);
         $request->session()->flush();
         // Mail::to('xavier5232@gmail.com')->send(new OrderShipped);
