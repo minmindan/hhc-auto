@@ -136,12 +136,12 @@
                     <p><a href="/aboutus">關於我們</a></p>
                     <h1><a href="/aboutus">ABOUT US</a></h1>
                     <ul>
-                        <li><a href="/aboutus#philosophy">經營理念 <img src="{{ asset('image/nav/white_right.svg') }}"
-                                    alt=""></a></li>
-                        <li><a href="/aboutus#milestones">公司沿革 <img src="{{ asset('image/nav/white_right.svg') }}"
-                                    alt=""></a></li>
-                        <li><a href="/aboutus#company-profile">公司簡介 <img
-                                    src="{{ asset('image/nav/white_right.svg') }}" alt=""></a></li>
+                        <li><a href="/aboutus/#philosophy">經營理念</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="/aboutus/#milestones">公司沿革</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
+                        <li><a href="/aboutus/#company-profile">公司簡介</a> <img src="{{ asset('image/nav/white_right.svg') }}"
+                                alt=""></li>
                     </ul>
                 </div>
                 <div class="focus-box">
