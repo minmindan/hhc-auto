@@ -220,29 +220,29 @@
                 <div class="card">
                   <div class="name-field"></div>
                   <div class="company-name">
-                    <span>{{$Profile[0]->company_name}}</span>
+                    <span>{{$Profile[0]->company_name??''}}</span>
                   </div>
                 </div>
                 <div class="card">
                   <div class="build-field"></div>
-                  <div class="build-date">{{$Profile[0]->found}}</div>
+                  <div class="build-date">{{$Profile[0]->found??''}}</div>
                 </div>
                 <div class="card">
                   <div class="address-field"></div>
-                  <div class="address">{{$Profile[0]->address}}</div>
+                  <div class="address">{{$Profile[0]->address??''}}</div>
                 </div>
                 <div class="card">
                   <div class="opening-field"></div>
-                  <div class="opening-hours">{{$Profile[0]->opening}}</div>
+                  <div class="opening-hours">{{$Profile[0]->opening??''}}</div>
                 </div>
                 <div class="card">
                   <div class="tel-field"></div>
-                  <div class="tel">{{$Profile[0]->phone}}</div>
+                  <div class="tel">{{$Profile[0]->phone??''}}</div>
                 </div>
                 <div class="card">
                   <div class="items-field"></div>
                   <div class="service-items">
-                    <p>{{$Profile[0]->serve}}</p>
+                    <p>{{$Profile[0]->serve??''}}</p>
                   </div>
                 </div>
               </div>
