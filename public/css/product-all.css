@@ -348,6 +348,12 @@ body main #banner .banner-container .main-section .banner-img .page-list ul {
 
 body main #banner .banner-container .main-section .banner-img .page-list ul li {
   margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body main #banner .banner-container .main-section .banner-img .page-list ul li a {
