@@ -11,6 +11,7 @@ use App\Models\Process_banner;
 use App\Models\Product_banner;
 use App\Models\Contact_banner;
 use App\Models\Profile;
+use App\Models\Newprofile;
 
 
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -34,7 +35,7 @@ class Controller extends BaseController
 
     public function cminfo(Request $request){
 
-        $info = Profile::create([
+        $info = Newprofile::create([
             'company_name' => $request->company_name,
 'found' => $request->found,
 'address' => $request->address,

@@ -184,7 +184,7 @@ class BasicInfoController extends Controller
     }
     public function contactlist_store(Request $request)
     {
-        Profile::where('id', 1)->update([
+        Newprofile::where('id', 1)->update([
             'company_name' => $request->company_name,
             'found' => $request->found,
             'address' => $request->address,
