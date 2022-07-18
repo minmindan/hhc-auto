@@ -56,30 +56,30 @@
                                 <div class="name-field"></div>
                                 <div class="company-name">
                                     <span><input type="text" name="company_name" id="company_name"
-                                            value="{{ $data[0]->company_name }}"></span>
+                                            value="{{ $data[0]->company_name??'' }}"></span>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="build-field"></div>
                                 <div class="build-date"><input name="found" type="text" id="found"
-                                        value="{{ $data[0]->found }}">
+                                        value="{{ $data[0]->found??'' }}">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="address-field"></div>
                                 <div class="address"><input name="address" id="address" type="text"
-                                        value="{{ $data[0]->address }}">
+                                        value="{{ $data[0]->address??'' }}">
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="opening-field"></div>
                                 <div class="opening-hours"><input type="text" name="opening" id="opening"
-                                        value="{{ $data[0]->opening }}"></div>
+                                        value="{{ $data[0]->opening??'' }}"></div>
                             </div>
                             <div class="card">
                                 <div class="tel-field"></div>
                                 <div class="tel"><input name="phone" id="phone" type="text"
-                                        value="{{ $data[0]->phone }}">
+                                        value="{{ $data[0]->phone??'' }}">
                                 </div>
                             </div>
                             <div class="card">
@@ -115,6 +115,6 @@
         var note = document.querySelector('.note-editable');
         console.log(note);
         note.setAttribute('name', 'standard');
-        note.innerHTML = `{!! $data[0]->serve !!}`
+        note.innerHTML = `{!! $data[0]->serve??'' !!}`
     </script>
 @endsection

@@ -348,7 +348,7 @@
         <div class="swiper banner swiper-no-swiping" style="width: 100%;height: calc(100vh + 5px) ;">
             <div class="swiper-wrapper swiper-no-swiping" style="width: 100%; height: 100%;">
                 @foreach ($banners as $banner)
-                    <div class="swiper-slide"><video controls muted muted="true" preload="auto" loop="true" autoplay="true"
+                    <div class="swiper-slide"><video muted muted="true" preload="auto" loop="true" autoplay="true"
                             src="{{ $banner->img_path }}"></video></div>
                 @endforeach
             </div>
