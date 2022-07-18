@@ -95,7 +95,7 @@
                             <div class="card">
                                 <div class="items-field"></div>
                                 <div class="note">
-                                    <p>{!!$data[0]->serve!!}</p>
+                                    <p>{!! $data[0]->serve??'' !!}</p>
                                 </div>
                             </div>
                             <div class="btnbox" style="margin: 0 0 0 120px;">

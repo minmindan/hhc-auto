@@ -242,7 +242,7 @@
                 <div class="card">
                   <div class="items-field"></div>
                   <div class="service-items">
-                    <p>{{$Profile[0]->serve??''}}</p>
+                    <p>{!! $Profile[0]->serve??''!!}</p>
                   </div>
                 </div>
               </div>
