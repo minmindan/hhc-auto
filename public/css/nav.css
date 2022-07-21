@@ -508,6 +508,10 @@ nav #bar #subnav .hoverbox .fons {
     color: #B4B4B4;
 }
 
+nav #bar #subnav .hoverbox .fons{
+    font-size: 18px;
+}
+
 nav #bar #subnav .hoverbox .backendlist {
     display: none;
     -webkit-box-orient: horizontal;

@@ -422,6 +422,10 @@ nav #bar #subnav .hoverbox .fons {
     position: relative;
 }
 
+nav #bar #subnav .hoverbox .fons a{
+    font-size: 18px;
+}
+
 nav #bar #subnav .hoverbox .fons:hover::after {
     content: '';
     z-index: 1;
