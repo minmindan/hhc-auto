@@ -94,7 +94,7 @@ class ContactController extends Controller
             'img_path' => '',
         ]);
         $request->session()->flush();
-        // Mail::to('xavier5232@gmail.com')->send(new OrderShipped);
+        Mail::to('ivy@hhc-auto.com')->send(new OrderShipped);
 
 
         return redirect('/hhc-auto/contact3');
