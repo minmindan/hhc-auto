@@ -46,7 +46,7 @@
                     @csrf
                     <div class="main-container">
                         <div class="tittle">
-                            <h3>公司沿革測試</h3>
+                            <h3>公司沿革</h3>
                         </div>
                         <div class="content">
                             <div class="card" style="position: relative;">
