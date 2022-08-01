@@ -94,6 +94,7 @@
                             </div>
                         </div>
                     </div>
+                </form>
             </div>
         </div>
         <div style="margin-bottom: 150px"></div>
