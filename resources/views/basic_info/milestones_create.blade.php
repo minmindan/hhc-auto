@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <!-- 右方區塊 -->
-                <form class="right-section" action="/milestones-manage/store/{{$data->id??''}}" method="POST">
+                <form class="right-section" action="/milestones-manage/store" method="POST">
                     @csrf
                     <div class="main-container">
                         <div class="tittle">
@@ -56,8 +56,8 @@
                                     </div>
                                 </div>
                                 <div class="date"><input type="text" name="month"
-                                        value="{{ $data->month??'' }}">月<br /><input type="text" name="years"
-                                        value="{{ $data->years??'' }}">年 </div>
+                                        value="">月<br /><input type="text" name="years"
+                                        value="">年 </div>
                                 <div class="text">
                                     <textarea name="content" id="" cols="30" rows="10">{{ $data->content??'' }}</textarea>
                                 </div>

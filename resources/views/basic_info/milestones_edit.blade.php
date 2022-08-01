@@ -42,7 +42,6 @@
                     </div>
                 </div>
                 <!-- 右方區塊 -->
-                <form action=""></form>
                 <form class="right-section" action="/milestones-manage/update/{{$data->id}}" method="POST">
                     @csrf
                     <div class="main-container">
