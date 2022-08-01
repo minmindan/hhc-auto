@@ -9,6 +9,11 @@
   rel="stylesheet"
   href="https://unpkg.com/swiper/swiper-bundle.min.css"
 /> --}}
+<style>
+    .service-items{
+        flex-direction: column;
+    }
+</style>
 @endsection
 @section('main')
 <main>
