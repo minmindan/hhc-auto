@@ -150,7 +150,7 @@ class BasicInfoController extends Controller
                 'com_img' => $path,
             ]);
         }
-        return redirect('/partner-manage/edit');
+        return redirect('/partner-manage');
     }
 
     public function partner_update(Request $request, $id)
