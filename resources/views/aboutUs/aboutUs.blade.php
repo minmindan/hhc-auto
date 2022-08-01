@@ -180,7 +180,8 @@
               <div class="content">
                 @foreach ($Milestones as $Milestone)
                 <div class="card">
-                    <div class="date">{{$Milestone->month}} 月<br />{{$Milestone->years}}</div>
+                    <div class="date">{{$Milestone->month}}@if (!($Milestone->month == null or $Milestone->month == '')){{'月'}}
+                        @endif<br />{{$Milestone->years}}</div>
                     <div class="text">
                       <span>{{$Milestone->content}}</span>
                     </div>
