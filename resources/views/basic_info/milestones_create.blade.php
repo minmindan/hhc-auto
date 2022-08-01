@@ -52,7 +52,7 @@
                         <div class="content">
                             <div class="card" style="position: relative;">
                                 <div class="btnbox" style="margin: 0 0 0 60px; position: absolute; left: 100%;">
-                                    <button class="btn-check" style="margin:  0 10px 0 0; color:white !important;">儲存</button>
+                                    <button class="btn-check" type="submit" style="margin:  0 10px 0 0; color:white !important;">儲存</button>
                                     <div class="btn-delete" style="margin:  0 20px 0 0;"><a style="color: white !important;" href="/milestones-manage">取消</a>
                                     </div>
                                 </div>
