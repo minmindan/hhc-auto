@@ -161,7 +161,7 @@
                                 </div>
                                 <!-- 排序 -->
                                 <div class="image-gradation">
-                                   
+
                                 </div>
 
                                 <!-- 新增日期 -->
@@ -340,7 +340,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
         });
@@ -351,7 +351,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
         });
@@ -362,7 +362,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
         });

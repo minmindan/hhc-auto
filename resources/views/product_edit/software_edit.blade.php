@@ -334,7 +334,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
         });
@@ -345,7 +345,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
         });
@@ -356,7 +356,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'ol', 'paragraph']],
+                ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
         });
