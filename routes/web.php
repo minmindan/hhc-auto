@@ -21,9 +21,9 @@ use App\Http\Controllers\Controller;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/test', function () {
-    return view('form-backstage.banner-manage');
-});
+// Route::get('/test', function () {
+//     return view('form-backstage.banner-manage');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -76,13 +76,3 @@ Route::prefix('/hhc-auto')->group(function (){
 });
 
 
-// 沒新增頁
-Route::prefix('/weneedtoaddmoreinfonmation')->middleware(['auth'])->group(function (){
-Route::get('/createtosql',[Controller::class,'createtosql']);
-Route::post('/cminfo',[Controller::class,'cminfo']);
-Route::post('/index_b',[Controller::class,'index_b']);
-Route::post('/abus_b',[Controller::class,'abus_b']);
-Route::post('/cont_b',[Controller::class,'cont_b']);
-Route::post('/poces_b',[Controller::class,'poces_b']);
-Route::post('/product_b',[Controller::class,'product_b']);
-});
