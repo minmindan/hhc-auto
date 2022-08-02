@@ -14,7 +14,6 @@ use App\Models\Repair_product;
 use App\Models\Software_img;
 use App\Models\Software_product;
 use Illuminate\Http\Request;
-use DB;
 
 class ProductManageController extends Controller
 {
@@ -34,7 +33,7 @@ class ProductManageController extends Controller
     // 首頁
     public function equipment_index()
     {
-        $product = Equipment_product::orderBy('weights','asc')->get();
+        $product = Equipment_product::orderBy('weights', 'asc')->get();
 
         return view('product_manage.product_equipment', compact('product'));
     }
@@ -42,24 +41,24 @@ class ProductManageController extends Controller
     public function equipment_create()
     {
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-
-        return view('product_create.equipment_create',compact('equipment','software','components','consumables','maintenance'));
+        return view('product_create.equipment_create', compact('equipment', 'software', 'components', 'consumables', 'maintenance'));
     }
     // 儲存頁
     public function equipment_store(Request $request)
     {
 
-
         // dd($request->all());
-
+        if ($request->hasfile('product_img')) {
         $path = FilesController::imgUpload($request->product_img, 'equipment');
-
+}else{
+    $path = '';
+}
         // 主要圖片
 
         $product = Equipment_product::create([
@@ -72,7 +71,6 @@ class ProductManageController extends Controller
             'feature' => $request->feature,
             'illustrate' => $request->illustrate,
         ]);
-
 
         //次要圖片
 
@@ -96,33 +94,26 @@ class ProductManageController extends Controller
     public function equipment_edit($id)
     {
         $product = Equipment_product::find($id);
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
-        $equipment2 = Equipment_product::where('weights','<','3')->get();
-
-
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
+        $equipment2 = Equipment_product::where('weights', '<', '3')->get();
 
         $imgs = Equipment_img::orderBy('weight', 'asc')->get();
 
+        $count = Equipment_img::where('iid', '=', $id)->count();
 
-        $count = Equipment_img::where('iid','=',$id)->count();
-
-        return view('product_edit.equipment_edit', compact('product','count','imgs','equipment','equipment2','software','components','consumables','maintenance'));
+        return view('product_edit.equipment_edit', compact('product', 'count', 'imgs', 'equipment', 'equipment2', 'software', 'components', 'consumables', 'maintenance'));
     }
-
-
 
     // 更新頁
     public function equipment_update(Request $request, $id)
     {
 
-
         $product = Equipment_product::find($id);
-        $imgs = Equipment_img::where('iid','=',$id)->get();
-
+        $imgs = Equipment_img::where('iid', '=', $id)->get();
 
         // 如果主要圖片有更新,套用新圖片
 
@@ -145,8 +136,6 @@ class ProductManageController extends Controller
             }
         }
 
-
-
         // 如果有更新資料,套用新資料
 
         if (($request->standard) != null) {
@@ -161,17 +150,11 @@ class ProductManageController extends Controller
             $product->illustrate = $request->illustrate;
         };
 
-
-
-
         $product->product_name = $request->product_name;
         $product->model = $request->product_model;
         $product->primary = $request->items;
         $product->weights = $request->weights;
         $product->save();
-
-
-
 
         return redirect('/product-manage/equipment');
 
@@ -194,13 +177,12 @@ class ProductManageController extends Controller
     }
 
     // 刪除次要圖片
-    public function equi_sec_img($id){
+    public function equi_sec_img($id)
+    {
 
         $img = Equipment_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
-
-
 
         $product = Equipment_product::find($id);
         $product_id = $product->id;
@@ -209,15 +191,12 @@ class ProductManageController extends Controller
 
     }
 
-
-
-
     // 軟體
     // 首頁
     public function software_index()
     {
 
-        $product = Software_product::orderBy('weights','asc')->get();
+        $product = Software_product::orderBy('weights', 'asc')->get();
 
         return view('product_manage.product_software', compact('product'));
 
@@ -227,22 +206,24 @@ class ProductManageController extends Controller
     public function software_create()
     {
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        return view('product_create.software_create',compact('equipment','software','components','consumables','maintenance'));
+        return view('product_create.software_create', compact('equipment', 'software', 'components', 'consumables', 'maintenance'));
     }
 
     // 儲存頁
     public function software_store(Request $request)
     {
         // dd($request->all());
-
+        if ($request->hasfile('product_img')) {
         $path = FilesController::imgUpload($request->product_img, 'software');
-
+}else{
+    $path = '';
+}
         // 主要圖片
 
         $product = Software_product::create([
@@ -276,28 +257,25 @@ class ProductManageController extends Controller
         $product = Software_product::find($id);
         $imgs = Software_img::orderBy('weight', 'asc')->get();
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        $software2 = Software_product::where('weights','<','3')->get();
+        $software2 = Software_product::where('weights', '<', '3')->get();
 
+        $count = Software_img::where('iid', '=', $id)->count();
 
-        $count = Software_img::where('iid','=',$id)->count();
-
-        return view('product_edit.software_edit', compact('product','count','imgs','equipment','software','software2','components','consumables','maintenance'));
+        return view('product_edit.software_edit', compact('product', 'count', 'imgs', 'equipment', 'software', 'software2', 'components', 'consumables', 'maintenance'));
     }
 
     // 更新頁
     public function software_update(Request $request, $id)
     {
 
-
         $product = Software_product::find($id);
-        $imgs = Software_img::where('iid','=',$id)->get();
-
+        $imgs = Software_img::where('iid', '=', $id)->get();
 
         // 如果主要圖片有更新,套用新圖片
 
@@ -320,16 +298,6 @@ class ProductManageController extends Controller
             }
         }
 
-
-
-
-
-
-
-
-
-
-
         // 如果有更新資料,套用新資料
 
         if (($request->standard) != null) {
@@ -344,17 +312,11 @@ class ProductManageController extends Controller
             $product->illustrate = $request->illustrate;
         };
 
-
-
-
         $product->product_name = $request->product_name;
         $product->model = $request->product_model;
         $product->primary = $request->items;
         $product->weights = $request->weights;
         $product->save();
-
-
-
 
         return redirect('/product-manage/software');
     }
@@ -376,13 +338,12 @@ class ProductManageController extends Controller
 
     // 刪除次要圖片
 
-    public function soft_sec_img($id){
+    public function soft_sec_img($id)
+    {
 
         $img = Software_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
-
-
 
         $product = Software_product::find($id);
         $product_id = $product->id;
@@ -395,7 +356,7 @@ class ProductManageController extends Controller
     // 首頁
     public function parts_index()
     {
-        $product = Components_product::orderBy('weights','asc')->get();
+        $product = Components_product::orderBy('weights', 'asc')->get();
 
         return view('product_manage.product_parts', compact('product'));
 
@@ -404,13 +365,13 @@ class ProductManageController extends Controller
     // 新增頁
     public function parts_create()
     {
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        return view('product_create.parts_create',compact('equipment','software','components','consumables','maintenance'));
+        return view('product_create.parts_create', compact('equipment', 'software', 'components', 'consumables', 'maintenance'));
 
     }
 
@@ -418,9 +379,11 @@ class ProductManageController extends Controller
     public function parts_store(Request $request)
     {
         // dd($request->all());
-
-        $path = FilesController::imgUpload($request->product_img, 'parts');
-
+        if ($request->hasfile('product_img')) {
+            $path = FilesController::imgUpload($request->product_img, 'parts');
+        }else{
+            $path = '';
+        }
         // 主要圖片
 
         $product = Components_product::create([
@@ -454,24 +417,23 @@ class ProductManageController extends Controller
         $product = Components_product::find($id);
         $imgs = Components_img::orderBy('weight', 'asc')->get();
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        $components2 = Components_product::where('weights','<','3')->get();
+        $components2 = Components_product::where('weights', '<', '3')->get();
 
-        $count = Components_img::where('iid','=',$id)->count();
+        $count = Components_img::where('iid', '=', $id)->count();
 
-        return view('product_edit.parts_edit', compact('product','count','imgs','equipment','software','components','components2','consumables','maintenance'));
+        return view('product_edit.parts_edit', compact('product', 'count', 'imgs', 'equipment', 'software', 'components', 'components2', 'consumables', 'maintenance'));
     }
 
     // 更新頁
     public function parts_update(Request $request, $id)
-    {      $product = Components_product::find($id);
-        $imgs = Components_img::where('iid','=',$id)->get();
-
+    {$product = Components_product::find($id);
+        $imgs = Components_img::where('iid', '=', $id)->get();
 
         // 如果主要圖片有更新,套用新圖片
 
@@ -494,16 +456,6 @@ class ProductManageController extends Controller
             }
         }
 
-
-
-
-
-
-
-
-
-
-
         // 如果有更新資料,套用新資料
 
         if (($request->standard) != null) {
@@ -518,17 +470,11 @@ class ProductManageController extends Controller
             $product->illustrate = $request->illustrate;
         };
 
-
-
-
         $product->product_name = $request->product_name;
         $product->model = $request->product_model;
         $product->primary = $request->items;
         $product->weights = $request->weights;
         $product->save();
-
-
-
 
         return redirect('/product-manage/parts');}
 
@@ -550,13 +496,12 @@ class ProductManageController extends Controller
 
     // 刪除次要圖片
 
-    public function part_sec_img($id){
+    public function part_sec_img($id)
+    {
 
         $img = Components_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
-
-
 
         $product = Components_product::find($id);
         $product_id = $product->id;
@@ -565,17 +510,12 @@ class ProductManageController extends Controller
 
     }
 
-
-
-
-
-
     // 耗材
     // 首頁
     public function consumables_index()
     {
 
-        $product = Consumables_product::orderBy('weights','asc')->get();
+        $product = Consumables_product::orderBy('weights', 'asc')->get();
 
         return view('product_manage.product_consumables', compact('product'));
     }
@@ -584,22 +524,24 @@ class ProductManageController extends Controller
     public function consumables_create()
     {
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        return view('product_create.consumables_create',compact('equipment','software','components','consumables','maintenance'));
+        return view('product_create.consumables_create', compact('equipment', 'software', 'components', 'consumables', 'maintenance'));
 
     }
 
     // 儲存頁
     public function consumables_store(Request $request)
     { // dd($request->all());
-
+        if ($request->hasfile('product_img')) {
         $path = FilesController::imgUpload($request->product_img, 'consumables');
-
+}else{
+    $path = '';
+}
         // 主要圖片
 
         $product = Consumables_product::create([
@@ -635,17 +577,17 @@ class ProductManageController extends Controller
 
         $product = Consumables_product::find($id);
         $imgs = Consumables_img::orderBy('weight', 'asc')->get();
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        $consumables2 = Consumables_product::where('weights','<','3')->get();
+        $consumables2 = Consumables_product::where('weights', '<', '3')->get();
 
-        $count = Consumables_img::where('iid','=',$id)->count();
+        $count = Consumables_img::where('iid', '=', $id)->count();
 
-        return view('product_edit.consumables_edit', compact('product','count','imgs','equipment','software','components','consumables','consumables2','maintenance'));
+        return view('product_edit.consumables_edit', compact('product', 'count', 'imgs', 'equipment', 'software', 'components', 'consumables', 'consumables2', 'maintenance'));
     }
 
     // 更新頁
@@ -653,8 +595,7 @@ class ProductManageController extends Controller
     {
 
         $product = Consumables_product::find($id);
-        $imgs = Consumables_img::where('iid','=',$id)->get();
-
+        $imgs = Consumables_img::where('iid', '=', $id)->get();
 
         // 如果主要圖片有更新,套用新圖片
 
@@ -677,8 +618,6 @@ class ProductManageController extends Controller
             }
         }
 
-
-
         // 如果有更新資料,套用新資料
 
         if (($request->standard) != null) {
@@ -693,17 +632,11 @@ class ProductManageController extends Controller
             $product->illustrate = $request->illustrate;
         };
 
-
-
-
         $product->product_name = $request->product_name;
         $product->model = $request->product_model;
         $product->primary = $request->items;
         $product->weights = $request->weights;
         $product->save();
-
-
-
 
         return redirect('/product-manage/consumables');
     }
@@ -723,16 +656,14 @@ class ProductManageController extends Controller
         redirect('/product-manage/consumables');
     }
 
-
     // 刪除次要圖片
 
-    public function cons_sec_img($id){
+    public function cons_sec_img($id)
+    {
 
         $img = Consumables_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
-
-
 
         $product = Consumables_product::find($id);
         $product_id = $product->id;
@@ -745,7 +676,7 @@ class ProductManageController extends Controller
     // 首頁
     public function maintenance_index()
     {
-        $product = Repair_product::orderBy('weights','asc')->get();
+        $product = Repair_product::orderBy('weights', 'asc')->get();
 
         return view('product_manage.product_maintenance', compact('product'));
     }
@@ -754,20 +685,19 @@ class ProductManageController extends Controller
     public function maintenance_create()
     {
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        return view('product_create.maintenance_create',compact('equipment','software','components','consumables','maintenance'));
+        return view('product_create.maintenance_create', compact('equipment', 'software', 'components', 'consumables', 'maintenance'));
 
     }
 
     // 儲存頁
     public function maintenance_store(Request $request)
     {
-
 
         $product = Repair_product::create([
             'product_name' => $request->product_name,
@@ -784,15 +714,15 @@ class ProductManageController extends Controller
             $path = FilesController::imgUpload($request->product_img, 'repair');
             // 主要圖片
             // dd($path);
-            $product = Repair_product::orderBy('id','desc')->take(1)->update([
-            'product_name' => $request->product_name,
-            'model' => $request->product_model,
-            'primary' => $request->items,
-            'weights' => 0,
-            'standard' => $request->standard,
-            'feature' => $request->feature,
-            'illustrate' => $request->illustrate,
-            'primary_img' => $path,
+            $product = Repair_product::orderBy('id', 'desc')->take(1)->update([
+                'product_name' => $request->product_name,
+                'model' => $request->product_model,
+                'primary' => $request->items,
+                'weights' => 0,
+                'standard' => $request->standard,
+                'feature' => $request->feature,
+                'illustrate' => $request->illustrate,
+                'primary_img' => $path,
             ]);
         }
 
@@ -811,34 +741,30 @@ class ProductManageController extends Controller
 
     }
 
-
-
     // 編輯頁
     public function maintenance_edit($id)
     {
-        $product =  Repair_product::find($id);
-        $imgs =  Repair_img::orderBy('weight', 'asc')->get();
+        $product = Repair_product::find($id);
+        $imgs = Repair_img::orderBy('weight', 'asc')->get();
 
-        $equipment = Equipment_product::where('primary','<','6')->get();
-        $software = Software_product::where('primary','<','6')->get();
-        $components = Components_product::where('primary','<','6')->get();
-        $consumables = Consumables_product::where('primary','<','6')->get();
-        $maintenance = Repair_product::where('primary','<','6')->get();
+        $equipment = Equipment_product::where('primary', '<', '6')->get();
+        $software = Software_product::where('primary', '<', '6')->get();
+        $components = Components_product::where('primary', '<', '6')->get();
+        $consumables = Consumables_product::where('primary', '<', '6')->get();
+        $maintenance = Repair_product::where('primary', '<', '6')->get();
 
-        $maintenance2 = Repair_product::where('weights','<','3')->get();
+        $maintenance2 = Repair_product::where('weights', '<', '3')->get();
 
+        $count = Repair_img::where('iid', '=', $id)->count();
 
-        $count =  Repair_img::where('iid','=',$id)->count();
-
-        return view('product_edit.maintenance_edit', compact('product','count','imgs','equipment','software','components','consumables','maintenance','maintenance2'));
+        return view('product_edit.maintenance_edit', compact('product', 'count', 'imgs', 'equipment', 'software', 'components', 'consumables', 'maintenance', 'maintenance2'));
     }
 
     // 更新頁
     public function maintenance_update(Request $request, $id)
     {
         $product = Repair_product::find($id);
-        $imgs = Repair_img::where('iid','=',$id)->get();
-
+        $imgs = Repair_img::where('iid', '=', $id)->get();
 
         // 如果主要圖片有更新,套用新圖片
 
@@ -861,8 +787,6 @@ class ProductManageController extends Controller
             }
         }
 
-
-
         // 如果有更新資料,套用新資料
 
         if (($request->standard) != null) {
@@ -877,17 +801,11 @@ class ProductManageController extends Controller
             $product->illustrate = $request->illustrate;
         };
 
-
-
-
         $product->product_name = $request->product_name;
         $product->model = $request->product_model;
         $product->primary = $request->items;
         $product->weights = $request->weights;
         $product->save();
-
-
-
 
         return redirect('/product-manage/maintenance');
     }
@@ -908,16 +826,14 @@ class ProductManageController extends Controller
         redirect('/product-manage/maintenance');
     }
 
-
     // 刪除次要圖片
 
-    public function main_sec_img($id){
+    public function main_sec_img($id)
+    {
 
         $img = Repair_img::find($id);
         FilesController::deleteUpload($img->path);
         $img->delete();
-
-
 
         $product = Repair_product::find($id);
         $product_id = $product->id;
