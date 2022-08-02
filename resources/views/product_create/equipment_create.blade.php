@@ -265,7 +265,7 @@
                         <!-- 上傳按鈕 -->
                         <div class="btn">
                             <button type="submit">儲存</button>
-                            <button>取消</button>
+                            <button onclick="history.go(-1)">取消</button>
                         </div>
                     </div>
                 </div>
