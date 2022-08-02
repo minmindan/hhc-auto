@@ -20,13 +20,11 @@
     {{-- summernote fixed --}}
 
     <style>
+        .about-product ul li {
 
-.about-product{
-    li{
-        display: list-item;
-    }
-}
+            display: list-item !important;
 
+        }
     </style>
 @endsection
 @section('main')
@@ -51,21 +49,21 @@
                         <div class="image-box">
                             <!-- 圖片 -->
                             <div class="product-img">
-                                    <div class="swiper mySwiper">
-                                        <div class="swiper-wrapper">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
 
-                                            <div class="swiper-slide">
-                                                <img src="{{ $product[0]->primary_img ?? '' }}" alt="">
-                                            </div>
+                                        <div class="swiper-slide">
+                                            <img src="{{ $product[0]->primary_img ?? '' }}" alt="">
+                                        </div>
 
-                                            @foreach ($product2 as $product2)
+                                        @foreach ($product2 as $product2)
                                             <div class="swiper-slide">
                                                 <img src="{{ $product2->path ?? '' }}" alt="">
                                             </div>
-                                            @endforeach
+                                        @endforeach
 
-                                        </div>
                                     </div>
+                                </div>
                                 <!-- 產品介紹 -->
                                 <div class="product-introduction">
                                     <div class="intro-content">
@@ -107,9 +105,9 @@
                                     </div>
 
                                     @foreach ($product3 as $product3)
-                                    <div class="swiper-slide">
-                                        <img src="{{ $product3->path ?? '' }}" alt="">
-                                    </div>
+                                        <div class="swiper-slide">
+                                            <img src="{{ $product3->path ?? '' }}" alt="">
+                                        </div>
                                     @endforeach
 
                                 </div>
