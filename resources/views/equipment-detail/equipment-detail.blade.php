@@ -16,6 +16,18 @@
             color: #bb1b21;
         }
     </style>
+
+    {{-- summernote fixed --}}
+
+    <style>
+
+.about-product{
+    li{
+        display: list-item;
+    }
+}
+
+    </style>
 @endsection
 @section('main')
     <main>
