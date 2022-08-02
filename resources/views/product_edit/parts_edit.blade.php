@@ -200,8 +200,8 @@
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 1) disabled @endif
                                     @endforeach
-                                    @foreach ($components as $cm) @if ($cm->primary == 1) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($components as $cm) @if ($cm->primary == 1) disabled @endif
+                                    @endforeach --}}
                                     @foreach ($consumables as $cn) @if ($cn->primary == 1) disabled @endif
                                     @endforeach
                                     @foreach ($maintenance as $ma) @if ($ma->primary == 1) disabled @endif
@@ -218,8 +218,8 @@
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 2) disabled @endif
                                     @endforeach
-                                    @foreach ($components as $cm) @if ($cm->primary == 2) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($components as $cm) @if ($cm->primary == 2) disabled @endif
+                                    @endforeach --}}
                                     @foreach ($consumables as $cn) @if ($cn->primary == 2) disabled @endif
                                     @endforeach
                                     @foreach ($maintenance as $ma) @if ($ma->primary == 2) disabled @endif
@@ -235,8 +235,8 @@
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 3) disabled @endif
                                     @endforeach
-                                    @foreach ($components as $cm) @if ($cm->primary == 3) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($components as $cm) @if ($cm->primary == 3) disabled @endif
+                                    @endforeach --}}
                                     @foreach ($consumables as $cn) @if ($cn->primary == 3) disabled @endif
                                     @endforeach
                                     @foreach ($maintenance as $ma) @if ($ma->primary == 3) disabled @endif
@@ -251,8 +251,8 @@
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 4) disabled @endif
                                     @endforeach
-                                    @foreach ($components as $cm) @if ($cm->primary == 4) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($components as $cm) @if ($cm->primary == 4) disabled @endif
+                                    @endforeach --}}
                                     @foreach ($consumables as $cn) @if ($cn->primary == 4) disabled @endif
                                     @endforeach
                                     @foreach ($maintenance as $ma) @if ($ma->primary == 4) disabled @endif
@@ -268,8 +268,8 @@
                                         @endforeach
                                     @foreach ($software as $s) @if ($s->primary == 5) disabled @endif
                                     @endforeach
-                                    @foreach ($components as $cm) @if ($cm->primary == 5) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($components as $cm) @if ($cm->primary == 5) disabled @endif
+                                    @endforeach --}}
                                     @foreach ($consumables as $cn) @if ($cn->primary == 5) disabled @endif
                                     @endforeach
                                     @foreach ($maintenance as $ma) @if ($ma->primary == 5) disabled @endif

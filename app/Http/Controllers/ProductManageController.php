@@ -112,6 +112,8 @@ class ProductManageController extends Controller
     public function equipment_update(Request $request, $id)
     {
 
+        // dd($request->all());
+
         $product = Equipment_product::find($id);
         $imgs = Equipment_img::where('iid', '=', $id)->get();
 

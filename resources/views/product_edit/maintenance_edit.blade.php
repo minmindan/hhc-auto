@@ -210,8 +210,8 @@
                                     @endforeach
                                     @foreach ($consumables as $cn) @if ($cn->primary == 1) disabled @endif
                                     @endforeach
-                                    @foreach ($maintenance as $ma) @if ($ma->primary == 1) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($maintenance as $ma) @if ($ma->primary == 1) disabled @endif
+                                    @endforeach --}}
 
                                     value="1" type="radio"
                                     name="items" id="items1" />
@@ -228,8 +228,8 @@
                                     @endforeach
                                     @foreach ($consumables as $cn) @if ($cn->primary == 2) disabled @endif
                                     @endforeach
-                                    @foreach ($maintenance as $ma) @if ($ma->primary == 2) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($maintenance as $ma) @if ($ma->primary == 2) disabled @endif
+                                    @endforeach --}}
 
                                     value="2" type="radio"
                                     name="items" id="items2" />
@@ -245,8 +245,8 @@
                                     @endforeach
                                     @foreach ($consumables as $cn) @if ($cn->primary == 3) disabled @endif
                                     @endforeach
-                                    @foreach ($maintenance as $ma) @if ($ma->primary == 3) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($maintenance as $ma) @if ($ma->primary == 3) disabled @endif
+                                    @endforeach --}}
                                     value="3" type="radio"
                                     name="items" id="items3" />
                                     <label for="items3">主打商品3</label>
@@ -261,8 +261,8 @@
                                     @endforeach
                                     @foreach ($consumables as $cn) @if ($cn->primary == 4) disabled @endif
                                     @endforeach
-                                    @foreach ($maintenance as $ma) @if ($ma->primary == 4) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($maintenance as $ma) @if ($ma->primary == 4) disabled @endif
+                                    @endforeach --}}
 
                                     value="4" type="radio"
                                     name="items" id="items4" />
@@ -278,8 +278,8 @@
                                     @endforeach
                                     @foreach ($consumables as $cn) @if ($cn->primary == 5) disabled @endif
                                     @endforeach
-                                    @foreach ($maintenance as $ma) @if ($ma->primary == 5) disabled @endif
-                                    @endforeach
+                                    {{-- @foreach ($maintenance as $ma) @if ($ma->primary == 5) disabled @endif
+                                    @endforeach --}}
                                     value="5" type="radio"
                                     name="items" id="items5" />
                                     <label for="items5">主打商品5</label>
