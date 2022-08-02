@@ -25,6 +25,17 @@
             display: list-item !important;
 
         }
+
+        .about-product ol{
+            padding-left: 1.2em;
+        }
+
+        .about-product ol li {
+
+display: list-item !important;
+list-style-type: decimal;
+
+}
     </style>
 @endsection
 @section('main')

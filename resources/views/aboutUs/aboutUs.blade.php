@@ -14,6 +14,24 @@
         flex-direction: column;
     }
 </style>
+
+{{-- summernote fixed  --}}
+
+    <style>
+        .service-items ul li {
+        display: list-item !important;
+    }
+
+        .service-items ol{
+            padding-left: 1.2em;
+        }
+
+        .service-items ol li{
+            display: list-item !important;
+list-style-type: decimal;
+        }
+    </style>
+
 @endsection
 @section('main')
 <main>
