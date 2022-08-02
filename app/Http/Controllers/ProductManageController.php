@@ -101,7 +101,7 @@ class ProductManageController extends Controller
         $maintenance = Repair_product::where('primary', '<', '6')->get();
         $equipment2 = Equipment_product::where('weights', '<', '3')->get();
 
-        $imgs = Equipment_img::orderBy('weight', 'asc')->get();
+        $imgs = Equipment_img::where('iid','=',$id)->orderBy('weight', 'asc')->get();
 
         $count = Equipment_img::where('iid', '=', $id)->count();
 
@@ -255,7 +255,7 @@ class ProductManageController extends Controller
     public function software_edit($id)
     {
         $product = Software_product::find($id);
-        $imgs = Software_img::orderBy('weight', 'asc')->get();
+        $imgs = Software_img::where('iid','=',$id)->orderBy('weight', 'asc')->get();
 
         $equipment = Equipment_product::where('primary', '<', '6')->get();
         $software = Software_product::where('primary', '<', '6')->get();
@@ -415,7 +415,7 @@ class ProductManageController extends Controller
     public function parts_edit($id)
     {
         $product = Components_product::find($id);
-        $imgs = Components_img::orderBy('weight', 'asc')->get();
+        $imgs = Components_img::where('iid','=',$id)->orderBy('weight', 'asc')->get();
 
         $equipment = Equipment_product::where('primary', '<', '6')->get();
         $software = Software_product::where('primary', '<', '6')->get();
@@ -576,7 +576,7 @@ class ProductManageController extends Controller
     {
 
         $product = Consumables_product::find($id);
-        $imgs = Consumables_img::orderBy('weight', 'asc')->get();
+        $imgs = Consumables_img::where('iid','=',$id)->orderBy('weight', 'asc')->get();
         $equipment = Equipment_product::where('primary', '<', '6')->get();
         $software = Software_product::where('primary', '<', '6')->get();
         $components = Components_product::where('primary', '<', '6')->get();
@@ -745,7 +745,7 @@ class ProductManageController extends Controller
     public function maintenance_edit($id)
     {
         $product = Repair_product::find($id);
-        $imgs = Repair_img::orderBy('weight', 'asc')->get();
+        $imgs = Repair_img::where('iid','=',$id)->orderBy('weight', 'asc')->get();
 
         $equipment = Equipment_product::where('primary', '<', '6')->get();
         $software = Software_product::where('primary', '<', '6')->get();
