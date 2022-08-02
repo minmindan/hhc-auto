@@ -282,7 +282,7 @@
             disableDragAndDrop: false,
             toolbar: [
                 ['color', ['color']],
-                ['font', ['bold', 'underline', 'clear']],
+                ['font', ['bold','ol', 'underline', 'clear']],
                 ['para', ['ul', 'paragraph']],
                 ['table', ['table']],
             ]
@@ -295,7 +295,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'paragraph']],
+                ['para', ['ul','ol', 'paragraph']],
                 ['table', ['table']],
             ]
         });
@@ -307,7 +307,7 @@
             toolbar: [
                 ['color', ['color']],
                 ['font', ['bold', 'underline', 'clear']],
-                ['para', ['ul', 'paragraph']],
+                ['para', ['ul','ol', 'paragraph']],
                 ['table', ['table']],
             ]
         });
